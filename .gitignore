@@ -1,0 +1,30 @@
+# dados brutos e intermediarios pesados
+*.tif
+*.tif.ovr
+*.tif.aux.xml
+*.las
+*.laz
+_tmp*
+_corr*
+_mp.geojson
+_m1.geojson
+
+# series baixadas da ANA (regeraveis com 01_baixa_dados_ana.R)
+01_dados/ana_hidroweb/*.csv
+
+# saidas do R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Quarto
+/.quarto/
+_site/
+_book/
+*_files/
+
+# sistema
+Thumbs.db
+.DS_Store
+~$*

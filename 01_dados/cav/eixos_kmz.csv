@@ -1,0 +1,4 @@
+id;lon_orig;lat_orig;arquivo;area_BHO_km2;dist_BHO_m;area_km2;cota_eixo_m;lat;lon;desloc_snap_m
+Ponto-Barragem1;-51,75233382812521;-29,15188153600278;Ponto-Barragem1.kmz;15551,6;773,0;15457,1;57,0;-29,15308;-51,75308;151,2
+Ponto_Barragem2;-51,71050367606783;-29,07640443850374;Ponto_Barragem2.kmz;2559,3;522,7;2561,5;69,0;-29,07525;-51,71192;188,1
+Ponto_Barragem3;-51,63810509563891;-29,08860071847289;Ponto_Barragem3.kmz;12877,0;10,7;12774,4;72,5;-29,08853;-51,63962;147,7

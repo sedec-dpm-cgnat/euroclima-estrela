@@ -1,0 +1,4 @@
+id;arquivo_origem;area_BHO_km2;dist_drenagem_m;area_bacia_km2;cota_eixo_m;lat;lon
+BAR-A;Barragem_A;15852,0;0,0;15759,6;47,0;-29,16163;-51,8356
+BAR-A2;Barragem_A2;12877,0;0,0;12777,4;72,0;-29,08147;-51,65664
+BAR-B;Barragem_B;2547,2;0,0;2549,3;72,0;-29,0597;-51,71858
