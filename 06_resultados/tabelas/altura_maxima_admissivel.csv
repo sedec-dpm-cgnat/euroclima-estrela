@@ -1,0 +1,13 @@
+eixo;area_km2;cota_eixo_m;restricao;potencia_restr_MW;cota_restricao_m;altura_max_m;volume_max_hm3;area_alagada_km2;custo_MRS
+E01;2548,8;72,5;Vale do Leite (operacao);6,4;130,9;56,4;129,1;5,47;227,0
+E02;3591,2;293,0;José Dinarte Lepek (estudo);0,0;317,5;22,5;31,6;2,48;52,0
+E03;3771,8;149,5;Monte Cuco (operacao);30,0;167,4;15,9;3,6;0,39;14,0
+E04;7497,5;239,0;Jararaca (operacao);28,0;268,3;27,3;124,8;7,46;122,0
+E05;7922,8;167,0;Monte Cuco (operacao);30,0;167,4;-1,6;;;
+E06;8158,8;149,5;Monte Cuco (operacao);30,0;167,4;15,9;13,7;1,42;35,0
+E07;8173,5;149,5;Monte Cuco (operacao);30,0;167,4;15,9;18,6;1,79;32,0
+E08;11950,5;148,0;Foz do Prata (operacao);49,4;171,3;21,3;43,7;3,37;63,0
+E09;12330,0;106,0;Foz do Prata (operacao);49,4;171,3;63,3;377,3;13,26;421,0
+E10;12778,1;71,5;Monte Claro (operacao);130,0;132,5;59,0;480,9;20,68;437,0
+E11;15456,9;57,5;14 de Julho (operacao);100,0;104,5;45,0;400,3;17,19;322,0
+E12;15759,8;47,0;14 de Julho (operacao);100,0;104,5;55,5;977,7;35,91;577,0
