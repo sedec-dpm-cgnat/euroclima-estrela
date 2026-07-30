@@ -50,9 +50,9 @@ PAR <- list(
   dano_2024_MRS = 2500, TR_evento = 100, cv_gumbel = 0.45, expoente_dano = 1.8
 )
 
-EIXO_ALVO <- "EIXO-A"          # eixo principal (15.760 km2)
-AREA_CTRL <- eix[eixo == EIXO_ALVO, area_km2]
-COTA_EIXO <- eix[eixo == EIXO_ALVO, cota_eixo_m]
+EIXO_ALVO <- "E12"          # eixo mais a jusante (15.760 km2, 81% da bacia)
+AREA_CTRL <- eix[codigo == EIXO_ALVO, area_km2]
+COTA_EIXO <- eix[codigo == EIXO_ALVO, cota_eixo_m]
 
 cat("\n=========================================================================\n")
 cat(sprintf("EIXO ANALISADO: %s | area %s km2 (%.1f%% da bacia) | cota %.1f m\n",
@@ -123,18 +123,23 @@ rotear_comportas <- function(hin, cv, H_bar, H_normal, L_sol, A_fundo,
   n <- nrow(hin)
   V <- numeric(n); h <- numeric(n); Qo <- numeric(n); ab <- numeric(n)
   V[1] <- V_ini; h[1] <- h_de_V(V_ini)
-  sat <- FALSE
+  sat <- FALSE; galga <- FALSE
 
   for (i in 2:n) {
     I  <- (hin$Q[i - 1] + hin$Q[i]) / 2
     Vp <- V[i - 1]; hp <- h[i - 1]
 
     # capacidade maxima de descarga na carga atual
-    q_cap <- vert_comporta(hp, H_normal * 0.5, L_sol, 1) + descarga_fundo(hp, A_fundo)
+    q_cap <- vert_comporta(hp, H_normal, L_sol, 1) + descarga_fundo(hp, A_fundo)
 
     if (Vp >= V_max * 0.995) {
-      # reservatorio cheio: comportas totalmente abertas
-      Qt <- max(q_cap, I); sat <- TRUE; abert <- 1
+      # Reservatorio cheio: as comportas modulam para passar exatamente a
+      # afluencia (regime permanente). Verter MAIS que a afluencia esvaziaria
+      # o reservatorio e nao e' o que ocorre no pico. Se nem com as comportas
+      # totalmente abertas a capacidade alcanca a afluencia, ha galgamento.
+      Qt <- min(q_cap, I); sat <- TRUE
+      if (q_cap < I) galga <- TRUE
+      abert <- 1
     } else {
       # regra de operacao: liberar o minimo entre a meta e a capacidade
       Qt <- min(Q_meta, q_cap)
@@ -144,12 +149,21 @@ rotear_comportas <- function(hin, cv, H_bar, H_normal, L_sol, A_fundo,
       abert <- if (q_cap > 0) min(Qt / q_cap, 1) else 0
     }
     Vn <- Vp + (I - Qt) * dt
-    if (Vn > V_max) { Qt <- Qt + (Vn - V_max) / dt; Vn <- V_max; sat <- TRUE }
+    if (Vn > V_max) {
+      # Reservatorio cheio: nao ha mais volume para amortecer, de modo que o
+      # efluente iguala o afluente (regime permanente). Nao ha "pico" de saida:
+      # uma barragem cheia TRANSFERE a cheia, nao a amplifica.
+      Qt <- max(Qt, I)
+      Vn <- min(Vp + (I - Qt) * dt, V_max)
+      sat <- TRUE
+      # se nem as comportas totalmente abertas dao conta, ha galgamento
+      if (q_cap < I) galga <- TRUE
+    }
     if (Vn < 0)     { Qt <- max(Qt + Vn / dt, 0);  Vn <- 0 }
     V[i] <- Vn; h[i] <- h_de_V(Vn); Qo[i] <- Qt; ab[i] <- abert
   }
   list(t_h = hin$t_h, Qin = hin$Q, Qout = Qo, V_hm3 = V / 1e6, h_m = h,
-       abertura = ab, saturou = sat, V_espera_hm3 = V_espera / 1e6,
+       abertura = ab, saturou = sat, galgou = galga, V_espera_hm3 = V_espera / 1e6,
        V_util_hm3 = V_norm / 1e6, h_max = max(h))
 }
 
@@ -193,10 +207,17 @@ res <- rbindlist(lapply(ALTURAS, function(H) {
   g <- geo[eixo == EIXO_ALVO & altura_m == H]
   if (!nrow(g)) return(NULL)
   cv <- geo[eixo == EIXO_ALVO, .(altura_m, volume_hm3)]
-  L_sol <- max(g$L_crista_m * 0.25, 60)         # 25% da crista como vertedouro
+  # Vertedouro dimensionado para descarregar a cheia de projeto (TR 10.000
+  # anos) com a sobrelevacao disponivel acima do NA normal. E o criterio
+  # de projeto usual; um vertedouro arbitrariamente longo produziria
+  # descargas fisicamente impossiveis.
+  Q_projeto <- gumbel_Q(10000) * AREA_CTRL / BACIA$area_estrela
   A_fundo <- 30
   rbindlist(lapply(FRAC_NORMAL, function(fr) {
     Hn <- H * fr
+    sobrelev <- max(H - Hn, 2)                 # carga maxima sobre a soleira
+    L_sol <- min(max(Q_projeto / (2.1 * sobrelev^1.5), 40),
+                 g$L_crista_m * 0.5)           # limitado a 50% da crista
     # picos resultantes para a malha de frequencia
     picos <- sapply(Q_MALHA, function(qp) {
       hn <- hidrograma(qp, AREA_CTRL)
