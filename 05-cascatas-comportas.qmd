@@ -1,0 +1,134 @@
+# Cascatas de barragens com comportas
+
+## Por que estudar cascatas
+
+Reservatórios em série ou em ramos convergentes podem distribuir o armazenamento e usar
+comportas para preservar volume de espera antes da cheia. A vantagem potencial é reduzir o
+porte de uma única obra e aumentar a flexibilidade. O risco é criar dependência entre
+reservatórios: uma decisão a montante pode transferir vazão e nível para a estrutura
+seguinte, especialmente quando há pouco tempo entre as ondas.
+
+## Rede imediata
+
+O inventário preliminar identifica as seguintes sequências geométricas:
+
+| Ramo | Sequência |
+|---|---|
+| Principal 1 | E01 → E11 → E12 |
+| Principal 2 | E02 → E03 → E08 → E09 → E10 → E11 → E12 |
+| Principal 3 | E04 → E05 → E06 → E07 → E08 → E09 → E10 → E11 → E12 |
+
+O diagnóstico é de conectividade por posição dos eixos. Ainda é necessário confirmar, em
+levantamento topográfico e no HEC-RAS 1D, se há remanso, conexão hidráulica e tempo de
+trânsito compatíveis com a operação coordenada.
+
+## Cenários de triagem
+
+| Cenário | Eixos | Pico resultante (m³/s) | Redução | Saturados | Galgamentos |
+|---|---|---:|---:|---:|---:|
+| C01 | E02 + E04 | 9.217 | 48,8% | 0 | 0 |
+| C02 | E02 + E04 + E12 | 6.650 | 63,1% | 0 | 0 |
+| C03 | E02 + E04 + E08 | 8.713 | 51,6% | 0 | 0 |
+| C04 | E09 + E10 + E11 + E12 | 14.753 | 18,0% | 4 | 4 |
+| C05 | E01 + E02 + E04 + E08 + E09 + E10 + E11 + E12 | 5.965 | 66,9% | 1 | 1 |
+
+Base: [roteamento preliminar de cascatas](06_resultados/tabelas/roteamento_cascata_comportas_triagem.csv).
+Os valores são uma triagem com hidrograma sintético, regra de comporta simplificada e
+parâmetros não calibrados. Não representam desempenho de projeto.
+
+### Resultado recalibrado das alternativas
+
+O Claude executou uma rodada independente com pico de referência de 16.300 m³/s, séries ANA e
+regra de barragem seca. Os resultados calibrados são os que devem orientar a próxima etapa:
+
+| Alternativa | Eixos | Pico resultante (m³/s) | Redução | Saturação |
+|---|---|---:|---:|---:|
+| ALT-A | E02 + E04 | 9.272 | 43,1% | não |
+| ALT-D | E02 + E04 + E08 | 8.411 | 48,4% | não |
+| ALT-E | E02 + E04 + E12 | 6.328 | 61,2% | não |
+| ALT-J | carteira completa com E01, E02, E04, E05, E08 e E12 | 6.213 | 61,9% | sim, em pelo menos um eixo |
+
+Nenhuma combinação atingiu a meta preliminar de 4.000 m³/s. A redução de pico verificada não
+deve ser interpretada como lâmina final de inundação: a conversão de vazão em cota, profundidade
+e duração ainda depende do HEC-RAS 1D.
+
+### Inclusão de um tributário concentrado: Forqueta
+
+O Forqueta deve ser tratado como ramo lateral da rede, e não como mais um reservatório em
+série no rio principal. Foram propostos FQ1 e FQ2, com áreas BHO a montante de 2.353,6 e
+2.226,7 km², respectivamente. Como o tributário deságua a jusante do ponto de análise de
+19.440 km², seus efeitos devem ser avaliados somente no trecho de Lajeado/Estrela.
+
+A série observada do posto Passo do Coimbra (86745000) indica defasagem central de 0 dia
+em 13 eventos. Com a calibração em Estrela, o ganho sobre ALT-J foi de apenas 0,7 ponto
+percentual para FQ1 e 1,1 ponto percentual para FQ2. FQ1 e FQ2 são geometricamente
+mutuamente exclusivos: o NA preliminar de FQ1 a 30 m ultrapassa em 12,5 m a cota de FQ2.
+
+| Cenário a testar | Função |
+|---|---|
+| ALT-J + FQ1 | opção condicionada à confirmação da defasagem no evento de projeto |
+| ALT-J + FQ2 | sensibilidade locacional, alternativa exclusiva |
+| ALT-J + FQ1 + FQ2 | somente teste de incompatibilidade geométrica; não é arranjo de projeto |
+| FQ1 ou FQ2 isolado | controle do efeito marginal e do custo de oportunidade |
+
+Os cenários devem usar o hidrograma lateral observado e explicitar a incerteza da defasagem.
+A série tem uma lacuna em novembro de 2023, justamente no maior pico de Estrela. A área de
+14,63% não deve ser convertida diretamente em uma parcela fixa do pico. A alternativa de
+referência permanece ALT-J sem Forqueta; FQ1 só deve ser reaberto após dados subdiários de
+Barra do Fão.
+
+O Guaporé deve ser representado como tributário a montante em uma rodada futura. A estação
+Santa Lúcia (86580000) possui série diária de 1940–2024, área ANA de 2.470 km² e máximo
+observado de 5.077 m³/s. O GU1-PROPOSTO controla aproximadamente 1.993 km² na triagem
+BHO/D8, mas sua compatibilidade com as usinas Guaporé e Monte Cuco ainda não foi verificada.
+
+![Matriz de integração do Forqueta à carteira ALT-J.](06_resultados/VALIDACAO/MATRIZ_ALTERNATIVAS_FORQUETA.png){#fig-matriz-forqueta-cascatas width=100%}
+
+## Regra de operação preliminar
+
+O script de triagem usa volume de espera inicial, uma regra simplificada de abertura e
+conservação de massa entre reservatórios. Essa escolha permite testar a lógica da rede, mas
+não representa uma curva de descarga de vertedouro, uma política de despacho ou um manual
+de operação.
+
+O alvo de `4.000 m³/s` usado no script é definido na seção de controle de Estrela. Para operar
+os reservatórios individualmente, a triagem aplica `Q_alvo,i = Q_alvo × A_i/A_Estrela`; essa
+partição proporcional não é uma vazão observada a montante e não substitui o acoplamento
+hidráulico. O volume de espera de cada eixo vem da sua própria CAV e da fração inicial adotada,
+não de uma divisão otimizada do `V_req` total. O resultado correto da comparação é o hidrograma
+roteado em Estrela, com saturação, galgamento, nível e volume utilizado por reservatório.
+
+Para avançar, a regra deve ser substituída por:
+
+- CAV validada de cada reservatório;
+- curva cota–descarga de comportas e vertedouros;
+- limites de segurança e nível operacional;
+- previsão de afluência e horizonte de decisão;
+- falha de comunicação e operação local;
+- acoplamento com o HEC-RAS 1D.
+
+::: {.callout-warning}
+## Como os cenários entram no HEC-RAS 1D
+
+C01 não é uma alternativa independente da ALT-A: ambos representam **E02 + E04**.
+C03 corresponde à ALT-D (**E02 + E04 + E08**) e C02 corresponde à ALT-E
+(**E02 + E04 + E12**). Por isso, a primeira rodada deve seguir a ordem **HEC-00 sem
+obra → HEC-01/C01 → HEC-02/C03 → HEC-03/C02**. C04 e C05 ficam para uma etapa
+posterior de sensibilidades de rede; C04 falha na triagem por saturação e galgamento,
+e C05 inclui E10, cujo balanço energético preliminar é negativo.
+
+O Guaporé (GU1) e o Forqueta (FQ1/FQ2) não são nós da cascata E01–E12: entram como
+contribuições laterais em planos separados. O GU1 é a extensão estrutural prioritária;
+FQ1 e FQ2 são alternativas mutuamente exclusivas. O diagrama [topológico da rede e
+dos planos HEC](06_resultados/VALIDACAO/DIAGRAMA_TOPOLOGICO_ALTERNATIVAS_HECRAS.svg)
+mostra essa separação. Nenhum desses cenários foi selecionado para implantação.
+:::
+
+## Arquivos e reprodução
+
+- [Inventário de cascatas](06_resultados/tabelas/rede_imediata_cascatas_comportas.csv)
+- [Cenários candidatos](06_resultados/tabelas/cascatas_candidatas_comportas.csv)
+- [Detalhe do roteamento](06_resultados/tabelas/roteamento_cascata_comportas_detalhe.csv)
+- [Script de inventário](07_python/30_inventario_cascatas_comportas.py)
+- [Script de roteamento](07_python/31_roteamento_cascata_comportas.py)
+- [Figuras dos hidrogramas](06_resultados/figuras/14_hidrogramas_natural_vs_cascatas.png)

@@ -1,0 +1,13 @@
+eixo;estaca_eixo_km;dist_eixo_canal_m;no_canal_1500m;cota_eixo_m;restricao_imediata_validada;estaca_restricao_km;dist_restricao_canal_m;dif_cota_restricao_m
+E04;238,07;0,5;True;239,0;Serra dos Cavalinhos II;133,68;67,7;15,3
+E02;243,9;15712,9;False;293,0;Serra dos Cavalinhos II;133,68;67,7;15,3
+E05;257,62;0,3;True;167,0;Castro Alves;248,4;23,0;32,7
+E06;270,67;0,4;True;149,5;Castro Alves;248,4;23,0;32,7
+E07;272,69;0,4;True;149,5;Castro Alves;248,4;23,0;32,7
+E03;272,77;973,8;True;149,5;Castro Alves;248,4;23,0;32,7
+E08;274,32;0,4;True;148,0;Castro Alves;248,4;23,0;32,7
+E09;303,3;0,3;True;106,0;Monte Claro;279,48;100,8;1,3
+E10;335,47;0,6;True;71,5;14 de Julho;326,24;50,3;22,1
+E01;345,68;2175,1;False;72,5;14 de Julho;326,24;50,3;22,1
+E11;358,06;0,5;True;57,5;14 de Julho;326,24;50,3;22,1
+E12;375,21;0,5;True;47,0;14 de Julho;326,24;50,3;22,1

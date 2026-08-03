@@ -1,0 +1,4 @@
+fonte_areas;area_mucum_km2;area_estrela_km2;razao_area;razao_vazao;expoente;q_ponto_analise_exp_obs;q_ponto_analise_exp_085
+areas ANA (HidroInventario);16000,0;22472,0;1,404;1,144;0,395;16300;15260
+areas D8 (delineadas);15880,8;23029,1;1,45;1,144;0,361;16236;14946
+areas BHO (ottocodificada);18460,2;23181,4;1,256;1,144;0,59;15560;14862

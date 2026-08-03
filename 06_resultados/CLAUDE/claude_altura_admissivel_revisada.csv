@@ -1,0 +1,13 @@
+eixo;area_km2;cota_eixo_m;estaca_km;no_canal_principal;criterio;restricao;limitante;h_remanso_m;potencia_restr_MW;cota_restricao_m;altura_max_m;volume_max_hm3;area_alagada_km2;custo_MRS
+E04;7497,5;239,0;238,1;True;posicao longitudinal;Serra dos Cavalinhos II (operacao);teto tecnico (remanso nao e' limitante);196,4;29,0;437,4;120,0;2210,7;42,31;2114
+E02;3591,2;293,0;243,9;False;area + cota (fora do canal principal);Passo do Meio (operacao);teto tecnico (remanso nao e' limitante);232,3;30,0;527,3;120,0;1377,4;30,78;1769
+E05;7922,8;167,0;257,6;True;posicao longitudinal;Castro Alves (operacao);remanso do aproveitamento de montante;67,0;130,0;236,0;67,0;91,0;3,17;296
+E06;8158,8;149,5;270,7;True;posicao longitudinal;Castro Alves (operacao);remanso do aproveitamento de montante;84,5;130,0;236,0;84,5;338,3;8,6;626
+E07;8173,5;149,5;272,7;True;posicao longitudinal;Castro Alves (operacao);remanso do aproveitamento de montante;84,5;130,0;236,0;84,5;385,6;9,44;557
+E03;3771,8;149,5;272,8;True;posicao longitudinal;Castro Alves (operacao);remanso do aproveitamento de montante;84,5;130,0;236,0;84,5;151,5;4,57;476
+E08;11950,5;148,0;274,3;True;posicao longitudinal;Castro Alves (operacao);remanso do aproveitamento de montante;86,0;130,0;236,0;86,0;621,1;15,55;702
+E09;12330,0;106,0;303,3;True;posicao longitudinal;Monte Claro (operacao);remanso do aproveitamento de montante;24,5;130,0;132,5;24,5;59,8;4,12;82
+E10;12778,1;71,5;335,5;True;posicao longitudinal;14 de Julho (operacao);remanso do aproveitamento de montante;31,0;100,0;104,5;31,0;70,0;5,06;112
+E01;2548,8;72,5;345,7;False;area + cota (fora do canal principal);Cotiporã (operacao);remanso do aproveitamento de montante;63,6;19,5;138,1;63,6;172,0;6,49;294
+E11;15456,9;57,5;358,1;True;posicao longitudinal;14 de Julho (operacao);remanso do aproveitamento de montante;45,0;100,0;104,5;45,0;400,3;17,19;322
+E12;15759,8;47,0;375,2;True;posicao longitudinal;14 de Julho (operacao);remanso do aproveitamento de montante;55,5;100,0;104,5;55,5;977,7;35,91;577

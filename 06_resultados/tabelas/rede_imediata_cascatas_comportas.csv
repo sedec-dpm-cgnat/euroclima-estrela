@@ -1,0 +1,12 @@
+montante;jusante_imediato;area_montante_km2;area_jusante_km2;area_incremental_entre_eixos_km2;cota_montante_m;cota_jusante_m;observacao
+E02;E03;3591,2;3771,8;180,60000000000036;293,0;149,5;conexão imediata derivada da topologia D8/BHO
+E04;E05;7497,5;7922,8;425,3000000000002;239,0;167,0;conexão imediata derivada da topologia D8/BHO
+E05;E06;7922,8;8158,8;236,0;167,0;149,5;conexão imediata derivada da topologia D8/BHO
+E06;E07;8158,8;8173,5;14,699999999999818;149,5;149,5;conexão imediata derivada da topologia D8/BHO
+E03;E08;3771,8;11950,5;8178,7;149,5;148,0;conexão imediata derivada da topologia D8/BHO
+E07;E08;8173,5;11950,5;3777,0;149,5;148,0;conexão imediata derivada da topologia D8/BHO
+E08;E09;11950,5;12330,0;379,5;148,0;106,0;conexão imediata derivada da topologia D8/BHO
+E09;E10;12330,0;12778,1;448,10000000000036;106,0;71,5;conexão imediata derivada da topologia D8/BHO
+E01;E11;2548,8;15456,9;12908,099999999999;72,5;57,5;conexão imediata derivada da topologia D8/BHO
+E10;E11;12778,1;15456,9;2678,7999999999993;71,5;57,5;conexão imediata derivada da topologia D8/BHO
+E11;E12;15456,9;15759,8;302,89999999999964;57,5;47,0;conexão imediata derivada da topologia D8/BHO

@@ -1,0 +1,736 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nota técnica — Potencial de barragens de montante em Estrela/RS",
+    "section": "",
+    "text": "Apresentação\nEsta nota técnica documenta, de forma didática, rastreável e versionada, a análise exploratória do potencial de barragens de montante para reduzir os danos de cheias no município de Estrela/RS e no trecho do rio Taquari–Antas de interesse do projeto EUROCLIMA+ / AECID.\nO material é uma triagem de ordem de grandeza para orientar o Termo de Referência e a modelagem a ser contratada. Ele não aprova obras, não substitui estudos de viabilidade, segurança de barragens, licenciamento ambiental ou projeto básico.",
+    "crumbs": [
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "index.html#equipe-e-escopo",
+    "href": "index.html#equipe-e-escopo",
+    "title": "Nota técnica — Potencial de barragens de montante em Estrela/RS",
+    "section": "Equipe e escopo",
+    "text": "Equipe e escopo\n\n\n\nItem\nRegistro\n\n\n\n\nCoordenação técnica\nCássio Guilherme Rampinelli e Saulo Aires de Souza, PhD — DPM/SEDEC/MIDR\n\n\nInstituição\nDepartamento de Prevenção e Mitigação de Desastres\n\n\nProjeto\nEUROCLIMA+ / AECID\n\n\nÁrea de estudo\nRio Taquari–Antas, com foco no controle de cheias em Estrela/RS\n\n\nData da versão\n02 de agosto de 2026\n\n\nStatus\nTriagem técnica preliminar; resultados sujeitos a validação",
+    "crumbs": [
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "index.html#como-este-relatório-funciona",
+    "href": "index.html#como-este-relatório-funciona",
+    "title": "Nota técnica — Potencial de barragens de montante em Estrela/RS",
+    "section": "Como este relatório funciona",
+    "text": "Como este relatório funciona\n\nCada etapa da análise é um capítulo .qmd deste livro.\nOs dados intermediários e os scripts permanecem no repositório, permitindo auditoria e reprodução.\nAs alternativas são comparadas por volume, área, energia, interferência longitudinal, dano evitado e segurança — nunca por um único indicador.\nA recomendação é deliberadamente provisória: a seleção final depende do HEC-RAS 1D, das curvas cota–dano e da validação dos dados oficiais.",
+    "crumbs": [
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "index.html#sumário-executivo",
+    "href": "index.html#sumário-executivo",
+    "title": "Nota técnica — Potencial de barragens de montante em Estrela/RS",
+    "section": "Sumário executivo",
+    "text": "Sumário executivo\nO primeiro ciclo de trabalho produziu quatro conclusões que orientam as próximas etapas:\n\nAlteamento das UHEs existentes é uma sensibilidade, não o eixo principal. As curvas disponíveis indicam ganho de espera pequeno diante da ordem de grandeza necessária e sugerem obra e restrições operacionais expressivas.\nO desenho deve priorizar eixos novos que não afoguem diretamente as usinas existentes. A cascata do rio das Antas — Monte Claro, Castro Alves e 14 de Julho — é a restrição longitudinal dominante.\nA simulação hidráulica terá uma ordem explícita. Primeiro vem o caso sem obra (HEC-00), depois E02 + E04 (HEC-01), E02 + E04 + E08 (HEC-02) e E02 + E04 + E12 (HEC-03). GU1 será a extensão estrutural prioritária; Forqueta e cascatas críticas entram como sensibilidades laterais ou de rede.\nO HEC-RAS será 1D. O preparo preliminar já conta com 39,4 km de eixo, 102 seções, quatro travessias e seis tributários; faltam topobatimetria, vãos e dados de contorno para a rodada confiável.\n\n\n\n\n\n\n\nLeitura correta dos resultados\n\n\n\nOs números deste site servem para dimensionar perguntas, comparar hipóteses e orientar a contratação. Parâmetros sintéticos, CAVs de eixos novos e regras de comportas ainda não calibradas não devem ser apresentados como desempenho garantido de uma barragem.",
+    "crumbs": [
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "index.html#capítulos",
+    "href": "index.html#capítulos",
+    "title": "Nota técnica — Potencial de barragens de montante em Estrela/RS",
+    "section": "Capítulos",
+    "text": "Capítulos\n\n\n\nCapítulo\nConteúdo\n\n\n\n\nContexto e pergunta decisória\nEvento de referência, objetivo e decisões que a nota precisa subsidiar\n\n\nDados e métodos\nMDE/ANADEM, CAV, HAND, hidrologia, danos e rastreabilidade\n\n\nAlternativas estudadas\nAlteamento, eixos novos, alternativas distribuídas e critérios\n\n\nHidrologia e HAND\nDelineamento, hidrogramas e triagem altimétrica antes do HEC-RAS\n\n\nCascatas com comportas\nRede de eixos, regra preliminar e cenários C01–C05\n\n\nHEC-RAS 1D\nMatriz HEC-00–HEC-06, topologia, insumos e lacunas\n\n\nDanos e economia\nAtlas de Desastres, exposição e curva cota–dano preliminar\n\n\nConclusões e próximos passos\nO que já pode ser afirmado e o que precisa ser contratado",
+    "crumbs": [
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "index.html#arquivos-centrais",
+    "href": "index.html#arquivos-centrais",
+    "title": "Nota técnica — Potencial de barragens de montante em Estrela/RS",
+    "section": "Arquivos centrais",
+    "text": "Arquivos centrais\n\nNota técnica em Markdown\nStatus atualizado\nHandoff completo\nRoteiro do HEC-RAS 1D\nCatálogo consolidado de CAVs\nBase preliminar de danos por município\nKMZ de pontos exploratórios\n\n\n\n\n\n\n\nTemplate visual\n\n\n\nEsta nota usa a estrutura de livro Quarto do Minicurso TRIGRS da SEDEC/DPM, adaptada ao estudo de cheias. Foram mantidas as marcas do DPM e da Defesa Civil; a marca da UFF não faz parte deste relatório.",
+    "crumbs": [
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "01-contexto.html",
+    "href": "01-contexto.html",
+    "title": "1  Contexto e pergunta decisória",
+    "section": "",
+    "text": "1.1 Por que esta análise existe\nAs cheias de maio de 2024 expuseram a necessidade de quantificar, para a bacia do Taquari–Antas, quais combinações de medidas estruturais e não estruturais poderiam reduzir níveis, tempos de permanência e danos em Estrela e nos municípios a jusante.\nA pergunta não é simplesmente “qual a melhor barragem?”. A pergunta operacional é:",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Contexto e pergunta decisória</span>"
+    ]
+  },
+  {
+    "objectID": "01-contexto.html#por-que-esta-análise-existe",
+    "href": "01-contexto.html#por-que-esta-análise-existe",
+    "title": "1  Contexto e pergunta decisória",
+    "section": "",
+    "text": "Qual combinação de reservatórios, volumes de espera, regras de operação e medidas complementares produz redução mensurável de danos, sem transferir risco para montante, sem comprometer a cascata hidrelétrica existente e com custo justificável?",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Contexto e pergunta decisória</span>"
+    ]
+  },
+  {
+    "objectID": "01-contexto.html#evento-de-referência",
+    "href": "01-contexto.html#evento-de-referência",
+    "title": "1  Contexto e pergunta decisória",
+    "section": "1.2 Evento de referência",
+    "text": "1.2 Evento de referência\nO evento de maio de 2024 é usado como referência de exposição e como teste inicial de ordem de grandeza. A análise deve manter separadas três camadas:\n\nHidrologia: chuva, vazões afluentes, sincronização de picos e incertezas;\nHidráulica: níveis e velocidades ao longo do rio, remanso, pontes e áreas inundadas;\nRisco: pessoas, edificações, infraestrutura, perdas econômicas e danos evitados.\n\nMisturar as três camadas em um único número esconde as hipóteses mais importantes.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Contexto e pergunta decisória</span>"
+    ]
+  },
+  {
+    "objectID": "01-contexto.html#escala-da-bacia",
+    "href": "01-contexto.html#escala-da-bacia",
+    "title": "1  Contexto e pergunta decisória",
+    "section": "1.3 Escala da bacia",
+    "text": "1.3 Escala da bacia\nO recorte de referência trabalha com aproximadamente 19.440 km² no início do trecho modelado em Estrela e 23.618 km² para a bacia Taquari–Antas completa. Os primeiros eixos BAR-A, BAR-A2 e BAR-B eram aninhados; por isso, os volumes não poderiam ser somados sem contabilizar a sobreposição de áreas.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Contexto e pergunta decisória</span>"
+    ]
+  },
+  {
+    "objectID": "01-contexto.html#perguntas-que-o-estudo-deve-responder",
+    "href": "01-contexto.html#perguntas-que-o-estudo-deve-responder",
+    "title": "1  Contexto e pergunta decisória",
+    "section": "1.4 Perguntas que o estudo deve responder",
+    "text": "1.4 Perguntas que o estudo deve responder\n\nQual é a redução de pico e de cota no ponto de controle em Estrela?\nQual é o tempo disponível para alerta e evacuação em cada cenário?\nQuanto dano é efetivamente evitado, por município e por faixa de cota?\nQuais eixos afetam as cotas operacionais ou a produção das UHEs existentes?\nCascatas com comportas melhoram o resultado sem criar saturação e galgamento em série?\nA solução é robusta para eventos maiores, defasagens de onda e falhas de operação?\n\n\n\n\n\n\n\nCritério de decisão\n\n\n\nUma alternativa só poderá ser chamada de “selecionada” depois de passar por: (i) balanço hidrológico; (ii) HEC-RAS 1D calibrado ou validado; (iii) curva cota–dano documentada; (iv) análise de segurança e operação; e (v) comparação econômica transparente.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Contexto e pergunta decisória</span>"
+    ]
+  },
+  {
+    "objectID": "02-dados-e-metodos.html",
+    "href": "02-dados-e-metodos.html",
+    "title": "2  Dados e métodos",
+    "section": "",
+    "text": "2.1 Dados principais",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados e métodos</span>"
+    ]
+  },
+  {
+    "objectID": "02-dados-e-metodos.html#dados-principais",
+    "href": "02-dados-e-metodos.html#dados-principais",
+    "title": "2  Dados e métodos",
+    "section": "",
+    "text": "Dado\nUso\nSituação\n\n\n\n\nMDE do projeto / ANADEM\nrelevo, drenagem e triagem de áreas\ndisponível; cobertura deve ser conferida no trecho detalhado\n\n\nDireções de fluxo D8\ndelimitação de áreas contribuintes\ndisponível\n\n\nBHO/ANA\nrede hidrográfica e áreas ottocodificadas\ndisponível\n\n\nCAVs do SNIRH\nreservatórios existentes e deplecionamento\nmetadados importados; validar datum, versão e série\n\n\nCAVs de eixos novos\nárea e volume em cotas de estudo\nestimadas a partir do MDE; classe B até validação topográfica\n\n\nAtlas Digital de Desastres\nperdas e afetados por município\nextração preliminar para o recorte de maio de 2024\n\n\nEUROCLIMA-rev.kmz\ninventário de eixos candidatos\nconvertido e incorporado ao inventário E01–E12\n\n\nTopobatimetria, pontes e níveis\nHEC-RAS 1D\npendente de aquisição/levantamento",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados e métodos</span>"
+    ]
+  },
+  {
+    "objectID": "02-dados-e-metodos.html#cavs-e-ausência-de-batimetria",
+    "href": "02-dados-e-metodos.html#cavs-e-ausência-de-batimetria",
+    "title": "2  Dados e métodos",
+    "section": "2.2 CAVs e ausência de batimetria",
+    "text": "2.2 CAVs e ausência de batimetria\nPara reservatórios existentes, o MDE registra a superfície da água e não informa de maneira confiável o volume abaixo do nível normal. Por isso, o estudo usa as curvas cota–área–volume do SNIRH quando disponíveis e mantém a batimetria como lacuna explícita.\nPara eixos novos, nos quais atualmente não há reservatório, foi adotada uma aproximação por curvas de nível e área alagada conectada ao eixo. O volume é integrado entre cotas e depois interpolado com PCHIP para evitar oscilações artificiais. Polinômios são mantidos apenas como apoio de inspeção, não como representação operacional principal.\nO procedimento é compatível com a lógica de reconstrução de relações nível–área–volume a partir de topografia e áreas inundadas descrita na literatura de sensoriamento remoto e modelagem de reservatórios; a referência específica está no capítulo de referências.\n\n\n\n\n\n\nFigura 2.1: Curvas cota–área–volume importadas do SNIRH para as estruturas existentes. A figura é uma conferência visual da base; os valores operacionais ainda dependem de datum e metadados.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados e métodos</span>"
+    ]
+  },
+  {
+    "objectID": "02-dados-e-metodos.html#hidrologia",
+    "href": "02-dados-e-metodos.html#hidrologia",
+    "title": "2  Dados e métodos",
+    "section": "2.3 Hidrologia",
+    "text": "2.3 Hidrologia\nO pipeline delimita bacias por busca de montante sobre a grade D8, com ajuste ao controle da BHO. A vazão específica calibrada para a triagem é 0,0269 m³/s/km²; os resultados da primeira rodada com 0,020 m³/s/km² permanecem apenas como histórico.\nOs hidrogramas preliminares não substituem uma série consistida. A próxima etapa deverá recalibrar perdas, transformação chuva–vazão, defasagens entre sub-bacias e volumes de entrada dos tributários com dados da ANA, ONS e operadores.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados e métodos</span>"
+    ]
+  },
+  {
+    "objectID": "02-dados-e-metodos.html#hand-como-triagem-altimétrica",
+    "href": "02-dados-e-metodos.html#hand-como-triagem-altimétrica",
+    "title": "2  Dados e métodos",
+    "section": "2.4 HAND como triagem altimétrica",
+    "text": "2.4 HAND como triagem altimétrica\nO HAND (Height Above Nearest Drainage) é empregado antes da modelagem hidráulica para identificar células potencialmente conectadas à drenagem e organizar os níveis de análise. Ele ajuda a localizar áreas baixas e a priorizar cortes transversais, mas não resolve:\n\nremanso e controle de jusante;\nperdas de carga em pontes;\narmazenamento dinâmico na planície;\noperação de comportas;\npropagação temporal de ondas em estruturas em série.\n\nAssim, HAND é filtro e ferramenta de comunicação, não substituto do HEC-RAS 1D.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados e métodos</span>"
+    ]
+  },
+  {
+    "objectID": "02-dados-e-metodos.html#rastreabilidade",
+    "href": "02-dados-e-metodos.html#rastreabilidade",
+    "title": "2  Dados e métodos",
+    "section": "2.5 Rastreabilidade",
+    "text": "2.5 Rastreabilidade\nOs scripts numerados em 07_python/ registram a sequência de preparação. As bases de saída mais importantes estão em 06_resultados/, e os achados da trilha de revisão ficam em 06_resultados/CLAUDE/CLAUDE_ACHADOS_PARA_CODEX.md.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Dados e métodos</span>"
+    ]
+  },
+  {
+    "objectID": "03-alternativas.html",
+    "href": "03-alternativas.html",
+    "title": "3  Alternativas estudadas e justificativa",
+    "section": "",
+    "text": "3.1 1. Referência e arranjos híbridos\nO cenário sem novos reservatórios é a referência contra a qual se mede qualquer benefício. Também devem ser comparados arranjos híbridos com previsão e alerta, ordenamento territorial, proteção localizada, retenção distribuída, evacuação e operação coordenada dos reservatórios existentes. Sem essa referência, a barragem pode receber crédito por reduções que seriam obtidas por medidas de menor prazo.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Alternativas estudadas e justificativa</span>"
+    ]
+  },
+  {
+    "objectID": "03-alternativas.html#alteamento-das-uhes-existentes",
+    "href": "03-alternativas.html#alteamento-das-uhes-existentes",
+    "title": "3  Alternativas estudadas e justificativa",
+    "section": "3.2 2. Alteamento das UHEs existentes",
+    "text": "3.2 2. Alteamento das UHEs existentes\nO alteamento fica documentado como alternativa de sensibilidade. As curvas disponíveis indicam ganho aproximado de 105 hm³ para 10 m e 139 hm³ para 15 m de deplecionamento conjunto das UHEs 14 de Julho, Castro Alves e Monte Claro, diante de uma ordem de grandeza de 3.230 hm³ usada para a referência.\nEsse resultado não encerra a questão: ele indica que os indícios são de valores expressivos de obra e que o ganho de espera pode ser pequeno. Custos, vertedouro, estabilidade, remanso, desapropriações, segurança, licenciamento e perda de energia precisam ser avaliados em nível de projeto. Enquanto isso, o esforço principal deve se concentrar em eixos novos sem interferência direta nas barragens existentes.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Alternativas estudadas e justificativa</span>"
+    ]
+  },
+  {
+    "objectID": "03-alternativas.html#primeira-rodada-de-eixos",
+    "href": "03-alternativas.html#primeira-rodada-de-eixos",
+    "title": "3  Alternativas estudadas e justificativa",
+    "section": "3.3 3. Primeira rodada de eixos",
+    "text": "3.3 3. Primeira rodada de eixos\nOs primeiros arranjos BAR-A, BAR-A2 e BAR-B foram úteis para testar a escala, mas são aninhados. A comparação correta é entre uma estrutura única de grande porte e dois reservatórios distribuídos que cubram ramos convergentes.\n\n\n\n\n\n\n\n\nArranjo\nLógica\nResultado de triagem\n\n\n\n\nBAR-A\nestrutura única, maior controle\nmaior volume, maior porte e maior concentração de impactos\n\n\nBAR-A2 + BAR-B\nduas estruturas distribuídas\nevita uma única obra extrema; exige coordenação e soma de impactos\n\n\nAlternativa híbrida\nbarragem + medidas não estruturais\npermite reduzir o volume estrutural necessário",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Alternativas estudadas e justificativa</span>"
+    ]
+  },
+  {
+    "objectID": "03-alternativas.html#portfólio-e01e12",
+    "href": "03-alternativas.html#portfólio-e01e12",
+    "title": "3  Alternativas estudadas e justificativa",
+    "section": "3.4 4. Portfólio E01–E12",
+    "text": "3.4 4. Portfólio E01–E12\nO inventário ampliado veio do arquivo EUROCLIMA-rev.kmz. Os eixos foram convertidos para uma base comum e avaliados por volume, área, energia, cobertura e interferência longitudinal. As alternativas de maior interesse na rodada revisada são:\n\n\n\n\n\n\n\n\n\n\nAlternativa\nEixos\nÁrea controlada\nVolume de espera\nLeitura\n\n\n\n\nALT-A\nE02 + E04\n11.089 km²\n1.794 hm³\nreferência distribuída, apenas prioritários\n\n\nALT-D\nE02 + E04 + E08\n11.950 km²\n2.104 hm³\ncobertura intermediária, E08 condicionado\n\n\nALT-E\nE02 + E04 + E12\n15.760 km²\n2.282 hm³\nmaior cobertura; E12 condicionado à 14 de Julho\n\n\nALT-I\nE02 + E04 + E01 + E05 + E08\n14.499 km²\n2.235 hm³\narranjo intermediário, mais estruturas\n\n\nALT-H\nE12 isolado\n15.760 km²\n488 hm³\nalto alcance, baixa espera e restrição crítica\n\n\n\nOs valores são de triagem e dependem da regra de operação e da definição de volume útil. A discrepância entre a cota de Monte Claro no MDE principal e a CAV oficial está documentada em Conciliação preliminar do datum de Monte Claro e deve ser resolvida antes de fechar a altura admissível de E09.\n\n3.4.1 Volume nominal e volume efetivamente utilizado\nO volume da tabela anterior é a capacidade nominal de espera derivada das CAVs. Na rodada C1–C4, o roteamento com barragem seca mostrou quanto desse volume foi efetivamente utilizado e qual foi o pico residual:\n\n\n\n\n\n\n\n\n\n\n\nAlternativa\nEixos\nVolume nominal (hm³)\nVolume usado (hm³)\nPico residual (m³/s)\nRedução\n\n\n\n\nALT-A\nE02 + E04\n1.794\n1.694\n9.272\n43,1%\n\n\nALT-D\nE02 + E04 + E08\n2.104\n1.871\n8.411\n48,4%\n\n\nALT-E\nE02 + E04 + E12\n2.282\n2.366\n6.328\n61,2%\n\n\nALT-J\nE02 + E04 + E01 + E05 + E08 + E12\n2.723\n2.639\n6.213\n61,9%\n\n\n\nALT-J é uma ampliação da carteira que passou a ser analisada na rodada calibrada. O fato de o volume usado poder superar o volume nominal de 50% da rodada SINV decorre da regra de operação, do volume inicial, dos aportes incrementais e da definição operacional usada no roteamento; a comparação final deve ser feita sempre com as séries de nível e volume de cada reservatório. O arquivo completo é claude_alternativas_finais.csv.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Alternativas estudadas e justificativa</span>"
+    ]
+  },
+  {
+    "objectID": "03-alternativas.html#divisão-de-quedas-e-restrições-longitudinais",
+    "href": "03-alternativas.html#divisão-de-quedas-e-restrições-longitudinais",
+    "title": "3  Alternativas estudadas e justificativa",
+    "section": "3.5 Divisão de quedas e restrições longitudinais",
+    "text": "3.5 Divisão de quedas e restrições longitudinais\nA figura geral mostra a posição relativa dos eixos e das usinas existentes. Os dois zooms separam a região dos eixos prioritários e a cascata das Antas, onde pequenas diferenças de cota mudam a admissibilidade do reservatório.\n\n\n\n\n\n\nFigura 3.1: Divisão de quedas revisada, com eixos candidatos e usinas existentes.\n\n\n\n\n\n\n\n\n\nFigura 3.2: Zoom dos eixos E02 e E04 em relação a Castro Alves.\n\n\n\n\n\n\n\n\n\nFigura 3.3: Zoom da cascata do rio das Antas, incluindo Monte Claro, Castro Alves e 14 de Julho.\n\n\n\n\n\n\n\n\n\nFigura 3.4: Comparação da divisão de quedas para as alternativas ALT-A, ALT-D, ALT-E/C02, ALT-I, C04 e os pontos exploratórios.\n\n\n\n\n\n\n\n\n\nFigura 3.5: Matriz das barragens consideradas em cada alternativa final e em cada cenário de comportas.\n\n\n\n\n\n\n\n\n\nFigura 3.6: Matriz dos cenários que combinam ALT-J com os eixos de retenção do Forqueta.\n\n\n\nA matriz torna explícita a composição de cada alternativa. As alternativas ALT-A–ALT-I são a carteira de comparação; C01–C05 são cenários de operação coordenada com comportas. A presença de um eixo na matriz não significa que a obra tenha sido selecionada: E08, E09–E12 e os eixos em cascata permanecem condicionados à verificação de remanso, energia, segurança e HEC-RAS 1D.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Alternativas estudadas e justificativa</span>"
+    ]
+  },
+  {
+    "objectID": "03-alternativas.html#novos-pontos-exploratórios-derivados-do-perfil",
+    "href": "03-alternativas.html#novos-pontos-exploratórios-derivados-do-perfil",
+    "title": "3  Alternativas estudadas e justificativa",
+    "section": "3.6 Novos pontos exploratórios derivados do perfil",
+    "text": "3.6 Novos pontos exploratórios derivados do perfil\nO perfil longitudinal foi suavizado em uma janela móvel e analisado por queda média em 10 km. O objetivo não foi localizar uma barragem pronta, mas indicar trechos que merecem levantamento topográfico, estudo de conexão hidráulica e verificação de energia.\n\n\n\n\n\n\n\n\n\n\nCódigo\nCoordenadas WGS84\nDistância no perfil\nQueda média em 10 km\nPapel preliminar\n\n\n\n\nCA2-PROPOSTO\n−29,0457167; −51,3622784\n255,00 km\n32,8 m\nqueda concentrada a jusante de Castro Alves\n\n\nMC2-PROPOSTO\n−29,0455307; −51,5562985\n294,48 km\n6,3 m\ngeometria fornecida pelo usuário, entre Monte Claro e 14 de Julho\n\n\n14J2-PROPOSTO\n−29,0658852; −51,6384943\n330,25 km\n33,0 m\nqueda a jusante de 14 de Julho e controle de cheias\n\n\nEST1-PROPOSTO\n−29,1656775; −51,7456402\n360,00 km\n8,9 m\ncontrole de cheias próximo ao trecho de interesse, baixa energia\n\n\n\n\n\n\n\n\n\nFigura 3.7: Perfil longitudinal com as usinas existentes e os pontos exploratórios propostos.\n\n\n\n\n3.6.1 Novos eixos exploratórios no Forqueta — opção condicionada\nComo o Forqueta representa aproximadamente 14,63% da área contribuinte da seção de Estrela, foram incluídos dois eixos de triagem no seu curso principal. A geometria foi construída perpendicularmente ao talvegue BHO e reprocessada no pipeline de CAV em uma rodada isolada.\nHá uma distinção espacial essencial: o ponto de análise hidrológica de 19.440 km² está a montante da confluência do Forqueta. Assim, FQ1 e FQ2 não alteram o hidrograma nesse ponto; sua eventual utilidade só aparece nos controles de Lajeado, Estrela e jusante, quando o hidrograma lateral é inserido no HEC-RAS 1D.\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nCoordenadas WGS84\nÁrea BHO a montante\nCota do eixo no MDE\nVolume a 80 m\nPapel\n\n\n\n\nFQ1-PROPOSTO\n−29,402960; −52,029700\n2.353,6 km²\n22,5 m\n2.424 hm³\nopção condicionada à defasagem\n\n\nFQ2-PROPOSTO\n−29,322620; −52,090830\n2.226,7 km²\n40,0 m\n1.289 hm³\nsensibilidade, alternativa exclusiva\n\n\n\nOs volumes foram extraídos da CAV derivada do MDE natural: FQ1 chega a 5.518 hm³ e FQ2 a 3.043 hm³ no teto geométrico de 120 m. Esses valores não são volume operacional nem altura admissível. A série medida do posto 86745000 reduziu a defasagem central adotada para 0 dia em 13 eventos e o pico de projeto transposto do Forqueta para 3.837 m³/s. Entretanto, há uma lacuna no posto durante novembro de 2023, justamente no maior evento observado em Estrela. A conclusão sobre FQ1 permanece condicionada à reconstituição subdiária em Barra do Fão.\nNa rodada calibrada com exutório em Estrela, ALT-J sem Forqueta reduziu o pico em 58,6%. ALT-J+FQ1 reduziu 59,3% e ALT-J+FQ2, 59,7%. FQ1 e FQ2 não são combináveis: com 30 m, o NA preliminar de FQ1 fica 12,5 m acima da cota do eixo FQ2. A eficiência marginal foi 0,33 pp/100 hm³ para FQ1 e 0,74 pp/100 hm³ para FQ2, muito inferior à carteira do Antas. Por isso, nenhum dos dois entra na alternativa de referência.\nIsso não significa descartar o Forqueta. Como o tributário conflui a montante de Estrela, ele permanece relevante para os controles de Lajeado, Estrela e Bom Retiro do Sul e deve ser mantido como alternativa condicionada no HEC-RAS 1D. O que foi retirado da referência é a combinação automática com a carteira do Antas, não a hipótese de aproveitamento do Forqueta.\n\n3.6.1.1 Triagem combinada Antas + Forqueta\nPara verificar se o Forqueta poderia mudar a conclusão, foi executada uma matriz com as alternativas ALT-A a ALT-J, cenário sem Forqueta, FQ1 e FQ2, e três regras operativas. O exutório é Estrela e a defasagem adotada é a medida nos eventos pareados: 0 h. O pico natural sintético resultante é 16.903 m³/s, próximo do máximo observado de 17.261 m³/s em 19/11/2023.\n\n\n\n\n\n\n\n\n\n\nRegra\nMelhor combinação\nPico em Estrela\nRedução\nAcima de 4.000 m³/s\n\n\n\n\nBarragem seca\nALT-J + FQ2\n6.802 m³/s\n59,8%\n2.802 m³/s\n\n\nComportas\nALT-J + FQ1\n7.887 m³/s\n53,3%\n3.887 m³/s\n\n\nConvencional\nALT-D sem Forqueta\n15.799 m³/s\n6,5%\n11.799 m³/s\n\n\n\nO melhor resultado fisicamente admissível foi, portanto, ALT-J + FQ2, mas ainda ficou 60,6% abaixo do pico observado de 2023 e acima do limiar preliminar de 4.000 m³/s. Não houve combinação que levasse a vazão em Estrela a uma magnitude compatível com a não ocorrência de cheia. O limiar de 4.000 m³/s é apenas uma referência de triagem e deve ser substituído pela relação cota–dano calibrada no HEC-RAS 1D.\n\n\n\n\n\n\nFigura 3.8: Hidrogramas da triagem combinada das barragens do Antas com as opções FQ1 e FQ2.\n\n\n\n\nMatriz completa do roteamento Antas + Forqueta\nSíntese interpretativa da rodada\nSéries dos hidrogramas combinados\n\n\n\n3.6.1.2 Busca ampliada: adicionar outras barragens à ALT-J\nPara verificar se o resultado poderia ser melhorado simplesmente acrescentando outras barragens da carteira do rio das Antas, foi feita uma busca exaustiva de todas as 32 adições possíveis à ALT-J, mantendo E10 fora da carteira principal. Também foi calculado um envelope teórico com E10, apesar de seu balanço energético preliminar negativo, e foram testadas 192 combinações com FQ1, FQ2 ou sem Forqueta, sob regras de barragem seca e comportas.\n\n\n\n\n\n\n\n\n\n\nBusca\nMelhor composição\nPico em Estrela\nExcesso sobre 4.000 m³/s\nCombinações abaixo de 4.000\n\n\n\n\nAdições à ALT-J, E10 excluído\nALT-J\n7.005 m³/s\n3.005 m³/s\n0 de 32\n\n\nEnvelope incluindo E10\nALT-J\n7.005 m³/s\n3.005 m³/s\n0 de 64\n\n\nAdições à ALT-J + Forqueta\nALT-J + FQ2, seca\n6.802 m³/s\n2.802 m³/s\n0 de 192\n\n\n\nO fato de as adições E03, E06, E07, E09 e E11 não alterarem o pico terminal não significa que sejam inúteis em qualquer projeto. O resultado indica que, na parametrização atual, elas são eixos aninhados ou redundantes em relação ao E12: quando o E12 está presente, a carteira já controla a mesma área terminal de 81,1% da seção de análise. Essas barragens ainda podem alterar níveis locais, remanso, tempo de propagação, distribuição do armazenamento e segurança operacional — efeitos que somente o HEC-RAS 1D acoplado à operação poderá revelar.\nO resultado também delimita a investigação: não há, entre os eixos adicionais da carteira atual, uma composição que leve Estrela à faixa preliminar de não inundação. O arquivo de síntese da busca ampliada e as 32 carteiras principais, o envelope com E10 e as combinações com Forqueta ficam como trilha reproduzível.\n\n\n\n\n\n\nFigura 3.9: Eixos exploratórios de retenção no rio Forqueta.\n\n\n\n\nTabela dos eixos e áreas do Forqueta\nKMZ dos eixos de triagem no Forqueta\nCAV isolada dos eixos do Forqueta\n\nOs pontos são deliberadamente chamados de propostos. O arquivo separado EIXO-MONTECLARO2.kmz foi conferido e contém uma LineString sobre o canal principal. O ponto médio dessa linha está na estaca aproximada 294,48 km do perfil e a cerca de 12 m do talvegue amostrado; a geometria original foi preservada no KMZ consolidado. A cota usada na triagem vem do perfil suavizado do MDE, não das altitudes gravadas no KML, que ainda precisam ser conferidas quanto ao datum. Os demais elementos do EUROCLIMA-rev.kmz continuam com rótulos genéricos EIXO e não devem ser tratados como alternativas selecionadas sem validação.\n\nTabela de coordenadas e critérios\nKMZ para conferência\nKML aberto\nGeoPackage dos pontos\n\n\n\n\n3.6.2 Como esses pontos entram nas alternativas\nCA2, MC2 e 14J2 devem entrar primeiro como cenários isolados de sensibilidade. FQ1 e FQ2 devem permanecer fora da alternativa de referência; FQ1 só deve ser reaberto se a série subdiária de Barra do Fão confirmar defasagem positiva no evento de projeto. FQ1 e FQ2 devem ser tratados como alternativas mutuamente exclusivas, nunca como uma cascata conjunta. EST1 deve ser mantido como alternativa de controle de cheias, não como eixo energético: sua queda média é pequena e o benefício depende principalmente de armazenamento e operação.\nO achado novo que merece prioridade é o rio Guaporé. O posto Santa Lúcia (86580000) indica cerca de 2.470 km², contribuição comparável à do Forqueta, mas situada a montante do ponto de análise e sem eixo de controle na carteira E01–E12. A hipótese de um eixo no Guaporé deve ser investigada separadamente, com BHO/D8, CAV preliminar, interferência com Monte Cuco/Guaporé e roteamento; ainda não é uma alternativa selecionada.\nO Guaporé é, portanto, a próxima adição estrutural a ser investigada. Diferentemente de uma simples adição de E03/E06/E07/E09/E11, ele exige separar do hidrograma sintético do Antas a parcela de sua sub-bacia, roteá-la pelo GU1 e recompor a contribuição na seção de 19.440 km². Sem essa separação, somar um hidrograma do Guaporé produziria dupla contagem.\n\n3.6.2.1 Primeira triagem numérica do GU1\nCom a série do posto Santa Lúcia (86580000), foi feita uma decomposição explícita do hidrograma: 2.486,7 km² do Guaporé e 16.953,3 km² de vertente residual do Antas. O GU1 controla preliminarmente 1.993,7 km² (80,2% do Guaporé). Foram testadas duas magnitudes de afluência do Guaporé — o máximo histórico observado e o máximo de novembro de 2023 —, defasagens de 0 a 24 h, alturas de 30 a 120 m e combinações com ALT-J e FQ2.\n\n\n\n\n\n\n\n\n\n\n\nEvento / hipótese\nComposição\nAltura GU1\nDefasagem\nPico em Estrela\nExcesso sobre 4.000\n\n\n\n\nMáximo histórico Santa Lúcia\nALT-J + GU1\n100 m\n0 h\n4.532 m³/s\n532 m³/s\n\n\nNovembro de 2023\nALT-J + GU1\n120 m (envelope)\n0 h\n4.763 m³/s\n763 m³/s\n\n\nMáximo histórico + FQ2\nALT-J + GU1 + FQ2\n100 m\n0 h\n6.166 m³/s\n2.166 m³/s\n\n\n\nO melhor resultado da matriz foi 4.532 m³/s, no cenário do máximo histórico do Guaporé, com ALT-J e GU1 a 100 m. Nenhuma das 384 combinações testadas ficou abaixo de 4.000 m³/s. O FQ2 não melhorou esse arranjo porque sua contribuição lateral e sua regra de descarga alteram a onda em outro ponto do sistema; a combinação deve ser reavaliada no HEC-RAS 1D, não descartada apenas pelo pico agregado desta triagem.\nOs números usam hidrogramas Gamma sintéticos, pico diário transposto, CAV derivada de MDE e 120 m apenas como envelope geométrico. Não são altura admissível nem projeto de operação. O roteamento GU1 + Antas, a tabela completa e o hidrograma comparativo deixam essa etapa reproduzível.\n\n\n\n\n\n\nFigura 3.10: Eixo exploratório GU1 e aproveitamentos existentes no Guaporé.\n\n\n\n\nKMZ do eixo GU1 para conferência\nShapefile do eixo GU1\nCAV isolada do GU1\n\nNenhum ponto deve ser convertido automaticamente em E13. A numeração oficial só deve ser atualizada depois que a geometria do KMZ for confirmada e o pipeline de bacias, CAV, topologia e restrições for reexecutado.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Alternativas estudadas e justificativa</span>"
+    ]
+  },
+  {
+    "objectID": "03-alternativas.html#alternativas-que-irão-ao-hec-ras-1d",
+    "href": "03-alternativas.html#alternativas-que-irão-ao-hec-ras-1d",
+    "title": "3  Alternativas estudadas e justificativa",
+    "section": "3.7 5. Alternativas que irão ao HEC-RAS 1D",
+    "text": "3.7 5. Alternativas que irão ao HEC-RAS 1D\nAs alternativas que aparentam melhor cobertura não são automaticamente as melhores: E12 interage com a 14 de Julho, E08 com Castro Alves e E09–E11 com a cascata das Antas. O critério de “não interferência” também deve distinguir o início de perda energética do nível de veto físico. Essa separação evita descartar cedo demais eixos que podem ser operados com perda controlada — ou aceitar eixos cujo remanso seja inviável.\nPara não confundir carteira, cenário de comportas e afluência lateral, a entrada no HEC-RAS 1D fica organizada assim:\n\n\n\n\n\n\n\n\n\n\nOrdem\nPlano HEC\nAlternativa/cenário\nComposição\nFinalidade\n\n\n\n\n0\nHEC-00 / REF\nsituação atual\nsem novos reservatórios\ncalibrar a resposta hidráulica e a curva cota–dano\n\n\n1\nHEC-01 / ALT-A / C01\nbase\nE02 + E04\nprimeiro caso com obra, com dois ramos prioritários\n\n\n2\nHEC-02 / ALT-D / C03\nintermediária\nE02 + E04 + E08\nmedir o ganho incremental de E08, condicionado a Castro Alves\n\n\n3\nHEC-03 / ALT-E / C02\ncobertura\nE02 + E04 + E12\nmedir a cobertura terminal, condicionada a 14 de Julho\n\n\n4\nHEC-04\nextensão estrutural\nALT-J + GU1\ntestar o Guaporé, que controla uma contribuição independente a montante\n\n\n5\nHEC-05\nextensão lateral\nALT-J + FQ2\ntestar o Forqueta no trecho de Estrela, sem somá-lo ao montante de 19.440 km²\n\n\n6\nHEC-06\nsensibilidades\nC04, C05, FQ1 e combinações selecionadas\ntestar comportas, saturação, galgamento e hipóteses de maior complexidade\n\n\n\nO caso HEC-01 (E02 + E04) é o primeiro arranjo com obra que deve ser construído depois do caso sem obra. HEC-02 e HEC-03 são comparações incrementais, não escolhas prévias. O HEC-04 entra depois da calibração porque exige retirar a sub-bacia do Guaporé do hidrograma residual do Antas; o HEC-05 entra como contribuição lateral observada. FQ1 e FQ2 são mutuamente exclusivas e FQ1 permanece condicionada à resolução da lacuna de novembro de 2023.\n\n\n\n\n\n\nDecisão provisória, agora explicitada\n\n\n\nNão há alternativa selecionada para implantação. A matriz mínima obrigatória é HEC-00 + HEC-01 + HEC-02 + HEC-03; a extensão prioritária é HEC-04 (ALT-J + GU1); HEC-05 e HEC-06 são sensibilidades. O primeiro caso com obra é E02 + E04. A seleção só será feita depois de remanso, operação, curva cota–dano, energia, segurança e custos serem avaliados com a mesma base de comparação.\n\n\nO diagrama que acompanha essa decisão está em topologia e sequência de cenários.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Alternativas estudadas e justificativa</span>"
+    ]
+  },
+  {
+    "objectID": "03-alternativas.html#critérios-para-a-rodada-contratada",
+    "href": "03-alternativas.html#critérios-para-a-rodada-contratada",
+    "title": "3  Alternativas estudadas e justificativa",
+    "section": "3.8 6. Critérios para a rodada contratada",
+    "text": "3.8 6. Critérios para a rodada contratada\nCada alternativa deve ser avaliada com o mesmo evento, mesma curva cota–dano e mesma referência econômica, reportando:\n\npico e cota máxima em Estrela e pontos intermediários;\nredução de duração acima de cotas críticas;\nvolume de espera inicial e volume efetivamente utilizado;\nmunicípios, pessoas e ativos protegidos;\ninterferência em UHEs existentes e energia firme;\nsegurança, galgamento, operação e falhas;\ncusto de implantação, operação, manutenção e compensações.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Alternativas estudadas e justificativa</span>"
+    ]
+  },
+  {
+    "objectID": "04-hidrologia-hand.html",
+    "href": "04-hidrologia-hand.html",
+    "title": "4  Hidrologia e HAND",
+    "section": "",
+    "text": "4.1 Delimitação e vazões\nO delineamento de montante foi realizado sobre o D8 e conferido contra áreas da BHO/ANA. Para BAR-A, a área controlada foi aproximadamente 15.760 km², com aderência inferior a 1% ao controle ottocodificado. A consistência espacial é suficiente para uma triagem, mas não substitui a calibração hidrológica.\nO valor calibrado de referência para a vazão específica é 0,0269 m³/s/km². O número deve ser substituído por parâmetros derivados de séries observadas e por uma transformação chuva–vazão calibrada para o evento de 2024 e para eventos de projeto.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hidrologia e HAND</span>"
+    ]
+  },
+  {
+    "objectID": "04-hidrologia-hand.html#cadeia-de-cálculo-hidrológico",
+    "href": "04-hidrologia-hand.html#cadeia-de-cálculo-hidrológico",
+    "title": "4  Hidrologia e HAND",
+    "section": "4.2 Cadeia de cálculo hidrológico",
+    "text": "4.2 Cadeia de cálculo hidrológico\nO cálculo preliminar foi organizado em uma sequência simples e auditável:\n\ndelimitar a área incremental de cada eixo pela grade D8 e conferir a área contra a BHO;\nestimar a afluência com a vazão específica, mantendo o fator explícito;\nconstruir um hidrograma sintético com forma gamma para representar o evento de referência;\nseparar os hidrogramas dos ramos antes de combiná-los, para preservar a defasagem;\naplicar a continuidade em cada reservatório, S(t+Δt) = S(t) + [I(t) − O(t)]Δt;\nlimitar o armazenamento pela CAV e registrar saturação, galgamento e volume de espera;\ntransferir o hidrograma resultante ao ponto de Estrela e, na etapa seguinte, ao HEC-RAS 1D.\n\nO volume de espera requerido é calculado, para uma vazão-alvo preliminar, por\nV_req = ∫ max[0, Q_afluente(t) − Q_alvo] dt.\nO valor é convertido para hm³ dividindo o volume em m³ por 10⁶. A escolha de Q_alvo, a duração do evento e a sincronização entre ramos são parâmetros sensíveis; por isso, o resultado não pode ser transformado diretamente em volume de uma obra.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hidrologia e HAND</span>"
+    ]
+  },
+  {
+    "objectID": "04-hidrologia-hand.html#volume-requerido-volume-alocado-e-cota-de-cada-reservatório",
+    "href": "04-hidrologia-hand.html#volume-requerido-volume-alocado-e-cota-de-cada-reservatório",
+    "title": "4  Hidrologia e HAND",
+    "section": "4.3 Volume requerido, volume alocado e cota de cada reservatório",
+    "text": "4.3 Volume requerido, volume alocado e cota de cada reservatório\nÉ importante separar dois cálculos que têm finalidades diferentes:\n\nVolume requerido em Estrela: V_req = ∫ max[0, Q_Estrela(t) − Q_alvo] dt. Esse é o volume que, em uma hipótese ideal de controle total e sincronização perfeita, precisaria ser retirado do hidrograma na seção de controle de Estrela para não superar a vazão-alvo.\nVolume de espera nominal da alternativa: para cada eixo i, a rodada SINV adota uma altura admissível H_i e uma fração de espera f_esp = 50%. O volume é calculado pela CAV individual: V_espera,i = f_esp × V_max,i(H_i). O volume da alternativa é a soma desses volumes, sem afirmar que ele será utilizado integralmente no mesmo instante.\n\nPortanto, na rodada atual o volume requerido não é distribuído entre os reservatórios por uma otimização e não é usado para resolver automaticamente a cota de cada barragem. As cotas são obtidas individualmente invertendo a CAV de cada eixo:\nNA_mxn,i = cota_eixo,i + CAV_i⁻¹[V_max,i(H_i) − V_espera,i].\nIsso produz o nível de espera/nível máximo normalizado da simulação energética. A cota depende da CAV daquele reservatório, de sua altura admissível e da fração de espera; não existe uma única cota comum para toda a alternativa.\nExemplo da alocação nominal usada nas alternativas principais:\n\n\n\n\n\n\n\n\n\n\nEixo\nAltura admissível (m)\nVolume máximo (hm³)\nVolume de espera (hm³)\nCota NA_mxn (m)\n\n\n\n\nE02 — ALT-A\n120,0\n1.377,4\n688,7\n385,8\n\n\nE04 — ALT-A\n120,0\n2.210,7\n1.105,3\n326,9\n\n\nE08 — ALT-D\n86,0\n620,4\n310,2\n209,8\n\n\nE12 — ALT-E/C02\n55,5\n976,5\n488,2\n86,8\n\n\n\nAssim, ALT-A soma 1.794 hm³ nominais, ALT-D soma 2.104 hm³ e ALT-E/C02 soma 2.282 hm³. Esses valores não devem ser comparados diretamente com V_req como se fossem equivalentes: o primeiro é uma capacidade inicial distribuída conforme CAVs; o segundo é uma integral do excesso de vazão em Estrela. O roteamento é que deve mostrar quanto do volume é efetivamente utilizado, em que momento, em qual reservatório, e qual pico resulta a jusante.\n\n4.3.1 Onde está a vazão-alvo\nNa formulação atual, Q_alvo = 4.000 m³/s é uma vazão-alvo preliminar na seção de controle de Estrela, associada à hipótese de vazão abaixo da qual não haveria dano relevante. Ela não é uma vazão medida na entrada de cada reservatório nem uma vazão definida a montante de Estrela. O valor de 4.000 m³/s é um placeholder e deve ser recalibrado a partir das cotas de inundação, curvas-chave, danos observados e do HEC-RAS 1D.\nNo roteamento simplificado das comportas, essa meta de Estrela foi convertida em metas locais proporcionais à área contribuinte: Q_alvo,i = 4.000 × A_i / 19.440. Essa regra é apenas uma aproximação de triagem para repartir a meta entre os eixos; ela não representa uma condição hidráulica local observada. Na modelagem contratada, as descargas de cada reservatório deverão ser escolhidas pelo hidrograma incremental, tempo de viagem, afluências laterais e nível na seção de controle em Estrela.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hidrologia e HAND</span>"
+    ]
+  },
+  {
+    "objectID": "04-hidrologia-hand.html#hidrogramas-com-e-sem-reservatórios",
+    "href": "04-hidrologia-hand.html#hidrogramas-com-e-sem-reservatórios",
+    "title": "4  Hidrologia e HAND",
+    "section": "4.4 Hidrogramas com e sem reservatórios",
+    "text": "4.4 Hidrogramas com e sem reservatórios\nAs figuras abaixo mostram a diferença entre o evento sem reservatório e a triagem com operação coordenada de comportas. C01 é composto por E02 + E04, C03 por E02 + E04 + E08 e C02 por E02 + E04 + E12. No HEC-RAS 1D, eles serão comparados nessa ordem, depois do HEC-00 sem obra; C02 não é uma alternativa escolhida, mas o terceiro caso da sequência mínima. Todos dependem de CAVs, remanso e regras operacionais verificadas.\n\n\n\n\n\n\nFigura 4.1: Hidrogramas do evento sem barragem e dos cinco cenários preliminares de cascata.\n\n\n\n\n\n\n\n\n\nFigura 4.2: Detalhe do cenário C02 em comparação com o evento sem barragem.\n\n\n\n\n\n\n\n\n\nFigura 4.3: Hidrograma sintético de referência usado para dimensionar a ordem de grandeza do evento.\n\n\n\nNa triagem, os picos resultantes foram 9.217 m³/s para C01, 6.650 m³/s para C02, 8.713 m³/s para C03, 14.753 m³/s para C04 e 5.965 m³/s para C05. C04 saturou os quatro reservatórios considerados; C05 apresentou um reservatório saturado e um galgamento. Esses números são de roteamento preliminar, não de simulação hidráulica calibrada.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hidrologia e HAND</span>"
+    ]
+  },
+  {
+    "objectID": "04-hidrologia-hand.html#rodada-calibrada-c1c4",
+    "href": "04-hidrologia-hand.html#rodada-calibrada-c1c4",
+    "title": "4  Hidrologia e HAND",
+    "section": "4.5 Rodada calibrada C1–C4",
+    "text": "4.5 Rodada calibrada C1–C4\nO Claude executou uma segunda rodada com séries obtidas da ANA, máximas anuais de Muçum e parâmetros recalibrados. O pico sintético de referência passou de 18.000 para 16.300 m³/s no ponto de análise, a lâmina escoada passou de 260 para 227 mm e a vazão de base passou de 600 para 926 m³/s. O posto de Estrela possui somente 3,1 anos de vazão; por isso, a transposição e a curva-chave ainda exigem confirmação com as medições previstas no TR.\nO ajuste de Gumbel por momentos-L em Muçum indica que o pico de setembro de 2023 corresponde a aproximadamente 333 anos. Maio de 2024 teve menor pico, mas maior volume escoado; o relatório passa a tratar as duas cheias como eventos distintos, sem chamar automaticamente uma delas de “evento de 100 anos”.\nCom a regra de barragem seca e os parâmetros calibrados, o roteamento das alternativas produziu:\n\n\n\n\n\n\n\n\n\n\nAlternativa\nEixos\nVolume efetivamente usado (hm³)\nPico em Estrela (m³/s)\nRedução\n\n\n\n\nALT-A\nE02 + E04\n1.694\n9.272\n43,1%\n\n\nALT-D\nE02 + E04 + E08\n1.871\n8.411\n48,4%\n\n\nALT-E\nE02 + E04 + E12\n2.366\n6.328\n61,2%\n\n\nALT-J — carteira completa\nE02 + E04 + E01 + E05 + E08 + E12\n2.639\n6.213\n61,9%\n\n\nE12 isolado\nE12\n976\n16.267\n0,2%\n\n\n\nNenhuma das 30 combinações testadas chegou a 4.000 m³/s. A comparação mostra por que o E12 não deve ser avaliado apenas pela área controlada: isolado, ele satura antes do pico e reduz praticamente nada; combinado com E02 e E04, passa a operar depois do amortecimento a montante. As regras convencionais de soleira livre produziram redução máxima de apenas 2,8%, contra 61,9% na melhor configuração de barragem seca.\n\n\n\n\n\n\nFigura 4.4: Rodada calibrada C1–C4: carteira completa e evento natural.\n\n\n\nOs valores calibrados substituem a rodada sintética como referência para a próxima análise, mas continuam sendo uma simulação de triagem: a decomposição ainda é proporcional à área e o limiar de 4.000 m³/s permanece provisório. A rodada específica do Forqueta foi posteriormente recalculada com a série observada do posto 86745000.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hidrologia e HAND</span>"
+    ]
+  },
+  {
+    "objectID": "04-hidrologia-hand.html#eixos-de-retenção-no-forqueta",
+    "href": "04-hidrologia-hand.html#eixos-de-retenção-no-forqueta",
+    "title": "4  Hidrologia e HAND",
+    "section": "4.6 Eixos de retenção no Forqueta",
+    "text": "4.6 Eixos de retenção no Forqueta\nPara avaliar a contribuição lateral, foram propostos dois pontos no Forqueta, cuja área contribuinte representa cerca de 14,63% da bacia da seção de Estrela. O FQ1, no segmento inferior, controla aproximadamente 2.354 km² (82,7% do tributário); o FQ2, em posição intermediária, controla aproximadamente 2.227 km² (78,3%).\nO Forqueta, contudo, deságua a jusante do ponto de análise de 19.440 km². Portanto, os eixos FQ1/FQ2 são invisíveis no hidrograma desse ponto e só podem ser avaliados nos controles de Lajeado/Estrela, com uma afluência lateral inserida no modelo hidráulico.\nO pipeline isolado confirmou aderência espacial entre D8 e BHO de 0,9985 para FQ1 e 0,9899 para FQ2. A CAV preliminar indica, a 80 m de altura geométrica, cerca de 2.424 hm³ em FQ1 e 1.289 hm³ em FQ2. O resultado é uma indicação de escala, não uma altura admissível: faltam topografia de maior resolução, geologia, ocupação, remanso, segurança, licenciamento e regra operativa.\nO roteamento calibrado usou a série observada do Passo do Coimbra (86745000), com pico transposto de 3.837 m³/s. Em 13 eventos pareados, a defasagem central até Estrela foi 0 dia. Com esse parâmetro, ALT-J reduziu o pico em Estrela em 58,6%, ALT-J+FQ1 em 59,3% e ALT-J+FQ2 em 59,7%. O ganho marginal é pequeno e FQ1/FQ2 são mutuamente exclusivos por interferência de cota: o NA preliminar de FQ1 a 30 m fica 12,5 m acima do eixo FQ2.\nA evidência ainda não fecha o caso: o Passo do Coimbra tem lacuna em novembro de 2023, quando Estrela registrou 17.261 m³/s e Muçum já estava em queda. O próximo dado crítico é uma série subdiária ou curva-chave reativada em Barra do Fão. Até lá, FQ1 e FQ2 permanecem opções condicionadas, fora da alternativa de referência.\nEssa é uma exclusão da referência, não um descarte do tributário: por confluir antes de Estrela, o Forqueta continua sendo uma afluência lateral potencialmente relevante no HEC-RAS 1D para Lajeado, Estrela e Bom Retiro do Sul.\nNa matriz ampliada com ALT-A–ALT-J, a melhor combinação preliminar foi ALT-J + FQ2 com barragem seca: pico de aproximadamente 6.802 m³/s em Estrela, redução de 59,8% e ainda 2.802 m³/s acima do limiar provisório de 4.000 m³/s. Com comportas, o melhor arranjo foi ALT-J + FQ1, com 7.887 m³/s. Assim, o Forqueta deve seguir na modelagem como alternativa lateral, mas os resultados atuais não indicam uma condição próxima da não ocorrência de cheia. A matriz completa está no resultado combinado.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hidrologia e HAND</span>"
+    ]
+  },
+  {
+    "objectID": "04-hidrologia-hand.html#busca-ampliada-de-barragens",
+    "href": "04-hidrologia-hand.html#busca-ampliada-de-barragens",
+    "title": "4  Hidrologia e HAND",
+    "section": "4.7 Busca ampliada de barragens",
+    "text": "4.7 Busca ampliada de barragens\nFoi realizada uma busca exaustiva das adições possíveis à ALT-J. As 32 carteiras com E10 excluído, o envelope teórico de 64 carteiras incluindo E10 e as 192 combinações com FQ1/FQ2 não produziram nenhum pico inferior a 4.000 m³/s. O melhor resultado continua sendo ALT-J + FQ2, sob regra de barragem seca, com aproximadamente 6.802 m³/s em Estrela.\nEssa repetição do pico para as adições E03, E06, E07, E09 e E11 decorre da topologia aninhada da rodada: com E12 presente, os eixos adicionais não ampliam a área terminal controlada no modelo simplificado. Isso não elimina seu interesse hidráulico local, mas impede apresentá-los como uma solução adicional de redução no exutório sem reformular a operação, os tempos de viagem e o modelo 1D. O E10 foi mantido apenas como envelope teórico, pois seu balanço energético preliminar é negativo.\nO Guaporé deve ser tratado como a próxima hipótese estrutural. Como ele não possui um eixo dedicado na carteira E01–E12, sua contribuição precisa ser desagregada do hidrograma do Antas antes de ser roteada pelo GU1; somá-la diretamente ao hidrograma atual seria dupla contagem. Os resultados e tabelas da busca estão na síntese das carteiras ampliadas.\nNa primeira decomposição numérica, o GU1 controlou 1.993,7 km² dos 2.486,7 km² do Guaporé. Com ALT-J e o máximo histórico do Santa Lúcia, a altura de 100 m reduziu o pico estimado em Estrela para 4.532 m³/s; o envelope de 120 m não trouxe redução adicional relevante. No cenário de novembro de 2023, com vazão observada menor no Guaporé, o resultado a 120 m e defasagem zero foi 4.763 m³/s. Em 384 combinações de evento, defasagem, altura, operação, ALT-J e FQ2, nenhuma ficou abaixo de 4.000 m³/s. Essa rodada confirma que GU1 merece prioridade, mas ainda não substitui a modelagem hidráulica nem autoriza a altura testada.\n\n\n\n\n\n\nFigura 4.5: Hidrogramas combinados em Estrela.\n\n\n\n\n\n\n\n\n\nFigura 4.6: Eixos exploratórios de retenção no rio Forqueta.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hidrologia e HAND</span>"
+    ]
+  },
+  {
+    "objectID": "04-hidrologia-hand.html#uso-do-hand",
+    "href": "04-hidrologia-hand.html#uso-do-hand",
+    "title": "4  Hidrologia e HAND",
+    "section": "4.8 Uso do HAND",
+    "text": "4.8 Uso do HAND\nO HAND organiza a diferença de cota entre o terreno e a drenagem mais próxima. No estudo, ele cumpre três funções:\n\nindicar setores potencialmente conectados ao rio;\norientar a seleção de seções e pontos de controle;\ncomunicar a triagem altimétrica de forma intuitiva.\n\nO método não calcula a onda de cheia por si só. A cota HAND não deve ser convertida diretamente em profundidade de inundação quando há pontes, diques, remanso ou armazenamento fora do talvegue.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hidrologia e HAND</span>"
+    ]
+  },
+  {
+    "objectID": "04-hidrologia-hand.html#o-que-foi-calculado-e-o-que-não-foi",
+    "href": "04-hidrologia-hand.html#o-que-foi-calculado-e-o-que-não-foi",
+    "title": "4  Hidrologia e HAND",
+    "section": "4.9 O que foi calculado e o que não foi",
+    "text": "4.9 O que foi calculado e o que não foi\nFoi calculada uma triagem espacial de áreas baixas, bacias contribuintes, volume de espera e resposta temporal de reservatórios idealizados. Ainda não foi calculada uma mancha de inundação final com níveis observados, perdas de carga em pontes, remanso de jusante e seções topobatimétricas. Essa distinção é essencial: HAND filtra e explica; o HEC-RAS 1D transforma vazão em cota, profundidade e duração.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hidrologia e HAND</span>"
+    ]
+  },
+  {
+    "objectID": "04-hidrologia-hand.html#preparação-para-o-hec-ras-1d",
+    "href": "04-hidrologia-hand.html#preparação-para-o-hec-ras-1d",
+    "title": "4  Hidrologia e HAND",
+    "section": "4.10 Preparação para o HEC-RAS 1D",
+    "text": "4.10 Preparação para o HEC-RAS 1D\nDepois da triagem, o eixo principal deve ser modelado em HEC-RAS 1D com seções transversais, pontes, confluências, rugosidades, condições de contorno e estruturas de controle. A preparação preliminar já está descrita no capítulo de HEC-RAS 1D. A ordem operacional está fixada em HEC-00 sem obra → HEC-01 (E02 + E04) → HEC-02 (E02 + E04 + E08) → HEC-03 (E02 + E04 + E12). Somente depois entram HEC-04 (ALT-J + GU1), HEC-05 (ALT-J + FQ2) e as sensibilidades de rede. O diagrama topológico mostra quais entradas são estruturas do rio principal e quais são afluências laterais.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hidrologia e HAND</span>"
+    ]
+  },
+  {
+    "objectID": "04-hidrologia-hand.html#limitações-da-rodada-hidrológica",
+    "href": "04-hidrologia-hand.html#limitações-da-rodada-hidrológica",
+    "title": "4  Hidrologia e HAND",
+    "section": "4.11 Limitações da rodada hidrológica",
+    "text": "4.11 Limitações da rodada hidrológica\n\nhidrogramas sintéticos ainda não substituem a modelagem hidráulica calibrada;\na defasagem central medida do Forqueta é 0 dia, mas não cobre o evento de novembro de 2023;\nForqueta representa aproximadamente 14,63% da bacia de Estrela e deve entrar como contribuição lateral concentrada, não como vazão no ponto de 19.440 km²;\nFQ1 e FQ2 são alternativas mutuamente exclusivas e não integram a referência;\no Guaporé, a montante do ponto de análise, ainda precisa ser investigado;\no trecho final possui declividade estimada muito baixa, podendo ser controlado por remanso;\nnão se deve somar hidrogramas gama independentes como se fossem uma única série sem sincronização física.\n\n\n\n\n\n\n\nReferência metodológica\n\n\n\nO conceito HAND e sua aplicação em estudos de inundação devem ser apresentados com a referência técnica indicada em Referências, sempre deixando claro que esta etapa é uma triagem anterior ao modelo hidráulico.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Hidrologia e HAND</span>"
+    ]
+  },
+  {
+    "objectID": "05-cascatas-comportas.html",
+    "href": "05-cascatas-comportas.html",
+    "title": "5  Cascatas de barragens com comportas",
+    "section": "",
+    "text": "5.1 Por que estudar cascatas\nReservatórios em série ou em ramos convergentes podem distribuir o armazenamento e usar comportas para preservar volume de espera antes da cheia. A vantagem potencial é reduzir o porte de uma única obra e aumentar a flexibilidade. O risco é criar dependência entre reservatórios: uma decisão a montante pode transferir vazão e nível para a estrutura seguinte, especialmente quando há pouco tempo entre as ondas.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Cascatas de barragens com comportas</span>"
+    ]
+  },
+  {
+    "objectID": "05-cascatas-comportas.html#rede-imediata",
+    "href": "05-cascatas-comportas.html#rede-imediata",
+    "title": "5  Cascatas de barragens com comportas",
+    "section": "5.2 Rede imediata",
+    "text": "5.2 Rede imediata\nO inventário preliminar identifica as seguintes sequências geométricas:\n\n\n\nRamo\nSequência\n\n\n\n\nPrincipal 1\nE01 → E11 → E12\n\n\nPrincipal 2\nE02 → E03 → E08 → E09 → E10 → E11 → E12\n\n\nPrincipal 3\nE04 → E05 → E06 → E07 → E08 → E09 → E10 → E11 → E12\n\n\n\nO diagnóstico é de conectividade por posição dos eixos. Ainda é necessário confirmar, em levantamento topográfico e no HEC-RAS 1D, se há remanso, conexão hidráulica e tempo de trânsito compatíveis com a operação coordenada.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Cascatas de barragens com comportas</span>"
+    ]
+  },
+  {
+    "objectID": "05-cascatas-comportas.html#cenários-de-triagem",
+    "href": "05-cascatas-comportas.html#cenários-de-triagem",
+    "title": "5  Cascatas de barragens com comportas",
+    "section": "5.3 Cenários de triagem",
+    "text": "5.3 Cenários de triagem\n\n\n\n\n\n\n\n\n\n\n\nCenário\nEixos\nPico resultante (m³/s)\nRedução\nSaturados\nGalgamentos\n\n\n\n\nC01\nE02 + E04\n9.217\n48,8%\n0\n0\n\n\nC02\nE02 + E04 + E12\n6.650\n63,1%\n0\n0\n\n\nC03\nE02 + E04 + E08\n8.713\n51,6%\n0\n0\n\n\nC04\nE09 + E10 + E11 + E12\n14.753\n18,0%\n4\n4\n\n\nC05\nE01 + E02 + E04 + E08 + E09 + E10 + E11 + E12\n5.965\n66,9%\n1\n1\n\n\n\nBase: roteamento preliminar de cascatas. Os valores são uma triagem com hidrograma sintético, regra de comporta simplificada e parâmetros não calibrados. Não representam desempenho de projeto.\n\n5.3.1 Resultado recalibrado das alternativas\nO Claude executou uma rodada independente com pico de referência de 16.300 m³/s, séries ANA e regra de barragem seca. Os resultados calibrados são os que devem orientar a próxima etapa:\n\n\n\n\n\n\n\n\n\n\nAlternativa\nEixos\nPico resultante (m³/s)\nRedução\nSaturação\n\n\n\n\nALT-A\nE02 + E04\n9.272\n43,1%\nnão\n\n\nALT-D\nE02 + E04 + E08\n8.411\n48,4%\nnão\n\n\nALT-E\nE02 + E04 + E12\n6.328\n61,2%\nnão\n\n\nALT-J\ncarteira completa com E01, E02, E04, E05, E08 e E12\n6.213\n61,9%\nsim, em pelo menos um eixo\n\n\n\nNenhuma combinação atingiu a meta preliminar de 4.000 m³/s. A redução de pico verificada não deve ser interpretada como lâmina final de inundação: a conversão de vazão em cota, profundidade e duração ainda depende do HEC-RAS 1D.\n\n\n5.3.2 Inclusão de um tributário concentrado: Forqueta\nO Forqueta deve ser tratado como ramo lateral da rede, e não como mais um reservatório em série no rio principal. Foram propostos FQ1 e FQ2, com áreas BHO a montante de 2.353,6 e 2.226,7 km², respectivamente. Como o tributário deságua a jusante do ponto de análise de 19.440 km², seus efeitos devem ser avaliados somente no trecho de Lajeado/Estrela.\nA série observada do posto Passo do Coimbra (86745000) indica defasagem central de 0 dia em 13 eventos. Com a calibração em Estrela, o ganho sobre ALT-J foi de apenas 0,7 ponto percentual para FQ1 e 1,1 ponto percentual para FQ2. FQ1 e FQ2 são geometricamente mutuamente exclusivos: o NA preliminar de FQ1 a 30 m ultrapassa em 12,5 m a cota de FQ2.\n\n\n\n\n\n\n\nCenário a testar\nFunção\n\n\n\n\nALT-J + FQ1\nopção condicionada à confirmação da defasagem no evento de projeto\n\n\nALT-J + FQ2\nsensibilidade locacional, alternativa exclusiva\n\n\nALT-J + FQ1 + FQ2\nsomente teste de incompatibilidade geométrica; não é arranjo de projeto\n\n\nFQ1 ou FQ2 isolado\ncontrole do efeito marginal e do custo de oportunidade\n\n\n\nOs cenários devem usar o hidrograma lateral observado e explicitar a incerteza da defasagem. A série tem uma lacuna em novembro de 2023, justamente no maior pico de Estrela. A área de 14,63% não deve ser convertida diretamente em uma parcela fixa do pico. A alternativa de referência permanece ALT-J sem Forqueta; FQ1 só deve ser reaberto após dados subdiários de Barra do Fão.\nO Guaporé deve ser representado como tributário a montante em uma rodada futura. A estação Santa Lúcia (86580000) possui série diária de 1940–2024, área ANA de 2.470 km² e máximo observado de 5.077 m³/s. O GU1-PROPOSTO controla aproximadamente 1.993 km² na triagem BHO/D8, mas sua compatibilidade com as usinas Guaporé e Monte Cuco ainda não foi verificada.\n\n\n\n\n\n\nFigura 5.1: Matriz de integração do Forqueta à carteira ALT-J.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Cascatas de barragens com comportas</span>"
+    ]
+  },
+  {
+    "objectID": "05-cascatas-comportas.html#regra-de-operação-preliminar",
+    "href": "05-cascatas-comportas.html#regra-de-operação-preliminar",
+    "title": "5  Cascatas de barragens com comportas",
+    "section": "5.4 Regra de operação preliminar",
+    "text": "5.4 Regra de operação preliminar\nO script de triagem usa volume de espera inicial, uma regra simplificada de abertura e conservação de massa entre reservatórios. Essa escolha permite testar a lógica da rede, mas não representa uma curva de descarga de vertedouro, uma política de despacho ou um manual de operação.\nO alvo de 4.000 m³/s usado no script é definido na seção de controle de Estrela. Para operar os reservatórios individualmente, a triagem aplica Q_alvo,i = Q_alvo × A_i/A_Estrela; essa partição proporcional não é uma vazão observada a montante e não substitui o acoplamento hidráulico. O volume de espera de cada eixo vem da sua própria CAV e da fração inicial adotada, não de uma divisão otimizada do V_req total. O resultado correto da comparação é o hidrograma roteado em Estrela, com saturação, galgamento, nível e volume utilizado por reservatório.\nPara avançar, a regra deve ser substituída por:\n\nCAV validada de cada reservatório;\ncurva cota–descarga de comportas e vertedouros;\nlimites de segurança e nível operacional;\nprevisão de afluência e horizonte de decisão;\nfalha de comunicação e operação local;\nacoplamento com o HEC-RAS 1D.\n\n\n\n\n\n\n\nComo os cenários entram no HEC-RAS 1D\n\n\n\nC01 não é uma alternativa independente da ALT-A: ambos representam E02 + E04. C03 corresponde à ALT-D (E02 + E04 + E08) e C02 corresponde à ALT-E (E02 + E04 + E12). Por isso, a primeira rodada deve seguir a ordem HEC-00 sem obra → HEC-01/C01 → HEC-02/C03 → HEC-03/C02. C04 e C05 ficam para uma etapa posterior de sensibilidades de rede; C04 falha na triagem por saturação e galgamento, e C05 inclui E10, cujo balanço energético preliminar é negativo.\nO Guaporé (GU1) e o Forqueta (FQ1/FQ2) não são nós da cascata E01–E12: entram como contribuições laterais em planos separados. O GU1 é a extensão estrutural prioritária; FQ1 e FQ2 são alternativas mutuamente exclusivas. O diagrama topológico da rede e dos planos HEC mostra essa separação. Nenhum desses cenários foi selecionado para implantação.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Cascatas de barragens com comportas</span>"
+    ]
+  },
+  {
+    "objectID": "05-cascatas-comportas.html#arquivos-e-reprodução",
+    "href": "05-cascatas-comportas.html#arquivos-e-reprodução",
+    "title": "5  Cascatas de barragens com comportas",
+    "section": "5.5 Arquivos e reprodução",
+    "text": "5.5 Arquivos e reprodução\n\nInventário de cascatas\nCenários candidatos\nDetalhe do roteamento\nScript de inventário\nScript de roteamento\nFiguras dos hidrogramas",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Cascatas de barragens com comportas</span>"
+    ]
+  },
+  {
+    "objectID": "06-hecras-1d.html",
+    "href": "06-hecras-1d.html",
+    "title": "6  HEC-RAS 1D",
+    "section": "",
+    "text": "6.1 Papel do modelo\nO HEC-RAS 1D será o modelo hidráulico principal da etapa detalhada. O objetivo é simular propagação de cheia no canal e na planície representada pelas seções, incluindo pontes, confluências, estruturas de controle e condições de contorno. O HAND orienta a triagem; ele não substitui esta etapa.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>HEC-RAS 1D</span>"
+    ]
+  },
+  {
+    "objectID": "06-hecras-1d.html#insumos-preliminares-prontos",
+    "href": "06-hecras-1d.html#insumos-preliminares-prontos",
+    "title": "6  HEC-RAS 1D",
+    "section": "6.2 Insumos preliminares prontos",
+    "text": "6.2 Insumos preliminares prontos\n\n\n\nInsumo\nQuantidade / extensão\nArquivo\n\n\n\n\nEixo principal\n39,40 km\nclaude_hecras_eixo.gpkg\n\n\nSeções transversais\n102, sendo 37 detalhadas\nclaude_hecras_secoes.csv\n\n\nTravessias\n4\nclaude_hecras_travessias.csv\n\n\nConfluências\n6\nclaude_hecras_confluencias.csv\n\n\nContornos\n1 conjunto preliminar\nclaude_hecras_contornos.csv\n\n\nTributário Forqueta\ncontribuição lateral no trecho de Lajeado/Estrela; FQ1/FQ2 são alternativas exclusivas\neixos_forqueta_propostos.kmz\n\n\n\nO talvegue preliminar varia de 22,0 m a 13,5 m, com declividade média aproximada de 0,216 m/km no trecho geral. A declividade dos últimos 10 km foi estimada em cerca de 6,3 × 10⁻⁵ m/m, sinal de possível controle por remanso.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>HEC-RAS 1D</span>"
+    ]
+  },
+  {
+    "objectID": "06-hecras-1d.html#dados-que-ainda-faltam",
+    "href": "06-hecras-1d.html#dados-que-ainda-faltam",
+    "title": "6  HEC-RAS 1D",
+    "section": "6.3 Dados que ainda faltam",
+    "text": "6.3 Dados que ainda faltam\n\nseções topobatimétricas com pontos abaixo do nível d’água;\ncota de fundo, margens, diques e aterros;\ngeometria real, vãos, pilares e tabuleiro das quatro pontes;\nrugosidade calibrada para canal e planície;\nséries de ANA/ONS e níveis observados em Estrela;\nsérie subdiária ou curva-chave reativada em Barra do Fão para resolver a lacuna de novembro de 2023;\ncurva-chave ou condição de contorno de jusante;\nníveis e regras de operação das estruturas existentes;\nhidrogramas de entrada e contribuições laterais consistidos;\ntempo de viagem e hidrograma lateral calibrado do Forqueta para os cenários FQ1/FQ2;\nposição e hidrograma do Guaporé, contribuição a montante do ponto de análise, a ser representada como ramo/afluência lateral nos cenários GU1;\n\nHá uma seção cuja cota amostrada aparece cerca de 10,5 m acima do talvegue local. Ela deve ser conferida antes de qualquer calibração, pois pode estar representando superfície d’água ou amostra do MDE, e não o tabuleiro da ponte.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>HEC-RAS 1D</span>"
+    ]
+  },
+  {
+    "objectID": "06-hecras-1d.html#roteiro-de-modelagem",
+    "href": "06-hecras-1d.html#roteiro-de-modelagem",
+    "title": "6  HEC-RAS 1D",
+    "section": "6.4 Roteiro de modelagem",
+    "text": "6.4 Roteiro de modelagem\n\nrevisar datum, projeção e geometrias;\nsubstituir seções sintéticas por levantamento topobatimétrico;\ncadastrar pontes e estruturas com vãos e cotas verificadas;\ninserir hidrogramas calibrados e vazões laterais, incluindo o Forqueta;\ntestar condições de jusante por nível observado, curva-chave e extensão do domínio;\ncalibrar níveis, tempos de chegada, vazões e áreas inundadas do evento de 2024;\nrodar a matriz HEC-00–HEC-06 definida na seção seguinte, começando pelo caso sem obra;\nextrair cota, duração e velocidade para alimentar a curva cota–dano;\nrepetir para sensibilidades de evento, rugosidade, operação e falha.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>HEC-RAS 1D</span>"
+    ]
+  },
+  {
+    "objectID": "06-hecras-1d.html#matriz-de-cenários-que-será-testada-no-hec-ras-1d",
+    "href": "06-hecras-1d.html#matriz-de-cenários-que-será-testada-no-hec-ras-1d",
+    "title": "6  HEC-RAS 1D",
+    "section": "6.5 Matriz de cenários que será testada no HEC-RAS 1D",
+    "text": "6.5 Matriz de cenários que será testada no HEC-RAS 1D\nO HEC-RAS não deve receber a carteira inteira como se todas as combinações fossem alternativas de projeto. O estudo separa caso de referência, casos estruturais comparáveis e sensibilidades. A sequência abaixo é a matriz de simulação a ser montada; ela substitui a instrução genérica de simplesmente rodar C01–C05.\n\n\n\n\n\n\n\n\n\n\nPlano\nNome de trabalho\nObras/entradas\nPapel na primeira rodada\nSituação\n\n\n\n\nHEC-00\nREF\nsem novos reservatórios; estruturas existentes na situação atual\ncalibrar cota, tempo, mancha e condição de jusante no evento de maio de 2024\nobrigatório\n\n\nHEC-01\nALT-A / C01\nE02 + E04\nprimeiro caso com obra; mede o efeito dos dois ramos prioritários\nobrigatório\n\n\nHEC-02\nALT-D / C03\nE02 + E04 + E08\nmede o ganho incremental do eixo intermediário, condicionado à verificação de Castro Alves\nobrigatório\n\n\nHEC-03\nALT-E / C02\nE02 + E04 + E12\nmede a cobertura terminal ampliada, condicionada à verificação de 14 de Julho\nobrigatório\n\n\nHEC-04\nALT-J + GU1\nALT-J como carteira de referência ampliada + GU1 como entrada do Guaporé\ntestar a hipótese estrutural independente a montante; exige desagregar o hidrograma para evitar dupla contagem\nprioridade após HEC-00–03\n\n\nHEC-05\nALT-J + FQ2\nALT-J + FQ2 como afluência lateral antes de Estrela\ntestar o efeito do Forqueta no trecho protegido, com série observada e incerteza de defasagem\nsensibilidade prioritária\n\n\nHEC-06\nRede crítica\nC04, C05, FQ1 e combinações laterais selecionadas\ntestar saturação, galgamento, comportas e hipóteses de maior complexidade\nopcional, depois da calibração\n\n\n\n\n6.5.1 O que significa “primeira rodada”\nOs planos HEC-00 a HEC-03 formam o conjunto mínimo comparável e devem ser executados nessa ordem. O HEC-00 fixa a situação atual; HEC-01 é a alternativa-base que será comparada com ele; HEC-02 e HEC-03 acrescentam, um por vez, E08 e E12. Assim, se o primeiro resultado com obra for solicitado antes de todos os demais, ele é o HEC-01 (E02 + E04). A alternativa HEC-03 não é chamada de escolhida: ela é o caso de maior cobertura da primeira rodada.\nO HEC-04 não deve ser misturado ao primeiro ajuste de rugosidade. Ele entra depois da calibração do HEC-00 e da verificação de que o hidrograma do Guaporé foi retirado da parcela residual do Antas. O GU1 será implementado como estrutura/ramo do Guaporé quando a geometria estiver disponível; enquanto isso, sua contribuição hidrológica pode ser representada no trecho detalhado por uma afluência lateral concentrada, claramente identificada como aproximação.\nO HEC-05 também é lateral: o Forqueta conflui antes de Estrela, mas a sua contribuição não deve ser somada ao hidrograma de montante de 19.440 km². FQ1 e FQ2 são mutuamente exclusivas por interferência de cota. FQ1 só volta ao conjunto principal se a lacuna de novembro de 2023 for resolvida com dados subdiários de Barra do Fão.\n\n\n\n\n\n\nFigura 6.1: Diagrama topológico da rede e da sequência de entrada no HEC-RAS 1D.\n\n\n\n\n\n6.5.2 Hidrogramas e comparabilidade\nNo HEC-00, a entrada de montante deve ser a série observada ou o hidrograma reconstituído do evento de 2024. Nos HEC-01–03, a entrada deve ser o hidrograma efluente do roteamento da alternativa, mantendo o mesmo evento e a mesma condição de jusante do caso de referência. Nos HEC-04 e HEC-05, a série do Guaporé ou do Forqueta entra como lateral, com a defasagem explicitada e sem dupla contagem.\nCada plano deve produzir, no mínimo, o hidrograma de montante, as afluências laterais, a cota máxima em Estrela, a duração acima de cada patamar, as velocidades compatíveis com 1D, a área inundada e os indicadores para a curva cota–dano. Os resultados de HEC-04–06 devem ser rotulados como extensão/sensibilidade até que as CAVs, alturas admissíveis, regras de operação e remanso sejam verificados.\n\n\n\n\n\n\nEscopo hidráulico\n\n\n\nO escopo atual desta nota é HEC-RAS 1D. Modelos 2D não fazem parte do método principal descrito aqui. Eventuais ferramentas complementares de planície só deverão ser incorporadas se forem explicitamente solicitadas e compatibilizadas com a cadeia 1D.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>HEC-RAS 1D</span>"
+    ]
+  },
+  {
+    "objectID": "07-danos-economia.html",
+    "href": "07-danos-economia.html",
+    "title": "7  Danos, exposição e economia",
+    "section": "",
+    "text": "7.1 Atlas Digital de Desastres\nO recorte preliminar foi extraído do Atlas Digital de Desastres do MDR para os municípios a jusante e no entorno do trecho protegido. A base registra pessoas afetadas, mortos, feridos, desabrigados, desalojados, danos materiais e prejuízos públicos e privados.\nO arquivo resultante é atlas_danos_municipios.csv. Ele deve ser tratado como uma base de calibração e contexto, não como dano diretamente atribuível a uma única cota do rio: o Atlas é organizado por evento e município, enquanto o HEC-RAS produz níveis, velocidades e duração espacialmente distribuídos.\nA primeira integração operacional está em base_exposicao_municipal_preliminar.csv, com a documentação correspondente em BASE_EXPOSICAO_MUNICIPAL_PRELIMINAR.md. Ela combina a área/profundidade média da mancha HAND com os recortes do Atlas para 19 municípios. População, domicílios, setores censitários, tipologias construtivas e custo de reposição permanecem identificados como campos pendentes; não foram preenchidos por aproximações sem fonte espacial compatível.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Danos, exposição e economia</span>"
+    ]
+  },
+  {
+    "objectID": "07-danos-economia.html#curva-cotadano-preliminar",
+    "href": "07-danos-economia.html#curva-cotadano-preliminar",
+    "title": "7  Danos, exposição e economia",
+    "section": "7.2 Curva cota–dano preliminar",
+    "text": "7.2 Curva cota–dano preliminar\nPara transformar hidráulica em risco, a estratégia é combinar:\n\náreas inundadas e cotas do HEC-RAS 1D;\nsetores censitários e malhas territoriais do IBGE;\nestoques físicos, população e usos do solo;\nvalores econômicos por tipo de ativo, com fontes IPEA/IBGE e bases setoriais;\nregistros observados do Atlas para conferir a ordem de grandeza;\nfunções de dano por profundidade, duração e tipo de ocupação.\n\nO resultado deve ser uma curva ou superfície que permita calcular dano esperado por cenário, município e classe de ativo. A curva não deve distribuir o prejuízo total do Atlas proporcionalmente à área sem antes considerar exposição e profundidade.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Danos, exposição e economia</span>"
+    ]
+  },
+  {
+    "objectID": "07-danos-economia.html#cálculo-energético",
+    "href": "07-danos-economia.html#cálculo-energético",
+    "title": "7  Danos, exposição e economia",
+    "section": "7.3 Cálculo energético",
+    "text": "7.3 Cálculo energético\nPara cada alternativa, a triagem energética usa a queda líquida disponível e a vazão turbinável. A potência instantânea é estimada por\nP(t) = η ρ g Q_turb(t) H_liq(t) / 10⁶,\ncom η como eficiência agregada, ρ como massa específica da água, g como gravidade, Q_turb em m³/s e H_liq em m. A energia é obtida integrando a potência no tempo e convertendo MWh para GWh. A potência é limitada pela potência instalada e a vazão é reduzida quando a operação de cheia exige volume de espera.\nO balanço de uma alternativa deve ser reportado como\nΔE_liq = E_novo − E_perdida_nas_usinas_existentes.\nEssa formulação é mais informativa que classificar um eixo como simplesmente “viável” ou “inviável”: há uma altura em que começa a perda de energia e outra em que a cota entra em conflito físico ou operacional com a usina existente. O fator de vazão específica usado na rodada v2 é 0,0269 m³/s/km²; os resultados com 0,020 pertencem apenas ao histórico.\n\n\n\n\n\n\nFigura 7.1: Trade-off preliminar entre energia média e redução do pico.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Danos, exposição e economia</span>"
+    ]
+  },
+  {
+    "objectID": "07-danos-economia.html#cálculo-custobenefício",
+    "href": "07-danos-economia.html#cálculo-custobenefício",
+    "title": "7  Danos, exposição e economia",
+    "section": "7.4 Cálculo custo–benefício",
+    "text": "7.4 Cálculo custo–benefício\nO procedimento econômico é composto por quatro etapas:\n\ncalcular o dano esperado anual sem medida, integrando a função dano–frequência;\nrepetir a integração com o hidrograma, cota, duração e exposição de cada alternativa;\natualizar o benefício anual para o horizonte de análise;\ncomparar benefício presente, CAPEX, O&M, energia e perdas de geração.\n\nPara uma taxa de desconto i e horizonte n, o fator de valor presente é\nFVP = [1 − (1 + i)^−n] / i.\nO benefício presente é VP_B = benefício_anual × FVP; o custo presente inclui CAPEX e O&M; e a decisão econômica deve observar simultaneamente VPL = VP_B − VP_C e B/C = VP_B / VP_C. Para alternativas mutuamente exclusivas, o VPL líquido é mais informativo que ordenar apenas pela razão B/C.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Danos, exposição e economia</span>"
+    ]
+  },
+  {
+    "objectID": "07-danos-economia.html#atualização-com-a-rodada-hidrológica-calibrada",
+    "href": "07-danos-economia.html#atualização-com-a-rodada-hidrológica-calibrada",
+    "title": "7  Danos, exposição e economia",
+    "section": "7.5 Atualização com a rodada hidrológica calibrada",
+    "text": "7.5 Atualização com a rodada hidrológica calibrada\nA rodada C1–C4 substituiu o pico sintético de 18.000 m³/s por um evento de triagem de 16.300 m³/s no ponto de análise, obtido a partir das séries ANA e da transposição preliminar para a área de 19.440 km². Com esse hidrograma, ALT-A, ALT-D, ALT-E e ALT-J apresentaram reduções de pico de 43,1%, 48,4%, 61,2% e 61,9%, respectivamente. Como nenhuma combinação alcançou 4.000 m³/s e o roteamento ainda não representa remanso, tributários defasados e hidráulica detalhada, esses percentuais não são ainda benefícios monetários.\nAssim, a próxima integração econômica deve recalcular a frequência de danos com os hidrogramas calibrados, associar a profundidade e a duração produzidas pelo HEC-RAS 1D à exposição espacial e só então estimar EAD, VPL e B/C. Os resultados econômicos baseados no pico sintético ou no dano placeholder permanecem como sensibilidade histórica, não como recomendação.\nAs planilhas e scripts atuais usam horizonte de 50 anos, taxa de desconto de 6% a.a. e O&M de 0,8% do CAPEX como parâmetros de triagem. Esses parâmetros precisam ser confirmados no Manual de Inventário e ajustados ao escopo do estudo. O dano placeholder de R$ 2.500 milhões foi retirado do papel de parâmetro decisório: ele deve ser substituído por curva cota–dano baseada em Atlas, IBGE/IPEA, ativos públicos e validação local.\n\n\n\n\n\n\nFigura 7.2: Fronteira preliminar custo–eficácia.\n\n\n\n\n\n\n\n\n\nFigura 7.3: Sensibilidade do dano de referência.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Danos, exposição e economia</span>"
+    ]
+  },
+  {
+    "objectID": "07-danos-economia.html#o-que-já-pode-ser-usado",
+    "href": "07-danos-economia.html#o-que-já-pode-ser-usado",
+    "title": "7  Danos, exposição e economia",
+    "section": "7.6 O que já pode ser usado",
+    "text": "7.6 O que já pode ser usado\nO Atlas já fornece uma referência de pessoas afetadas e valores monetários declarados para o evento. A base tem, por exemplo, registros de afetados em Encantado, Colinas, Lajeado, Estrela, Bom Retiro do Sul, Fazenda Vilanova e Taquari. Os valores zero em alguns municípios não significam ausência de risco: podem refletir declaração incompleta, recorte do evento ou ausência de dano monetizado.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Danos, exposição e economia</span>"
+    ]
+  },
+  {
+    "objectID": "07-danos-economia.html#estratégia-recomendada",
+    "href": "07-danos-economia.html#estratégia-recomendada",
+    "title": "7  Danos, exposição e economia",
+    "section": "7.7 Estratégia recomendada",
+    "text": "7.7 Estratégia recomendada\n\n\n\n\n\n\n\n\nCamada\nFonte principal\nProduto\n\n\n\n\nLimites e setores\nIBGE\nunidades espaciais de exposição\n\n\nPopulação e domicílios\nCenso/IBGE\npessoas e residências por unidade\n\n\nAtivos e economia\nIBGE, IPEA e bases setoriais\nestoque econômico por classe\n\n\nEvento observado\nAtlas MDR\ncalibração de ordem de grandeza\n\n\nCota, profundidade e duração\nHEC-RAS 1D\nintensidade hidráulica\n\n\nFunção de dano\nliteratura e validação local\nprejuízo por ativo e intensidade",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Danos, exposição e economia</span>"
+    ]
+  },
+  {
+    "objectID": "07-danos-economia.html#limitações-econômicas-atuais",
+    "href": "07-danos-economia.html#limitações-econômicas-atuais",
+    "title": "7  Danos, exposição e economia",
+    "section": "7.8 Limitações econômicas atuais",
+    "text": "7.8 Limitações econômicas atuais\n\no valor de dano placeholder de R$ 2.500 milhões não deve governar a conclusão;\no Atlas contém autodeclarações e diferenças de cobertura entre municípios;\nvalores monetários precisam de ano-base, atualização e separação entre dano e prejuízo;\nnão se deve somar perdas públicas e privadas sem conferir sobreposição;\nbenefícios de alerta e tempo de evacuação precisam ser contabilizados separadamente;\na curva cota–dano só pode ser fechada depois dos resultados hidráulicos validados.\n\n\n\n\n\n\n\nRegra de transparência\n\n\n\nTodo valor econômico apresentado no relatório final deve informar fonte, ano-base, município, unidade espacial, função de dano e hipótese de atualização. Se a fonte não permitir esse detalhamento, o número deve ser apresentado como faixa ou sensibilidade.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Danos, exposição e economia</span>"
+    ]
+  },
+  {
+    "objectID": "08-conclusoes.html",
+    "href": "08-conclusoes.html",
+    "title": "8  Conclusões e próximos passos",
+    "section": "",
+    "text": "8.1 Conclusões que resistem à triagem",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Conclusões e próximos passos</span>"
+    ]
+  },
+  {
+    "objectID": "08-conclusoes.html#conclusões-que-resistem-à-triagem",
+    "href": "08-conclusoes.html#conclusões-que-resistem-à-triagem",
+    "title": "8  Conclusões e próximos passos",
+    "section": "",
+    "text": "Aumentar a altura das UHEs existentes não parece suficiente, isoladamente, para gerar o volume de espera necessário; permanece como sensibilidade de custo e engenharia.\nEixos novos sem afogamento direto das usinas existentes são a linha de investigação mais promissora neste momento.\nA restrição da cascata Monte Claro–Castro Alves–14 de Julho domina o desenho das alturas admissíveis.\nCascatas com comportas podem aumentar a flexibilidade, mas exigem modelo de operação, massa, tempo de trânsito e segurança em série.\nA rodada calibrada C1–C4 indica ALT-E (E02 + E04 + E12) e ALT-J como os cenários de maior redução de pico na triagem, mas nenhum alcançou 4.000 m³/s e nenhum deve ser tratado como escolha definitiva antes do HEC-RAS 1D.\nA curva cota–dano é o elo que transforma redução de vazão em benefício social e deve ser construída em conjunto com a calibração hidráulica.\nO Forqueta não deve entrar na alternativa de referência nesta rodada, mas isso não é descarte do tributário: como conflui antes de Estrela, ele permanece como sensibilidade condicionada para Lajeado, Estrela e Bom Retiro do Sul. Com a série observada do posto 86745000, FQ1 acrescentou 0,7 ponto percentual e FQ2 1,1 ponto percentual à redução de ALT-J em Estrela; além disso, os dois eixos são mutuamente exclusivos por cota. FQ1 permanece condicionado à confirmação da defasagem no evento de novembro de 2023.\nA matriz combinada com ALT-A–ALT-J confirmou que o melhor cenário preliminar é ALT-J + FQ2, sob regra de barragem seca: aproximadamente 6.802 m³/s em Estrela, ainda 2.802 m³/s acima do limiar provisório de 4.000 m³/s. Portanto, incluir o Forqueta melhora o resultado, mas não produz, nesta parametrização, uma condição próxima da não ocorrência de cheia.\nA busca exaustiva das adições à ALT-J confirmou que incluir E03, E06, E07, E09 ou E11 não reduz o pico terminal na parametrização atual; o envelope teórico com E10 também permanece em 7.005 m³/s. Isso decorre da topologia aninhada e da presença do E12 como eixo terminal, não de uma prova de que esses eixos sejam hidraulicamente irrelevantes.\nA próxima hipótese de barragem que pode acrescentar controle independente é o GU1 no rio Guaporé. Antes de combiná-lo com ALT-J, será necessário desagregar sua sub-bacia do hidrograma do Antas e fazer o roteamento próprio; a soma direta dos hidrogramas incorreria em dupla contagem. Essa decomposição foi executada: no máximo histórico do Santa Lúcia, ALT-J + GU1 a 100 m levou o pico a aproximadamente 4.532 m³/s; no evento de novembro de 2023, o resultado foi 4.763 m³/s a 120 m, ambos ainda acima do limiar preliminar. O GU1 passa a ser a alternativa prioritária para aprofundamento, mas não resolve sozinho a não inundação na triagem atual.\nO Guaporé surgiu como prioridade exploratória superior ao Forqueta: tem contribuição de ordem semelhante, está a montante do ponto de análise e não é controlado pela carteira atual.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Conclusões e próximos passos</span>"
+    ]
+  },
+  {
+    "objectID": "08-conclusoes.html#ordem-de-execução",
+    "href": "08-conclusoes.html#ordem-de-execução",
+    "title": "8  Conclusões e próximos passos",
+    "section": "8.2 Ordem de execução",
+    "text": "8.2 Ordem de execução\n\nfechar a auditoria de datum e CAVs das UHEs existentes;\nobter ANA/ONS, níveis, vazões e informações operacionais;\nsubstituir a batimetria sintética por topobatimetria no trecho detalhado;\ncompletar geometria e vãos das pontes;\ncalibrar o HEC-RAS 1D no evento de 2024;\nconstruir a exposição e a curva cota–dano preliminar;\nincorporar as séries observadas, desagregar o hidrograma do Guaporé e investigar o GU1 como novo eixo exploratório;\nconfirmar a defasagem do Forqueta com dados subdiários de Barra do Fão e manter FQ1/FQ2 apenas como sensibilidades;\nexecutar a matriz HEC-00–HEC-03: sem obra, E02 + E04, E02 + E04 + E08 e E02 + E04 + E12; depois, testar HEC-04 (ALT-J + GU1) como extensão estrutural prioritária, HEC-05 (ALT-J + FQ2) como sensibilidade lateral e HEC-06 (C04/C05/FQ1) apenas como rede crítica;\nestimar custos, energia, segurança, impactos e benefícios;\nselecionar, ou rejeitar, alternativas com critérios documentados.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Conclusões e próximos passos</span>"
+    ]
+  },
+  {
+    "objectID": "08-conclusoes.html#entrega-esperada-do-estudo-contratado",
+    "href": "08-conclusoes.html#entrega-esperada-do-estudo-contratado",
+    "title": "8  Conclusões e próximos passos",
+    "section": "8.3 Entrega esperada do estudo contratado",
+    "text": "8.3 Entrega esperada do estudo contratado\nO Termo de Referência deve exigir arquivos editáveis, geometrias, séries, parâmetros, regras de operação, relatórios de calibração, mapas, metadados e scripts ou rotinas de reprodução. A decisão precisa ser auditável por município, ponto de controle, cota e evento.\n\n\n\n\n\n\nMensagem final\n\n\n\nO achado mais útil desta etapa não é uma obra escolhida; é a redução da incerteza sobre onde investir o esforço. A próxima rodada deve validar o arranjo distribuído e as cascatas com comportas no HEC-RAS 1D, enquanto deixa o alteamento documentado como alternativa de sensibilidade.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Conclusões e próximos passos</span>"
+    ]
+  },
+  {
+    "objectID": "90-limitacoes.html",
+    "href": "90-limitacoes.html",
+    "title": "Apêndice A — Limitações e incertezas",
+    "section": "",
+    "text": "A.1 Incertezas principais",
+    "crumbs": [
+      "Apêndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Limitações e incertezas</span>"
+    ]
+  },
+  {
+    "objectID": "90-limitacoes.html#incertezas-principais",
+    "href": "90-limitacoes.html#incertezas-principais",
+    "title": "Apêndice A — Limitações e incertezas",
+    "section": "",
+    "text": "MDE/ANADEM: resolução e cobertura podem não representar talvegue, pontes e microrelevo;\nbatimetria: o MDE não revela volume abaixo da água em reservatórios existentes;\nCAVs de eixos novos: derivadas de topografia e área alagada, ainda sem levantamento;\nMonte Claro: diferença entre cota oficial de 148 m e superfície do MDE do projeto;\nhidrologia: a rodada C1–C4 calibrada é preliminar; transposição para o ponto de análise, perdas e sincronização dos tributários ainda não estão plenamente validadas;\ncomportas: regras, áreas de descarga e limites são hipóteses de triagem;\nHEC-RAS 1D: seções, pontes e contorno de jusante ainda precisam de dados reais;\ndanos: valores do Atlas e estoque econômico não equivalem automaticamente a uma função cota–dano;\neconomia: qualquer dano placeholder deve ser substituído por fonte e sensibilidade;\nsegurança: nenhuma conclusão de estabilidade ou segurança de barragem está sendo feita.",
+    "crumbs": [
+      "Apêndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Limitações e incertezas</span>"
+    ]
+  },
+  {
+    "objectID": "90-limitacoes.html#como-reportar",
+    "href": "90-limitacoes.html#como-reportar",
+    "title": "Apêndice A — Limitações e incertezas",
+    "section": "A.2 Como reportar",
+    "text": "A.2 Como reportar\nCada tabela final deve classificar o número como observado, derivado, estimado, sintético ou não disponível. Cenários sintéticos devem ser reproduzidos com os mesmos parâmetros e acompanhados por uma faixa de sensibilidade.\n\n\n\n\n\n\nNão extrapolar\n\n\n\nNão é válido transformar a redução de pico de um cenário de roteamento calibrado em redução garantida de danos, nem transformar volume de espera em cota protegida sem simulação hidráulica.",
+    "crumbs": [
+      "Apêndices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Limitações e incertezas</span>"
+    ]
+  },
+  {
+    "objectID": "91-reprodutibilidade.html",
+    "href": "91-reprodutibilidade.html",
+    "title": "Apêndice B — Reprodutibilidade e organização dos arquivos",
+    "section": "",
+    "text": "B.1 Estrutura",
+    "crumbs": [
+      "Apêndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Reprodutibilidade e organização dos arquivos</span>"
+    ]
+  },
+  {
+    "objectID": "91-reprodutibilidade.html#estrutura",
+    "href": "91-reprodutibilidade.html#estrutura",
+    "title": "Apêndice B — Reprodutibilidade e organização dos arquivos",
+    "section": "",
+    "text": "Pasta\nFunção\n\n\n\n\n01_dados/\ndados brutos, metadados e bases intermediárias\n\n\n02_R/\nrotinas estatísticas e de operação\n\n\n03_HECRAS/\nprojetos e insumos do HEC-RAS 1D\n\n\n04_HECHMS/\npreparação hidrológica\n\n\n05_FloodAdapt/\nferramentas complementares, quando aplicáveis\n\n\n06_resultados/\ntabelas, figuras, notas e arquivos geoespaciais\n\n\n07_python/\nscripts numerados da análise\n\n\ndocs/\nsite HTML gerado pelo Quarto",
+    "crumbs": [
+      "Apêndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Reprodutibilidade e organização dos arquivos</span>"
+    ]
+  },
+  {
+    "objectID": "91-reprodutibilidade.html#pipeline-mínimo",
+    "href": "91-reprodutibilidade.html#pipeline-mínimo",
+    "title": "Apêndice B — Reprodutibilidade e organização dos arquivos",
+    "section": "B.2 Pipeline mínimo",
+    "text": "B.2 Pipeline mínimo\n\nconferir os insumos e seus metadados;\nexecutar os scripts na ordem numérica relevante;\nverificar os CSVs e as figuras em 06_resultados/;\nrenderizar o livro com quarto render;\nrevisar o HTML, as imagens, links de download e referências;\nregistrar o commit e a versão dos dados.",
+    "crumbs": [
+      "Apêndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Reprodutibilidade e organização dos arquivos</span>"
+    ]
+  },
+  {
+    "objectID": "91-reprodutibilidade.html#arquivos-de-auditoria",
+    "href": "91-reprodutibilidade.html#arquivos-de-auditoria",
+    "title": "Apêndice B — Reprodutibilidade e organização dos arquivos",
+    "section": "B.3 Arquivos de auditoria",
+    "text": "B.3 Arquivos de auditoria\n\nHANDOFF\nstatus do projeto\nrelação de figuras e referências\nachados da revisão\nroteiro HEC-RAS 1D\n\nO site é uma camada de apresentação; os dados e scripts permanecem no repositório para que as tabelas e conclusões possam ser conferidas.",
+    "crumbs": [
+      "Apêndices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Reprodutibilidade e organização dos arquivos</span>"
+    ]
+  },
+  {
+    "objectID": "referencias.html",
+    "href": "referencias.html",
+    "title": "Apêndice C — Referências",
+    "section": "",
+    "text": "C.1 Template e documentação",
+    "crumbs": [
+      "Apêndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Referências</span>"
+    ]
+  },
+  {
+    "objectID": "referencias.html#template-e-documentação",
+    "href": "referencias.html#template-e-documentação",
+    "title": "Apêndice C — Referências",
+    "section": "",
+    "text": "SEDEC/DPM. Minicurso TRIGRS — template Quarto.\nQuarto. Quarto Book.",
+    "crumbs": [
+      "Apêndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Referências</span>"
+    ]
+  },
+  {
+    "objectID": "referencias.html#hand-inundação-e-relevo",
+    "href": "referencias.html#hand-inundação-e-relevo",
+    "title": "Apêndice C — Referências",
+    "section": "C.2 HAND, inundação e relevo",
+    "text": "C.2 HAND, inundação e relevo\n\nAssociação Brasileira de Recursos Hídricos. Trabalho técnico sobre HAND.\nRennó, C. D. et al. HAND — Height Above the Nearest Drainage: a new terrain descriptor for hydrological mapping and flood-related applications. Referência metodológica a ser conferida na versão final do artigo e do PDF adotado.",
+    "crumbs": [
+      "Apêndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Referências</span>"
+    ]
+  },
+  {
+    "objectID": "referencias.html#reservatórios-e-curvas-cav",
+    "href": "referencias.html#reservatórios-e-curvas-cav",
+    "title": "Apêndice C — Referências",
+    "section": "C.3 Reservatórios e curvas CAV",
+    "text": "C.3 Reservatórios e curvas CAV\n\nSNIRH. Metadados da base de curvas cota–área–volume.\nDomeneghetti, A. et al. Artigo sobre reconstrução/uso de relações de reservatórios.\nMinistério de Minas e Energia. Manual de Inventário Hidrelétrico de Bacias Hidrográficas. Brasília, 2007.",
+    "crumbs": [
+      "Apêndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Referências</span>"
+    ]
+  },
+  {
+    "objectID": "referencias.html#danos-exposição-e-bases-territoriais",
+    "href": "referencias.html#danos-exposição-e-bases-territoriais",
+    "title": "Apêndice C — Referências",
+    "section": "C.4 Danos, exposição e bases territoriais",
+    "text": "C.4 Danos, exposição e bases territoriais\n\nMDR. Atlas Digital de Desastres.\nIBGE. Estatísticas de habitação.\nIBGE. Downloads de estatísticas.\nIBGE. Malhas de setores censitários e divisões intramunicipais.\nIPEA. IPEAgeo — bases territoriais.",
+    "crumbs": [
+      "Apêndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Referências</span>"
+    ]
+  },
+  {
+    "objectID": "referencias.html#dados-hidrológicos-e-geoespaciais",
+    "href": "referencias.html#dados-hidrológicos-e-geoespaciais",
+    "title": "Apêndice C — Referências",
+    "section": "C.5 Dados hidrológicos e geoespaciais",
+    "text": "C.5 Dados hidrológicos e geoespaciais\n\nAgência Nacional de Águas e Saneamento Básico. Base Hidrográfica Ottocodificada e séries hidrológicas utilizadas no estudo; metadados e versão devem ser registrados na entrega final.\nANADEM. Modelo digital de elevação adotado para o recorte detalhado, com resolução, sistema de referência e data de acesso a registrar na versão contratada.",
+    "crumbs": [
+      "Apêndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Referências</span>"
+    ]
+  },
+  {
+    "objectID": "referencias.html#nota-sobre-atualização",
+    "href": "referencias.html#nota-sobre-atualização",
+    "title": "Apêndice C — Referências",
+    "section": "C.6 Nota sobre atualização",
+    "text": "C.6 Nota sobre atualização\nAs referências acima compõem a base metodológica da nota. A versão final deve acrescentar DOI, autores completos, edição, ano-base monetário, versão dos dados, data de acesso e metadados de cada arquivo efetivamente usado.",
+    "crumbs": [
+      "Apêndices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Referências</span>"
+    ]
+  }
+]

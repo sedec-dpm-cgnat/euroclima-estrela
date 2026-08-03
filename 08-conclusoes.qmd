@@ -1,0 +1,74 @@
+# Conclusões e próximos passos
+
+## Conclusões que resistem à triagem
+
+- Aumentar a altura das UHEs existentes não parece suficiente, isoladamente, para gerar o
+  volume de espera necessário; permanece como sensibilidade de custo e engenharia.
+- Eixos novos sem afogamento direto das usinas existentes são a linha de investigação mais
+  promissora neste momento.
+- A restrição da cascata Monte Claro–Castro Alves–14 de Julho domina o desenho das alturas
+  admissíveis.
+- Cascatas com comportas podem aumentar a flexibilidade, mas exigem modelo de operação,
+  massa, tempo de trânsito e segurança em série.
+- A rodada calibrada C1–C4 indica ALT-E (E02 + E04 + E12) e ALT-J como os cenários
+  de maior redução de pico na triagem, mas nenhum alcançou 4.000 m³/s e nenhum deve
+  ser tratado como escolha definitiva antes do HEC-RAS 1D.
+- A curva cota–dano é o elo que transforma redução de vazão em benefício social e deve ser
+  construída em conjunto com a calibração hidráulica.
+- O Forqueta não deve entrar na alternativa de referência nesta rodada, mas isso não é descarte
+  do tributário: como conflui antes de Estrela, ele permanece como sensibilidade condicionada
+  para Lajeado, Estrela e Bom Retiro do Sul. Com a série observada
+  do posto 86745000, FQ1 acrescentou 0,7 ponto percentual e FQ2 1,1 ponto percentual à
+  redução de ALT-J em Estrela; além disso, os dois eixos são mutuamente exclusivos por cota.
+  FQ1 permanece condicionado à confirmação da defasagem no evento de novembro de 2023.
+- A matriz combinada com ALT-A–ALT-J confirmou que o melhor cenário preliminar é ALT-J + FQ2,
+  sob regra de barragem seca: aproximadamente 6.802 m³/s em Estrela, ainda 2.802 m³/s acima
+  do limiar provisório de 4.000 m³/s. Portanto, incluir o Forqueta melhora o resultado, mas
+  não produz, nesta parametrização, uma condição próxima da não ocorrência de cheia.
+- A busca exaustiva das adições à ALT-J confirmou que incluir E03, E06, E07, E09 ou E11
+  não reduz o pico terminal na parametrização atual; o envelope teórico com E10 também
+  permanece em 7.005 m³/s. Isso decorre da topologia aninhada e da presença do E12 como
+  eixo terminal, não de uma prova de que esses eixos sejam hidraulicamente irrelevantes.
+- A próxima hipótese de barragem que pode acrescentar controle independente é o **GU1 no
+  rio Guaporé**. Antes de combiná-lo com ALT-J, será necessário desagregar sua sub-bacia
+  do hidrograma do Antas e fazer o roteamento próprio; a soma direta dos hidrogramas
+  incorreria em dupla contagem. Essa decomposição foi executada: no máximo histórico
+  do Santa Lúcia, ALT-J + GU1 a 100 m levou o pico a aproximadamente 4.532 m³/s; no
+  evento de novembro de 2023, o resultado foi 4.763 m³/s a 120 m, ambos ainda acima
+  do limiar preliminar. O GU1 passa a ser a alternativa prioritária para aprofundamento,
+  mas não resolve sozinho a não inundação na triagem atual.
+- O Guaporé surgiu como prioridade exploratória superior ao Forqueta: tem contribuição de
+  ordem semelhante, está a montante do ponto de análise e não é controlado pela carteira atual.
+
+## Ordem de execução
+
+1. fechar a auditoria de datum e CAVs das UHEs existentes;
+2. obter ANA/ONS, níveis, vazões e informações operacionais;
+3. substituir a batimetria sintética por topobatimetria no trecho detalhado;
+4. completar geometria e vãos das pontes;
+5. calibrar o HEC-RAS 1D no evento de 2024;
+6. construir a exposição e a curva cota–dano preliminar;
+7. incorporar as séries observadas, desagregar o hidrograma do Guaporé e investigar o GU1
+   como novo eixo exploratório;
+8. confirmar a defasagem do Forqueta com dados subdiários de Barra do Fão e manter FQ1/FQ2
+   apenas como sensibilidades;
+9. executar a matriz HEC-00–HEC-03: sem obra, E02 + E04, E02 + E04 + E08 e E02 + E04 + E12;
+   depois, testar HEC-04 (ALT-J + GU1) como extensão estrutural prioritária, HEC-05
+   (ALT-J + FQ2) como sensibilidade lateral e HEC-06 (C04/C05/FQ1) apenas como rede crítica;
+10. estimar custos, energia, segurança, impactos e benefícios;
+11. selecionar, ou rejeitar, alternativas com critérios documentados.
+
+## Entrega esperada do estudo contratado
+
+O Termo de Referência deve exigir arquivos editáveis, geometrias, séries, parâmetros,
+regras de operação, relatórios de calibração, mapas, metadados e scripts ou rotinas de
+reprodução. A decisão precisa ser auditável por município, ponto de controle, cota e evento.
+
+::: {.callout-note}
+## Mensagem final
+
+O achado mais útil desta etapa não é uma obra escolhida; é a redução da incerteza sobre onde
+investir o esforço. A próxima rodada deve validar o arranjo distribuído e as cascatas com
+comportas no HEC-RAS 1D, enquanto deixa o alteamento documentado como alternativa de
+sensibilidade.
+:::

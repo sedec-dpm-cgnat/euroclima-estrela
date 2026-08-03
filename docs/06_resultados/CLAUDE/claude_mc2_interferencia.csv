@@ -1,0 +1,10 @@
+eixo;altura_m;cota_NA_m;volume_hm3;area_alagada_km2;Ef_novo_MWmed;perda_montante_MWmed;usina_afetada;Ef_liquido_MWmed;VETO_min_operacional;dentro_da_altura_admissivel
+MC2;10;117,5;5,3;1,1;15,6;0,94;Monte Claro;14,7;False;True
+MC2;20;127,5;20,4;1,97;31,2;16,15;Monte Claro;15,0;False;True
+MC2;30;137,5;45,9;3,15;46,8;31,35;Monte Claro;15,4;False;False
+MC2;40;147,5;83,1;4,36;62,4;46,56;Monte Claro;15,8;True;False
+MC2;50;157,5;143,8;7,18;78,0;47,32;Monte Claro;30,7;True;False
+MC2;60;167,5;225,8;9,27;93,6;47,32;Monte Claro;46,3;True;False
+MC2;80;187,5;459,8;14,22;124,8;47,32;Monte Claro;77,5;True;False
+MC2;100;207,5;803,7;20,1;156,0;47,32;Monte Claro;108,7;True;False
+MC2;120;227,5;1271,9;26,83;187,2;47,32;Monte Claro;139,9;True;False

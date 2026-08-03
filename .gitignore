@@ -24,6 +24,12 @@ _site/
 _book/
 *_files/
 
+# pacotes brutos grandes; as curvas extraídas e a ficha técnica ficam versionadas
+01_dados/cav_snirh/*.zip
+
+# artefatos locais do Python
+07_python/__pycache__/
+
 # sistema
 Thumbs.db
 .DS_Store

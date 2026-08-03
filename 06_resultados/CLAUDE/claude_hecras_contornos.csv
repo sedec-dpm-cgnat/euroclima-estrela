@@ -1,0 +1,9 @@
+posicao;tipo;estaca_ras_m;cota_talvegue_m;area_drenagem_km2;fonte;observacao
+montante;flow hydrograph;39402,2;22,0;19440,0;"hidrograma do evento de referencia; nos cenarios com barragem, usar o efluente roteado";posto ANA de Mucum/Encantado propagado, quando disponivel
+jusante;normal depth;0,0;13,5;23699,0;normal depth com S = 0.000063 m/m (regressao sobre a cota bruta dos ultimos 10 km);TESTAR SENSIBILIDADE: com declividade desta ordem o remanso do Guaiba pode governar o nivel em eventos extremos
+lateral;lateral inflow;23675,0;;2844,8;Rio Forqueta — hidrograma escalado por area (14.63% da bacia);verificar defasagem de pico do tributario
+lateral;lateral inflow;36603,8;;576,5;Arroio Boa Vista — hidrograma escalado por area (2.97% da bacia);verificar defasagem de pico do tributario
+lateral;lateral inflow;9974,5;;254,8;Arroio Sampaio — hidrograma escalado por area (1.31% da bacia);verificar defasagem de pico do tributario
+lateral;lateral inflow;17898,8;;241,0;Arroio Estrela — hidrograma escalado por area (1.24% da bacia);verificar defasagem de pico do tributario
+lateral;lateral inflow;26823,2;;60,9;Arroio Grande — hidrograma escalado por area (0.31% da bacia);verificar defasagem de pico do tributario
+lateral;lateral inflow;24823,1;;24,3;Arroio do Meio — hidrograma escalado por area (0.13% da bacia);verificar defasagem de pico do tributario

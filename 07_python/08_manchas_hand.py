@@ -4,8 +4,11 @@ EUROCLIMA / Estrela-RS — manchas de inundacao COM e SEM barragens,
 do eixo barrado ate Bom Retiro do Sul.
 
 Metodo: HAND (Height Above Nearest Drainage) + curva-chave sintetica de
-Manning por trecho (Nobre et al. 2011; Zheng et al. 2018 — mesma familia de
-metodo do produto "Mapa de Perigo a Inundacao para o RS" ja disponivel).
+Manning por trecho (Rennó et al. 2008; Nobre et al. 2011; Goerl et al.,
+"O modelo HAND como ferramenta de mapeamento de áreas propensas a inundar",
+XX Simpósio Brasileiro de Recursos Hídricos). O HAND é usado como triagem;
+os parâmetros precisam ser calibrados contra dados observados antes de
+interpretar as manchas como resultado hidráulico definitivo.
 
 Arquitetura em dois estagios, por desempenho:
   ESTAGIO 1 — acumulacao de fluxo sobre a BACIA INTEIRA (51 M celulas)

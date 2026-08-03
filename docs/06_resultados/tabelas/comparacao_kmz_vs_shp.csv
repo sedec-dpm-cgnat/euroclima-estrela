@@ -1,0 +1,4 @@
+par;shp;kmz;area_shp;area_kmz;cota_shp;cota_kmz;vol80_shp;vol80_kmz;ganho_vol_pct
+eixo principal;BAR-A;B1;15759,6;15457,1;47;57;2231,4;1599,6;-28,3
+ramo principal (Antas);BAR-A2;B3;12777,4;12774,4;72;72,5;1003,5;969,5;-3,4
+tributario;BAR-B;B2;2549,3;2561,5;72;69;300,5;325,8;8,4

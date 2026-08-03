@@ -1,0 +1,22 @@
+cenario;regra;eixos_antas;eixos_forqueta;volume_total_hm3;vol_antas_hm3;vol_forqueta_hm3;pico_estrela_m3s;reducao_estrela_pct;pico_analise_m3s;reducao_analise_pct;saturou
+ALT-J sem Forqueta;seca;E02,E04,E01,E05,E08,E12;-;2604,0;2604,0;0,0;7005;58,6;6207;61,9;True
+ALT-J sem Forqueta;comportas;E02,E04,E01,E05,E08,E12;-;2342,7;2342,7;0,0;8301;50,9;6329;61,2;True
+ALT-J sem Forqueta;convencional;E02,E04,E01,E05,E08,E12;-;589,7;589,7;0,0;15845;6,3;15372;5,7;True
+ALT-J + FQ1;seca;E02,E04,E01,E05,E08,E12;FQ1;2816,3;2604,0;212,3;6880;59,3;6207;61,9;True
+ALT-J + FQ1;comportas;E02,E04,E01,E05,E08,E12;FQ1;2485,5;2342,7;142,8;7887;53,3;6329;61,2;True
+ALT-J + FQ1;convencional;E02,E04,E01,E05,E08,E12;FQ1;617,4;589,7;27,7;15855;6,2;15372;5,7;True
+ALT-J + FQ2;seca;E02,E04,E01,E05,E08,E12;FQ2;2752,5;2604,0;148,4;6816;59,7;6207;61,9;True
+ALT-J + FQ2;comportas;E02,E04,E01,E05,E08,E12;FQ2;2432,5;2342,7;89,7;8320;50,8;6329;61,2;True
+ALT-J + FQ2;convencional;E02,E04,E01,E05,E08,E12;FQ2;605,9;589,7;16,2;15854;6,2;15372;5,7;True
+ALT-J + FQ1 + FQ2 (inviavel);seca;E02,E04,E01,E05,E08,E12;FQ1,FQ2;2833,5;2604,0;229,5;6880;59,3;6207;61,9;True
+ALT-J + FQ1 + FQ2 (inviavel);comportas;E02,E04,E01,E05,E08,E12;FQ1,FQ2;2566,2;2342,7;223,5;7046;58,3;6329;61,2;True
+ALT-J + FQ1 + FQ2 (inviavel);convencional;E02,E04,E01,E05,E08,E12;FQ1,FQ2;633,6;589,7;43,9;15865;6,1;15372;5,7;True
+FQ1 isolado;seca;-;FQ1;212,3;0,0;212,3;17012;-0,6;16300;0,0;False
+FQ1 isolado;comportas;-;FQ1;142,8;0,0;142,8;16920;-0,1;16300;0,0;True
+FQ1 isolado;convencional;-;FQ1;27,7;0,0;27,7;16920;-0,1;16300;0,0;True
+FQ2 isolado;seca;-;FQ2;148,4;0,0;148,4;16919;-0,1;16300;0,0;True
+FQ2 isolado;comportas;-;FQ2;89,7;0,0;89,7;16919;-0,1;16300;0,0;True
+FQ2 isolado;convencional;-;FQ2;16,2;0,0;16,2;16919;-0,1;16300;0,0;True
+ALT-A (E02+E04) + FQ1;seca;E02,E04;FQ1;1880,6;1668,3;212,3;9974;41,0;9273;43,1;False
+ALT-A (E02+E04) + FQ1;comportas;E02,E04;FQ1;1711,6;1568,8;142,8;10005;40,8;9284;43,0;True
+ALT-A (E02+E04) + FQ1;convencional;E02,E04;FQ1;427,6;399,9;27,7;15871;6,1;15377;5,7;True

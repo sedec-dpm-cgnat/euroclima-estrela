@@ -1,0 +1,31 @@
+alternativa;eixos;regra_operativa;n_eixos;area_controlada_km2;pct_bacia;volume_utilizado_hm3;pico_natural_m3s;pico_com_alternativa_m3s;reducao_pico_pct;atinge_Q_sem_dano;algum_reservatorio_saturou
+ALT-A — E02 + E04 (prioritarios);E02+E04;convencional;2;11089;57,0;2013,9;16299;16114;1,1;False;False
+ALT-A — E02 + E04 (prioritarios);E02+E04;seca;2;11089;57,0;1693,5;16299;9272;43,1;False;False
+ALT-A — E02 + E04 (prioritarios);E02+E04;comportas;2;11089;57,0;2442,7;16299;9283;43,0;False;False
+ALT-B — E02 + E04 + E01;E02+E04+E01;convencional;3;13638;70,2;2118,9;16299;16124;1,1;False;False
+ALT-B — E02 + E04 + E01;E02+E04+E01;seca;3;13638;70,2;1864,2;16299;8969;45,0;False;True
+ALT-B — E02 + E04 + E01;E02+E04+E01;comportas;3;13638;70,2;2613,5;16299;9159;43,8;False;True
+ALT-C — E02 + E04 + E05;E02+E04+E05;convencional;3;11514;59,2;2084,6;16299;16092;1,3;False;False
+ALT-C — E02 + E04 + E05;E02+E04+E05;seca;3;11514;59,2;1751,1;16299;9014;44,7;False;False
+ALT-C — E02 + E04 + E05;E02+E04+E05;comportas;3;11514;59,2;2519,7;16299;9014;44,7;False;False
+ALT-D — E02 + E04 + E08;E02+E04+E08;convencional;3;11950;61,5;2490,6;16299;15981;1,9;False;False
+ALT-D — E02 + E04 + E08;E02+E04+E08;seca;3;11950;61,5;1870,7;16299;8411;48,4;False;False
+ALT-D — E02 + E04 + E08;E02+E04+E08;comportas;3;11950;61,5;2733,4;16299;8738;46,4;False;False
+ALT-E — E02 + E04 + E12;E02+E04+E12;convencional;3;15760;81,1;2891,2;16299;15812;3,0;False;False
+ALT-E — E02 + E04 + E12;E02+E04+E12;seca;3;15760;81,1;2365,8;16299;6328;61,2;False;False
+ALT-E — E02 + E04 + E12;E02+E04+E12;comportas;3;15760;81,1;3303,5;16299;6328;61,2;False;False
+ALT-F — E02 isolado;E02;convencional;1;3591;18,5;696,6;16299;16223;0,5;False;False
+ALT-F — E02 isolado;E02;seca;1;3591;18,5;545,9;16299;14027;13,9;False;False
+ALT-F — E02 isolado;E02;comportas;1;3591;18,5;784,5;16299;14027;13,9;False;False
+ALT-G — E04 isolado;E04;convencional;1;7498;38,6;1317,2;16299;16145;0,9;False;False
+ALT-G — E04 isolado;E04;seca;1;7498;38,6;1147,6;16299;11541;29,2;False;False
+ALT-G — E04 isolado;E04;comportas;1;7498;38,6;1658,2;16299;11555;29,1;False;False
+ALT-H — E12 isolado;E12;convencional;1;15760;81,1;880,7;16299;16070;1,4;False;False
+ALT-H — E12 isolado;E12;seca;1;15760;81,1;976,3;16299;16267;0,2;False;True
+ALT-H — E12 isolado;E12;comportas;1;15760;81,1;972,2;16299;16229;0,4;False;True
+ALT-I — E02+E04+E01+E05+E08;E02+E04+E01+E05+E08;convencional;5;14499;74,6;2666,3;16299;16004;1,8;False;False
+ALT-I — E02+E04+E01+E05+E08;E02+E04+E01+E05+E08;seca;5;14499;74,6;2099,2;16299;8279;49,2;False;True
+ALT-I — E02+E04+E01+E05+E08;E02+E04+E01+E05+E08;comportas;5;14499;74,6;2981,4;16299;8628;47,1;False;True
+ALT-J — E02+E04+E01+E05+E08+E12;E02+E04+E01+E05+E08+E12;convencional;6;15760;81,1;3544,0;16299;15816;3,0;False;False
+ALT-J — E02+E04+E01+E05+E08+E12;E02+E04+E01+E05+E08+E12;seca;6;15760;81,1;2639,3;16299;6213;61,9;False;True
+ALT-J — E02+E04+E01+E05+E08+E12;E02+E04+E01+E05+E08+E12;comportas;6;15760;81,1;3706,2;16299;6328;61,2;False;True

@@ -1,0 +1,16 @@
+﻿id_curva;nome;categoria;confiabilidade;n_pontos;cota_min_m;cota_max_m;arquivo
+UHE_14_DE_JULHO;14 de Julho;UHE existente;A - CAV oficial SNIRH/ANA;1107;62,37;110,00000000000354;01_dados/cav_snirh/curvas/cav_snirh_consolidada.csv
+UHE_CASTRO_ALVES;Castro Alves;UHE existente;A - CAV oficial SNIRH/ANA;1265;187,05;246,44;01_dados/cav_snirh/curvas/cav_snirh_consolidada.csv
+UHE_MONTE_CLARO;Monte Claro;UHE existente;A - CAV oficial SNIRH/ANA;1328;116,88;157,2499999999908;01_dados/cav_snirh/curvas/cav_snirh_consolidada.csv
+EIXO_E01;E01;Eixo novo sem reservatório existente;"B - Derivada do MDE natural; triagem";111;82,5;192,5;06_resultados/tabelas/cav_eixos_novos_interpolada_1m.csv
+EIXO_E02;E02;Eixo novo sem reservatório existente;"B - Derivada do MDE natural; triagem";111;303,0;413,0;06_resultados/tabelas/cav_eixos_novos_interpolada_1m.csv
+EIXO_E03;E03;Eixo novo sem reservatório existente;"B - Derivada do MDE natural; triagem";111;159,5;269,5;06_resultados/tabelas/cav_eixos_novos_interpolada_1m.csv
+EIXO_E04;E04;Eixo novo sem reservatório existente;"B - Derivada do MDE natural; triagem";111;249,0;359,0;06_resultados/tabelas/cav_eixos_novos_interpolada_1m.csv
+EIXO_E05;E05;Eixo novo sem reservatório existente;"B - Derivada do MDE natural; triagem";111;177,0;287,0;06_resultados/tabelas/cav_eixos_novos_interpolada_1m.csv
+EIXO_E06;E06;Eixo novo sem reservatório existente;"B - Derivada do MDE natural; triagem";111;159,5;269,5;06_resultados/tabelas/cav_eixos_novos_interpolada_1m.csv
+EIXO_E07;E07;Eixo novo sem reservatório existente;"B - Derivada do MDE natural; triagem";111;159,5;269,5;06_resultados/tabelas/cav_eixos_novos_interpolada_1m.csv
+EIXO_E08;E08;Eixo novo sem reservatório existente;"B - Derivada do MDE natural; triagem";111;158,0;268,0;06_resultados/tabelas/cav_eixos_novos_interpolada_1m.csv
+EIXO_E09;E09;Eixo novo sem reservatório existente;"B - Derivada do MDE natural; triagem";111;116,0;226,0;06_resultados/tabelas/cav_eixos_novos_interpolada_1m.csv
+EIXO_E10;E10;Eixo novo sem reservatório existente;"B - Derivada do MDE natural; triagem";111;81,5;191,5;06_resultados/tabelas/cav_eixos_novos_interpolada_1m.csv
+EIXO_E11;E11;Eixo novo sem reservatório existente;"B - Derivada do MDE natural; triagem";111;67,5;177,5;06_resultados/tabelas/cav_eixos_novos_interpolada_1m.csv
+EIXO_E12;E12;Eixo novo sem reservatório existente;"B - Derivada do MDE natural; triagem";111;57,0;167,0;06_resultados/tabelas/cav_eixos_novos_interpolada_1m.csv

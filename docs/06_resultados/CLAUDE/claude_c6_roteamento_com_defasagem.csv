@@ -1,0 +1,49 @@
+alternativa;cenario_distribuicao;fator_concentracao;defasagem_h;area_controlada_km2;pct_bacia;volume_usado_hm3;pico_m3s;reducao_pct;saturou
+ALT-A — E02 + E04;proporcional;1,0;0;11089;57,0;1693,5;9272;43,1;False
+ALT-A — E02 + E04;proporcional;1,0;6;11089;57,0;1693,5;9166;43,8;False
+ALT-A — E02 + E04;proporcional;1,0;12;11089;57,0;1693,5;9021;44,6;False
+ALT-A — E02 + E04;proporcional;1,0;24;11089;57,0;1693,5;8640;47,0;False
+ALT-A — E02 + E04;montante domina (set/2023);1,236;0;11089;57,0;2292,8;7089;56,5;False
+ALT-A — E02 + E04;montante domina (set/2023);1,236;6;11089;57,0;2292,8;7085;56,5;False
+ALT-A — E02 + E04;montante domina (set/2023);1,236;12;11089;57,0;2292,8;6993;57,1;False
+ALT-A — E02 + E04;montante domina (set/2023);1,236;24;11089;57,0;2292,8;6636;59,3;False
+ALT-A — E02 + E04;jusante domina (nov/2023);0,765;0;11089;57,0;1125,7;11281;30,8;False
+ALT-A — E02 + E04;jusante domina (nov/2023);0,765;6;11089;57,0;1125,7;11160;31,5;False
+ALT-A — E02 + E04;jusante domina (nov/2023);0,765;12;11089;57,0;1125,7;11013;32,4;False
+ALT-A — E02 + E04;jusante domina (nov/2023);0,765;24;11089;57,0;1125,7;10628;34,8;False
+ALT-D — E02 + E04 + E08;proporcional;1,0;0;11950;61,5;1870,7;8411;48,4;False
+ALT-D — E02 + E04 + E08;proporcional;1,0;6;11950;61,5;1870,7;8281;49,2;False
+ALT-D — E02 + E04 + E08;proporcional;1,0;12;11950;61,5;1870,7;8129;50,1;False
+ALT-D — E02 + E04 + E08;proporcional;1,0;24;11950;61,5;1870,7;7722;52,6;False
+ALT-D — E02 + E04 + E08;montante domina (set/2023);1,236;0;11950;61,5;2511,1;6182;62,1;False
+ALT-D — E02 + E04 + E08;montante domina (set/2023);1,236;6;11950;61,5;2511,1;6071;62,8;False
+ALT-D — E02 + E04 + E08;montante domina (set/2023);1,236;12;11950;61,5;2511,1;5933;63,6;False
+ALT-D — E02 + E04 + E08;montante domina (set/2023);1,236;24;11950;61,5;2511,1;5580;65,8;False
+ALT-D — E02 + E04 + E08;jusante domina (nov/2023);0,765;0;11950;61,5;1271,5;10591;35,0;False
+ALT-D — E02 + E04 + E08;jusante domina (nov/2023);0,765;6;11950;61,5;1271,5;10459;35,8;False
+ALT-D — E02 + E04 + E08;jusante domina (nov/2023);0,765;12;11950;61,5;1271,5;10298;36,8;False
+ALT-D — E02 + E04 + E08;jusante domina (nov/2023);0,765;24;11950;61,5;1271,5;9827;39,7;False
+ALT-E — E02 + E04 + E12;proporcional;1,0;0;15760;81,1;2365,8;6328;61,2;False
+ALT-E — E02 + E04 + E12;proporcional;1,0;6;15760;81,1;2365,8;6320;61,2;False
+ALT-E — E02 + E04 + E12;proporcional;1,0;12;15760;81,1;2365,8;6233;61,8;False
+ALT-E — E02 + E04 + E12;proporcional;1,0;24;15760;81,1;2365,8;5883;63,9;False
+ALT-E — E02 + E04 + E12;montante domina (set/2023);1,236;0;15760;81,1;3120,3;3569;78,1;False
+ALT-E — E02 + E04 + E12;montante domina (set/2023);1,236;6;15760;81,1;3120,3;3569;78,1;False
+ALT-E — E02 + E04 + E12;montante domina (set/2023);1,236;12;15760;81,1;3120,3;3567;78,1;False
+ALT-E — E02 + E04 + E12;montante domina (set/2023);1,236;24;15760;81,1;3120,3;3538;78,3;False
+ALT-E — E02 + E04 + E12;jusante domina (nov/2023);0,765;0;15760;81,1;1554,5;9338;42,7;False
+ALT-E — E02 + E04 + E12;jusante domina (nov/2023);0,765;6;15760;81,1;1554,5;9189;43,6;False
+ALT-E — E02 + E04 + E12;jusante domina (nov/2023);0,765;12;15760;81,1;1554,5;9015;44,7;False
+ALT-E — E02 + E04 + E12;jusante domina (nov/2023);0,765;24;15760;81,1;1554,5;8559;47,5;False
+ALT-J — carteira completa;proporcional;1,0;0;15760;81,1;2639,3;6213;61,9;True
+ALT-J — carteira completa;proporcional;1,0;6;15760;81,1;2639,3;6052;62,9;True
+ALT-J — carteira completa;proporcional;1,0;12;15760;81,1;2639,3;5895;63,8;True
+ALT-J — carteira completa;proporcional;1,0;24;15760;81,1;2639,3;5556;65,9;True
+ALT-J — carteira completa;montante domina (set/2023);1,236;0;15760;81,1;3446,5;3568;78,1;True
+ALT-J — carteira completa;montante domina (set/2023);1,236;6;15760;81,1;3446,5;3559;78,2;True
+ALT-J — carteira completa;montante domina (set/2023);1,236;12;15760;81,1;3446,5;3542;78,3;True
+ALT-J — carteira completa;montante domina (set/2023);1,236;24;15760;81,1;3446,5;3494;78,6;True
+ALT-J — carteira completa;jusante domina (nov/2023);0,765;0;15760;81,1;1782,8;9024;44,6;True
+ALT-J — carteira completa;jusante domina (nov/2023);0,765;6;15760;81,1;1782,8;8891;45,4;True
+ALT-J — carteira completa;jusante domina (nov/2023);0,765;12;15760;81,1;1782,8;8728;46,4;True
+ALT-J — carteira completa;jusante domina (nov/2023);0,765;24;15760;81,1;1782,8;8272;49,2;True

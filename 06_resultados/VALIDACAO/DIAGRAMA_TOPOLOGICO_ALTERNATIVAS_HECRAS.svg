@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#5b6770"/></marker></defs>
+<rect width="1800" height="1120" fill="#ffffff"/>
+<text x="60" y="48" font-size="28px" fill="#17324d" font-weight="700" text-anchor="start">Topologia física e matriz de entrada no HEC-RAS 1D</text>
+<text x="60" y="75" font-size="15px" fill="#52606d" font-weight="400" text-anchor="start">Linhas contínuas = conectividade a confirmar; linhas tracejadas = afluências laterais ou sensibilidades.</text>
+<rect x="35" y="100" width="1730" height="510" rx="14" fill="#f7f9fb" stroke="#d7e0e8"/>
+<text x="65" y="132" font-size="21px" fill="#17324d" font-weight="700" text-anchor="start">A. Rede física esquemática</text>
+<text x="65" y="160" font-size="14px" fill="#52606d" font-weight="400" text-anchor="start">Os eixos E02/E04 são os ramos prioritários; E08 e E12 entram como extensões condicionadas.</text>
+<line x1="205" y1="230" x2="340" y2="230" stroke="#1d70b8" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="395" y1="230" x2="530" y2="275" stroke="#6c757d" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="205" y1="410" x2="340" y2="410" stroke="#1d70b8" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="395" y1="410" x2="530" y2="455" stroke="#6c757d" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="585" y1="295" x2="720" y2="295" stroke="#6c757d" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="775" y1="295" x2="910" y2="295" stroke="#7b3f98" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="965" y1="295" x2="1100" y2="295" stroke="#6c757d" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="1155" y1="295" x2="1290" y2="295" stroke="#c53030" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="585" y1="445" x2="720" y2="325" stroke="#6c757d" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="965" y1="445" x2="1100" y2="325" stroke="#6c757d" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="1345" y1="295" x2="1600" y2="295" stroke="#17324d" stroke-width="3" marker-end="url(#arrow)"/>
+<g><rect x="150" y="205" width="110" height="55" rx="10" fill="#e6f2ff" stroke="#1d70b8" stroke-width="2"/><text x="205.0" y="230" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">E02</text><text x="205.0" y="252" text-anchor="middle" font-size="12" fill="#203040">prioritário</text></g>
+<g><rect x="340" y="205" width="110" height="55" rx="10" fill="#f1f3f5" stroke="#6c757d" stroke-width="2"/><text x="395.0" y="230" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">E03</text><text x="395.0" y="252" text-anchor="middle" font-size="12" fill="#203040">condicionado</text></g>
+<g><rect x="530" y="265" width="110" height="55" rx="10" fill="#fff4d6" stroke="#b7791f" stroke-width="2"/><text x="585.0" y="290" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">E08</text><text x="585.0" y="312" text-anchor="middle" font-size="12" fill="#203040">intermediário</text></g>
+<g><rect x="720" y="265" width="110" height="55" rx="10" fill="#f1f3f5" stroke="#6c757d" stroke-width="2"/><text x="775.0" y="290" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">E09</text><text x="775.0" y="312" text-anchor="middle" font-size="12" fill="#203040">condicionado</text></g>
+<g><rect x="910" y="265" width="110" height="55" rx="10" fill="#f7eafa" stroke="#7b3f98" stroke-width="2"/><text x="965.0" y="290" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">E10</text><text x="965.0" y="312" text-anchor="middle" font-size="12" fill="#203040">sensibilidade</text></g>
+<g><rect x="1100" y="265" width="110" height="55" rx="10" fill="#f1f3f5" stroke="#6c757d" stroke-width="2"/><text x="1155.0" y="290" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">E11</text><text x="1155.0" y="312" text-anchor="middle" font-size="12" fill="#203040">condicionado</text></g>
+<g><rect x="1290" y="265" width="110" height="55" rx="10" fill="#fde8e8" stroke="#c53030" stroke-width="2"/><text x="1345.0" y="290" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">E12</text><text x="1345.0" y="312" text-anchor="middle" font-size="12" fill="#203040">cobertura</text></g>
+<g><rect x="150" y="385" width="110" height="55" rx="10" fill="#e6f2ff" stroke="#1d70b8" stroke-width="2"/><text x="205.0" y="410" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">E04</text><text x="205.0" y="432" text-anchor="middle" font-size="12" fill="#203040">prioritário</text></g>
+<g><rect x="340" y="385" width="110" height="55" rx="10" fill="#f1f3f5" stroke="#6c757d" stroke-width="2"/><text x="395.0" y="410" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">E05</text><text x="395.0" y="432" text-anchor="middle" font-size="12" fill="#203040">condicionado</text></g>
+<g><rect x="530" y="445" width="110" height="55" rx="10" fill="#f1f3f5" stroke="#6c757d" stroke-width="2"/><text x="585.0" y="470" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">E06</text><text x="585.0" y="492" text-anchor="middle" font-size="12" fill="#203040">condicionado</text></g>
+<g><rect x="720" y="445" width="110" height="55" rx="10" fill="#f1f3f5" stroke="#6c757d" stroke-width="2"/><text x="775.0" y="470" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">E07</text><text x="775.0" y="492" text-anchor="middle" font-size="12" fill="#203040">condicionado</text></g>
+<g><rect x="910" y="445" width="110" height="55" rx="10" fill="#f1f3f5" stroke="#6c757d" stroke-width="2"/><text x="965.0" y="470" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">E01</text><text x="965.0" y="492" text-anchor="middle" font-size="12" fill="#203040">condicionado</text></g>
+<text x="1630" y="289" font-size="13px" fill="#17324d" font-weight="700" text-anchor="middle">saída para</text>
+<text x="1630" y="309" font-size="15px" fill="#17324d" font-weight="700" text-anchor="middle">Estrela</text>
+<line x1="850" y1="170" x2="850" y2="250" stroke="#2f855a" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow)"/>
+<g><rect x="760" y="115" width="180" height="55" rx="10" fill="#e7f7ed" stroke="#2f855a" stroke-width="2"/><text x="850.0" y="140" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">GU1</text><text x="850.0" y="162" text-anchor="middle" font-size="12" fill="#203040">Guaporé · prioridade</text></g>
+<text x="950" y="146" font-size="13px" fill="#2f855a" font-weight="700" text-anchor="start">entrada lateral a montante</text>
+<text x="950" y="164" font-size="12px" fill="#2f855a" font-weight="400" text-anchor="start">com desagregação do hidrograma</text>
+<line x1="1215" y1="475" x2="1215" y2="325" stroke="#805ad5" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow)"/>
+<g><rect x="1115" y="475" width="200" height="55" rx="10" fill="#f0eafd" stroke="#805ad5" stroke-width="2"/><text x="1215.0" y="500" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">FQ2</text><text x="1215.0" y="522" text-anchor="middle" font-size="12" fill="#203040">Forqueta · sensibilidade</text></g>
+<text x="1335" y="498" font-size="13px" fill="#805ad5" font-weight="700" text-anchor="start">entrada lateral antes de Estrela</text>
+<text x="1335" y="516" font-size="12px" fill="#805ad5" font-weight="400" text-anchor="start">FQ1 é alternativa exclusiva e condicionada</text>
+<rect x="65" y="540" width="15" height="15" fill="#e6f2ff" stroke="#1d70b8"/>
+<text x="88" y="553" font-size="12px" fill="#263238" font-weight="400" text-anchor="start">prioritário</text>
+<rect x="180" y="540" width="15" height="15" fill="#fff4d6" stroke="#b7791f"/>
+<text x="203" y="553" font-size="12px" fill="#263238" font-weight="400" text-anchor="start">extensão intermediária</text>
+<rect x="375" y="540" width="15" height="15" fill="#fde8e8" stroke="#c53030"/>
+<text x="398" y="553" font-size="12px" fill="#263238" font-weight="400" text-anchor="start">cobertura terminal</text>
+<line x1="600" y1="548" x2="665" y2="548" stroke="#805ad5" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="678" y="553" font-size="12px" fill="#263238" font-weight="400" text-anchor="start">ramo lateral / sensibilidade</text>
+<text x="65" y="585" font-size="13px" fill="#52606d" font-weight="400" text-anchor="start">A topologia não autoriza, por si só, a combinação de obras: remanso, cota de afogamento, energia e operação ainda precisam ser validados.</text>
+<rect x="35" y="635" width="1730" height="430" rx="14" fill="#f7f9fb" stroke="#d7e0e8"/>
+<text x="65" y="670" font-size="21px" fill="#17324d" font-weight="700" text-anchor="start">B. Sequência de simulação no HEC-RAS 1D</text>
+<text x="65" y="697" font-size="14px" fill="#52606d" font-weight="400" text-anchor="start">A primeira rodada identifica o efeito incremental; as extensões só entram depois da calibração do caso sem obra.</text>
+<g><rect x="65" y="755" width="215" height="150" rx="10" fill="#e9ecef" stroke="#495057" stroke-width="2"/><text x="172.5" y="780" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">HEC-00</text><text x="172.5" y="802" text-anchor="middle" font-size="12" fill="#203040">REF</text></g>
+<text x="172.5" y="837" font-size="14px" fill="#495057" font-weight="700" text-anchor="middle">sem obra</text>
+<text x="172.5" y="861" font-size="12px" fill="#52606d" font-weight="400" text-anchor="middle">calibração do evento 2024</text>
+<line x1="285" y1="830.0" x2="315" y2="830.0" stroke="#8a959e" stroke-width="2" marker-end="url(#arrow)"/>
+<g><rect x="310" y="755" width="215" height="150" rx="10" fill="#e6f2ff" stroke="#1d70b8" stroke-width="2"/><text x="417.5" y="780" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">HEC-01</text><text x="417.5" y="802" text-anchor="middle" font-size="12" fill="#203040">ALT-A / C01</text></g>
+<text x="417.5" y="837" font-size="14px" fill="#1d70b8" font-weight="700" text-anchor="middle">E02 + E04</text>
+<text x="417.5" y="861" font-size="12px" fill="#52606d" font-weight="400" text-anchor="middle">primeiro caso estrutural</text>
+<line x1="530" y1="830.0" x2="560" y2="830.0" stroke="#8a959e" stroke-width="2" marker-end="url(#arrow)"/>
+<g><rect x="555" y="755" width="215" height="150" rx="10" fill="#fff4d6" stroke="#b7791f" stroke-width="2"/><text x="662.5" y="780" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">HEC-02</text><text x="662.5" y="802" text-anchor="middle" font-size="12" fill="#203040">ALT-D / C03</text></g>
+<text x="662.5" y="837" font-size="14px" fill="#b7791f" font-weight="700" text-anchor="middle">E02 + E04 + E08</text>
+<text x="662.5" y="861" font-size="12px" fill="#52606d" font-weight="400" text-anchor="middle">cobertura intermediária</text>
+<line x1="775" y1="830.0" x2="805" y2="830.0" stroke="#8a959e" stroke-width="2" marker-end="url(#arrow)"/>
+<g><rect x="800" y="755" width="215" height="150" rx="10" fill="#fde8e8" stroke="#c53030" stroke-width="2"/><text x="907.5" y="780" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">HEC-03</text><text x="907.5" y="802" text-anchor="middle" font-size="12" fill="#203040">ALT-E / C02</text></g>
+<text x="907.5" y="837" font-size="14px" fill="#c53030" font-weight="700" text-anchor="middle">E02 + E04 + E12</text>
+<text x="907.5" y="861" font-size="12px" fill="#52606d" font-weight="400" text-anchor="middle">cobertura ampliada</text>
+<line x1="1020" y1="830.0" x2="1050" y2="830.0" stroke="#8a959e" stroke-width="2" marker-end="url(#arrow)"/>
+<g><rect x="1045" y="755" width="215" height="150" rx="10" fill="#e7f7ed" stroke="#2f855a" stroke-width="2"/><text x="1152.5" y="780" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">HEC-04</text><text x="1152.5" y="802" text-anchor="middle" font-size="12" fill="#203040">ALT-J + GU1</text></g>
+<text x="1152.5" y="837" font-size="14px" fill="#2f855a" font-weight="700" text-anchor="middle">carteira + Guaporé</text>
+<text x="1152.5" y="861" font-size="12px" fill="#52606d" font-weight="400" text-anchor="middle">prioridade estrutural</text>
+<line x1="1265" y1="830.0" x2="1295" y2="830.0" stroke="#8a959e" stroke-width="2" marker-end="url(#arrow)"/>
+<g><rect x="1290" y="755" width="215" height="150" rx="10" fill="#f0eafd" stroke="#805ad5" stroke-width="2"/><text x="1397.5" y="780" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">HEC-05</text><text x="1397.5" y="802" text-anchor="middle" font-size="12" fill="#203040">ALT-J + FQ2</text></g>
+<text x="1397.5" y="837" font-size="14px" fill="#805ad5" font-weight="700" text-anchor="middle">carteira + Forqueta</text>
+<text x="1397.5" y="861" font-size="12px" fill="#52606d" font-weight="400" text-anchor="middle">sensibilidade lateral</text>
+<line x1="1510" y1="830.0" x2="1540" y2="830.0" stroke="#8a959e" stroke-width="2" marker-end="url(#arrow)"/>
+<g><rect x="1535" y="755" width="215" height="150" rx="10" fill="#f1f3f5" stroke="#6c757d" stroke-width="2"/><text x="1642.5" y="780" text-anchor="middle" font-size="18" font-weight="700" fill="#203040">HEC-06</text><text x="1642.5" y="802" text-anchor="middle" font-size="12" fill="#203040">C04 / C05 / FQ1</text></g>
+<text x="1642.5" y="837" font-size="14px" fill="#6c757d" font-weight="700" text-anchor="middle">rede crítica</text>
+<text x="1642.5" y="861" font-size="12px" fill="#52606d" font-weight="400" text-anchor="middle">sensibilidade opcional</text>
+<rect x="65" y="950" width="1690" height="80" rx="8" fill="#fff8e1" stroke="#d69e2e"/>
+<text x="85" y="978" font-size="14px" fill="#8a5a00" font-weight="700" text-anchor="start">Regra de decisão</text>
+<text x="85" y="1003" font-size="13px" fill="#5d4700" font-weight="400" text-anchor="start">HEC-01 é o primeiro caso com obra. HEC-02 e HEC-03 medem o ganho incremental. GU1 entra como extensão prioritária após a calibração; FQ2 e FQ1 são sensibilidades laterais exclusivas. Nenhum cenário é obra selecionada antes da curva cota–dano e da validação hidráulica.</text>
+<text x="65" y="1092" font-size="12px" fill="#6c757d" font-weight="400" text-anchor="start">Fonte: síntese da topologia E01–E12 e da matriz de alternativas do estudo EUROCLIMA+ / AECID. Esquema sem escala.</text>
+</svg>

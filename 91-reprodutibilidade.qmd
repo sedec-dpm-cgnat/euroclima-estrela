@@ -1,0 +1,34 @@
+# Reprodutibilidade e organização dos arquivos
+
+## Estrutura
+
+| Pasta | Função |
+|---|---|
+| `01_dados/` | dados brutos, metadados e bases intermediárias |
+| `02_R/` | rotinas estatísticas e de operação |
+| `03_HECRAS/` | projetos e insumos do HEC-RAS 1D |
+| `04_HECHMS/` | preparação hidrológica |
+| `05_FloodAdapt/` | ferramentas complementares, quando aplicáveis |
+| `06_resultados/` | tabelas, figuras, notas e arquivos geoespaciais |
+| `07_python/` | scripts numerados da análise |
+| `docs/` | site HTML gerado pelo Quarto |
+
+## Pipeline mínimo
+
+1. conferir os insumos e seus metadados;
+2. executar os scripts na ordem numérica relevante;
+3. verificar os CSVs e as figuras em `06_resultados/`;
+4. renderizar o livro com `quarto render`;
+5. revisar o HTML, as imagens, links de download e referências;
+6. registrar o commit e a versão dos dados.
+
+## Arquivos de auditoria
+
+- [HANDOFF](HANDOFF.md)
+- [status do projeto](STATUS_ATUAL_PROJETO.md)
+- [relação de figuras e referências](RELATORIO_FIGURAS_REFERENCIAS.md)
+- [achados da revisão](06_resultados/CLAUDE/CLAUDE_ACHADOS_PARA_CODEX.md)
+- [roteiro HEC-RAS 1D](06_resultados/CLAUDE/CLAUDE_ROTEIRO_HECRAS_1D.md)
+
+O site é uma camada de apresentação; os dados e scripts permanecem no repositório para que
+as tabelas e conclusões possam ser conferidas.

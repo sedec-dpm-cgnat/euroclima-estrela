@@ -1,0 +1,6 @@
+id;nome;eixos;tipo;objetivo;status
+C01;prioritarios;E02+E04;ramos_convergentes;testar a operação coordenada dos dois eixos prioritários;primeiro cenário conjunto
+C02;prioritarios_com_cobertura;E02+E04+E12;ramos_convergentes_com_eixo_jusante;testar o ganho de cobertura com E12, condicionado à 14 de Julho;cenário de cobertura
+C03;intermediaria;E02+E04+E08;ramos_convergentes_com_eixo_intermediario;testar cobertura intermediária sem incluir toda a cascata inferior;"cenário intermediário; E08 condicionado a Castro Alves"
+C04;cascata_antas;E09+E10+E11+E12;serie_principal;testar barragens com comportas em série e a interação com a cascata existente;"cenário crítico; E09/E10/E11/E12 condicionados"
+C05;cascata_ramificada_completa;E01+E02+E04+E08+E09+E10+E11+E12;rede_ramificada;avaliar a coordenação de ramos e reservatórios em série;"sensibilidade; depende de validar todos os eixos"

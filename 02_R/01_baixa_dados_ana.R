@@ -6,7 +6,14 @@
 # Uso:  Rscript 01_baixa_dados_ana.R
 # Saida: 01_dados/ana_hidroweb/<codigo>_<tipo>.csv
 # =============================================================================
-source(file.path(dirname(normalizePath(sys.frame(1)$ofile %||% ".")), "00_config.R"))
+# Resolucao de caminho robusta: `sys.frame(1)$ofile` so existe quando o arquivo
+# e' carregado por source(); sob Rscript nao ha' frame e a chamada aborta.
+aqui <- local({
+  a <- commandArgs(trailingOnly = FALSE)
+  f <- sub("^--file=", "", a[grep("^--file=", a)])
+  if (length(f)) dirname(normalizePath(f[1])) else getwd()
+})
+source(file.path(aqui, "00_config.R"))
 suppressPackageStartupMessages({ library(xml2); library(httr) })
 
 # tipoDados: 1 = cota, 2 = chuva, 3 = vazao

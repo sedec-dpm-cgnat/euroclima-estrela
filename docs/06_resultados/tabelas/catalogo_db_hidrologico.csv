@@ -1,0 +1,17 @@
+﻿tipo,identificador,nome_ou_schema,rio_ou_tabela,municipio,n_ou_area,periodo,observacao
+catalogo,atlas_desastres,atlas_valores_corrigidos,,,76191,
+catalogo,dados_xavier,clima_diario_grade_2023,,,25915156,
+catalogo,dados_xavier,clima_diario_grade_2024,,,25990494,
+catalogo,dados_xavier,clima_diario_grade_2025,,,0,
+catalogo,dados_xavier,grid_ponto,,,71007,
+catalogo,hidro,chuvas_d_cb,,,156075968,
+catalogo,hidro,vazoes_d_cb,,,46119168,
+estacao_vazao,86305000,UHE CASTRO ALVES BARRAMENTO,RIO DAS ANTAS,NOVA ROMA DO SUL,30860,1931-01-01 a 2015-06-30,max=4962.0; area_km2=7742.6; qref=1932-2013; qmlt=175.239378177552; q95=18.0
+estacao_vazao,86448000,UHE MONTE CLARO BARRAMENTO,RIO DAS ANTAS,VERANÓPOLIS,30860,1931-01-01 a 2015-06-30,max=7753.09; area_km2=12113.7; qref=1932-2013; qmlt=306.998236214314; q95=33.734
+estacao_vazao,86470800,UHE 14 DE JULHO BARRAMENTO,RIO DAS ANTAS,COTIPORÃ,30860,1931-01-01 a 2015-06-30,max=12358.0; area_km2=12757.8; qref=1932-2013; qmlt=318.988301394864; q95=31.1045
+estacao_vazao,86510000,MUÇUM,RIO TAQUARI,MUÇUM,31471,1940-01-01 a 2026-02-28,max=15092.3; area_km2=16000.0; qref=1940-2023; qmlt=363.554372540009; q95=30.73
+estacao_vazao,86720000,ENCANTADO,RIO TAQUARI,ENCANTADO,30804,1941-10-01 a 2026-01-31,max=14003.0; area_km2=19100.0; qref=1942-2022; qmlt=457.025484715096; q95=43.787
+estacao_vazao,86745000,PASSO DO COIMBRA,RIO FORQUETA,POUSO NOVO,25021,1957-07-01 a 2025-12-31,max=1292.33; area_km2=791.0; qref=1958-2022; qmlt=21.8193691264668; q95=1.0099
+estacao_vazao,86580000,SANTA LÚCIA,RIO GUAPORÉ,DOUTOR RICARDO,31047,1940-01-01 a 2024-12-31,max=5077.11; area_km2=2470.0; qref=1940-2022; qmlt=65.8247851530531; q95=6.2761
+estacao_vazao,86879300,ESTRELA,RIO TAQUARI,ESTRELA,1156,2020-11-01 a 2023-12-31,max=17260.9; area_km2=22472.0; qref=2022-2023; qmlt=1316.0578739726; q95=844.495
+estacao_vazao,86870000,LAJEADO,RIO TAQUARI,ARROIO DO MEIO,61,1977-10-01 a 1977-11-30,max=1982.0; area_km2=19700.0; qref=-; qmlt=; q95=

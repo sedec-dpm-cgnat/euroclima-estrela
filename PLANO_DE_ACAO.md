@@ -16,10 +16,13 @@ Atualizado em 30/07/2026
 | Base GIS | ⚠️ existe, mas com CRS heterogêneos e nomenclatura duplicada |
 | TR REV. 0A | ⚠️ seções 1–4.1 boas; 3.2 em diante era resíduo de outro projeto |
 | **TR REV. 0B (minuta)** | ✅ **redigida — `06_resultados/TR_MINUTA_REV0B.md`** |
-| Delineação das barragens + curvas CAV | ✅ concluída |
+| Delineação das barragens + CAV sintética de triagem | ✅ concluída |
+| CAV oficial SNIRH/ANA | ✅ 3 UHEs; completar demais reservatórios |
+| CAV dos 12 eixos novos | ✅ MDE natural, interpolação monotônica a 1 m |
 | Simulação preliminar de amortecimento | ✅ concluída (Puls) |
-| Modelo HEC-RAS 2D | ⏳ a montar |
+| Modelo HEC-RAS 1D | ⏳ a montar |
 | FloodAdapt | ⏳ a montar |
+| Site Quarto documentando a análise no GitHub | ⏳ estrutura a criar; logos DPM e Defesa Civil obrigatórias |
 
 ---
 
@@ -75,25 +78,30 @@ Estabelecer a relação cota × vazão no posto 86879300 para converter as cotas
 
 ---
 
-## FASE 3 — Modelo HEC-RAS 2D preliminar (esforço: 5 a 8 dias)
+## FASE 3 — Modelo HEC-RAS 1D preliminar (esforço: 5 a 8 dias)
 
 Versões instaladas: **HEC-RAS 6.3.1 e 7.0.1**; **HEC-HMS 4.11 e 4.13**.
+
+O HAND já foi executado como etapa preliminar de triagem geomorfológica e
+controle de coerência. Ele orienta o corredor, as primeiras manchas e a
+comparação com 2024, mas não substitui o HEC-RAS 1D.
 
 ### 3.1 Preparar o terreno
 ```
 Entrada:  GIS/raster/mdr.tif (28,6 m, EPSG:32722)
 Saída:    03_HECRAS/Terrain/estrela_terrain.tif  (EPSG:31982)
 ```
-Para a etapa preliminar o MDE de 28,6 m basta para o trecho estendido. Para o trecho urbano, usar o melhor MDE disponível até que o LiDAR do Eixo 1 seja executado — verificar se o **ANADEM** (30 m, corrigido para vegetação) melhora o resultado em relação ao `mdr.tif`.
+Para a etapa preliminar o MDE de 28,6 m basta para o trecho estendido. O projeto informa que o `mdr.tif` veio do ANADEM, mas essa origem não está registrada nos metadados do arquivo. O recorte público `anadem_taquari_31982.tif` deve ser usado como controle de sensibilidade e contexto, não como segunda fonte independente. Para o trecho urbano/detalhado, usar MDE local de maior resolução e levantamento topográfico-topobatimétrico integrado.
 
 ### 3.2 Geometria
-- **Malha 2D**: célula de 100 m no trecho estendido; refinamento para 20–30 m na área urbana de Estrela.
-- **Breaklines** obrigatórias: eixo do rio, topo dos diques/aterros, BR-386, ferrovia, ruas principais dos bairros Moinhos, Indústrias e Centro.
-- **Manning**: 0,030 no canal; 0,060 em planície de vegetação; 0,15 em área urbana consolidada — ou uso do MapBiomas para espacializar.
+- **Trecho prioritário**: aproximadamente 12 km na área urbana de Estrela/Lajeado, dentro do trecho contratado de 39,4 km.
+- **Seções 1D**: a cada 200 m no trecho detalhado e 500 m no restante, refinando em pontes, confluências, diques e mudanças de seção.
+- **Estruturas**: cadastrar BR-386, ferrovia e travessias urbanas; representar diques e aterros como elementos de seção.
+- **Manning**: 0,030 no canal; 0,060 em planície vegetada; 0,12 em área urbana, calibrando contra cotas e mancha de maio/2024.
 
 ### 3.3 Condições de contorno
 - **Montante**: hidrograma no limite montante (`LimiteMontante.shp`, −29,3764 / −51,8790).
-- **Laterais**: hidrogramas dos afluentes já delineados — Rio Forqueta (2.845 km²), Arroio Boa Vista (576 km²), Arroio Estrela (241 km²), Arroio Sampaio (255 km²).
+- **Laterais**: hidrogramas dos afluentes já delineados — Rio Forqueta (2.845 km²), Arroio Boa Vista (576 km²), Arroio Estrela (241 km²), Arroio Sampaio (255 km²). O Forqueta entra somente entre o ponto de análise de 19.440 km² e Estrela; o Guaporé (aprox. 2.487 km²) deve ser incluído após a triagem do eixo GU1.
 - **Jusante**: *normal depth* com declividade do trecho, ou curva-chave se disponível. Atenção ao remanso do Guaíba/Lago em eventos extremos.
 
 ### 3.4 Plano de simulação
@@ -101,13 +109,13 @@ Para a etapa preliminar o MDE de 28,6 m basta para o trecho estendido. Para o tr
 |---|---|
 | P00 | Calibração — evento de maio/2024, situação atual |
 | P01 | TR 100 anos, situação atual |
-| P02 | TR 100 anos + BAR-A 80 m seca |
-| P03 | TR 100 anos + BAR-A2 + BAR-B secas |
-| P04 | Evento 2024 + BAR-A 80 m seca |
-| P05 | Evento 2024 + diques na área urbana |
-| P06 | Evento 2024 + arranjo híbrido |
+| P02 | TR 100 anos + E02 |
+| P03 | TR 100 anos + E04 |
+| P04 | TR 100 anos + E02 + E04 |
+| P05 | Evento 2024 + E02 + E04 |
+| P06 | Evento 2024 + diques na área urbana |
 
-Nos planos com barragem, aplicar como condição de contorno de montante o **hidrograma efluente** já calculado por `03_roteamento_puls.R` (saída em `06_resultados/tabelas/`), evitando modelar a estrutura no HEC-RAS nesta etapa preliminar.
+Nos planos com barragem, aplicar como condição de contorno de montante o **hidrograma efluente** já calculado por `03_roteamento_puls.R` (saída em `06_resultados/tabelas/`), evitando modelar a estrutura no HEC-RAS nesta etapa preliminar. O roteiro detalhado está em `06_resultados/CLAUDE/CLAUDE_ROTEIRO_HECRAS_1D.md`.
 
 ### 3.5 Calibração
 Alvo: reproduzir a mancha de maio/2024. Referências disponíveis:
@@ -135,8 +143,8 @@ O FloodAdapt (Deltares) é a ferramenta adequada para a **análise de alternativ
 ### 4.2 Estratégia recomendada
 **Não tente rodar FloodAdapt completo nesta etapa preliminar.** O caminho eficiente é:
 
-1. **Agora (preliminar):** HEC-RAS 2D para as manchas + planilha de curvas cota-dano em R para a CBA. Suficiente para calibrar o TR.
-2. **No contrato:** exigir da CONTRATADA a entrega de um *setup* FloodAdapt operacional, com SFINCS calibrado contra o HEC-RAS. Isso vira um produto de legado para o município — e é forte argumento junto à AECID e à frente de financiamento climático.
+1. **Agora (preliminar):** HEC-RAS 1D no trecho detalhado para perfis de linha d'água, curva-chave, remanso e cenários de operação + planilha de curvas cota-dano. Esta é a configuração hidrodinâmica adotada neste trabalho.
+2. **No contrato:** exigir da CONTRATADA a entrega de um *setup* FloodAdapt operacional, com SFINCS calibrado e/ou confrontado contra os resultados do HEC-RAS 1D. Uma modelagem HEC-RAS 2D não faz parte da linha metodológica atual.
 
 > **Sugestão para o TR:** incluir no Eixo 3, como entregável opcional pontuado na avaliação técnica, a implantação de uma instância FloodAdapt para Estrela. Deltares e o programa EUROCLIMA+ têm histórico de cooperação, o que favorece a aceitação.
 
@@ -172,7 +180,7 @@ Isso permite responder no TR: *"o dano evitado por uma barragem de 80 m justific
 ```
 Semana 1   FASE 1 (fechar TR)          ← desbloqueia a publicação
 Semana 2   FASE 2 (hidrologia ANA)     ← consolida os números
-Semana 3-4 FASE 3 (HEC-RAS 2D)         ← manchas por cenário
+Semana 3-4 FASE 3 (HEC-RAS 1D)         ← perfis, curva-chave e cenários
 Semana 5   FASE 5 (curvas cota-dano)   ← argumento econômico
 Semana 6   Revisão final do TR com os resultados
 FASE 4     transferir para o contrato (recomendado)
@@ -190,5 +198,5 @@ FASE 4     transferir para o contrato (recomendado)
 | Orçamento insuficiente para o LiDAR especificado | Média | Alto | Consulta prévia de mercado antes da publicação |
 | Expectativa de que "barragens resolvem" persistir | Média | Alto | Anexar a Nota Técnica Preliminar ao TR (Fase 1.5) |
 | Ausência de curva-chave em Estrela | Alta | Médio | Exigir no Eixo 1 as 10 medições de vazão |
-| MDE de 28,6 m insuficiente para o trecho urbano | Certa | Médio | É exatamente o que o Eixo 1 resolve; usar ANADEM no ínterim |
+| MDE de 28,6 m insuficiente para o trecho urbano | Certa | Médio | Usar `mdr.tif`/ANADEM apenas como contexto; o Eixo 1 deve entregar MDE e topobatimetria de maior resolução |
 | Sobreposição com as frentes Haskoning e Eco | Média | Médio | Seção 1.1 do TR delimita; reuniões de articulação |

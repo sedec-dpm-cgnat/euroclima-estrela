@@ -1,0 +1,38 @@
+# Referências
+
+## Template e documentação
+
+- SEDEC/DPM. [Minicurso TRIGRS — template Quarto](https://sedec-dpm-cgnat.github.io/tutorial-trigrs/).
+- Quarto. [Quarto Book](https://quarto.org/docs/books/).
+
+## HAND, inundação e relevo
+
+- Associação Brasileira de Recursos Hídricos. [Trabalho técnico sobre HAND](https://files.abrhidro.org.br/Eventos/Trabalhos/60/PAP022598.pdf).
+- Rennó, C. D. et al. HAND — Height Above the Nearest Drainage: a new terrain descriptor for hydrological mapping and flood-related applications. Referência metodológica a ser conferida na versão final do artigo e do PDF adotado.
+
+## Reservatórios e curvas CAV
+
+- SNIRH. [Metadados da base de curvas cota–área–volume](https://metadados.snirh.gov.br/geonetwork/srv/api/records/b8f0487a-df73-4f8d-8b22-bb49cf9f3683).
+- Domeneghetti, A. et al. [Artigo sobre reconstrução/uso de relações de reservatórios](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2015wr017967).
+- Ministério de Minas e Energia. Manual de Inventário Hidrelétrico de Bacias Hidrográficas. Brasília, 2007.
+
+## Danos, exposição e bases territoriais
+
+- MDR. [Atlas Digital de Desastres](https://atlasdigital.mdr.gov.br/paginas/graficos.xhtml#).
+- IBGE. [Estatísticas de habitação](https://www.ibge.gov.br/estatisticas/sociais/habitacao.html).
+- IBGE. [Downloads de estatísticas](https://www.ibge.gov.br/estatisticas/downloads-estatisticas.html).
+- IBGE. [Malhas de setores censitários e divisões intramunicipais](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/malhas-territoriais/26565-malhas-de-setores-censitarios-divisoes-intramunicipais.html).
+- IPEA. [IPEAgeo — bases territoriais](https://portalantigo.ipea.gov.br/ipeageo/bases.html).
+
+## Dados hidrológicos e geoespaciais
+
+- Agência Nacional de Águas e Saneamento Básico. Base Hidrográfica Ottocodificada e séries
+  hidrológicas utilizadas no estudo; metadados e versão devem ser registrados na entrega final.
+- ANADEM. Modelo digital de elevação adotado para o recorte detalhado, com resolução,
+  sistema de referência e data de acesso a registrar na versão contratada.
+
+## Nota sobre atualização
+
+As referências acima compõem a base metodológica da nota. A versão final deve acrescentar
+DOI, autores completos, edição, ano-base monetário, versão dos dados, data de acesso e
+metadados de cada arquivo efetivamente usado.
