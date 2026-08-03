@@ -1,0 +1,92 @@
+# Apresentação {.unnumbered}
+
+::: {layout-ncol=2 layout-valign="center"}
+![](logos/DPM-Circular.png){fig-alt="Logo do Departamento de Prevenção e Mitigação de Desastres" height="170"}
+
+![](logos/logo_marca_sedec.png){fig-alt="Marca Proteção e Defesa Civil Brasil" height="170"}
+:::
+
+Esta nota técnica documenta, de forma **didática, rastreável e versionada**, a análise
+exploratória do potencial de barragens de montante para reduzir os danos de cheias no
+município de Estrela/RS e no trecho do rio Taquari–Antas de interesse do projeto
+**EUROCLIMA+ / AECID**.
+
+O material é uma triagem de ordem de grandeza para orientar o Termo de Referência e a
+modelagem a ser contratada. Ele **não aprova obras**, não substitui estudos de viabilidade,
+segurança de barragens, licenciamento ambiental ou projeto básico.
+
+## Equipe e escopo {.unnumbered}
+
+| Item | Registro |
+|---|---|
+| Coordenação técnica | Cássio Guilherme Rampinelli e [Saulo Aires de Souza, PhD](http://lattes.cnpq.br/6021309864695571) — DPM/SEDEC/MIDR |
+| Instituição | Departamento de Prevenção e Mitigação de Desastres |
+| Projeto | EUROCLIMA+ / AECID |
+| Área de estudo | Rio Taquari–Antas, com foco no controle de cheias em Estrela/RS |
+| Data da versão | 02 de agosto de 2026 |
+| Status | Triagem técnica preliminar; resultados sujeitos a validação |
+
+## Como este relatório funciona {.unnumbered}
+
+- Cada etapa da análise é um capítulo `.qmd` deste livro.
+- Os dados intermediários e os scripts permanecem no repositório, permitindo auditoria e
+  reprodução.
+- As alternativas são comparadas por volume, área, energia, interferência longitudinal,
+  dano evitado e segurança — nunca por um único indicador.
+- A recomendação é deliberadamente provisória: a seleção final depende do HEC-RAS 1D,
+  das curvas cota–dano e da validação dos dados oficiais.
+
+## Sumário executivo {.unnumbered}
+
+O primeiro ciclo de trabalho produziu quatro conclusões que orientam as próximas etapas:
+
+1. **Alteamento das UHEs existentes é uma sensibilidade, não o eixo principal.** As curvas
+   disponíveis indicam ganho de espera pequeno diante da ordem de grandeza necessária e
+   sugerem obra e restrições operacionais expressivas.
+2. **O desenho deve priorizar eixos novos que não afoguem diretamente as usinas existentes.**
+   A cascata do rio das Antas — Monte Claro, Castro Alves e 14 de Julho — é a restrição
+   longitudinal dominante.
+3. **A simulação hidráulica terá uma ordem explícita.** Primeiro vem o caso sem obra
+   (HEC-00), depois E02 + E04 (HEC-01), E02 + E04 + E08 (HEC-02) e E02 + E04 + E12
+   (HEC-03). GU1 será a extensão estrutural prioritária; Forqueta e cascatas críticas
+   entram como sensibilidades laterais ou de rede.
+4. **O HEC-RAS será 1D.** O preparo preliminar já conta com 39,4 km de eixo, 102 seções,
+   quatro travessias e seis tributários; faltam topobatimetria, vãos e dados de contorno
+   para a rodada confiável.
+
+::: {.callout-warning}
+## Leitura correta dos resultados
+
+Os números deste site servem para dimensionar perguntas, comparar hipóteses e orientar a
+contratação. Parâmetros sintéticos, CAVs de eixos novos e regras de comportas ainda não
+calibradas não devem ser apresentados como desempenho garantido de uma barragem.
+:::
+
+## Capítulos {.unnumbered}
+
+| Capítulo | Conteúdo |
+|---|---|
+| [Contexto e pergunta decisória](01-contexto.qmd) | Evento de referência, objetivo e decisões que a nota precisa subsidiar |
+| [Dados e métodos](02-dados-e-metodos.qmd) | MDE/ANADEM, CAV, HAND, hidrologia, danos e rastreabilidade |
+| [Alternativas estudadas](03-alternativas.qmd) | Alteamento, eixos novos, alternativas distribuídas e critérios |
+| [Hidrologia e HAND](04-hidrologia-hand.qmd) | Delineamento, hidrogramas e triagem altimétrica antes do HEC-RAS |
+| [Cascatas com comportas](05-cascatas-comportas.qmd) | Rede de eixos, regra preliminar e cenários C01–C05 |
+| [HEC-RAS 1D](06-hecras-1d.qmd) | Matriz HEC-00–HEC-06, topologia, insumos e lacunas |
+| [Danos e economia](07-danos-economia.qmd) | Atlas de Desastres, exposição e curva cota–dano preliminar |
+| [Conclusões e próximos passos](08-conclusoes.qmd) | O que já pode ser afirmado e o que precisa ser contratado |
+
+## Arquivos centrais {.unnumbered}
+
+- [Nota técnica em Markdown](06_resultados/NOTA_TECNICA_PRELIMINAR_BARRAGENS.md)
+- [Status atualizado](STATUS_ATUAL_PROJETO.md)
+- [Handoff completo](HANDOFF.md)
+- [Roteiro do HEC-RAS 1D](06_resultados/CLAUDE/CLAUDE_ROTEIRO_HECRAS_1D.md)
+- [Catálogo consolidado de CAVs](06_resultados/tabelas/catalogo_cavs.csv)
+- [Base preliminar de danos por município](06_resultados/tabelas/atlas_danos_municipios.csv)
+- [KMZ de pontos exploratórios](06_resultados/GIS/eixos_exploratorios_propostos.kmz)
+
+::: {.callout-note}
+## Template visual
+
+Esta nota usa a estrutura de livro Quarto do [Minicurso TRIGRS da SEDEC/DPM](https://sedec-dpm-cgnat.github.io/tutorial-trigrs/), adaptada ao estudo de cheias. Foram mantidas as marcas do DPM e da Defesa Civil; a marca da UFF não faz parte deste relatório.
+:::

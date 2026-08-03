@@ -1,0 +1,59 @@
+project:
+  type: book
+  output-dir: docs
+  resources:
+    - .nojekyll
+    - 06_resultados/VALIDACAO/*
+    - 06_resultados/figuras/*
+    - 06_resultados/GIS/*
+    - 06_resultados/tabelas/*.csv
+    - 06_resultados/CLAUDE/*.csv
+    - 06_resultados/CLAUDE/*.gpkg
+    - 06_resultados/CLAUDE/*.md
+
+lang: pt-BR
+
+book:
+  title: "Nota técnica — Potencial de barragens de montante em Estrela/RS"
+  subtitle: "EUROCLIMA+ / AECID · redução de danos de cheias"
+  author:
+    - "Cássio Guilherme Rampinelli — DPM/SEDEC/MIDR"
+    - "Saulo Aires de Souza, PhD — DPM/SEDEC/MIDR"
+  date: "30/07/2026"
+  date-format: "DD/MM/YYYY"
+  repo-url: https://github.com/sedec-dpm-cgnat/euroclima-estrela
+  repo-actions: [edit, issue]
+  sidebar:
+    logo: logos/DPM-Circular.png
+    search: true
+  page-footer:
+    left: "DPM · Secretaria Nacional de Proteção e Defesa Civil · MIDR"
+    right: "Feito com [Quarto](https://quarto.org)"
+  chapters:
+    - index.qmd
+    - 01-contexto.qmd
+    - 02-dados-e-metodos.qmd
+    - 03-alternativas.qmd
+    - 04-hidrologia-hand.qmd
+    - 05-cascatas-comportas.qmd
+    - 06-hecras-1d.qmd
+    - 07-danos-economia.qmd
+    - 08-conclusoes.qmd
+  appendices:
+    - 90-limitacoes.qmd
+    - 91-reprodutibilidade.qmd
+    - referencias.qmd
+
+format:
+  html:
+    theme: flatly
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-copy: true
+    code-overflow: wrap
+    fig-align: center
+
+execute:
+  warning: false
+  message: false

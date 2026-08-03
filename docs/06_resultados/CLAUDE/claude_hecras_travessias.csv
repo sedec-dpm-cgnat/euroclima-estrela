@@ -1,0 +1,5 @@
+tipo;identificacao;estaca_ras_m;dist_montante_km;x;y;cota_terreno_m;no_sub_trecho_detalhado;cota_talvegue_local_m;desnivel_sobre_talvegue_m;conferir_locacao
+rodovia estadual;S/I;18762,2;20,64;410658,41372260026;6742391,893296273;14,0;False;14,0;0,0;False
+rodovia estadual;S/I;16933,3;22,469;410034,08348841075;6741547,598642767;24,530000686645508;False;14,0;10,5;True
+rodovia federal;386;13098,7;26,303;407541,8946864086;6739620,106827616;14,0;True;14,0;0,0;False
+rodovia estadual;RS-130;8366,8;31,035;406038,2953248001;6736543,778150044;14,0;True;14,0;0,0;False

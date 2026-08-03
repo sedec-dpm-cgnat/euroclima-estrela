@@ -1,0 +1,173 @@
+eixo;altura_m;cota_NA_eixo_m;aproveitamento;situacao;potencia_kW;cota_existente_m;area_exist_km2;afogamento_m
+E01;10;82,5;Boa Vista;operacao;705,75;41,6;548,1;40,9
+E01;60;132,5;Vale do Leite;operacao;6400,00;130,9;753,4;1,6
+E01;65;137,5;Vale Fundo;estudo;5,600;135,7;706,2;1,8
+E01;70;142,5;Cotiporã;operacao;19500,00;138,1;2447,6;4,4
+E01;75;147,5;Nelson José Zanelatto;estudo;5,690;147,2;2079,5;0,3
+E01;95;167,5;Monte Cuco;operacao;30000,00;167,4;2143,9;0,1
+E01;110;182,5;Linha Emília;operacao;19500,00;179,6;2314,1;2,9
+E01;120;192,5;Salto Forqueta;operacao;6080,00;190,0;672,3;2,5
+E01;120;192,5;Guaporé;operacao;667,20;189,0;2066,4;3,5
+E02;10;303,0;Barracão;operacao;810,00;302,6;158,7;0,4
+E02;10;303,0;Boa Vista;operacao;705,75;41,6;548,1;261,4
+E02;10;303,0;Rastro de Auto;operacao;7020,00;277,4;647,6;25,6
+E02;10;303,0;Salto Forqueta;operacao;6080,00;190,0;672,3;113,0
+E02;10;303,0;Vale Fundo;estudo;5,600;135,7;706,2;167,3
+E02;10;303,0;Vale do Leite;operacao;6400,00;130,9;753,4;172,1
+E02;10;303,0;Alto Constantino;estudo;8,000;264,2;892,8;38,8
+E02;10;303,0;Bugrinha;estudo;8,502;221,2;1150,7;81,8
+E02;10;303,0;Queimado;estudo;8,060;247,1;1230,5;55,9
+E02;10;303,0;Buongiorno;estudo;10,250;289,3;1769,2;13,7
+E02;10;303,0;Autódromo;operacao;24000,00;280,0;1816,4;23,0
+E02;10;303,0;Guaporé;operacao;667,20;189,0;2066,4;114,0
+E02;10;303,0;Nelson José Zanelatto;estudo;5,690;147,2;2079,5;155,8
+E02;10;303,0;Monte Cuco;operacao;30000,00;167,4;2143,9;135,6
+E02;10;303,0;Linha Emília;operacao;19500,00;179,6;2314,1;123,4
+E02;10;303,0;Cotiporã;operacao;19500,00;138,1;2447,6;164,9
+E02;25;318,0;José Dinarte Lepek;estudo;7,501;317,5;955,8;0,5
+E02;30;323,0;São Paulo;operacao;16000,00;322,5;1748,2;0,5
+E02;50;343,0;Dona Maria Piana;operacao;1000,00;339,9;198,5;3,1
+E02;55;348,0;Foz do Jacutinga;estudo;5,500;344,8;612,8;3,2
+E02;55;348,0;Barra do Galvão;estudo;6,440;347,5;815,2;0,5
+E02;70;363,0;Boa Fé;operacao;24000,00;359,5;1700,4;3,5
+E02;75;368,0;Primavera do Rio Turvo;estudo;30,000;367,0;2862,0;1,0
+E02;85;378,0;Duque de Caxias;estudo;6,500;374,5;3015,4;3,5
+E02;100;393,0;Linha Tafona;estudo;11,100;392,5;2678,7;0,5
+E02;120;413,0;São Domingos do Prata;operacao;2205,00;409,1;258,2;3,9
+E03;10;159,5;Boa Vista;operacao;705,75;41,6;548,1;117,9
+E03;10;159,5;Vale Fundo;estudo;5,600;135,7;706,2;23,8
+E03;10;159,5;Vale do Leite;operacao;6400,00;130,9;753,4;28,6
+E03;10;159,5;Nelson José Zanelatto;estudo;5,690;147,2;2079,5;12,3
+E03;10;159,5;Cotiporã;operacao;19500,00;138,1;2447,6;21,4
+E03;20;169,5;Monte Cuco;operacao;30000,00;167,4;2143,9;2,1
+E03;35;184,5;Linha Emília;operacao;19500,00;179,6;2314,1;4,9
+E03;40;189,5;Guaporé;operacao;667,20;189,0;2066,4;0,5
+E03;45;194,5;Salto Forqueta;operacao;6080,00;190,0;672,3;4,5
+E03;75;224,5;Bugrinha;estudo;8,502;221,2;1150,7;3,3
+E03;100;249,5;Queimado;estudo;8,060;247,1;1230,5;2,4
+E03;115;264,5;Alto Constantino;estudo;8,000;264,2;892,8;0,3
+E03;120;269,5;Jararaca;operacao;28000,00;268,3;3732,0;1,2
+E04;10;249,0;Boa Vista;operacao;705,75;41,6;548,1;207,4
+E04;10;249,0;Salto Forqueta;operacao;6080,00;190,0;672,3;59,0
+E04;10;249,0;Vale Fundo;estudo;5,600;135,7;706,2;113,3
+E04;10;249,0;Vale do Leite;operacao;6400,00;130,9;753,4;118,1
+E04;10;249,0;Bugrinha;estudo;8,502;221,2;1150,7;27,8
+E04;10;249,0;Queimado;estudo;8,060;247,1;1230,5;1,9
+E04;10;249,0;Guaporé;operacao;667,20;189,0;2066,4;60,0
+E04;10;249,0;Nelson José Zanelatto;estudo;5,690;147,2;2079,5;101,8
+E04;10;249,0;Monte Cuco;operacao;30000,00;167,4;2143,9;81,6
+E04;10;249,0;Linha Emília;operacao;19500,00;179,6;2314,1;69,4
+E04;10;249,0;Cotiporã;operacao;19500,00;138,1;2447,6;110,9
+E04;10;249,0;Foz do Prata;operacao;49365,00;171,3;3776,0;77,7
+E04;30;269,0;Alto Constantino;estudo;8,000;264,2;892,8;4,8
+E04;30;269,0;Jararaca;operacao;28000,00;268,3;3732,0;0,7
+E04;40;279,0;Rastro de Auto;operacao;7020,00;277,4;647,6;1,6
+E04;45;284,0;Autódromo;operacao;24000,00;280,0;1816,4;4,0
+E04;45;284,0;Da Ilha;operacao;26000,00;279,4;3633,1;4,6
+E04;55;294,0;Buongiorno;estudo;10,250;289,3;1769,2;4,7
+E04;65;304,0;Barracão;operacao;810,00;302,6;158,7;1,4
+E04;80;319,0;José Dinarte Lepek;estudo;7,501;317,5;955,8;1,5
+E04;85;324,0;São Paulo;operacao;16000,00;322,5;1748,2;1,5
+E04;105;344,0;Dona Maria Piana;operacao;1000,00;339,9;198,5;4,1
+E04;110;349,0;Foz do Jacutinga;estudo;5,500;344,8;612,8;4,2
+E04;110;349,0;Barra do Galvão;estudo;6,440;347,5;815,2;1,5
+E05;10;177,0;Boa Vista;operacao;705,75;41,6;548,1;135,4
+E05;10;177,0;Vale Fundo;estudo;5,600;135,7;706,2;41,3
+E05;10;177,0;Vale do Leite;operacao;6400,00;130,9;753,4;46,1
+E05;10;177,0;Nelson José Zanelatto;estudo;5,690;147,2;2079,5;29,8
+E05;10;177,0;Monte Cuco;operacao;30000,00;167,4;2143,9;9,6
+E05;10;177,0;Cotiporã;operacao;19500,00;138,1;2447,6;38,9
+E05;10;177,0;Foz do Prata;operacao;49365,00;171,3;3776,0;5,7
+E05;15;182,0;Linha Emília;operacao;19500,00;179,6;2314,1;2,4
+E05;25;192,0;Salto Forqueta;operacao;6080,00;190,0;672,3;2,0
+E05;25;192,0;Guaporé;operacao;667,20;189,0;2066,4;3,0
+E05;55;222,0;Bugrinha;estudo;8,502;221,2;1150,7;0,8
+E05;70;237,0;Castro Alves;operacao;130000,00;236,0;7700,0;1,0
+E05;85;252,0;Queimado;estudo;8,060;247,1;1230,5;4,9
+E05;100;267,0;Alto Constantino;estudo;8,000;264,2;892,8;2,8
+E05;105;272,0;Jararaca;operacao;28000,00;268,3;3732,0;3,7
+E05;115;282,0;Rastro de Auto;operacao;7020,00;277,4;647,6;4,6
+E05;115;282,0;Autódromo;operacao;24000,00;280,0;1816,4;2,0
+E05;115;282,0;Da Ilha;operacao;26000,00;279,4;3633,1;2,6
+E06;10;159,5;Boa Vista;operacao;705,75;41,6;548,1;117,9
+E06;10;159,5;Vale Fundo;estudo;5,600;135,7;706,2;23,8
+E06;10;159,5;Vale do Leite;operacao;6400,00;130,9;753,4;28,6
+E06;10;159,5;Nelson José Zanelatto;estudo;5,690;147,2;2079,5;12,3
+E06;10;159,5;Cotiporã;operacao;19500,00;138,1;2447,6;21,4
+E06;20;169,5;Monte Cuco;operacao;30000,00;167,4;2143,9;2,1
+E06;25;174,5;Foz do Prata;operacao;49365,00;171,3;3776,0;3,2
+E06;35;184,5;Linha Emília;operacao;19500,00;179,6;2314,1;4,9
+E06;40;189,5;Guaporé;operacao;667,20;189,0;2066,4;0,5
+E06;45;194,5;Salto Forqueta;operacao;6080,00;190,0;672,3;4,5
+E06;75;224,5;Bugrinha;estudo;8,502;221,2;1150,7;3,3
+E06;90;239,5;Castro Alves;operacao;130000,00;236,0;7700,0;3,5
+E06;100;249,5;Queimado;estudo;8,060;247,1;1230,5;2,4
+E06;115;264,5;Alto Constantino;estudo;8,000;264,2;892,8;0,3
+E06;120;269,5;Jararaca;operacao;28000,00;268,3;3732,0;1,2
+E07;10;159,5;Boa Vista;operacao;705,75;41,6;548,1;117,9
+E07;10;159,5;Vale Fundo;estudo;5,600;135,7;706,2;23,8
+E07;10;159,5;Vale do Leite;operacao;6400,00;130,9;753,4;28,6
+E07;10;159,5;Nelson José Zanelatto;estudo;5,690;147,2;2079,5;12,3
+E07;10;159,5;Cotiporã;operacao;19500,00;138,1;2447,6;21,4
+E07;20;169,5;Monte Cuco;operacao;30000,00;167,4;2143,9;2,1
+E07;25;174,5;Foz do Prata;operacao;49365,00;171,3;3776,0;3,2
+E07;35;184,5;Linha Emília;operacao;19500,00;179,6;2314,1;4,9
+E07;40;189,5;Guaporé;operacao;667,20;189,0;2066,4;0,5
+E07;45;194,5;Salto Forqueta;operacao;6080,00;190,0;672,3;4,5
+E07;75;224,5;Bugrinha;estudo;8,502;221,2;1150,7;3,3
+E07;90;239,5;Castro Alves;operacao;130000,00;236,0;7700,0;3,5
+E07;100;249,5;Queimado;estudo;8,060;247,1;1230,5;2,4
+E07;115;264,5;Alto Constantino;estudo;8,000;264,2;892,8;0,3
+E07;120;269,5;Jararaca;operacao;28000,00;268,3;3732,0;1,2
+E08;10;158,0;Boa Vista;operacao;705,75;41,6;548,1;116,4
+E08;10;158,0;Vale Fundo;estudo;5,600;135,7;706,2;22,3
+E08;10;158,0;Vale do Leite;operacao;6400,00;130,9;753,4;27,1
+E08;10;158,0;Nelson José Zanelatto;estudo;5,690;147,2;2079,5;10,8
+E08;10;158,0;Cotiporã;operacao;19500,00;138,1;2447,6;19,9
+E08;20;168,0;Monte Cuco;operacao;30000,00;167,4;2143,9;0,6
+E08;25;173,0;Foz do Prata;operacao;49365,00;171,3;3776,0;1,7
+E08;35;183,0;Linha Emília;operacao;19500,00;179,6;2314,1;3,4
+E08;45;193,0;Salto Forqueta;operacao;6080,00;190,0;672,3;3,0
+E08;45;193,0;Guaporé;operacao;667,20;189,0;2066,4;4,0
+E08;75;223,0;Bugrinha;estudo;8,502;221,2;1150,7;1,8
+E08;90;238,0;Castro Alves;operacao;130000,00;236,0;7700,0;2,0
+E08;100;248,0;Queimado;estudo;8,060;247,1;1230,5;0,9
+E08;120;268,0;Alto Constantino;estudo;8,000;264,2;892,8;3,8
+E09;10;116,0;Boa Vista;operacao;705,75;41,6;548,1;74,4
+E09;25;131,0;Vale do Leite;operacao;6400,00;130,9;753,4;0,1
+E09;30;136,0;Vale Fundo;estudo;5,600;135,7;706,2;0,3
+E09;35;141,0;Cotiporã;operacao;19500,00;138,1;2447,6;2,9
+E09;45;151,0;Nelson José Zanelatto;estudo;5,690;147,2;2079,5;3,8
+E09;65;171,0;Monte Cuco;operacao;30000,00;167,4;2143,9;3,6
+E09;70;176,0;Foz do Prata;operacao;49365,00;171,3;3776,0;4,7
+E09;75;181,0;Linha Emília;operacao;19500,00;179,6;2314,1;1,4
+E09;85;191,0;Salto Forqueta;operacao;6080,00;190,0;672,3;1,0
+E09;85;191,0;Guaporé;operacao;667,20;189,0;2066,4;2,0
+E09;120;226,0;Bugrinha;estudo;8,502;221,2;1150,7;4,8
+E10;10;81,5;Boa Vista;operacao;705,75;41,6;548,1;39,9
+E10;60;131,5;Vale do Leite;operacao;6400,00;130,9;753,4;0,6
+E10;65;136,5;Vale Fundo;estudo;5,600;135,7;706,2;0,8
+E10;65;136,5;Monte Claro;operacao;130000,00;132,5;12414,0;4,0
+E10;70;141,5;Cotiporã;operacao;19500,00;138,1;2447,6;3,4
+E10;80;151,5;Nelson José Zanelatto;estudo;5,690;147,2;2079,5;4,3
+E10;100;171,5;Monte Cuco;operacao;30000,00;167,4;2143,9;4,1
+E10;100;171,5;Foz do Prata;operacao;49365,00;171,3;3776,0;0,2
+E10;110;181,5;Linha Emília;operacao;19500,00;179,6;2314,1;1,9
+E10;120;191,5;Salto Forqueta;operacao;6080,00;190,0;672,3;1,5
+E10;120;191,5;Guaporé;operacao;667,20;189,0;2066,4;2,5
+E11;10;67,5;Boa Vista;operacao;705,75;41,6;548,1;25,9
+E11;50;107,5;14 de Julho;operacao;100000,00;104,5;12877,0;3,0
+E11;75;132,5;Vale do Leite;operacao;6400,00;130,9;753,4;1,6
+E11;80;137,5;Vale Fundo;estudo;5,600;135,7;706,2;1,8
+E11;80;137,5;Monte Claro;operacao;130000,00;132,5;12414,0;5,0
+E11;85;142,5;Cotiporã;operacao;19500,00;138,1;2447,6;4,4
+E11;90;147,5;Nelson José Zanelatto;estudo;5,690;147,2;2079,5;0,3
+E11;110;167,5;Monte Cuco;operacao;30000,00;167,4;2143,9;0,1
+E11;115;172,5;Foz do Prata;operacao;49365,00;171,3;3776,0;1,2
+E12;10;57,0;Boa Vista;operacao;705,75;41,6;548,1;15,4
+E12;60;107,0;14 de Julho;operacao;100000,00;104,5;12877,0;2,5
+E12;85;132,0;Vale do Leite;operacao;6400,00;130,9;753,4;1,1
+E12;90;137,0;Vale Fundo;estudo;5,600;135,7;706,2;1,3
+E12;90;137,0;Monte Claro;operacao;130000,00;132,5;12414,0;4,5
+E12;95;142,0;Cotiporã;operacao;19500,00;138,1;2447,6;3,9
+E12;105;152,0;Nelson José Zanelatto;estudo;5,690;147,2;2079,5;4,8

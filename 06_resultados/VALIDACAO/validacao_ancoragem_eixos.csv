@@ -1,0 +1,13 @@
+﻿codigo;area_km2_anterior;area_km2_intersecao;delta_area_km2;area_BHO_km2_intersecao;aderencia_nova;cota_eixo_m_anterior;cota_eixo_m_intersecao;delta_cota_m;lat_anterior;lat_intersecao;lon_anterior;lon_intersecao;intersectou_BHO;status
+E01;2548,8;2550,4;1,599999999999909;2547,2;1,0013;72,5;71,5;-1,0;-29,05815;-29,06126;-51,71886;-51,71741;True;"aderência dentro do intervalo; conferir pequenas mudanças de ponto/cota"
+E02;3591,2;3590,9;-0,29999999999972715;3591,7;0,9998;293,0;293,0;0,0;-28,86104;-28,85922;-51,45912;-51,46117;True;"aderência dentro do intervalo; conferir pequenas mudanças de ponto/cota"
+E03;3771,8;3771,7;-0,1000000000003638;3776,0;0,9989;149,5;149,5;0,0;-29,00755;-29,00756;-51,47182;-51,46858;True;"aderência dentro do intervalo; conferir pequenas mudanças de ponto/cota"
+E04;7497,5;7497,2;-0,3000000000001819;7587,3;0,9881;239,0;239,0;0,0;-28,95838;-28,95735;-51,3176;-51,31348;True;"aderência dentro do intervalo; conferir pequenas mudanças de ponto/cota"
+E05;7922,8;7922,5;-0,3000000000001819;8012,6;0,9888;167,0;168,5;1,5;-29,06527;-29,06269;-51,36411;-51,36146;True;"aderência dentro do intervalo; conferir pequenas mudanças de ponto/cota"
+E06;8158,8;8158,7;-0,1000000000003638;8249,7;0,989;149,5;149,5;0,0;-29,02621;-29,0275;-51,45749;-51,4575;True;"aderência dentro do intervalo; conferir pequenas mudanças de ponto/cota"
+E07;8173,5;8173,5;0,0;8264,0;0,9891;149,5;149,5;0,0;-29,01634;-29,01634;-51,47098;-51,47098;True;"aderência dentro do intervalo; conferir pequenas mudanças de ponto/cota"
+E08;11950,5;11950,1;-0,3999999999996362;12041,5;0,9924;148,0;148,5;0,5;-29,02665;-29,02562;-51,47985;-51,47867;True;"aderência dentro do intervalo; conferir pequenas mudanças de ponto/cota"
+E09;12330,0;12330,0;0,0;12423,8;0,9924;106,0;106,0;0,0;-29,03899;-29,03899;-51,56402;-51,56402;True;"aderência dentro do intervalo; conferir pequenas mudanças de ponto/cota"
+E10;12778,1;12777,2;-0,8999999999996362;12877,0;0,9923;71,5;72,0;0,5;-29,08121;-29,08303;-51,65841;-51,65489;True;"aderência dentro do intervalo; conferir pequenas mudanças de ponto/cota"
+E11;15456,9;15456,5;-0,3999999999996362;15547,1;0,9942;57,5;57,5;0,0;-29,15101;-29,14765;-51,75336;-51,75363;True;"aderência dentro do intervalo; conferir pequenas mudanças de ponto/cota"
+E12;15759,8;15759,1;-0,6999999999989086;15852,0;0,9941;47,0;47,0;0,0;-29,16034;-29,16422;-51,83617;-51,83444;True;"aderência dentro do intervalo; conferir pequenas mudanças de ponto/cota"

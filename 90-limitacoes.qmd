@@ -1,0 +1,32 @@
+# Limitações e incertezas
+
+Este apêndice evita que resultados de triagem sejam usados fora do seu alcance.
+
+## Incertezas principais
+
+- MDE/ANADEM: resolução e cobertura podem não representar talvegue, pontes e microrelevo;
+- batimetria: o MDE não revela volume abaixo da água em reservatórios existentes;
+- CAVs de eixos novos: derivadas de topografia e área alagada, ainda sem levantamento;
+- Monte Claro: diferença entre cota oficial de 148 m e superfície do MDE do projeto;
+- hidrologia: a rodada C1–C4 calibrada é preliminar; transposição para o ponto de
+  análise, perdas e sincronização dos tributários ainda não estão plenamente validadas;
+- comportas: regras, áreas de descarga e limites são hipóteses de triagem;
+- HEC-RAS 1D: seções, pontes e contorno de jusante ainda precisam de dados reais;
+- danos: valores do Atlas e estoque econômico não equivalem automaticamente a uma função
+  cota–dano;
+- economia: qualquer dano placeholder deve ser substituído por fonte e sensibilidade;
+- segurança: nenhuma conclusão de estabilidade ou segurança de barragem está sendo feita.
+
+## Como reportar
+
+Cada tabela final deve classificar o número como **observado**, **derivado**, **estimado**,
+**sintético** ou **não disponível**. Cenários sintéticos devem ser reproduzidos com os
+mesmos parâmetros e acompanhados por uma faixa de sensibilidade.
+
+::: {.callout-warning}
+## Não extrapolar
+
+Não é válido transformar a redução de pico de um cenário de roteamento calibrado em redução
+garantida de danos, nem transformar volume de espera em cota protegida sem simulação
+hidráulica.
+:::

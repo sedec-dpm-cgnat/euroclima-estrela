@@ -1,0 +1,17 @@
+de;para;tipo_de;tipo_para;dist_de_km;dist_para_km;extensao_km;cota_de_m;cota_para_m;queda_disponivel_m
+Pezzi;Passo do Meio;existente;existente;96,6;109,0;12,4;565,0;527,3;37,7
+Passo do Meio;Serra dos Cavalinhos I;existente;existente;109,0;127,2;18,2;527,3;452,0;75,3
+Serra dos Cavalinhos I;Serra dos Cavalinhos II;existente;existente;127,2;133,7;6,5;452,0;437,4;14,6
+Serra dos Cavalinhos II;E04;existente;proposto;133,7;238,1;104,4;437,4;359,0;78,4
+E04;Castro Alves;proposto;existente;238,1;248,4;10,3;359,0;236,0;123,0
+Castro Alves;E05;existente;proposto;248,4;257,6;9,2;236,0;234,0;2,0
+E05;E06;proposto;proposto;257,6;270,7;13,0;234,0;234,0;0,0
+E06;E07;proposto;proposto;270,7;272,7;2,0;234,0;234,0;0,0
+E07;E03;proposto;proposto;272,7;272,8;0,1;234,0;234,0;0,0
+E03;E08;proposto;proposto;272,8;274,3;1,5;234,0;234,0;0,0
+E08;Monte Claro;proposto;existente;274,3;279,5;5,2;234,0;132,5;101,5
+Monte Claro;E09;existente;proposto;279,5;303,3;23,8;132,5;130,5;2,0
+E09;14 de Julho;proposto;existente;303,3;326,2;22,9;130,5;104,5;26,0
+14 de Julho;E10;existente;proposto;326,2;335,5;9,2;104,5;102,5;2,0
+E10;E11;proposto;proposto;335,5;358,1;22,6;102,5;102,5;0,0
+E11;E12;proposto;proposto;358,1;375,2;17,1;102,5;102,5;0,0

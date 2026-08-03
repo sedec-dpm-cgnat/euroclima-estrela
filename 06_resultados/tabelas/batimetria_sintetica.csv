@@ -1,0 +1,7 @@
+nome;mde_fonte;potencia_MW;area_drenagem_km2;NA_atual_m;compr_remanso_km;declividade;larg_media_m;prof_media_m;prof_max_m;prof_Manning_m;razao_prof;qualidade_triagem;area_espelho_km2;V_submerso_hm3;V_deplec_1m_hm3;V_deplec_2m_hm3;V_deplec_3m_hm3;V_deplec_5m_hm3;V_deplec_8m_hm3;V_deplec_10m_hm3;V_deplec_15m_hm3
+14 de Julho;mdr.tif;100,0;12609,9;104,8;23,95;0,000583;252,9;21,7;28,7;1,2;18,61;revisar — profundidade muito acima de Manning;7,03;91,2;6,0;11,9;17,6;28,5;43,6;52,7;70,3
+Serra dos Cavalinhos II;mdr.tif;29,0;3714,9;435,5;0,7;0,002476;88,8;0,2;0,4;0,6;0,37;revisar — profundidade abaixo de Manning;0,07;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0
+Serra dos Cavalinhos I;mdr.tif;25,0;3615,4;453,5;0,79;0,003319;35,8;0,2;0,4;1,2;0,21;revisar — profundidade abaixo de Manning;0,05;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0
+Passo do Meio;mdr.tif;30,0;3378,8;530,0;5,18;0,003258;155,6;6,9;13,8;0,4;16,04;revisar — profundidade muito acima de Manning;1,14;3,2;0,6;1,1;1,5;2,1;2,5;2,5;2,4
+Pezzi;mdr.tif;19,0;1962,2;565,5;2,71;0,001435;114,5;0,2;0,4;0,5;0,52;triagem utilizável, requer calibração;0,7;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0
+São Paulo;mdr.tif;16,0;1698,4;328,5;0,75;0,003925;73,0;0,6;1,2;0,4;1,6;revisar — remanso curto;0,05;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0

@@ -1,0 +1,10 @@
+alternativa;n_eixos;eixos;area_controlada_km2;pct_bacia_controlada;area_inundada_km2;volume_acumulado_hm3;volume_espera_hm3;pct_do_volume_necessario;Ef_MWmed;P_MW;ICB_RS_MWh;competitivo_energia;contem_apenas_prioritarios
+ALT-E — E02 + E04 + E12;3;E02+E04+E12;15760;81,1;108,6;4565;2282;70,7;181,3;461,6;292,1;True;False
+ALT-I — E02 + E04 + E01 + E05 + E08;5;E02+E04+E01+E05+E08;14499;74,6;98,1;4470;2235;69,2;249,2;631,2;247,4;True;False
+ALT-D — E02 + E04 + E08;3;E02+E04+E08;11950;61,5;88,6;4208;2104;65,1;193,6;493,2;281,4;True;False
+ALT-B — E02 + E04 + E01;3;E02+E04+E01;13638;70,2;79,6;3760;1880;58,2;126,3;319,8;390,8;False;False
+ALT-C — E02 + E04 + E05;3;E02+E04+E05;11514;59,2;76,2;3678;1839;56,9;155,1;392,4;319,4;False;False
+ALT-A — E02 + E04 (prioritarios);2;E02+E04;11089;57,0;73,1;3588;1794;55,5;112,9;287,1;406,3;False;True
+ALT-G — E04 isolado;1;E04;7498;38,6;42,3;2211;1105;34,2;74,3;191,8;336,9;False;True
+ALT-F — E02 isolado;1;E02;3591;18,5;30,8;1377;689;21,3;38,6;95,3;539,7;False;True
+ALT-H — E12 isolado (cascata critica);1;E12;15760;81,1;35,6;976;488;15,1;68,4;174,5;103,6;True;False

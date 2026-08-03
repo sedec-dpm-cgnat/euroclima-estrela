@@ -1,0 +1,15 @@
+codigo_pipeline_fq;codigo_canonico;area_fq_km2;area_canonica_km2;origem
+E03;E01;2550,4;2548,8;EUROCLIMA-rev.kmz
+E02;FQ1;2350,1;;eixos_forqueta_propostos.kmz
+E06;E04;7497,2;7497,5;EUROCLIMA-rev.kmz
+E04;E02;3590,9;3591,2;EUROCLIMA-rev.kmz
+E07;E05;7922,5;7922,8;EUROCLIMA-rev.kmz
+E08;E06;8158,7;8158,8;EUROCLIMA-rev.kmz
+E09;E07;8173,5;8173,5;EUROCLIMA-rev.kmz
+E01;FQ2;2204,2;;eixos_forqueta_propostos.kmz
+E10;E08;11950,1;11950,5;EUROCLIMA-rev.kmz
+E11;E09;12330,0;12330,0;EUROCLIMA-rev.kmz
+E13;E11;15456,5;15456,9;EUROCLIMA-rev.kmz
+E14;E12;15759,1;15759,8;EUROCLIMA-rev.kmz
+E12;E10;12777,2;12778,1;EUROCLIMA-rev.kmz
+E05;E03;3771,7;3771,8;EUROCLIMA-rev.kmz

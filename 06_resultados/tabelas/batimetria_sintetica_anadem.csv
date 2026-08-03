@@ -1,0 +1,18 @@
+nome;mde_fonte;potencia_MW;area_drenagem_km2;NA_atual_m;compr_remanso_km;declividade;larg_media_m;prof_media_m;prof_max_m;prof_Manning_m;razao_prof;qualidade_triagem;area_espelho_km2;V_submerso_hm3;V_deplec_1m_hm3;V_deplec_2m_hm3;V_deplec_3m_hm3;V_deplec_5m_hm3;V_deplec_8m_hm3;V_deplec_10m_hm3;V_deplec_15m_hm3
+14 de Julho;anadem_taquari_31982.tif;100,0;12607,5;105,2;0,42;0,000616;63,8;0,1;0,2;2,4;0,05;revisar — profundidade abaixo de Manning;5,88;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0
+Monte Claro;anadem_taquari_31982.tif;130,0;11965,3;148,0;4,61;0,001325;171,8;1,5;2,9;1,0;1,44;triagem utilizável, requer calibração;1,08;0,4;0,2;0,3;0,3;0,3;0,3;0,3;0,3
+Serra dos Cavalinhos II;anadem_taquari_31982.tif;29,0;3714,9;438,7;0,5;0,002343;81,5;1,6;2,1;0,8;2,03;revisar — remanso curto;0,13;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0
+Serra dos Cavalinhos I;anadem_taquari_31982.tif;25,0;3615,4;478,9;5,61;0,004306;104,8;8,2;16,6;0,5;16,03;revisar — profundidade muito acima de Manning;0,87;2,4;0,4;0,7;1,0;1,4;1,8;1,9;1,8
+Foz do Prata;anadem_taquari_31982.tif;49,4;3765,2;173,4;1,02;0,003341;63,3;1,9;3,5;0,7;2,68;triagem utilizável, requer calibração;0,09;0,1;0,0;0,1;0,1;0,1;0,1;0,1;0,1
+Jararaca;anadem_taquari_31982.tif;28,0;3651,4;259,3;2,2;0,003947;60,9;0,3;0,5;0,8;0,38;revisar — profundidade abaixo de Manning;0,69;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0
+Da Ilha;anadem_taquari_31982.tif;26,0;3613,3;299,0;3,56;0,003145;242,7;2,2;4,2;0,3;6,36;triagem utilizável, requer calibração;1,88;0,4;0,2;0,3;0,3;0,3;0,3;0,3;0,3
+Passo do Meio;anadem_taquari_31982.tif;30,0;3378,6;533,6;1,7;0,003102;133,3;1,7;3,3;0,5;3,6;triagem utilizável, requer calibração;1,32;0,1;0,1;0,1;0,1;0,1;0,1;0,1;0,1
+Cotiporã;anadem_taquari_31982.tif;19,5;2298,3;138,3;0,49;0,00309;82,3;0,6;1,1;0,5;1,06;revisar — remanso curto;0,06;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0
+Linha Emília;anadem_taquari_31982.tif;19,5;2290,6;195,2;9,57;0,004075;244,3;7,6;14,6;0,2;31,23;revisar — profundidade muito acima de Manning;1,77;4,4;0,8;1,5;2,0;2,9;3,4;3,5;3,3
+Monte Cuco;anadem_taquari_31982.tif;30,0;2124,3;139,3;2,22;0,003529;99,1;2,3;4,4;0,4;5,76;triagem utilizável, requer calibração;0,19;0,2;0,1;0,1;0,1;0,1;0,1;0,1;0,1
+Pezzi;anadem_taquari_31982.tif;19,0;1962,2;567,3;0,51;0,001358;112,8;0,2;0,4;0,5;0,45;revisar — profundidade abaixo de Manning;0,8;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0
+Autódromo;anadem_taquari_31982.tif;24,0;1784,7;285,3;0,28;0,003463;80,2;1,2;1,4;0,4;2,68;revisar — remanso curto;0,31;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0
+São Paulo;anadem_taquari_31982.tif;16,0;1700,1;329,4;1,09;0,003913;117,9;0,8;1,6;0,3;2,54;triagem utilizável, requer calibração;0,1;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0
+Boa Fé;anadem_taquari_31982.tif;24,0;1611,1;376,6;1,56;0,004016;112,2;0,3;0,7;0,3;1,17;triagem utilizável, requer calibração;0,69;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0
+Saltinho RS;anadem_taquari_31982.tif;27,3;1198,4;535,4;0,92;0,006586;136,0;0,6;1,2;0,2;3,36;revisar — remanso curto;0,08;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0
+Palanquinho;anadem_taquari_31982.tif;24,2;789,3;520,0;1,91;0,008161;108,8;3,2;6,6;0,2;20,47;revisar — profundidade muito acima de Manning;0,29;0,2;0,1;0,1;0,1;0,1;0,1;0,1;0,1

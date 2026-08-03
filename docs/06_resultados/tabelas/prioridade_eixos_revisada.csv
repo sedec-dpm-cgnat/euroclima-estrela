@@ -1,0 +1,13 @@
+eixo;estaca_km;altura_max_m;volume_max_hm3;restricao;limitante;classe_revisada;prioridade;justificativa;nao_interferencia_comprovada
+E02;243,9;120,0;1377,4;Passo do Meio (operacao);teto tecnico (remanso nao e' limitante);candidato_prioritario_baixa_interferencia_triagem;1;"remanso não limita até 120 m; teto é hipótese de triagem";não
+E04;238,1;120,0;2210,7;Serra dos Cavalinhos II (operacao);teto tecnico (remanso nao e' limitante);candidato_prioritario_baixa_interferencia_triagem;1;"remanso não limita até 120 m; teto é hipótese de triagem";não
+E01;345,7;63,6;172,0;Cotiporã (operacao);remanso do aproveitamento de montante;candidato_em_tributario_com_restricao_operacional;2;"tributário; restrição operacional precisa ser confirmada";não
+E05;257,6;67,0;91,0;Castro Alves (operacao);remanso do aproveitamento de montante;alternativa_viavel_com_conflito_operacional;3;volta a ser viável, mas afeta o remanso de Castro Alves;não
+E09;303,3;24,5;59,8;Monte Claro (operacao);remanso do aproveitamento de montante;cascata_critica_alta_interferencia;3;altura limitada por usina existente da cascata principal;não
+E10;335,5;31,0;70,0;14 de Julho (operacao);remanso do aproveitamento de montante;cascata_critica_alta_interferencia;3;altura limitada por usina existente da cascata principal;não
+E11;358,1;45,0;400,3;14 de Julho (operacao);remanso do aproveitamento de montante;cascata_critica_alta_interferencia;3;altura limitada por usina existente da cascata principal;não
+E12;375,2;55,5;977,7;14 de Julho (operacao);remanso do aproveitamento de montante;cascata_critica_alta_interferencia;3;altura limitada por usina existente da cascata principal;não
+E03;272,8;84,5;151,5;Castro Alves (operacao);remanso do aproveitamento de montante;conflito_operacional_castro_alves;4;altura limitada pelo remanso de Castro Alves;não
+E06;270,7;84,5;338,3;Castro Alves (operacao);remanso do aproveitamento de montante;conflito_operacional_castro_alves;4;altura limitada pelo remanso de Castro Alves;não
+E07;272,7;84,5;385,6;Castro Alves (operacao);remanso do aproveitamento de montante;conflito_operacional_castro_alves;4;altura limitada pelo remanso de Castro Alves;não
+E08;274,3;86,0;621,1;Castro Alves (operacao);remanso do aproveitamento de montante;conflito_operacional_castro_alves;4;altura limitada pelo remanso de Castro Alves;não

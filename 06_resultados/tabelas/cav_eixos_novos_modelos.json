@@ -1,0 +1,1022 @@
+{
+  "E01": {
+    "altura_min_m": 10.0,
+    "altura_max_m": 120.0,
+    "cota_eixo_m": 72.5,
+    "modelos": {
+      "area_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          6.752944099378883,
+          8.914021739130435,
+          2.770599378881989
+        ],
+        "rmse": 0.14557059498528827,
+        "erro_maximo": 0.43130999435347483,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          6.752944099378883,
+          8.664163322185063,
+          2.7705993788819905,
+          0.3826945373467083
+        ],
+        "rmse": 0.13013432231561667,
+        "erro_maximo": 0.396807105937544,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          6.799048054919906,
+          8.66416332218506,
+          2.34418704649025,
+          0.38269453734672154,
+          0.4589215318116902
+        ],
+        "rmse": 0.12364262036710677,
+        "erro_maximo": 0.34575960271612516,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          180.5990062111802,
+          404.56195652173915,
+          242.851645962733
+        ],
+        "rmse": 8.340549626674806,
+        "erro_maximo": 18.58739130434776,
+        "monotono_no_intervalo": false
+      },
+      "volume_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          180.5990062111802,
+          372.74353957636566,
+          242.851645962733,
+          48.73453734671115
+        ],
+        "rmse": 0.7401087597534647,
+        "erro_maximo": 1.93342309864056,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          181.1887414187643,
+          372.7435395763656,
+          237.39722535156162,
+          48.73453734671159,
+          5.8702595395963355
+        ],
+        "rmse": 0.527451710818541,
+        "erro_maximo": 1.5024627546368947,
+        "monotono_no_intervalo": true
+      }
+    }
+  },
+  "E02": {
+    "altura_min_m": 10.0,
+    "altura_max_m": 120.0,
+    "cota_eixo_m": 293.0,
+    "modelos": {
+      "area_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          10.482757763975158,
+          15.081956521739128,
+          5.784155279503113
+        ],
+        "rmse": 0.3247726073095534,
+        "erro_maximo": 0.5817955957086429,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          10.482757763975158,
+          15.990764771460427,
+          5.784155279503113,
+          -1.3919721293199618
+        ],
+        "rmse": 0.22174917029528074,
+        "erro_maximo": 0.42492420622855676,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          10.318764302059497,
+          15.990764771460427,
+          7.300919595532854,
+          -1.391972129319949,
+          -1.6324007314831044
+        ],
+        "rmse": 0.16831039550056592,
+        "erro_maximo": 0.30928779077520474,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          274.11552795031076,
+          647.1239130434782,
+          422.29751552795057
+        ],
+        "rmse": 19.340319996349372,
+        "erro_maximo": 41.089130434783144,
+        "monotono_no_intervalo": false
+      },
+      "volume_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          274.11552795031076,
+          573.839303232999,
+          422.2975155279506,
+          112.24604793756954
+        ],
+        "rmse": 2.815503060742075,
+        "erro_maximo": 5.098394648829753,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          271.3741418764304,
+          573.8393032329991,
+          447.6524078800676,
+          112.24604793757014,
+          -27.287920993955883
+        ],
+        "rmse": 1.4499453064750865,
+        "erro_maximo": 2.6753775743706996,
+        "monotono_no_intervalo": true
+      }
+    }
+  },
+  "E03": {
+    "altura_min_m": 10.0,
+    "altura_max_m": 120.0,
+    "cota_eixo_m": 149.5,
+    "modelos": {
+      "area_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          2.9598385093167705,
+          3.9472826086956525,
+          1.2104440993788823
+        ],
+        "rmse": 0.10451687088367628,
+        "erro_maximo": 0.36192546583851026,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          2.9598385093167705,
+          3.8778383500557414,
+          1.2104440993788823,
+          0.10636399108138152
+        ],
+        "rmse": 0.10293212239762133,
+        "erro_maximo": 0.34514376927420454,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          3.002050343249428,
+          3.877838350055744,
+          0.8200297336149712,
+          0.10636399108138422,
+          0.4201791204600153
+        ],
+        "rmse": 0.09598954536012824,
+        "erro_maximo": 0.29815973500184256,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          78.0465838509317,
+          177.06304347826082,
+          107.94689440993793
+        ],
+        "rmse": 3.5311712577382393,
+        "erro_maximo": 7.843478260869517,
+        "monotono_no_intervalo": false
+      },
+      "volume_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          78.0465838509317,
+          163.67311594202897,
+          107.94689440993793,
+          20.50862318840571
+        ],
+        "rmse": 0.4967898075952701,
+        "erro_maximo": 1.366572557876907,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          78.18160183066361,
+          163.673115942029,
+          106.69812234739568,
+          20.508623188405966,
+          1.343977048250567
+        ],
+        "rmse": 0.48235973409402666,
+        "erro_maximo": 1.217077125772846,
+        "monotono_no_intervalo": true
+      }
+    }
+  },
+  "E04": {
+    "altura_min_m": 10.0,
+    "altura_max_m": 120.0,
+    "cota_eixo_m": 239.0,
+    "modelos": {
+      "area_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          18.190509316770193,
+          19.207717391304346,
+          4.852947204968954
+        ],
+        "rmse": 0.09217556703500998,
+        "erro_maximo": 0.18189158667418237,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          18.190509316770193,
+          19.28971181716834,
+          4.852947204968954,
+          -0.1255863991081501
+        ],
+        "rmse": 0.089654985294454,
+        "erro_maximo": 0.1932141771272038,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          18.175478260869564,
+          19.28971181716834,
+          4.991968413229269,
+          -0.12558639910812133,
+          -0.14962002972870717
+        ],
+        "rmse": 0.08867302535020456,
+        "erro_maximo": 0.176571399614887,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          590.78099378882,
+          1060.7434782608696,
+          529.331614906833
+        ],
+        "rmse": 15.039380770241943,
+        "erro_maximo": 30.969130434783416,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          590.78099378882,
+          1003.1910535117054,
+          529.3316149068326,
+          88.1499163879595
+        ],
+        "rmse": 0.6178823493059797,
+        "erro_maximo": 1.0902202145681485,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          590.28118993135,
+          1003.1910535117055,
+          533.9542666099476,
+          88.14991638796066,
+          -4.9750775000489655
+        ],
+        "rmse": 0.4337810748436328,
+        "erro_maximo": 0.7644171160645783,
+        "monotono_no_intervalo": true
+      }
+    }
+  },
+  "E05": {
+    "altura_min_m": 10.0,
+    "altura_max_m": 120.0,
+    "cota_eixo_m": 167.0,
+    "modelos": {
+      "area_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          5.018086956521739,
+          12.255543478260872,
+          8.07471739130435
+        ],
+        "rmse": 1.013015645345314,
+        "erro_maximo": 2.648960474308301,
+        "monotono_no_intervalo": false
+      },
+      "area_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          5.018086956521739,
+          13.101688963210698,
+          8.07471739130435,
+          -1.2959949832775899
+        ],
+        "rmse": 0.9886318405637415,
+        "erro_maximo": 2.724909090909091,
+        "monotono_no_intervalo": false
+      },
+      "area_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          4.350082379862703,
+          13.1016889632107,
+          14.253046045297188,
+          -1.2959949832775857,
+          -6.649357522149858
+        ],
+        "rmse": 0.7946940124359352,
+        "erro_maximo": 2.1075109215727084,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          87.48385093167707,
+          372.4673913043477,
+          343.6270186335404
+        ],
+        "rmse": 30.46486295219777,
+        "erro_maximo": 56.94347826086975,
+        "monotono_no_intervalo": false
+      },
+      "volume_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          87.48385093167707,
+          258.93505574136,
+          343.62701863354044,
+          173.89129877368995
+        ],
+        "rmse": 7.0294328579423535,
+        "erro_maximo": 15.867699691612785,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          84.58892448512587,
+          258.9350557413604,
+          370.4019953940031,
+          173.89129877369038,
+          -28.81627104969753
+        ],
+        "rmse": 6.551142923027797,
+        "erro_maximo": 13.826405402378015,
+        "monotono_no_intervalo": true
+      }
+    }
+  },
+  "E06": {
+    "altura_min_m": 10.0,
+    "altura_max_m": 120.0,
+    "cota_eixo_m": 149.5,
+    "modelos": {
+      "area_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          6.264968944099381,
+          11.523369565217386,
+          7.51296583850932
+        ],
+        "rmse": 0.9723424142021097,
+        "erro_maximo": 2.7887351778656146,
+        "monotono_no_intervalo": false
+      },
+      "area_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          6.264968944099381,
+          9.426346711259752,
+          7.512965838509322,
+          3.2118957636566257
+        ],
+        "rmse": 0.803534651573423,
+        "erro_maximo": 2.1806226816661614,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          5.834192219679631,
+          9.426346711259756,
+          11.497190307848774,
+          3.2118957636566416,
+          -4.2879772878405555
+        ],
+        "rmse": 0.7084076989101278,
+        "erro_maximo": 2.2017096541902,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          181.29043478260877,
+          431.961956521739,
+          297.50456521739136
+        ],
+        "rmse": 27.634114202260907,
+        "erro_maximo": 59.743043478260915,
+        "monotono_no_intervalo": false
+      },
+      "volume_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          181.29043478260877,
+          331.17530657748046,
+          297.5045652173915,
+          154.36942586399095
+        ],
+        "rmse": 8.436102350888582,
+        "erro_maximo": 17.69005472788092,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          189.2472768878718,
+          331.1753065774806,
+          223.91227664339206,
+          154.36942586399124,
+          79.20288236617202
+        ],
+        "rmse": 4.700834796032228,
+        "erro_maximo": 13.822918180217926,
+        "monotono_no_intervalo": true
+      }
+    }
+  },
+  "E07": {
+    "altura_min_m": 10.0,
+    "altura_max_m": 120.0,
+    "cota_eixo_m": 149.5,
+    "modelos": {
+      "area_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          6.982770186335405,
+          11.887282608695653,
+          7.4939037267080755
+        ],
+        "rmse": 0.9743401144269356,
+        "erro_maximo": 2.786347826086958,
+        "monotono_no_intervalo": false
+      },
+      "area_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          6.982770186335405,
+          9.765159420289853,
+          7.4939037267080755,
+          3.2503405797101457
+        ],
+        "rmse": 0.8014595386174221,
+        "erro_maximo": 2.1709565217391322,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          6.553162471395881,
+          9.765159420289855,
+          11.467316107297217,
+          3.2503405797101563,
+          -4.276340897533677
+        ],
+        "rmse": 0.7066048933905883,
+        "erro_maximo": 2.1919862700228823,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          213.36857142857156,
+          471.2793478260871,
+          307.36903726708096
+        ],
+        "rmse": 27.585218941994558,
+        "erro_maximo": 59.683043478260515,
+        "monotono_no_intervalo": false
+      },
+      "volume_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          213.36857142857156,
+          370.7274080267558,
+          307.36903726708084,
+          154.00993311036805
+        ],
+        "rmse": 8.466956786978399,
+        "erro_maximo": 17.750771836858917,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          221.36004576659045,
+          370.7274080267559,
+          233.45643754033875,
+          154.00993311036842,
+          79.54761368303757
+        ],
+        "rmse": 4.710763998560846,
+        "erro_maximo": 13.866803539709736,
+        "monotono_no_intervalo": true
+      }
+    }
+  },
+  "E08": {
+    "altura_min_m": 10.0,
+    "altura_max_m": 120.0,
+    "cota_eixo_m": 148.0,
+    "modelos": {
+      "area_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          10.679242236024848,
+          15.930217391304348,
+          8.619149068322983
+        ],
+        "rmse": 1.1081130002084367,
+        "erro_maximo": 2.931066064370416,
+        "monotono_no_intervalo": false
+      },
+      "area_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          10.679242236024848,
+          13.179969342251947,
+          8.61914906832298,
+          4.21240523968785
+        ],
+        "rmse": 0.8439662508166875,
+        "erro_maximo": 2.0765586152977455,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          10.398151029748284,
+          13.179969342251942,
+          11.218942415263353,
+          4.2124052396878655,
+          -2.7979986846994964
+        ],
+        "rmse": 0.8068704491629973,
+        "erro_maximo": 2.2131728728936935,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          332.52372670807466,
+          692.240217391304,
+          418.07822981366473
+        ],
+        "rmse": 29.82863703739911,
+        "erro_maximo": 66.9578260869564,
+        "monotono_no_intervalo": false
+      },
+      "volume_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          332.52372670807466,
+          582.8260981047936,
+          418.07822981366485,
+          167.58365105908555
+        ],
+        "rmse": 8.581560484049351,
+        "erro_maximo": 14.962989619076552,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          341.1838443935926,
+          582.8260981047938,
+          337.98139348510614,
+          167.58365105908604,
+          86.20332956834697
+        ],
+        "rmse": 3.938989736748488,
+        "erro_maximo": 10.754051303387655,
+        "monotono_no_intervalo": true
+      }
+    }
+  },
+  "E09": {
+    "altura_min_m": 10.0,
+    "altura_max_m": 120.0,
+    "cota_eixo_m": 106.0,
+    "modelos": {
+      "area_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          13.640819875776403,
+          15.725652173913042,
+          3.9027453416149123
+        ],
+        "rmse": 0.24697078278543938,
+        "erro_maximo": 0.7491485036702503,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          13.640819875776403,
+          16.383192865105904,
+          3.9027453416149123,
+          -1.0071192865105882
+        ],
+        "rmse": 0.17753933766560595,
+        "erro_maximo": 0.5448493245884629,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          13.723038901601827,
+          16.38319286510591,
+          3.142307193569198,
+          -1.0071192865105885,
+          0.8184131021533995
+        ],
+        "rmse": 0.16211368578946728,
+        "erro_maximo": 0.5048897281208431,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          400.04708074534176,
+          796.3782608695652,
+          438.2803105590062
+        ],
+        "rmse": 11.886446879705218,
+        "erro_maximo": 27.349130434782715,
+        "monotono_no_intervalo": false
+      },
+      "volume_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          400.04708074534176,
+          751.2394927536232,
+          438.2803105590062,
+          69.13659420289859
+        ],
+        "rmse": 1.545591295842603,
+        "erro_maximo": 3.351304347826181,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          398.6504347826085,
+          751.2394927536233,
+          451.1977935711637,
+          69.13659420289923,
+          -13.902297473058708
+        ],
+        "rmse": 0.9364872256199477,
+        "erro_maximo": 2.767497719671411,
+        "monotono_no_intervalo": true
+      }
+    }
+  },
+  "E10": {
+    "altura_min_m": 10.0,
+    "altura_max_m": 120.0,
+    "cota_eixo_m": 71.5,
+    "modelos": {
+      "area_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          22.91691925465839,
+          25.97141304347826,
+          2.989232919254662
+        ],
+        "rmse": 1.3176620189487143,
+        "erro_maximo": 4.080172219085268,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          22.91691925465839,
+          25.5393790412486,
+          2.989232919254662,
+          0.6617229654403685
+        ],
+        "rmse": 1.3128247668974853,
+        "erro_maximo": 4.184576293271952,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          23.549945080091522,
+          25.539379041248605,
+          -2.8655796563594134,
+          0.6617229654403867,
+          6.30117693970156
+        ],
+        "rmse": 1.188665723556731,
+        "erro_maximo": 3.4799846111173163,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          600.8572670807455,
+          1292.4956521739132,
+          716.1218633540373
+        ],
+        "rmse": 9.32716705492184,
+        "erro_maximo": 18.125217391303977,
+        "monotono_no_intervalo": false
+      },
+      "volume_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          600.8572670807455,
+          1274.4449888517279,
+          716.1218633540375,
+          27.647218506131665
+        ],
+        "rmse": 8.04886112075957,
+        "erro_maximo": 21.679804108934803,
+        "monotono_no_intervalo": false
+      },
+      "volume_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          605.8471395881006,
+          1274.4449888517279,
+          669.9708737213709,
+          27.647218506133374,
+          49.66948947759586
+        ],
+        "rmse": 6.744340067041866,
+        "erro_maximo": 17.33547454833453,
+        "monotono_no_intervalo": false
+      }
+    }
+  },
+  "E11": {
+    "altura_min_m": 10.0,
+    "altura_max_m": 120.0,
+    "cota_eixo_m": 57.5,
+    "modelos": {
+      "area_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          35.499664596273306,
+          39.60217391304349,
+          6.499291925465858
+        ],
+        "rmse": 1.556304054063086,
+        "erro_maximo": 4.768284584980247,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          35.499664596273306,
+          41.840375139353405,
+          6.499291925465858,
+          -3.428130992196216
+        ],
+        "rmse": 1.4424205937116752,
+        "erro_maximo": 4.119231985405911,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          36.20775286041191,
+          41.84037513935342,
+          -0.04976801326062986,
+          -3.4281309921961878,
+          7.048352945490875
+        ],
+        "rmse": 1.3007580419076985,
+        "erro_maximo": 4.084570322126378,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          989.8505590062114,
+          2030.352173913043,
+          1107.5968322981364
+        ],
+        "rmse": 19.185274458434737,
+        "erro_maximo": 49.595217391304686,
+        "monotono_no_intervalo": false
+      },
+      "volume_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          989.8505590062114,
+          1969.1461092530658,
+          1107.5968322981366,
+          93.7459977703461
+        ],
+        "rmse": 10.615750490684167,
+        "erro_maximo": 24.892262085740526,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          983.7125400457667,
+          1969.1461092530658,
+          1164.3669499696825,
+          93.74599777034842,
+          -61.09820796416666
+        ],
+        "rmse": 9.137484526031221,
+        "erro_maximo": 22.638793586276392,
+        "monotono_no_intervalo": true
+      }
+    }
+  },
+  "E12": {
+    "altura_min_m": 10.0,
+    "altura_max_m": 120.0,
+    "cota_eixo_m": 47.0,
+    "modelos": {
+      "area_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          48.10370186335405,
+          48.343804347826094,
+          4.266667701863364
+        ],
+        "rmse": 1.4492897187506513,
+        "erro_maximo": 4.594966120835693,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          48.10370186335405,
+          49.21760423634336,
+          4.266667701863364,
+          -1.3383517279821706
+        ],
+        "rmse": 1.4312199071560388,
+        "erro_maximo": 4.444137601528915,
+        "monotono_no_intervalo": true
+      },
+      "area_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          48.04580778032036,
+          49.21760423634337,
+          4.802126117271952,
+          -1.3383517279821358,
+          -0.5762811662656728
+        ],
+        "rmse": 1.4303120780301037,
+        "erro_maximo": 4.403314850671819,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_2": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          1409.4167701863357,
+          2695.095652173913,
+          1337.1832298136653
+        ],
+        "rmse": 17.63415992049076,
+        "erro_maximo": 33.84918125352863,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_3": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          1409.4167701863357,
+          2640.7199609810477,
+          1337.1832298136653,
+          83.28428651059146
+        ],
+        "rmse": 10.459523846897033,
+        "erro_maximo": 27.239847543761016,
+        "monotono_no_intervalo": true
+      },
+      "volume_grau_4": {
+        "centro_m": 65.0,
+        "meia_amplitude_m": 55.0,
+        "coeficientes_potencia_crescente": [
+          1402.7537757437074,
+          2640.7199609810473,
+          1398.8088098241683,
+          83.28428651059475,
+          -66.32384532261304
+        ],
+        "rmse": 8.65982351860121,
+        "erro_maximo": 21.081625407392494,
+        "monotono_no_intervalo": true
+      }
+    }
+  }
+}

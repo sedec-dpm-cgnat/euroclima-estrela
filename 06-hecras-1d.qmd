@@ -1,0 +1,117 @@
+# HEC-RAS 1D
+
+## Papel do modelo
+
+O HEC-RAS 1D será o modelo hidráulico principal da etapa detalhada. O objetivo é simular
+propagação de cheia no canal e na planície representada pelas seções, incluindo pontes,
+confluências, estruturas de controle e condições de contorno. O HAND orienta a triagem;
+ele não substitui esta etapa.
+
+## Insumos preliminares prontos
+
+| Insumo | Quantidade / extensão | Arquivo |
+|---|---:|---|
+| Eixo principal | 39,40 km | [claude_hecras_eixo.gpkg](06_resultados/CLAUDE/claude_hecras_eixo.gpkg) |
+| Seções transversais | 102, sendo 37 detalhadas | [claude_hecras_secoes.csv](06_resultados/CLAUDE/claude_hecras_secoes.csv) |
+| Travessias | 4 | [claude_hecras_travessias.csv](06_resultados/CLAUDE/claude_hecras_travessias.csv) |
+| Confluências | 6 | [claude_hecras_confluencias.csv](06_resultados/CLAUDE/claude_hecras_confluencias.csv) |
+| Contornos | 1 conjunto preliminar | [claude_hecras_contornos.csv](06_resultados/CLAUDE/claude_hecras_contornos.csv) |
+| Tributário Forqueta | contribuição lateral no trecho de Lajeado/Estrela; FQ1/FQ2 são alternativas exclusivas | [eixos_forqueta_propostos.kmz](06_resultados/GIS/eixos_forqueta_propostos.kmz) |
+
+O talvegue preliminar varia de 22,0 m a 13,5 m, com declividade média aproximada de
+0,216 m/km no trecho geral. A declividade dos últimos 10 km foi estimada em cerca de
+6,3 × 10⁻⁵ m/m, sinal de possível controle por remanso.
+
+## Dados que ainda faltam
+
+- seções topobatimétricas com pontos abaixo do nível d'água;
+- cota de fundo, margens, diques e aterros;
+- geometria real, vãos, pilares e tabuleiro das quatro pontes;
+- rugosidade calibrada para canal e planície;
+- séries de ANA/ONS e níveis observados em Estrela;
+- série subdiária ou curva-chave reativada em Barra do Fão para resolver a lacuna de novembro de 2023;
+- curva-chave ou condição de contorno de jusante;
+- níveis e regras de operação das estruturas existentes;
+- hidrogramas de entrada e contribuições laterais consistidos;
+- tempo de viagem e hidrograma lateral calibrado do Forqueta para os cenários FQ1/FQ2;
+- posição e hidrograma do Guaporé, contribuição a montante do ponto de análise, a ser
+  representada como ramo/afluência lateral nos cenários GU1;
+
+Há uma seção cuja cota amostrada aparece cerca de 10,5 m acima do talvegue local. Ela deve
+ser conferida antes de qualquer calibração, pois pode estar representando superfície d'água
+ou amostra do MDE, e não o tabuleiro da ponte.
+
+## Roteiro de modelagem
+
+1. revisar datum, projeção e geometrias;
+2. substituir seções sintéticas por levantamento topobatimétrico;
+3. cadastrar pontes e estruturas com vãos e cotas verificadas;
+4. inserir hidrogramas calibrados e vazões laterais, incluindo o Forqueta;
+5. testar condições de jusante por nível observado, curva-chave e extensão do domínio;
+6. calibrar níveis, tempos de chegada, vazões e áreas inundadas do evento de 2024;
+7. rodar a matriz HEC-00–HEC-06 definida na seção seguinte, começando pelo caso sem obra;
+8. extrair cota, duração e velocidade para alimentar a curva cota–dano;
+9. repetir para sensibilidades de evento, rugosidade, operação e falha.
+
+## Matriz de cenários que será testada no HEC-RAS 1D
+
+O HEC-RAS não deve receber a carteira inteira como se todas as combinações fossem
+alternativas de projeto. O estudo separa **caso de referência**, **casos estruturais
+comparáveis** e **sensibilidades**. A sequência abaixo é a matriz de simulação a ser
+montada; ela substitui a instrução genérica de simplesmente rodar C01–C05.
+
+| Plano | Nome de trabalho | Obras/entradas | Papel na primeira rodada | Situação |
+|---|---|---|---|---|
+| **HEC-00** | REF | sem novos reservatórios; estruturas existentes na situação atual | calibrar cota, tempo, mancha e condição de jusante no evento de maio de 2024 | obrigatório |
+| **HEC-01** | ALT-A / C01 | **E02 + E04** | primeiro caso com obra; mede o efeito dos dois ramos prioritários | obrigatório |
+| **HEC-02** | ALT-D / C03 | **E02 + E04 + E08** | mede o ganho incremental do eixo intermediário, condicionado à verificação de Castro Alves | obrigatório |
+| **HEC-03** | ALT-E / C02 | **E02 + E04 + E12** | mede a cobertura terminal ampliada, condicionada à verificação de 14 de Julho | obrigatório |
+| **HEC-04** | ALT-J + GU1 | ALT-J como carteira de referência ampliada + **GU1** como entrada do Guaporé | testar a hipótese estrutural independente a montante; exige desagregar o hidrograma para evitar dupla contagem | prioridade após HEC-00–03 |
+| **HEC-05** | ALT-J + FQ2 | ALT-J + **FQ2** como afluência lateral antes de Estrela | testar o efeito do Forqueta no trecho protegido, com série observada e incerteza de defasagem | sensibilidade prioritária |
+| **HEC-06** | Rede crítica | C04, C05, FQ1 e combinações laterais selecionadas | testar saturação, galgamento, comportas e hipóteses de maior complexidade | opcional, depois da calibração |
+
+### O que significa “primeira rodada”
+
+Os planos **HEC-00 a HEC-03** formam o conjunto mínimo comparável e devem ser
+executados nessa ordem. O HEC-00 fixa a situação atual; HEC-01 é a alternativa-base
+que será comparada com ele; HEC-02 e HEC-03 acrescentam, um por vez, E08 e E12.
+Assim, se o primeiro resultado com obra for solicitado antes de todos os demais,
+ele é o **HEC-01 (E02 + E04)**. A alternativa HEC-03 não é chamada de escolhida:
+ela é o caso de maior cobertura da primeira rodada.
+
+O **HEC-04** não deve ser misturado ao primeiro ajuste de rugosidade. Ele entra
+depois da calibração do HEC-00 e da verificação de que o hidrograma do Guaporé foi
+retirado da parcela residual do Antas. O GU1 será implementado como estrutura/ramo
+do Guaporé quando a geometria estiver disponível; enquanto isso, sua contribuição
+hidrológica pode ser representada no trecho detalhado por uma afluência lateral
+concentrada, claramente identificada como aproximação.
+
+O **HEC-05** também é lateral: o Forqueta conflui antes de Estrela, mas a sua
+contribuição não deve ser somada ao hidrograma de montante de 19.440 km². FQ1 e
+FQ2 são mutuamente exclusivas por interferência de cota. FQ1 só volta ao conjunto
+principal se a lacuna de novembro de 2023 for resolvida com dados subdiários de
+Barra do Fão.
+
+![Diagrama topológico da rede e da sequência de entrada no HEC-RAS 1D.](06_resultados/VALIDACAO/DIAGRAMA_TOPOLOGICO_ALTERNATIVAS_HECRAS.svg){#fig-topologia-hecras width=100%}
+
+### Hidrogramas e comparabilidade
+
+No HEC-00, a entrada de montante deve ser a série observada ou o hidrograma
+reconstituído do evento de 2024. Nos HEC-01–03, a entrada deve ser o hidrograma
+efluente do roteamento da alternativa, mantendo o mesmo evento e a mesma condição
+de jusante do caso de referência. Nos HEC-04 e HEC-05, a série do Guaporé ou do
+Forqueta entra como **lateral**, com a defasagem explicitada e sem dupla contagem.
+
+Cada plano deve produzir, no mínimo, o hidrograma de montante, as afluências
+laterais, a cota máxima em Estrela, a duração acima de cada patamar, as velocidades
+compatíveis com 1D, a área inundada e os indicadores para a curva cota–dano.
+Os resultados de HEC-04–06 devem ser rotulados como extensão/sensibilidade até que
+as CAVs, alturas admissíveis, regras de operação e remanso sejam verificados.
+
+::: {.callout-important}
+## Escopo hidráulico
+
+O escopo atual desta nota é **HEC-RAS 1D**. Modelos 2D não fazem parte do método principal
+descrito aqui. Eventuais ferramentas complementares de planície só deverão ser incorporadas
+se forem explicitamente solicitadas e compatibilizadas com a cadeia 1D.
+:::

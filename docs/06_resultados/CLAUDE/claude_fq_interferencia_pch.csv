@@ -1,0 +1,221 @@
+eixo;altura_m;NA_mx_m;aproveitamento;situacao_apr;potencia_MW;area_km2;cota_apr_m;folga_m;situacao
+FQ1;15;37,5;Foz do Jacutinga;estudo;0,0055;612,8;344,8;307,3;livre
+FQ1;20;42,5;Foz do Jacutinga;estudo;0,0055;612,8;344,8;302,3;livre
+FQ1;25;47,5;Foz do Jacutinga;estudo;0,0055;612,8;344,8;297,3;livre
+FQ1;30;52,5;Foz do Jacutinga;estudo;0,0055;612,8;344,8;292,3;livre
+FQ1;35;57,5;Foz do Jacutinga;estudo;0,0055;612,8;344,8;287,3;livre
+FQ1;40;62,5;Foz do Jacutinga;estudo;0,0055;612,8;344,8;282,3;livre
+FQ1;45;67,5;Foz do Jacutinga;estudo;0,0055;612,8;344,8;277,3;livre
+FQ1;50;72,5;Foz do Jacutinga;estudo;0,0055;612,8;344,8;272,3;livre
+FQ1;60;82,5;Foz do Jacutinga;estudo;0,0055;612,8;344,8;262,3;livre
+FQ1;70;92,5;Foz do Jacutinga;estudo;0,0055;612,8;344,8;252,3;livre
+FQ1;15;37,5;Rastro de Auto;operacao;7,02;647,6;277,4;239,9;livre
+FQ1;20;42,5;Rastro de Auto;operacao;7,02;647,6;277,4;234,9;livre
+FQ1;25;47,5;Rastro de Auto;operacao;7,02;647,6;277,4;229,9;livre
+FQ1;30;52,5;Rastro de Auto;operacao;7,02;647,6;277,4;224,9;livre
+FQ1;35;57,5;Rastro de Auto;operacao;7,02;647,6;277,4;219,9;livre
+FQ1;40;62,5;Rastro de Auto;operacao;7,02;647,6;277,4;214,9;livre
+FQ1;45;67,5;Rastro de Auto;operacao;7,02;647,6;277,4;209,9;livre
+FQ1;50;72,5;Rastro de Auto;operacao;7,02;647,6;277,4;204,9;livre
+FQ1;60;82,5;Rastro de Auto;operacao;7,02;647,6;277,4;194,9;livre
+FQ1;70;92,5;Rastro de Auto;operacao;7,02;647,6;277,4;184,9;livre
+FQ1;15;37,5;Salto Forqueta;operacao;6,08;672,3;190,0;152,5;livre
+FQ1;20;42,5;Salto Forqueta;operacao;6,08;672,3;190,0;147,5;livre
+FQ1;25;47,5;Salto Forqueta;operacao;6,08;672,3;190,0;142,5;livre
+FQ1;30;52,5;Salto Forqueta;operacao;6,08;672,3;190,0;137,5;livre
+FQ1;35;57,5;Salto Forqueta;operacao;6,08;672,3;190,0;132,5;livre
+FQ1;40;62,5;Salto Forqueta;operacao;6,08;672,3;190,0;127,5;livre
+FQ1;45;67,5;Salto Forqueta;operacao;6,08;672,3;190,0;122,5;livre
+FQ1;50;72,5;Salto Forqueta;operacao;6,08;672,3;190,0;117,5;livre
+FQ1;60;82,5;Salto Forqueta;operacao;6,08;672,3;190,0;107,5;livre
+FQ1;70;92,5;Salto Forqueta;operacao;6,08;672,3;190,0;97,5;livre
+FQ1;15;37,5;Vale Fundo;estudo;0,0056;706,2;135,7;98,2;livre
+FQ1;20;42,5;Vale Fundo;estudo;0,0056;706,2;135,7;93,2;livre
+FQ1;25;47,5;Vale Fundo;estudo;0,0056;706,2;135,7;88,2;livre
+FQ1;30;52,5;Vale Fundo;estudo;0,0056;706,2;135,7;83,2;livre
+FQ1;35;57,5;Vale Fundo;estudo;0,0056;706,2;135,7;78,2;livre
+FQ1;40;62,5;Vale Fundo;estudo;0,0056;706,2;135,7;73,2;livre
+FQ1;45;67,5;Vale Fundo;estudo;0,0056;706,2;135,7;68,2;livre
+FQ1;50;72,5;Vale Fundo;estudo;0,0056;706,2;135,7;63,2;livre
+FQ1;60;82,5;Vale Fundo;estudo;0,0056;706,2;135,7;53,2;livre
+FQ1;70;92,5;Vale Fundo;estudo;0,0056;706,2;135,7;43,2;livre
+FQ1;15;37,5;Vale do Leite;operacao;6,4;753,4;130,9;93,4;livre
+FQ1;20;42,5;Vale do Leite;operacao;6,4;753,4;130,9;88,4;livre
+FQ1;25;47,5;Vale do Leite;operacao;6,4;753,4;130,9;83,4;livre
+FQ1;30;52,5;Vale do Leite;operacao;6,4;753,4;130,9;78,4;livre
+FQ1;35;57,5;Vale do Leite;operacao;6,4;753,4;130,9;73,4;livre
+FQ1;40;62,5;Vale do Leite;operacao;6,4;753,4;130,9;68,4;livre
+FQ1;45;67,5;Vale do Leite;operacao;6,4;753,4;130,9;63,4;livre
+FQ1;50;72,5;Vale do Leite;operacao;6,4;753,4;130,9;58,4;livre
+FQ1;60;82,5;Vale do Leite;operacao;6,4;753,4;130,9;48,4;livre
+FQ1;70;92,5;Vale do Leite;operacao;6,4;753,4;130,9;38,4;livre
+FQ1;15;37,5;Barra do Galvão;estudo;0,00644;815,2;347,5;310,0;livre
+FQ1;20;42,5;Barra do Galvão;estudo;0,00644;815,2;347,5;305,0;livre
+FQ1;25;47,5;Barra do Galvão;estudo;0,00644;815,2;347,5;300,0;livre
+FQ1;30;52,5;Barra do Galvão;estudo;0,00644;815,2;347,5;295,0;livre
+FQ1;35;57,5;Barra do Galvão;estudo;0,00644;815,2;347,5;290,0;livre
+FQ1;40;62,5;Barra do Galvão;estudo;0,00644;815,2;347,5;285,0;livre
+FQ1;45;67,5;Barra do Galvão;estudo;0,00644;815,2;347,5;280,0;livre
+FQ1;50;72,5;Barra do Galvão;estudo;0,00644;815,2;347,5;275,0;livre
+FQ1;60;82,5;Barra do Galvão;estudo;0,00644;815,2;347,5;265,0;livre
+FQ1;70;92,5;Barra do Galvão;estudo;0,00644;815,2;347,5;255,0;livre
+FQ1;15;37,5;Alto Constantino;estudo;0,008;892,8;264,2;226,7;livre
+FQ1;20;42,5;Alto Constantino;estudo;0,008;892,8;264,2;221,7;livre
+FQ1;25;47,5;Alto Constantino;estudo;0,008;892,8;264,2;216,7;livre
+FQ1;30;52,5;Alto Constantino;estudo;0,008;892,8;264,2;211,7;livre
+FQ1;35;57,5;Alto Constantino;estudo;0,008;892,8;264,2;206,7;livre
+FQ1;40;62,5;Alto Constantino;estudo;0,008;892,8;264,2;201,7;livre
+FQ1;45;67,5;Alto Constantino;estudo;0,008;892,8;264,2;196,7;livre
+FQ1;50;72,5;Alto Constantino;estudo;0,008;892,8;264,2;191,7;livre
+FQ1;60;82,5;Alto Constantino;estudo;0,008;892,8;264,2;181,7;livre
+FQ1;70;92,5;Alto Constantino;estudo;0,008;892,8;264,2;171,7;livre
+FQ1;15;37,5;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;280,0;livre
+FQ1;20;42,5;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;275,0;livre
+FQ1;25;47,5;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;270,0;livre
+FQ1;30;52,5;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;265,0;livre
+FQ1;35;57,5;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;260,0;livre
+FQ1;40;62,5;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;255,0;livre
+FQ1;45;67,5;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;250,0;livre
+FQ1;50;72,5;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;245,0;livre
+FQ1;60;82,5;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;235,0;livre
+FQ1;70;92,5;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;225,0;livre
+FQ1;15;37,5;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;183,7;livre
+FQ1;20;42,5;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;178,7;livre
+FQ1;25;47,5;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;173,7;livre
+FQ1;30;52,5;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;168,7;livre
+FQ1;35;57,5;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;163,7;livre
+FQ1;40;62,5;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;158,7;livre
+FQ1;45;67,5;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;153,7;livre
+FQ1;50;72,5;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;148,7;livre
+FQ1;60;82,5;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;138,7;livre
+FQ1;70;92,5;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;128,7;livre
+FQ1;15;37,5;Queimado;estudo;0,008060000000000001;1230,5;247,1;209,6;livre
+FQ1;20;42,5;Queimado;estudo;0,008060000000000001;1230,5;247,1;204,6;livre
+FQ1;25;47,5;Queimado;estudo;0,008060000000000001;1230,5;247,1;199,6;livre
+FQ1;30;52,5;Queimado;estudo;0,008060000000000001;1230,5;247,1;194,6;livre
+FQ1;35;57,5;Queimado;estudo;0,008060000000000001;1230,5;247,1;189,6;livre
+FQ1;40;62,5;Queimado;estudo;0,008060000000000001;1230,5;247,1;184,6;livre
+FQ1;45;67,5;Queimado;estudo;0,008060000000000001;1230,5;247,1;179,6;livre
+FQ1;50;72,5;Queimado;estudo;0,008060000000000001;1230,5;247,1;174,6;livre
+FQ1;60;82,5;Queimado;estudo;0,008060000000000001;1230,5;247,1;164,6;livre
+FQ1;70;92,5;Queimado;estudo;0,008060000000000001;1230,5;247,1;154,6;livre
+FQ1;15;37,5;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;109,7;livre
+FQ1;20;42,5;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;104,7;livre
+FQ1;25;47,5;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;99,7;livre
+FQ1;30;52,5;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;94,7;livre
+FQ1;35;57,5;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;89,7;livre
+FQ1;40;62,5;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;84,7;livre
+FQ1;45;67,5;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;79,7;livre
+FQ1;50;72,5;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;74,7;livre
+FQ1;60;82,5;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;64,7;livre
+FQ1;70;92,5;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;54,7;livre
+FQ2;15;55,0;Foz do Jacutinga;estudo;0,0055;612,8;344,8;289,8;livre
+FQ2;20;60,0;Foz do Jacutinga;estudo;0,0055;612,8;344,8;284,8;livre
+FQ2;25;65,0;Foz do Jacutinga;estudo;0,0055;612,8;344,8;279,8;livre
+FQ2;30;70,0;Foz do Jacutinga;estudo;0,0055;612,8;344,8;274,8;livre
+FQ2;35;75,0;Foz do Jacutinga;estudo;0,0055;612,8;344,8;269,8;livre
+FQ2;40;80,0;Foz do Jacutinga;estudo;0,0055;612,8;344,8;264,8;livre
+FQ2;45;85,0;Foz do Jacutinga;estudo;0,0055;612,8;344,8;259,8;livre
+FQ2;50;90,0;Foz do Jacutinga;estudo;0,0055;612,8;344,8;254,8;livre
+FQ2;60;100,0;Foz do Jacutinga;estudo;0,0055;612,8;344,8;244,8;livre
+FQ2;70;110,0;Foz do Jacutinga;estudo;0,0055;612,8;344,8;234,8;livre
+FQ2;15;55,0;Rastro de Auto;operacao;7,02;647,6;277,4;222,4;livre
+FQ2;20;60,0;Rastro de Auto;operacao;7,02;647,6;277,4;217,4;livre
+FQ2;25;65,0;Rastro de Auto;operacao;7,02;647,6;277,4;212,4;livre
+FQ2;30;70,0;Rastro de Auto;operacao;7,02;647,6;277,4;207,4;livre
+FQ2;35;75,0;Rastro de Auto;operacao;7,02;647,6;277,4;202,4;livre
+FQ2;40;80,0;Rastro de Auto;operacao;7,02;647,6;277,4;197,4;livre
+FQ2;45;85,0;Rastro de Auto;operacao;7,02;647,6;277,4;192,4;livre
+FQ2;50;90,0;Rastro de Auto;operacao;7,02;647,6;277,4;187,4;livre
+FQ2;60;100,0;Rastro de Auto;operacao;7,02;647,6;277,4;177,4;livre
+FQ2;70;110,0;Rastro de Auto;operacao;7,02;647,6;277,4;167,4;livre
+FQ2;15;55,0;Salto Forqueta;operacao;6,08;672,3;190,0;135,0;livre
+FQ2;20;60,0;Salto Forqueta;operacao;6,08;672,3;190,0;130,0;livre
+FQ2;25;65,0;Salto Forqueta;operacao;6,08;672,3;190,0;125,0;livre
+FQ2;30;70,0;Salto Forqueta;operacao;6,08;672,3;190,0;120,0;livre
+FQ2;35;75,0;Salto Forqueta;operacao;6,08;672,3;190,0;115,0;livre
+FQ2;40;80,0;Salto Forqueta;operacao;6,08;672,3;190,0;110,0;livre
+FQ2;45;85,0;Salto Forqueta;operacao;6,08;672,3;190,0;105,0;livre
+FQ2;50;90,0;Salto Forqueta;operacao;6,08;672,3;190,0;100,0;livre
+FQ2;60;100,0;Salto Forqueta;operacao;6,08;672,3;190,0;90,0;livre
+FQ2;70;110,0;Salto Forqueta;operacao;6,08;672,3;190,0;80,0;livre
+FQ2;15;55,0;Vale Fundo;estudo;0,0056;706,2;135,7;80,7;livre
+FQ2;20;60,0;Vale Fundo;estudo;0,0056;706,2;135,7;75,7;livre
+FQ2;25;65,0;Vale Fundo;estudo;0,0056;706,2;135,7;70,7;livre
+FQ2;30;70,0;Vale Fundo;estudo;0,0056;706,2;135,7;65,7;livre
+FQ2;35;75,0;Vale Fundo;estudo;0,0056;706,2;135,7;60,7;livre
+FQ2;40;80,0;Vale Fundo;estudo;0,0056;706,2;135,7;55,7;livre
+FQ2;45;85,0;Vale Fundo;estudo;0,0056;706,2;135,7;50,7;livre
+FQ2;50;90,0;Vale Fundo;estudo;0,0056;706,2;135,7;45,7;livre
+FQ2;60;100,0;Vale Fundo;estudo;0,0056;706,2;135,7;35,7;livre
+FQ2;70;110,0;Vale Fundo;estudo;0,0056;706,2;135,7;25,7;livre
+FQ2;15;55,0;Vale do Leite;operacao;6,4;753,4;130,9;75,9;livre
+FQ2;20;60,0;Vale do Leite;operacao;6,4;753,4;130,9;70,9;livre
+FQ2;25;65,0;Vale do Leite;operacao;6,4;753,4;130,9;65,9;livre
+FQ2;30;70,0;Vale do Leite;operacao;6,4;753,4;130,9;60,9;livre
+FQ2;35;75,0;Vale do Leite;operacao;6,4;753,4;130,9;55,9;livre
+FQ2;40;80,0;Vale do Leite;operacao;6,4;753,4;130,9;50,9;livre
+FQ2;45;85,0;Vale do Leite;operacao;6,4;753,4;130,9;45,9;livre
+FQ2;50;90,0;Vale do Leite;operacao;6,4;753,4;130,9;40,9;livre
+FQ2;60;100,0;Vale do Leite;operacao;6,4;753,4;130,9;30,9;livre
+FQ2;70;110,0;Vale do Leite;operacao;6,4;753,4;130,9;20,9;livre
+FQ2;15;55,0;Barra do Galvão;estudo;0,00644;815,2;347,5;292,5;livre
+FQ2;20;60,0;Barra do Galvão;estudo;0,00644;815,2;347,5;287,5;livre
+FQ2;25;65,0;Barra do Galvão;estudo;0,00644;815,2;347,5;282,5;livre
+FQ2;30;70,0;Barra do Galvão;estudo;0,00644;815,2;347,5;277,5;livre
+FQ2;35;75,0;Barra do Galvão;estudo;0,00644;815,2;347,5;272,5;livre
+FQ2;40;80,0;Barra do Galvão;estudo;0,00644;815,2;347,5;267,5;livre
+FQ2;45;85,0;Barra do Galvão;estudo;0,00644;815,2;347,5;262,5;livre
+FQ2;50;90,0;Barra do Galvão;estudo;0,00644;815,2;347,5;257,5;livre
+FQ2;60;100,0;Barra do Galvão;estudo;0,00644;815,2;347,5;247,5;livre
+FQ2;70;110,0;Barra do Galvão;estudo;0,00644;815,2;347,5;237,5;livre
+FQ2;15;55,0;Alto Constantino;estudo;0,008;892,8;264,2;209,2;livre
+FQ2;20;60,0;Alto Constantino;estudo;0,008;892,8;264,2;204,2;livre
+FQ2;25;65,0;Alto Constantino;estudo;0,008;892,8;264,2;199,2;livre
+FQ2;30;70,0;Alto Constantino;estudo;0,008;892,8;264,2;194,2;livre
+FQ2;35;75,0;Alto Constantino;estudo;0,008;892,8;264,2;189,2;livre
+FQ2;40;80,0;Alto Constantino;estudo;0,008;892,8;264,2;184,2;livre
+FQ2;45;85,0;Alto Constantino;estudo;0,008;892,8;264,2;179,2;livre
+FQ2;50;90,0;Alto Constantino;estudo;0,008;892,8;264,2;174,2;livre
+FQ2;60;100,0;Alto Constantino;estudo;0,008;892,8;264,2;164,2;livre
+FQ2;70;110,0;Alto Constantino;estudo;0,008;892,8;264,2;154,2;livre
+FQ2;15;55,0;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;262,5;livre
+FQ2;20;60,0;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;257,5;livre
+FQ2;25;65,0;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;252,5;livre
+FQ2;30;70,0;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;247,5;livre
+FQ2;35;75,0;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;242,5;livre
+FQ2;40;80,0;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;237,5;livre
+FQ2;45;85,0;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;232,5;livre
+FQ2;50;90,0;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;227,5;livre
+FQ2;60;100,0;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;217,5;livre
+FQ2;70;110,0;José Dinarte Lepek;estudo;0,007501000000000001;955,8;317,5;207,5;livre
+FQ2;15;55,0;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;166,2;livre
+FQ2;20;60,0;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;161,2;livre
+FQ2;25;65,0;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;156,2;livre
+FQ2;30;70,0;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;151,2;livre
+FQ2;35;75,0;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;146,2;livre
+FQ2;40;80,0;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;141,2;livre
+FQ2;45;85,0;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;136,2;livre
+FQ2;50;90,0;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;131,2;livre
+FQ2;60;100,0;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;121,2;livre
+FQ2;70;110,0;Bugrinha;estudo;0,008502000000000001;1150,7;221,2;111,2;livre
+FQ2;15;55,0;Queimado;estudo;0,008060000000000001;1230,5;247,1;192,1;livre
+FQ2;20;60,0;Queimado;estudo;0,008060000000000001;1230,5;247,1;187,1;livre
+FQ2;25;65,0;Queimado;estudo;0,008060000000000001;1230,5;247,1;182,1;livre
+FQ2;30;70,0;Queimado;estudo;0,008060000000000001;1230,5;247,1;177,1;livre
+FQ2;35;75,0;Queimado;estudo;0,008060000000000001;1230,5;247,1;172,1;livre
+FQ2;40;80,0;Queimado;estudo;0,008060000000000001;1230,5;247,1;167,1;livre
+FQ2;45;85,0;Queimado;estudo;0,008060000000000001;1230,5;247,1;162,1;livre
+FQ2;50;90,0;Queimado;estudo;0,008060000000000001;1230,5;247,1;157,1;livre
+FQ2;60;100,0;Queimado;estudo;0,008060000000000001;1230,5;247,1;147,1;livre
+FQ2;70;110,0;Queimado;estudo;0,008060000000000001;1230,5;247,1;137,1;livre
+FQ2;15;55,0;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;92,2;livre
+FQ2;20;60,0;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;87,2;livre
+FQ2;25;65,0;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;82,2;livre
+FQ2;30;70,0;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;77,2;livre
+FQ2;35;75,0;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;72,2;livre
+FQ2;40;80,0;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;67,2;livre
+FQ2;45;85,0;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;62,2;livre
+FQ2;50;90,0;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;57,2;livre
+FQ2;60;100,0;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;47,2;livre
+FQ2;70;110,0;Nelson José Zanelatto;estudo;0,005690000000000001;2079,5;147,2;37,2;livre

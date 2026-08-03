@@ -1,0 +1,6 @@
+parametro;antes;calibrado;unidade;fonte
+Q_PICO;18000,0;16300,0;m3/s;posto 86879300 (22.472 km2) transposto ao ponto de analise (19.440 km2)
+LAMINA_MM;260,0;227,0;mm;integracao do hidrograma observado em Estrela
+Q_BASE;600,0;926,0;m3/s;percentil 10 da janela do evento
+TR_EVENTO;100,0;333,0;anos;Gumbel por momentos-L em Mucum, 86 anos
+CV_GUMBEL;0,45;0,526;-;serie de maximas anuais de Mucum

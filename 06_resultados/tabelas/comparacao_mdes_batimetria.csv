@@ -1,0 +1,18 @@
+﻿nome;status_mdr;status_anadem;V_submerso_mdr_hm3;V_submerso_anadem_hm3;delta_V_submerso_anadem_menos_mdr_hm3;V_deplec_10m_mdr_hm3;V_deplec_10m_anadem_hm3;delta_V_deplec_10m_anadem_menos_mdr_hm3;qualidade_mdr;qualidade_anadem
+14 de Julho;reconstruido;reconstruido;91,20;0,00;-91,20;52,70;0,00;-52,70;revisar — profundidade muito acima de Manning;revisar — profundidade abaixo de Manning
+Autódromo;nao_reconstruido;reconstruido;;0,00;;;0,00;;;revisar — remanso curto
+Boa Fé;nao_reconstruido;reconstruido;;0,00;;;0,00;;;triagem utilizável, requer calibração
+Cotiporã;nao_reconstruido;reconstruido;;0,00;;;0,00;;;revisar — remanso curto
+Da Ilha;nao_reconstruido;reconstruido;;0,40;;;0,30;;;triagem utilizável, requer calibração
+Foz do Prata;nao_reconstruido;reconstruido;;0,10;;;0,10;;;triagem utilizável, requer calibração
+Jararaca;nao_reconstruido;reconstruido;;0,00;;;0,00;;;revisar — profundidade abaixo de Manning
+Linha Emília;nao_reconstruido;reconstruido;;4,40;;;3,50;;;revisar — profundidade muito acima de Manning
+Monte Claro;nao_reconstruido;reconstruido;;0,40;;;0,30;;;triagem utilizável, requer calibração
+Monte Cuco;nao_reconstruido;reconstruido;;0,20;;;0,10;;;triagem utilizável, requer calibração
+Palanquinho;nao_reconstruido;reconstruido;;0,20;;;0,10;;;revisar — profundidade muito acima de Manning
+Passo do Meio;reconstruido;reconstruido;3,20;0,10;-3,10;2,50;0,10;-2,40;revisar — profundidade muito acima de Manning;triagem utilizável, requer calibração
+Pezzi;reconstruido;reconstruido;0,00;0,00;0,00;0,00;0,00;0,00;triagem utilizável, requer calibração;revisar — profundidade abaixo de Manning
+Saltinho RS;nao_reconstruido;reconstruido;;0,00;;;0,00;;;revisar — remanso curto
+Serra dos Cavalinhos I;reconstruido;reconstruido;0,00;2,40;2,40;0,00;1,90;1,90;revisar — profundidade abaixo de Manning;revisar — profundidade muito acima de Manning
+Serra dos Cavalinhos II;reconstruido;reconstruido;0,00;0,00;0,00;0,00;0,00;0,00;revisar — profundidade abaixo de Manning;revisar — remanso curto
+São Paulo;reconstruido;reconstruido;0,00;0,00;0,00;0,00;0,00;0,00;revisar — remanso curto;triagem utilizável, requer calibração

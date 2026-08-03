@@ -1,0 +1,10 @@
+alternativa;eixos;n_eixos;area_controlada_km2;V_max_hm3;V_espera_hm3;V_util_hm3;Ef_MWmed;Ef_sem_espera_MWmed;P_MW;custo_MRS;ICB_RS_MWh;restricoes_montante
+E09 + E10;E09+E10;2;25108,1;129,8;64,9;30,400000000000002;36,7;56,400000000000006;66,8;243;66,87569208565066;"E09: Monte Claro (operacao); E10: 14 de Julho (operacao)"
+E05 isolado;E05;1;7922,8;91,0;45,5;27,3;31,5;43,1;57,2;370;114,8800463868957;E05: Castro Alves (operacao)
+E12 isolado;E12;1;15759,8;977,7;488,8;297,3;51,0;71,7;92,7;722;137,21013519563076;E12: 14 de Julho (operacao)
+E02 + E04 + E08;E02+E04+E08;3;23039,2;4209,2;2104,5;1246,1000000000001;145,2;205,10000000000002;264,0;5731;373,520384417022;"E04: Serra dos Cavalinhos II (operacao); E02: Passo do Meio (operacao); E08: Castro Alves (operacao)"
+E02 + E04 + E05;E02+E04+E05;3;19011,5;3679,1;1839,5;1102,2;116,6;163,5;211,89999999999998;5223;423,23597828896357;"E04: Serra dos Cavalinhos II (operacao); E02: Passo do Meio (operacao); E05: Castro Alves (operacao)"
+E04 isolado;E04;1;7497,5;2210,7;1105,3;625,3;55,9;80,2;101,6;2642;446,2061247661757;E04: Serra dos Cavalinhos II (operacao)
+E01 + E02 + E04;E01+E02+E04;3;13637,5;3760,1;1880,0;1128,4;95,1;133,9;172,79999999999998;5220;517,4797977615488;"E04: Serra dos Cavalinhos II (operacao); E02: Passo do Meio (operacao); E01: Cotiporã (operacao)"
+E02 + E04;E02+E04;2;11088,7;3588,1;1794,0;1074,9;85,1;120,4;154,7;4853;537,3747779941943;"E04: Serra dos Cavalinhos II (operacao); E02: Passo do Meio (operacao)"
+E02 isolado;E02;1;3591,2;1377,4;688,7;449,6;29,2;40,2;53,1;2211;711,9065490711203;E02: Passo do Meio (operacao)

@@ -1,0 +1,48 @@
+# Contexto e pergunta decisória
+
+## Por que esta análise existe
+
+As cheias de maio de 2024 expuseram a necessidade de quantificar, para a bacia do
+Taquari–Antas, quais combinações de medidas estruturais e não estruturais poderiam reduzir
+níveis, tempos de permanência e danos em Estrela e nos municípios a jusante.
+
+A pergunta não é simplesmente “qual a melhor barragem?”. A pergunta operacional é:
+
+> Qual combinação de reservatórios, volumes de espera, regras de operação e medidas
+> complementares produz redução mensurável de danos, sem transferir risco para montante,
+> sem comprometer a cascata hidrelétrica existente e com custo justificável?
+
+## Evento de referência
+
+O evento de maio de 2024 é usado como referência de exposição e como teste inicial de
+ordem de grandeza. A análise deve manter separadas três camadas:
+
+1. **Hidrologia:** chuva, vazões afluentes, sincronização de picos e incertezas;
+2. **Hidráulica:** níveis e velocidades ao longo do rio, remanso, pontes e áreas inundadas;
+3. **Risco:** pessoas, edificações, infraestrutura, perdas econômicas e danos evitados.
+
+Misturar as três camadas em um único número esconde as hipóteses mais importantes.
+
+## Escala da bacia
+
+O recorte de referência trabalha com aproximadamente **19.440 km²** no início do trecho
+modelado em Estrela e **23.618 km²** para a bacia Taquari–Antas completa. Os primeiros eixos
+BAR-A, BAR-A2 e BAR-B eram aninhados; por isso, os volumes não poderiam ser somados sem
+contabilizar a sobreposição de áreas.
+
+## Perguntas que o estudo deve responder
+
+- Qual é a redução de pico e de cota no ponto de controle em Estrela?
+- Qual é o tempo disponível para alerta e evacuação em cada cenário?
+- Quanto dano é efetivamente evitado, por município e por faixa de cota?
+- Quais eixos afetam as cotas operacionais ou a produção das UHEs existentes?
+- Cascatas com comportas melhoram o resultado sem criar saturação e galgamento em série?
+- A solução é robusta para eventos maiores, defasagens de onda e falhas de operação?
+
+::: {.callout-important}
+## Critério de decisão
+
+Uma alternativa só poderá ser chamada de “selecionada” depois de passar por: (i) balanço
+hidrológico; (ii) HEC-RAS 1D calibrado ou validado; (iii) curva cota–dano documentada;
+(iv) análise de segurança e operação; e (v) comparação econômica transparente.
+:::

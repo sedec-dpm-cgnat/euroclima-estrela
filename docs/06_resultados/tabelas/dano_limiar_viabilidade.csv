@@ -1,0 +1,9 @@
+alternativa;reducao_pct;custo_MRS;dano_limiar_MRS
+B1-80m-seca;23,4;1125;926
+B1-90m-seca;52,7;1431;1020
+B3-90m-seca;22,1;1250;1132
+B3-90m+B2-30m-seca;21,8;1320;1198
+B1-100m-seca;54;1790;1229
+B3-100m-seca;43,6;1568;1259
+B3-100m+B2-30m-seca;43,6;1639;1316
+B1-110m-seca;55,1;2194;1471

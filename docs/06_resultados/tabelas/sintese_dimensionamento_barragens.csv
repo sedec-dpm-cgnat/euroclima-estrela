@@ -1,0 +1,5 @@
+cenario;Q_alvo;reducao_pct;V_necessario_hm3;V_efetivo_BARA_hm3;altura_BARA_m;altura_A2B_m;viavel_Q
+Evitar inundacao urbana;4000;78;3230;2618;;;TRUE
+Reduzir pico a 1/2;9000;50;1524;1235;62;78;TRUE
+Reduzir pico a 1/3;6000;67;2462;1996;76;;TRUE
+Limitar a cheia de TR=25 anos (ordem);8000;56;1811;1468;66;;TRUE

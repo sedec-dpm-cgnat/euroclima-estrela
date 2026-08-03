@@ -25,13 +25,19 @@ import geopandas as gpd
 from osgeo import gdal, ogr, osr
 from scipy import ndimage
 from shapely.geometry import Point, LineString
+from shapely.ops import nearest_points
 
 gdal.UseExceptions()
 
 GIS = os.environ["GIS"]; SHP = os.environ["SHP"]; KMZ = os.environ["KMZ"]
 DEST = os.path.join(os.environ["EURO"], "05_MODELAGEM")
-D_GIS = os.path.join(DEST, "01_dados", "gis_derivado")
-D_CAV = os.path.join(DEST, "01_dados", "cav")
+# Use OUTPUT_TAG for an isolated validation run; this prevents a new KMZ from
+# overwriting the current 12-axis outputs before the additional candidate is
+# reviewed. Example: OUTPUT_TAG=mc2 -> cav_mc2 / gis_derivado_mc2.
+OUTPUT_TAG = re.sub(r"[^A-Za-z0-9_-]+", "_", os.environ.get("OUTPUT_TAG", "").strip())
+OUTPUT_SUFFIX = f"_{OUTPUT_TAG}" if OUTPUT_TAG else ""
+D_GIS = os.path.join(DEST, "01_dados", f"gis_derivado{OUTPUT_SUFFIX}")
+D_CAV = os.path.join(DEST, "01_dados", f"cav{OUTPUT_SUFFIX}")
 FDR = os.path.join(GIS, "raster", "Fdr.tif")
 MDE = os.path.join(GIS, "raster", "mdr.tif")
 UTM22 = 31982
@@ -43,17 +49,35 @@ def log(*a): print(f"[{time.time()-t0:7.1f}s]", *a, flush=True)
 CRISTA_M, TAL_M, TAL_J, BORDA = 10.0, 2.5, 2.0, 3.0
 C_ATERRO, C_VERT, C_DESAP = 90.0, 8_000.0, 45_000.0
 ALTURAS = list(range(10, 125, 5))
-PADRAO_EIXO = re.compile(r"(EIXO|BARRAGEM|BARRAG)", re.I)
+# Além dos rótulos históricos EIXO/BARRAGEM, aceitar nomes descritivos usados
+# para novos eixos exploratórios. O KMZ atual, contudo, exportou os últimos
+# elementos com o nome genérico EIXO; por isso a identificação final deve ser
+# conferida pelo usuário no mapa antes de entrar na carteira oficial.
+PADRAO_EIXO = re.compile(r"(EIXO|BARRAGEM|BARRAG|MONTE\s*CLARO\s*2|MC\s*2)", re.I)
 
 # ------------------------------------------------------------- 1. le os eixos
 def le_eixos(pasta):
-    """Le os eixos do KMZ mais recente da pasta. Nomes repetidos (varios
-    'EIXO') recebem sufixo provisorio; a numeracao definitiva e' atribuida
-    depois, de montante para jusante."""
-    arqs = sorted(glob.glob(os.path.join(pasta, "*.km[lz]")),
-                  key=os.path.getmtime, reverse=True)
-    # usa o arquivo mais recente que contenha eixos; ignora os antigos
-    arqs = [max(arqs, key=os.path.getmtime)] if arqs else []
+    """Le a base principal e, opcionalmente, um KMZ extra.
+
+    A base principal continua sendo o ``EUROCLIMA-rev.kmz`` quando ele existe.
+    ``EXTRA_KMZ`` permite acrescentar um arquivo recebido separadamente (por
+    exemplo, Monte Claro 2) sem o risco de substituir a carteira de 12 eixos
+    apenas porque o arquivo novo tem data de modificacao mais recente.
+    Nomes repetidos recebem sufixo provisorio; a numeracao definitiva e
+    atribuida depois, de montante para jusante.
+    """
+    arqs_todos = sorted(glob.glob(os.path.join(pasta, "*.km[lz]")),
+                        key=os.path.getmtime, reverse=True)
+    preferidas = [a for a in arqs_todos
+                  if os.path.basename(a).lower() == "euroclima-rev.kmz"]
+    arqs = [preferidas[0] if preferidas else arqs_todos[0]] if arqs_todos else []
+    extra = os.environ.get("EXTRA_KMZ", "").strip()
+    if extra:
+        extra = os.path.abspath(extra)
+        if os.path.exists(extra) and os.path.abspath(extra) not in {os.path.abspath(a) for a in arqs}:
+            arqs.append(extra)
+        elif not os.path.exists(extra):
+            log(f"  aviso: EXTRA_KMZ nao encontrado: {extra}")
     out = []
     for fp in arqs:
         if fp.lower().endswith(".kmz"):
@@ -162,18 +186,25 @@ bho = gpd.read_file(os.path.join(SHP, "Drenagem_Bacia_Taquari.shp")).to_crs(UTM2
 bho = bho[bho.geometry.notna()].copy()
 
 def ancora(geom):
-    perto = bho[bho.geometry.distance(geom) < 400]
+    # A linha do eixo deve ser ancorada no trecho da BHO que ela cruza, e não
+    # no maior nuareamont entre todos os cursos que caem dentro de um raio.
+    # O critério antigo podia escolher um tributário próximo da barragem.
+    dist = bho.geometry.distance(geom)
+    perto = bho[dist < 400].copy()
     if len(perto) == 0:
-        perto = bho[bho.geometry.distance(geom) < 3000]
-    if len(perto) == 0: return None
-    ln = perto.sort_values("nuareamont", ascending=False).iloc[0]
+        perto = bho[dist < 3000].copy()
+    if len(perto) == 0:
+        return None
+    corredor = geom.buffer(max(2 * px, 60.0))
+    inters = perto[perto.geometry.intersects(corredor)].copy()
+    usada_intersecao = len(inters) > 0
+    cand = inters if usada_intersecao else perto
+    cand["_dist_geom_m"] = cand.geometry.distance(geom)
+    # Menor distância é o critério primário; nuareamont apenas desempata.
+    cand = cand.sort_values(["_dist_geom_m", "nuareamont"], ascending=[True, False])
+    ln = cand.iloc[0]
     alvo = float(ln.get("nuareamont", np.nan))
-    if geom.geom_type == "LineString":
-        s = min((geom.interpolate(t).distance(ln.geometry), t)
-                for t in np.arange(0, geom.length, px / 2))[1]
-        p = geom.interpolate(s)
-    else:
-        p = geom
+    p = nearest_points(geom, ln.geometry)[0]
     r0, c0 = rc(p.x, p.y)
     best = None
     for dr in range(-10, 11):
@@ -181,9 +212,13 @@ def ancora(geom):
             r, c = r0 + dr, c0 + dc
             if not (0 <= r < NY and 0 <= c < NX): continue
             i = r * NX + c
-            sc = abs(area[i] - alvo) if np.isfinite(alvo) else -area[i]
+            dist_px = Point(*xy(r, c)).distance(ln.geometry) / max(px, 1.0)
+            sc = (abs(area[i] - alvo) / max(abs(alvo), 1.0)
+                  if np.isfinite(alvo) else 0.0) + 0.001 * dist_px
             if best is None or sc < best[0]: best = (sc, r, c, i, float(area[i]), alvo)
-    return best
+    if best is None:
+        return None
+    return (*best, float(ln["_dist_geom_m"]), usada_intersecao)
 
 log("ancorando eixos e delineando bacias...")
 info = []
@@ -191,18 +226,23 @@ for _, e in eixos.iterrows():
     b = ancora(e.geometry)
     if b is None:
         log(f"  {e.eixo}: sem drenagem proxima — IGNORADO"); continue
-    _, r, c, i, a, alvo = b
+    _, r, c, i, a, alvo, dist_bho_m, usada_intersecao = b
     mask = bfs(i)
     ll = gpd.GeoSeries([Point(*xy(r, c))], crs=UTM22).to_crs(4326).iloc[0]
+    aderencia = a / alvo if np.isfinite(alvo) and alvo > 0 else np.nan
     info.append(dict(eixo=e.eixo, fonte=e.fonte, no=i, r=r, c=c,
                      area_km2=round(a, 1), area_BHO_km2=round(alvo, 1),
+                     aderencia_D8_BHO=round(aderencia, 4) if np.isfinite(aderencia) else np.nan,
+                     distancia_BHO_m=round(dist_bho_m, 1),
+                     ancoragem_por_intersecao=bool(usada_intersecao),
                      cota_eixo_m=round(float(dem[r, c]), 1),
                      lat=round(ll.y, 5), lon=round(ll.x, 5),
                      tipo_geom=e.geometry.geom_type,
                      compr_eixo_m=round(e.geometry.length, 1)
                      if e.geometry.geom_type == "LineString" else np.nan,
                      _mask=mask))
-    log(f"  {e.eixo:<18} D8={a:>10,.1f} km2  (BHO={alvo:>10,.1f})  cota {dem[r,c]:>6.1f} m")
+    alerta = " REVISAR" if np.isfinite(aderencia) and not (0.9 <= aderencia <= 1.1) else ""
+    log(f"  {e.eixo:<18} D8={a:>10,.1f} km2  (BHO={alvo:>10,.1f}; razão={aderencia:>5.3f})  cota {dem[r,c]:>6.1f} m{alerta}")
 
 # ------------------------------------------------------------ 4. topologia
 log("montando topologia (quem esta a montante de quem)...")

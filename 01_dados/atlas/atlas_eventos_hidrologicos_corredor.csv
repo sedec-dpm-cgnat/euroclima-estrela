@@ -1,0 +1,203 @@
+Protocolo_S2iD;Nome_Municipio;Sigla_UF;Cod_Cobrade;tipologia;descricao_tipologia;grupo_de_desastre;Cod_IBGE_Mun;Status;DH_MORTOS;DH_FERIDOS;DH_ENFERMOS;DH_DESABRIGADOS;DH_DESALOJADOS;DH_DESAPARECIDOS;DH_total_danos_humanos_diretos;DH_OUTROS AFETADOS;DM_total_danos_materiais;PEPL_total_publico;PEPR_total_privado;PE_PLePR;data_evento;data_registro;recorte
+RS-P-4301008-12100-19920602;Arroio do Meio;RS;12100;7.00;Inundações;Hidrológico;4301008;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;1992-06-02;1992-06-02;historico_hidrologico
+RS-P-4307807-12100-19920602;Estrela;RS;12100;7.00;Inundações;Hidrológico;4307807;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;1992-06-02;1992-06-02;historico_hidrologico
+RS-P-4312609-12100-19920602;Muçum;RS;12100;7.00;Inundações;Hidrológico;4312609;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;1992-06-02;1992-06-02;historico_hidrologico
+RS-P-4315800-12200-19921116;Roca Sales;RS;12200;2.00;Enxurradas;Hidrológico;4315800;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;1992-11-16;1992-11-16;historico_hidrologico
+RS-P-4306205-12200-19931109;Cruzeiro do Sul;RS;12200;2.00;Enxurradas;Hidrológico;4306205;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;1993-11-09;1993-11-09;historico_hidrologico
+RS-P-4311403-12200-19931222;Lajeado;RS;12200;2.00;Enxurradas;Hidrológico;4311403;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;1993-12-22;1993-12-22;historico_hidrologico
+RS-P-4306205-12200-19940110;Cruzeiro do Sul;RS;12200;2.00;Enxurradas;Hidrológico;4306205;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;1994-01-10;1994-01-10;historico_hidrologico
+RS-P-4315800-12200-19940503;Roca Sales;RS;12200;2.00;Enxurradas;Hidrológico;4315800;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;1994-05-03;1994-05-03;historico_hidrologico
+RS-P-4301008-12200-19970804;Arroio do Meio;RS;12200;2.00;Enxurradas;Hidrológico;4301008;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;1997-08-04;1997-08-04;historico_hidrologico
+RS-P-4301008-12100-20000223;Arroio do Meio;RS;12100;7.00;Inundações;Hidrológico;4301008;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2000-02-23;2000-02-23;historico_hidrologico
+RS-P-4312054-12100-20000223;Marques de Souza;RS;12100;7.00;Inundações;Hidrológico;4312054;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2000-02-23;2000-02-23;historico_hidrologico
+RS-P-4307807-12200-20010720;Estrela;RS;12200;2.00;Enxurradas;Hidrológico;4307807;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2001-07-20;2001-07-20;historico_hidrologico
+RS-P-4311403-12200-20010720;Lajeado;RS;12200;2.00;Enxurradas;Hidrológico;4311403;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2001-07-20;2001-07-20;historico_hidrologico
+RS-P-4312054-12200-20010720;Marques de Souza;RS;12200;2.00;Enxurradas;Hidrológico;4312054;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2001-07-20;2001-07-20;historico_hidrologico
+RS-P-4312609-12200-20010720;Muçum;RS;12200;2.00;Enxurradas;Hidrológico;4312609;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2001-07-20;2001-07-20;historico_hidrologico
+RS-P-4316758-12200-20010720;Santa Clara do Sul;RS;12200;2.00;Enxurradas;Hidrológico;4316758;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2001-07-20;2001-07-20;historico_hidrologico
+RS-P-4320453-12200-20010720;Sério;RS;12200;2.00;Enxurradas;Hidrológico;4320453;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2001-07-20;2001-07-20;historico_hidrologico
+RS-P-4322608-12200-20010720;Venâncio Aires;RS;12200;2.00;Enxurradas;Hidrológico;4322608;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2001-07-20;2001-07-20;historico_hidrologico
+RS-P-4302402-12200-20010721;Bom Retiro do Sul;RS;12200;2.00;Enxurradas;Hidrológico;4302402;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2001-07-21;2001-07-21;historico_hidrologico
+RS-P-4305587-12200-20010721;Colinas;RS;12200;2.00;Enxurradas;Hidrológico;4305587;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2001-07-21;2001-07-21;historico_hidrologico
+RS-P-4306205-12200-20010721;Cruzeiro do Sul;RS;12200;2.00;Enxurradas;Hidrológico;4306205;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2001-07-21;2001-07-21;historico_hidrologico
+RS-P-4306809-12200-20010721;Encantado;RS;12200;2.00;Enxurradas;Hidrológico;4306809;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2001-07-21;2001-07-21;historico_hidrologico
+RS-P-4321303-12200-20010723;Taquari;RS;12200;2.00;Enxurradas;Hidrológico;4321303;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2001-07-23;2001-07-23;historico_hidrologico
+RS-P-4305587-12200-20010809;Colinas;RS;12200;2.00;Enxurradas;Hidrológico;4305587;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2001-08-09;2001-08-09;historico_hidrologico
+RS-A-4307807-12100-20020612;Estrela;RS;12100;7.00;Inundações;Hidrológico;4307807;Registro;0;0;0;242;0;0;242;242;271659,51;18537,53;652849,56;671387,08;2002-06-12;2002-06-12;historico_hidrologico
+RS-A-4311403-12100-20020612;Lajeado;RS;12100;7.00;Inundações;Hidrológico;4311403;Registro;0;0;0;580;970;0;1550;0;4182694,1;0,0;0,0;0,0;2002-06-12;2002-06-12;historico_hidrologico
+RS-A-4307807-12100-20030220;Estrela;RS;12100;7.00;Inundações;Hidrológico;4307807;Reconhecido;0;0;0;48;58;0;106;58;3139741,63;0,0;0,0;0,0;2003-02-20;2003-02-20;historico_hidrologico
+RS-A-4322608-12100-20030708;Venâncio Aires;RS;12100;7.00;Inundações;Hidrológico;4322608;Reconhecido;1;2;3;300;300;0;606;2000;0,0;0,0;60071,59;60071,59;2003-07-08;2003-07-08;historico_hidrologico
+RS-A-4302352-12100-20070923;Bom Princípio;RS;12100;7.00;Inundações;Hidrológico;4302352;Reconhecido;0;0;0;0;17;0;17;7215;12927671,68;178322,27;37863552,65;38041874,92;2007-09-23;2007-09-23;historico_hidrologico
+RS-A-4321303-12100-20070923;Taquari;RS;12100;7.00;Inundações;Hidrológico;4321303;Registro;0;0;0;0;0;0;0;0;6852490,18;0,0;5320903,49;5320903,49;2007-09-23;2007-09-23;historico_hidrologico
+RS-A-4305587-12100-20070924;Colinas;RS;12100;7.00;Inundações;Hidrológico;4305587;Registro;0;0;0;65;0;0;65;130;438685,39;28071,58;3010936,93;3039008,51;2007-09-24;2007-09-24;historico_hidrologico
+RS-A-4302402-12100-20070924;Bom Retiro do Sul;RS;12100;7.00;Inundações;Hidrológico;4302402;Registro;0;0;0;8;0;0;8;60;5066936,03;0,0;1575379,62;1575379,62;2007-09-24;2007-09-24;historico_hidrologico
+RS-A-4306205-12100-20070924;Cruzeiro do Sul;RS;12100;7.00;Inundações;Hidrológico;4306205;Registro;0;0;0;200;1950;0;2150;0;0,0;0,0;0,0;0,0;2007-09-24;2007-09-24;historico_hidrologico
+RS-A-4311403-12200-20081025;Lajeado;RS;12200;2.00;Enxurradas;Hidrológico;4311403;Registro;0;0;0;322;32;0;354;176;0,0;28878,83;706491,7;735370,53;2008-10-25;2008-10-25;historico_hidrologico
+RS-A-4306809-12100-20081026;Encantado;RS;12100;7.00;Inundações;Hidrológico;4306809;Registro;0;0;0;3450;128;0;3578;4527;0,0;459173,4;3187645,28;3646818,68;2008-10-26;2008-10-26;historico_hidrologico
+RS-A-4305587-12100-20081026;Colinas;RS;12100;7.00;Inundações;Hidrológico;4305587;Registro;1;0;0;34;127;0;162;25;1732729,81;132958,13;4382218,09;4515176,23;2008-10-26;2008-10-26;historico_hidrologico
+RS-A-4312609-12100-20081026;Muçum;RS;12100;7.00;Inundações;Hidrológico;4312609;Registro;0;0;0;0;600;0;600;0;7719311,32;43318,25;1992639,29;2035957,53;2008-10-26;2008-10-26;historico_hidrologico
+RS-A-4301008-12100-20081026;Arroio do Meio;RS;12100;7.00;Inundações;Hidrológico;4301008;Registro;0;0;0;300;500;0;800;0;0,0;106562,88;5219848,57;5326411,45;2008-10-26;2008-10-26;historico_hidrologico
+RS-A-4307807-12100-20081027;Estrela;RS;12100;7.00;Inundações;Hidrológico;4307807;Registro;0;2;2;1500;5500;0;7004;7000;7820387,23;127702,19;1603901,35;1731603,54;2008-10-27;2008-10-27;historico_hidrologico
+RS-A-4321303-12100-20081027;Taquari;RS;12100;7.00;Inundações;Hidrológico;4321303;Registro;0;0;26;200;600;0;826;1205;10702494,49;591438,44;7540274,13;8131712,57;2008-10-27;2008-10-27;historico_hidrologico
+RS-A-4315800-12100-20081027;Roca Sales;RS;12100;7.00;Inundações;Hidrológico;4315800;Registro;0;0;0;10;80;0;90;635;4360703,37;49094,01;7223750,6;7272844,61;2008-10-27;2008-10-27;historico_hidrologico
+RS-A-4322608-12100-20081027;Venâncio Aires;RS;12100;7.00;Inundações;Hidrológico;4322608;Registro;0;0;0;0;0;0;0;230;0,0;0,0;10642888,58;10642888,58;2008-10-27;2008-10-27;historico_hidrologico
+RS-A-4302402-12100-20081027;Bom Retiro do Sul;RS;12100;7.00;Inundações;Hidrológico;4302402;Registro;0;0;0;0;0;0;0;0;160624,05;0,0;38091,18;38091,18;2008-10-27;2008-10-27;historico_hidrologico
+RS-A-4306205-12100-20081028;Cruzeiro do Sul;RS;12100;7.00;Inundações;Hidrológico;4306205;Registro;0;0;0;256;2725;0;2981;3464;2418168,85;15248,02;17113565,92;17128813,94;2008-10-28;2008-10-28;historico_hidrologico
+RS-A-4302352-12200-20090110;Bom Princípio;RS;12200;2.00;Enxurradas;Hidrológico;4302352;Reconhecido;0;0;0;0;0;0;0;0;0,0;243170,52;5050915,36;5294085,88;2009-01-10;2009-01-10;historico_hidrologico
+RS-A-4321303-12200-20090913;Taquari;RS;12200;2.00;Enxurradas;Hidrológico;4321303;Registro;0;0;0;0;281;0;281;4532;0,0;0,0;263678,88;263678,88;2009-09-13;2009-09-13;historico_hidrologico
+RS-A-4307807-12100-20090913;Estrela;RS;12100;7.00;Inundações;Hidrológico;4307807;Registro;0;0;0;0;125;0;125;1338;11719,06;0,0;0,0;0,0;2009-09-13;2009-09-13;historico_hidrologico
+RS-A-4322608-12100-20090913;Venâncio Aires;RS;12100;7.00;Inundações;Hidrológico;4322608;Registro;0;0;0;0;524;0;524;40;0,0;0,0;2025639,72;2025639,72;2009-09-13;2009-09-13;historico_hidrologico
+RS-A-4306205-12100-20090914;Cruzeiro do Sul;RS;12100;7.00;Inundações;Hidrológico;4306205;Reconhecido;0;0;0;245;880;0;1125;172;0,0;0,0;0,0;0,0;2009-09-14;2009-09-14;historico_hidrologico
+RS-A-4302352-12200-20090926;Bom Princípio;RS;12200;2.00;Enxurradas;Hidrológico;4302352;Reconhecido;0;0;0;0;120;0;120;3500;7842981,68;261335,06;27897225,09;28158560,16;2009-09-26;2009-09-26;historico_hidrologico
+RS-A-4305587-12200-20091123;Colinas;RS;12200;2.00;Enxurradas;Hidrológico;4305587;Reconhecido;0;0;0;0;19;0;19;1768;1904347,44;0,0;1191359,76;1191359,76;2009-11-23;2009-11-23;historico_hidrologico
+RS-A-4306809-12200-20100104;Encantado;RS;12200;2.00;Enxurradas;Hidrológico;4306809;Reconhecido;0;10;0;45;298;0;353;10300;0,0;0,0;5357284,99;5357284,99;2010-01-04;2010-01-04;historico_hidrologico
+RS-A-4322608-12100-20100104;Venâncio Aires;RS;12100;7.00;Inundações;Hidrológico;4322608;Reconhecido;0;0;0;0;103;0;103;4558;8114765,29;0,0;29099439,08;29099439,08;2010-01-04;2010-01-04;historico_hidrologico
+RS-A-4306205-12200-20100104;Cruzeiro do Sul;RS;12200;2.00;Enxurradas;Hidrológico;4306205;Reconhecido;0;0;0;15;0;0;15;4397;0,0;0,0;2546279,23;2546279,23;2010-01-04;2010-01-04;historico_hidrologico
+RS-A-4301008-12200-20100104;Arroio do Meio;RS;12200;2.00;Enxurradas;Hidrológico;4301008;Reconhecido;0;0;0;46;25;0;71;4050;4487200,0;76968,85;6613688,36;6690657,21;2010-01-04;2010-01-04;historico_hidrologico
+RS-A-4312054-12200-20100104;Marques de Souza;RS;12200;2.00;Enxurradas;Hidrológico;4312054;Reconhecido;0;15;9;54;696;0;774;4045;0,0;1460934,14;11100467,21;12561401,36;2010-01-04;2010-01-04;historico_hidrologico
+RS-A-4321626-12200-20100104;Travesseiro;RS;12200;2.00;Enxurradas;Hidrológico;4321626;Reconhecido;0;0;0;22;218;0;240;2314;0,0;1318789,2;11647988,45;12966777,65;2010-01-04;2010-01-04;historico_hidrologico
+RS-A-4305587-12200-20100104;Colinas;RS;12200;2.00;Enxurradas;Hidrológico;4305587;Reconhecido;0;1;7;43;21;0;72;1850;1079248,65;0,0;1007649,71;1007649,71;2010-01-04;2010-01-04;historico_hidrologico
+RS-C-4307807-12100-20100104;Estrela;RS;12100;7.00;Inundações;Hidrológico;4307807;Registro;0;0;0;0;150;0;150;0;0,0;0,0;0,0;0,0;2010-01-04;2010-01-04;historico_hidrologico
+RS-A-4320453-12200-20100104;Sério;RS;12200;2.00;Enxurradas;Hidrológico;4320453;Reconhecido;0;0;0;0;0;0;0;0;642811,02;0,0;7691620,85;7691620,85;2010-01-04;2010-01-04;historico_hidrologico
+RS-A-4302402-12200-20100105;Bom Retiro do Sul;RS;12200;2.00;Enxurradas;Hidrológico;4302402;Reconhecido;0;0;0;0;250;0;250;4678;1256508,66;158465,29;412904,74;571370,03;2010-01-05;2010-01-05;historico_hidrologico
+RS-A-4316758-12200-20100105;Santa Clara do Sul;RS;12200;2.00;Enxurradas;Hidrológico;4316758;Reconhecido;0;0;0;0;0;0;0;0;0,0;0,0;65807,84;65807,84;2010-01-05;2010-01-05;historico_hidrologico
+RS-A-4302352-12200-20100107;Bom Princípio;RS;12200;2.00;Enxurradas;Hidrológico;4302352;Reconhecido;0;0;0;0;11;0;11;4893;4221204,69;547837,14;17610179,15;18158016,29;2010-01-07;2010-01-07;historico_hidrologico
+RS-D-4307807-12100-20100312;Estrela;RS;12100;7.00;Inundações;Hidrológico;4307807;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2010-03-12;2010-03-12;historico_hidrologico
+RS-P-4302352-12200-20100928;Bom Princípio;RS;12200;2.00;Enxurradas;Hidrológico;4302352;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2010-09-28;2010-09-28;historico_hidrologico
+RS-P-4305587-12200-20101127;Colinas;RS;12200;2.00;Enxurradas;Hidrológico;4305587;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2010-11-27;2010-11-27;historico_hidrologico
+RS-P-4312054-12100-20101127;Marques de Souza;RS;12100;7.00;Inundações;Hidrológico;4312054;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2010-11-27;2010-11-27;historico_hidrologico
+RS-A-4311403-12200-20110413;Lajeado;RS;12200;2.00;Enxurradas;Hidrológico;4311403;Reconhecido;0;0;0;0;0;0;0;0;94765,81;0,0;0,0;0,0;2011-04-13;2011-04-13;historico_hidrologico
+RS-A-4316758-12200-20110414;Santa Clara do Sul;RS;12200;2.00;Enxurradas;Hidrológico;4316758;Reconhecido;0;0;0;0;5;0;5;3527;0,0;11281,64;122801,95;134083,59;2011-04-14;2011-04-14;historico_hidrologico
+RS-A-4320453-12200-20110414;Sério;RS;12200;2.00;Enxurradas;Hidrológico;4320453;Reconhecido;0;0;0;0;0;0;0;0;0,0;0,0;96300,11;96300,11;2011-04-14;2011-04-14;historico_hidrologico
+RS-P-4306205-12200-20110414;Cruzeiro do Sul;RS;12200;2.00;Enxurradas;Hidrológico;4306205;Reconhecido;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2011-04-14;2011-04-14;historico_hidrologico
+RS-P-4312153-12200-20110414;Mato Leitão;RS;12200;2.00;Enxurradas;Hidrológico;4312153;Reconhecido;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2011-04-14;2011-04-14;historico_hidrologico
+RS-A-4302402-12200-20110423;Bom Retiro do Sul;RS;12200;2.00;Enxurradas;Hidrológico;4302402;Reconhecido;0;0;0;0;184;0;184;3146;2262220,32;95267,22;131619,18;226886,4;2011-04-23;2011-04-23;historico_hidrologico
+RS-A-4321303-12200-20110423;Taquari;RS;12200;2.00;Enxurradas;Hidrológico;4321303;Reconhecido;0;0;0;0;29;0;29;820;0,0;3760,55;12162251,52;12166012,07;2011-04-23;2011-04-23;historico_hidrologico
+RS-A-4302352-12200-20110423;Bom Princípio;RS;12200;2.00;Enxurradas;Hidrológico;4302352;Reconhecido;0;0;0;0;0;0;0;0;10287054,26;0,0;0,0;0,0;2011-04-23;2011-04-23;historico_hidrologico
+RS-A-4306809-12100-20110720;Encantado;RS;12100;7.00;Inundações;Hidrológico;4306809;Reconhecido;0;7;0;1696;658;0;2361;13252;0,0;113443,2;4427192,85;4540636,05;2011-07-20;2011-07-20;historico_hidrologico
+RS-A-4302402-12100-20110720;Bom Retiro do Sul;RS;12100;7.00;Inundações;Hidrológico;4302402;Reconhecido;0;2;0;0;0;0;2;3235;651828,32;0,0;1602996,26;1602996,26;2011-07-20;2011-07-20;historico_hidrologico
+RS-A-4307807-12100-20110721;Estrela;RS;12100;7.00;Inundações;Hidrológico;4307807;Reconhecido;0;0;0;288;1912;0;2200;13725;9856571,79;179603,77;1119640,49;1299244,26;2011-07-21;2011-07-21;historico_hidrologico
+RS-A-4312609-12100-20110721;Muçum;RS;12100;7.00;Inundações;Hidrológico;4312609;Reconhecido;0;0;0;72;724;0;796;1186;2097683,81;0,0;0,0;0,0;2011-07-21;2011-07-21;historico_hidrologico
+RS-A-4311403-12100-20110721;Lajeado;RS;12100;7.00;Inundações;Hidrológico;4311403;Reconhecido;0;0;0;0;368;0;368;720;0,0;0,0;2507,03;2507,03;2011-07-21;2011-07-21;historico_hidrologico
+RS-A-4321303-12100-20110722;Taquari;RS;12100;7.00;Inundações;Hidrológico;4321303;Reconhecido;0;0;0;262;0;0;262;2400;0,0;0,0;72001,96;72001,96;2011-07-22;2011-07-22;historico_hidrologico
+RS-F-4315800-12300-20130825;Roca Sales;RS;12300;1.00;Alagamentos;Hidrológico;4315800;Registro;0;0;0;11;0;0;11;0;0,0;1384,45;0,0;1384,45;2013-08-26;2013-08-26;historico_hidrologico
+RS-F-4301008-12100-20130825;Arroio do Meio;RS;12100;7.00;Inundações;Hidrológico;4301008;Registro;0;0;0;74;76;0;150;0;5142697,45;95171,6;1114364,89;1209536,49;2013-09-04;2013-09-04;historico_hidrologico
+RS-F-4302402-12100-20130825;Bom Retiro do Sul;RS;12100;7.00;Inundações;Hidrológico;4302402;Registro;0;0;0;0;8;0;8;24;329693,76;0,0;87918,34;87918,34;2013-09-09;2013-09-09;historico_hidrologico
+RS-F-4307807-12100-20130824;Estrela;RS;12100;7.00;Inundações;Hidrológico;4307807;Registro;0;0;0;94;320;0;414;0;217871,59;1602,42;463769,22;465371,65;2013-09-11;2013-09-11;historico_hidrologico
+RS-F-4311403-12100-20130825;Lajeado;RS;12100;7.00;Inundações;Hidrológico;4311403;Registro;0;0;0;320;48;0;368;600;13187,75;0,0;0,0;0,0;2013-11-12;2013-11-12;historico_hidrologico
+RS-F-4322608-12100-20130825;Venâncio Aires;RS;12100;7.00;Inundações;Hidrológico;4322608;Registro;0;0;0;2000;28;0;2028;0;736131,44;0,0;828058,85;828058,85;2013-11-19;2013-11-19;historico_hidrologico
+RS-F-4322608-12100-20131111;Venâncio Aires;RS;12100;7.00;Inundações;Hidrológico;4322608;Registro;0;0;0;0;15;0;15;1985;0,0;0,0;8982121,86;8982121,86;2013-11-20;2013-11-20;historico_hidrologico
+RS-F-4312609-12200-20131111;Muçum;RS;12200;2.00;Enxurradas;Hidrológico;4312609;Reconhecido;0;0;0;0;0;0;0;1070;565470,96;578524,63;2557104,81;3135629,44;2013-11-21;2013-11-21;historico_hidrologico
+RS-F-4307807-12200-20131111;Estrela;RS;12200;2.00;Enxurradas;Hidrológico;4307807;Registro;0;0;0;0;0;0;0;0;270659,59;0,0;16878,12;16878,12;2013-12-05;2013-12-05;historico_hidrologico
+RS-F-4307807-12200-20140225;Estrela;RS;12200;2.00;Enxurradas;Hidrológico;4307807;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2014-03-06;2014-03-06;historico_hidrologico
+RS-F-4312153-12200-20140628;Mato Leitão;RS;12200;2.00;Enxurradas;Hidrológico;4312153;Reconhecido;0;0;0;0;0;0;0;3869;1160569,96;0,0;2495467,01;2495467,01;2014-07-21;2014-07-21;historico_hidrologico
+RS-F-4316758-12200-20140628;Santa Clara do Sul;RS;12200;2.00;Enxurradas;Hidrológico;4316758;Reconhecido;0;0;0;0;0;0;0;500;1846797,19;0,0;557331,96;557331,96;2014-07-22;2014-07-22;historico_hidrologico
+RS-F-4322608-12200-20140629;Venâncio Aires;RS;12200;2.00;Enxurradas;Hidrológico;4322608;Reconhecido;0;0;0;0;12000;0;12000;0;17311129,27;7360410,92;13997071,98;21357482,9;2014-07-29;2014-07-29;historico_hidrologico
+RS-F-4311403-12100-20141019;Lajeado;RS;12100;7.00;Inundações;Hidrológico;4311403;Registro;0;0;0;4;8;0;12;0;0,0;0,0;0,0;0,0;2014-11-02;2014-11-02;historico_hidrologico
+RS-F-4301008-13214-20150717;Arroio do Meio;RS;13214;13.00;Chuvas Intensas;Hidrológico;4301008;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2015-07-24;2015-07-24;historico_hidrologico
+RS-F-4311403-12100-20150715;Lajeado;RS;12100;7.00;Inundações;Hidrológico;4311403;Registro;0;0;0;5;8;0;13;0;0,0;0,0;0,0;0,0;2015-09-14;2015-09-14;historico_hidrologico
+RS-F-4307807-12200-20150713;Estrela;RS;12200;2.00;Enxurradas;Hidrológico;4307807;Registro;0;0;0;0;0;0;0;0;272848,97;0,0;0,0;0,0;2015-09-14;2015-09-14;historico_hidrologico
+RS-F-4312153-12300-20151008;Mato Leitão;RS;12300;1.00;Alagamentos;Hidrológico;4312153;Registro;0;0;0;0;20;0;20;0;209048,82;0,0;0,0;0,0;2015-10-13;2015-10-13;historico_hidrologico
+RS-F-4322608-12100-20151009;Venâncio Aires;RS;12100;7.00;Inundações;Hidrológico;4322608;Registro;0;1;0;56;200;0;257;1756;5089496,68;1330757,83;15609910,43;16940668,27;2015-10-14;2015-10-14;historico_hidrologico
+RS-F-4301008-13214-20151013;Arroio do Meio;RS;13214;13.00;Chuvas Intensas;Hidrológico;4301008;Reconhecido;0;0;0;10;35;0;45;0;2701622,0;0,0;57393,15;57393,15;2015-10-14;2015-10-14;historico_hidrologico
+RS-F-4302352-12100-20151015;Bom Princípio;RS;12100;7.00;Inundações;Hidrológico;4302352;Reconhecido;0;0;0;0;9;0;9;5600;13862549,09;0,0;0,0;0,0;2015-10-15;2015-10-15;historico_hidrologico
+RS-F-4311403-12100-20150920;Lajeado;RS;12100;7.00;Inundações;Hidrológico;4311403;Registro;0;0;0;13;29;0;42;0;0,0;0,0;0,0;0,0;2015-10-22;2015-10-22;historico_hidrologico
+RS-F-4307807-12300-20160715;Estrela;RS;12300;1.00;Alagamentos;Hidrológico;4307807;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2016-07-15;2016-07-26;historico_hidrologico
+RS-F-4302352-12100-20161018;Bom Princípio;RS;12100;7.00;Inundações;Hidrológico;4302352;Reconhecido;0;0;0;0;20;0;20;6200;27601528,75;9548817,9;30892205,98;40441023,88;2016-10-18;2016-10-19;historico_hidrologico
+RS-F-4301008-12100-20161019;Arroio do Meio;RS;12100;7.00;Inundações;Hidrológico;4301008;Registro;0;0;0;63;25;0;88;0;0,0;0,0;0,0;0,0;2016-10-19;2016-10-20;historico_hidrologico
+RS-F-4322608-12200-20170312;Venâncio Aires;RS;12200;2.00;Enxurradas;Hidrológico;4322608;Registro;0;0;0;0;0;0;0;0;415099,41;415099,41;203113,5;618212,91;2017-03-12;2017-03-21;historico_hidrologico
+RS-F-4301008-12100-20170527;Arroio do Meio;RS;12100;7.00;Inundações;Hidrológico;4301008;Registro;0;0;0;0;4;0;4;7879;1433923,72;1398075,62;716961,86;2115037,48;2017-05-27;2017-06-05;historico_hidrologico
+RS-F-4312153-13214-20170608;Mato Leitão;RS;13214;13.00;Chuvas Intensas;Hidrológico;4312153;Reconhecido;0;0;0;0;0;0;0;789;234891,04;234891,04;3220490,5;3455381,55;2017-06-08;2017-06-09;historico_hidrologico
+RS-F-4312054-12200-20170608;Marques de Souza;RS;12200;2.00;Enxurradas;Hidrológico;4312054;Registro;0;0;0;0;0;0;0;187;335448,53;337794,79;0,0;337794,79;2017-06-08;2017-06-16;historico_hidrologico
+RS-F-4311403-12100-20170608;Lajeado;RS;12100;7.00;Inundações;Hidrológico;4311403;Registro;0;0;0;157;97;0;254;0;8962,02;0,0;0,0;0,0;2017-06-08;2017-06-28;historico_hidrologico
+RS-F-4301008-12200-20170609;Arroio do Meio;RS;12200;2.00;Enxurradas;Hidrológico;4301008;Reconhecido;0;0;0;36;113;0;149;7881;2444580,04;4042048,14;1107706,07;5149754,21;2017-06-09;2017-06-13;historico_hidrologico
+RS-F-4307807-12100-20170609;Estrela;RS;12100;7.00;Inundações;Hidrológico;4307807;Registro;0;0;0;60;160;0;220;0;526006,24;0,0;807388,67;807388,67;2017-06-09;2017-06-21;historico_hidrologico
+RS-F-4322608-12200-20170612;Venâncio Aires;RS;12200;2.00;Enxurradas;Hidrológico;4322608;Reconhecido;0;0;0;0;7;0;7;752;82726,64;98992,72;6659441,08;6758433,79;2017-06-12;2017-06-22;historico_hidrologico
+RS-F-4301008-12100-20200708;Arroio do Meio;RS;12100;7.00;Inundações;Hidrológico;4301008;Reconhecido;0;10;0;120;870;0;1000;3780;4464212,18;421694,04;14525718,33;14947412,36;2020-07-08;2020-07-08;historico_hidrologico
+RS-F-4302402-12100-20200708;Bom Retiro do Sul;RS;12100;7.00;Inundações;Hidrológico;4302402;Reconhecido;0;0;0;6;278;0;284;300;1486488,77;688552,75;3633134,03;4321686,78;2020-07-10;2020-07-10;historico_hidrologico
+RS-F-4305587-12100-20200709;Colinas;RS;12100;7.00;Inundações;Hidrológico;4305587;Reconhecido;1;0;0;0;120;0;121;220;63127,85;114261,41;1670697,49;1784958,9;2020-07-10;2020-07-10;historico_hidrologico
+RS-F-4312609-12100-20200708;Muçum;RS;12100;7.00;Inundações;Hidrológico;4312609;Reconhecido;0;0;0;200;1630;0;1830;0;2257754,94;688093,57;3661415,31;4349508,88;2020-07-11;2020-07-11;historico_hidrologico
+RS-F-4315800-12100-20200708;Roca Sales;RS;12100;7.00;Inundações;Hidrológico;4315800;Reconhecido;0;1;0;40;2200;0;2241;0;15125432,9;64489,11;10620250,75;10684739,86;2020-07-11;2020-07-11;historico_hidrologico
+RS-F-4306205-12100-20200713;Cruzeiro do Sul;RS;12100;7.00;Inundações;Hidrológico;4306205;Reconhecido;0;0;0;60;450;0;510;5205;18262024,48;940604,97;387352,49;1327957,46;2020-07-14;2020-07-14;historico_hidrologico
+RS-F-4306809-12100-20200709;Encantado;RS;12100;7.00;Inundações;Hidrológico;4306809;Reconhecido;0;0;0;372;348;0;720;2080;13809217,23;795410,91;63127850,18;63923261,09;2020-07-14;2020-07-14;historico_hidrologico
+RS-F-4321303-12100-20200709;Taquari;RS;12100;7.00;Inundações;Hidrológico;4321303;Reconhecido;0;0;0;19;54;0;73;383;757534,2;7827,85;2558009,93;2565837,78;2020-07-14;2020-07-14;historico_hidrologico
+RS-F-4307807-12100-20200709;Estrela;RS;12100;7.00;Inundações;Hidrológico;4307807;Reconhecido;0;0;0;105;4023;0;4128;0;55989352,88;845958,64;646246,12;1492204,76;2020-07-14;2020-07-14;historico_hidrologico
+RS-F-4311403-12100-20200707;Lajeado;RS;12100;7.00;Inundações;Hidrológico;4311403;Reconhecido;0;0;0;320;1500;0;1820;40000;12764451,31;300655,03;14835044,79;15135699,83;2020-07-16;2020-07-16;historico_hidrologico
+RS-F-4322608-12100-20200709;Venâncio Aires;RS;12100;7.00;Inundações;Hidrológico;4322608;Reconhecido;0;0;0;34;435;0;469;1275;227032,13;76053,71;4436379,11;4512432,82;2020-07-28;2020-07-28;historico_hidrologico
+RS-F-4307807-12100-20210910;Estrela;RS;12100;7.00;Inundações;Hidrológico;4307807;Reconhecido;0;0;0;0;0;0;0;1800;8578783,98;8578783,98;20284004,38;28862788,36;2021-09-16;2021-09-16;historico_hidrologico
+RS-F-4311403-12300-20220503;Lajeado;RS;12300;1.00;Alagamentos;Hidrológico;4311403;Registro;0;0;2;176;70;0;248;0;0,0;0,0;0,0;0,0;2022-05-03;2022-05-16;historico_hidrologico
+RS-F-4322608-13214-20221202;Venâncio Aires;RS;13214;13.00;Chuvas Intensas;Hidrológico;4322608;Reconhecido;1;2;0;0;102;0;105;0;244120,78;676516,88;11963033,7;12639550,58;2022-12-02;2022-12-08;historico_hidrologico
+RS-F-4302352-12200-20230616;Bom Princípio;RS;12200;2.00;Enxurradas;Hidrológico;4302352;Reconhecido;0;0;0;0;2;0;2;1000;950227,17;253393,91;527903,99;781297,9;2023-06-16;2023-06-19;historico_hidrologico
+RS-F-4322608-12200-20230616;Venâncio Aires;RS;12200;2.00;Enxurradas;Hidrológico;4322608;Reconhecido;0;0;0;0;22;0;22;700;0,0;64139,12;364214,16;428353,28;2023-06-16;2023-06-19;historico_hidrologico
+RS-F-4305587-11340-20230617;Colinas;RS;11340;8.00;Movimento de Massa;Hidrológico;4305587;Reconhecido;0;0;0;0;0;0;0;31;263951,99;0,0;0,0;0,0;2023-06-17;2023-06-23;historico_hidrologico
+RS-F-4311403-12100-20230712;Lajeado;RS;12100;7.00;Inundações;Hidrológico;4311403;Registro;1;0;0;135;50;0;186;0;0,0;0,0;0,0;0,0;2023-07-12;2023-07-17;historico_hidrologico
+RS-F-4311403-11321-20230724;Lajeado;RS;11321;8.00;Movimento de Massa;Hidrológico;4311403;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2023-07-24;2023-07-27;historico_hidrologico
+RS-F-4311403-12200-20230811;Lajeado;RS;12200;2.00;Enxurradas;Hidrológico;4311403;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2023-08-11;2023-08-11;historico_hidrologico
+RS-F-4306809-13214-20230904;Encantado;RS;13214;13.00;Chuvas Intensas;Hidrológico;4306809;Reconhecido;1;0;0;509;1395;0;1905;21057;48683305,54;2808449,2;459300750,94;462109200,14;2023-09-04;2023-09-07;historico_hidrologico
+RS-F-4306205-13214-20230904;Cruzeiro do Sul;RS;13214;13.00;Chuvas Intensas;Hidrológico;4306205;Reconhecido;4;9;2;383;2853;1;3252;3338;126646277,73;3159083,03;36214846,89;39373929,92;2023-09-04;2023-09-06;historico_hidrologico
+RS-F-4305587-13214-20230904;Colinas;RS;13214;13.00;Chuvas Intensas;Hidrológico;4305587;Reconhecido;0;30;0;6;311;0;347;1800;3494724,38;272398,46;12141791,67;12414190,12;2023-09-04;2023-09-07;historico_hidrologico
+RS-F-4322608-13214-20230904;Venâncio Aires;RS;13214;13.00;Chuvas Intensas;Hidrológico;4322608;Reconhecido;0;5;0;120;1850;0;1975;810;0,0;0,0;0,0;0,0;2023-09-04;2023-09-07;historico_hidrologico
+RS-F-4302402-13214-20230904;Bom Retiro do Sul;RS;13214;13.00;Chuvas Intensas;Hidrológico;4302402;Reconhecido;0;155;73;182;509;0;919;675;17377965,72;3663653,66;9998501,48;13662155,14;2023-09-04;2023-09-09;historico_hidrologico
+RS-F-4311403-13214-20230904;Lajeado;RS;13214;13.00;Chuvas Intensas;Hidrológico;4311403;Reconhecido;0;2;0;870;3390;0;4262;0;131448092,38;24811487,32;0,0;24811487,32;2023-09-04;2023-09-06;historico_hidrologico
+RS-F-4315800-13214-20230904;Roca Sales;RS;13214;13.00;Chuvas Intensas;Hidrológico;4315800;Reconhecido;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2023-09-04;2023-09-07;historico_hidrologico
+RS-F-4301008-13214-20230905;Arroio do Meio;RS;13214;13.00;Chuvas Intensas;Hidrológico;4301008;Reconhecido;0;30;0;600;7000;1;7631;10000;35609235,44;2174964,42;216787466,96;218962431,38;2023-09-05;2023-09-07;historico_hidrologico
+RS-F-4307807-13214-20230906;Estrela;RS;13214;13.00;Chuvas Intensas;Hidrológico;4307807;Reconhecido;4;309;49;670;392;0;1424;32183;31715679,59;7347774,81;48641073,22;55988848,03;2023-09-06;2023-09-07;historico_hidrologico
+RS-F-4312609-13214-20230906;Muçum;RS;13214;13.00;Chuvas Intensas;Hidrológico;4312609;Reconhecido;14;150;100;150;3000;1;3415;0;2428358,33;765460,78;791855978,2;792621438,98;2023-09-06;2023-09-06;historico_hidrologico
+RS-F-4321303-13214-20230906;Taquari;RS;13214;13.00;Chuvas Intensas;Hidrológico;4321303;Reconhecido;0;5;10;95;439;0;549;0;7354758,33;507843,63;3510471,76;4018315,39;2023-09-06;2023-09-08;historico_hidrologico
+RS-F-4321303-12100-20230906;Taquari;RS;12100;7.00;Inundações;Hidrológico;4321303;Reconhecido;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2023-09-06;2023-09-06;historico_hidrologico
+RS-F-4311403-12100-20231007;Lajeado;RS;12100;7.00;Inundações;Hidrológico;4311403;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2023-10-07;2023-10-08;historico_hidrologico
+RS-F-4311403-12100-20231012;Lajeado;RS;12100;7.00;Inundações;Hidrológico;4311403;Registro;0;0;0;70;30;0;100;0;0,0;0,0;0,0;0,0;2023-10-12;2023-10-23;historico_hidrologico
+RS-F-4311403-12100-20231017;Lajeado;RS;12100;7.00;Inundações;Hidrológico;4311403;Registro;0;0;0;20;10;0;30;0;0,0;0,0;0,0;0,0;2023-10-17;2023-10-23;historico_hidrologico
+RS-F-4307807-13214-20231116;Estrela;RS;13214;13.00;Chuvas Intensas;Hidrológico;4307807;Reconhecido;0;0;676;401;235;0;1312;0;683107,76;63348,48;69290459,94;69353808,41;2023-11-16;2023-11-20;historico_hidrologico
+RS-F-4311403-13214-20231116;Lajeado;RS;13214;13.00;Chuvas Intensas;Hidrológico;4311403;Registro;0;0;0;0;10;0;10;0;49622,97;0,0;0,0;0,0;2023-11-16;2023-11-17;historico_hidrologico
+RS-F-4304697-13214-20231117;Capitão;RS;13214;13.00;Chuvas Intensas;Hidrológico;4304697;Reconhecido;0;0;0;0;50;0;50;2871;1383108,44;1689081,59;12293300,11;13982381,7;2023-11-17;2023-12-06;historico_hidrologico
+RS-F-4321626-13214-20231117;Travesseiro;RS;13214;13.00;Chuvas Intensas;Hidrológico;4321626;Reconhecido;0;0;0;0;15;0;15;2137;126696,96;126696,96;4569948,66;4696645,62;2023-11-17;2023-11-23;historico_hidrologico
+RS-F-4312054-13214-20231117;Marques de Souza;RS;13214;13.00;Chuvas Intensas;Hidrológico;4312054;Reconhecido;0;0;0;0;0;0;0;25;600695,22;600695,22;1866351,75;2467046,97;2023-11-17;2023-11-22;historico_hidrologico
+RS-F-4306809-13214-20231118;Encantado;RS;13214;13.00;Chuvas Intensas;Hidrológico;4306809;Reconhecido;0;0;0;681;923;0;1604;3800;13904990,98;3853699,09;78474078,27;82327777,36;2023-11-18;2023-11-21;historico_hidrologico
+RS-F-4305587-13214-20231118;Colinas;RS;13214;13.00;Chuvas Intensas;Hidrológico;4305587;Reconhecido;0;0;0;25;350;0;375;1800;2175822,14;95022,72;2008199,59;2103222,31;2023-11-18;2023-11-20;historico_hidrologico
+RS-F-4302402-12200-20231118;Bom Retiro do Sul;RS;12200;2.00;Enxurradas;Hidrológico;4302402;Reconhecido;0;15;3;5;470;0;493;690;1649488,79;1376773,59;3975117,01;5351890,6;2023-11-18;2023-11-20;historico_hidrologico
+RS-F-4302352-13214-20231118;Bom Princípio;RS;13214;13.00;Chuvas Intensas;Hidrológico;4302352;Reconhecido;0;0;0;4;0;0;4;343;4095479,12;4106013,98;8991419,05;13097433,03;2023-11-18;2023-11-22;historico_hidrologico
+RS-F-4301008-13214-20231119;Arroio do Meio;RS;13214;13.00;Chuvas Intensas;Hidrológico;4301008;Reconhecido;0;0;0;553;4500;0;5053;10000;1854662,9;422323,19;57448556,25;57870879,44;2023-11-19;2023-11-21;historico_hidrologico
+RS-F-4306205-12100-20231120;Cruzeiro do Sul;RS;12100;7.00;Inundações;Hidrológico;4306205;Reconhecido;0;1;0;257;2732;0;2990;3405;59519062,75;2323833,34;30828009,04;33151842,38;2023-11-20;2023-11-21;historico_hidrologico
+RS-F-4321303-13214-20231120;Taquari;RS;13214;13.00;Chuvas Intensas;Hidrológico;4321303;Reconhecido;0;0;0;66;39;0;105;510;9252532,63;83408,83;7464824,19;7548233,02;2023-11-20;2023-11-20;historico_hidrologico
+RS-F-4315800-13214-20231120;Roca Sales;RS;13214;13.00;Chuvas Intensas;Hidrológico;4315800;Reconhecido;0;0;0;63;500;0;563;0;63612430,25;26131247,28;50250568,01;76381815,29;2023-11-20;2023-11-23;historico_hidrologico
+RS-F-4311403-12200-20240407;Lajeado;RS;12200;2.00;Enxurradas;Hidrológico;4311403;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2024-04-07;2024-04-08;2024_hidrologico
+RS-F-4311403-12200-20240423;Lajeado;RS;12200;2.00;Enxurradas;Hidrológico;4311403;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2024-04-23;2024-04-24;2024_hidrologico
+RS-F-4315800-13214-20240428;Roca Sales;RS;13214;13.00;Chuvas Intensas;Hidrológico;4315800;Reconhecido;14;14;0;350;3000;2;3380;0;0,0;0,0;0,0;0,0;2024-04-28;2024-05-05;2024_hidrologico
+RS-F-4304697-13214-20240429;Capitão;RS;13214;13.00;Chuvas Intensas;Hidrológico;4304697;Reconhecido;2;15;0;32;106;0;155;2789;0,0;0,0;0,0;0,0;2024-04-29;2024-05-06;2024_hidrologico
+RS-F-4302352-13214-20240429;Bom Princípio;RS;13214;13.00;Chuvas Intensas;Hidrológico;4302352;Reconhecido;1;0;0;171;468;0;640;63;5361444,05;247989,89;20743814,64;20991804,52;2024-04-29;2024-05-03;2024_hidrologico
+RS-F-4306205-13214-20240430;Cruzeiro do Sul;RS;13214;13.00;Chuvas Intensas;Hidrológico;4306205;Reconhecido;13;0;0;800;2987;5;3805;12331;0,0;0,0;0,0;0,0;2024-04-30;2024-05-01;2024_hidrologico
+RS-F-4312054-13214-20240430;Marques de Souza;RS;13214;13.00;Chuvas Intensas;Hidrológico;4312054;Reconhecido;1;20;0;400;150;1;572;3497;0,0;0,0;0,0;0,0;2024-04-30;2024-04-30;2024_hidrologico
+RS-F-4320453-12200-20240430;Sério;RS;12200;2.00;Enxurradas;Hidrológico;4320453;Reconhecido;0;0;0;0;41;0;41;2240;0,0;0,0;0,0;0,0;2024-04-30;2024-05-03;2024_hidrologico
+RS-F-4321626-13214-20240430;Travesseiro;RS;13214;13.00;Chuvas Intensas;Hidrológico;4321626;Reconhecido;1;20;3;40;350;0;414;2152;0,0;0,0;0,0;0,0;2024-04-30;2024-05-03;2024_hidrologico
+RS-F-4312609-13214-20240430;Muçum;RS;13214;13.00;Chuvas Intensas;Hidrológico;4312609;Reconhecido;0;0;0;306;3520;0;3826;965;66196503,83;2173616,54;110656842,22;112830458,77;2024-04-30;2024-05-02;2024_hidrologico
+RS-F-4302402-13214-20240430;Bom Retiro do Sul;RS;13214;13.00;Chuvas Intensas;Hidrológico;4302402;Registro;0;0;0;11;497;0;508;730;11500407,53;276642,11;4510254,33;4786896,43;2024-04-30;2024-05-01;2024_hidrologico
+RS-F-4301008-13214-20240430;Arroio do Meio;RS;13214;13.00;Chuvas Intensas;Hidrológico;4301008;Reconhecido;1;0;0;1000;12000;0;13001;0;0,0;0,0;0,0;0,0;2024-04-30;2024-05-01;2024_hidrologico
+RS-F-4322608-13214-20240430;Venâncio Aires;RS;13214;13.00;Chuvas Intensas;Hidrológico;4322608;Reconhecido;5;19;0;391;23235;0;23650;0;0,0;0,0;0,0;0,0;2024-04-30;2024-05-04;2024_hidrologico
+RS-F-4312153-13214-20240430;Mato Leitão;RS;13214;13.00;Chuvas Intensas;Hidrológico;4312153;Reconhecido;0;0;0;0;48;0;48;0;0,0;0,0;12762685,94;12762685,94;2024-04-30;2024-05-06;2024_hidrologico
+RS-F-4316758-13214-20240430;Santa Clara do Sul;RS;13214;13.00;Chuvas Intensas;Hidrológico;4316758;Reconhecido;0;1;0;0;60;0;61;0;0,0;0,0;0,0;0,0;2024-04-30;2024-04-30;2024_hidrologico
+RS-F-4311403-13214-20240501;Lajeado;RS;13214;13.00;Chuvas Intensas;Hidrológico;4311403;Reconhecido;2;60;0;1326;5000;3;6391;65000;0,0;0,0;0,0;0,0;2024-05-01;2024-05-04;maio_2024_hidrologico
+RS-F-4321303-13214-20240501;Taquari;RS;13214;13.00;Chuvas Intensas;Hidrológico;4321303;Reconhecido;2;0;0;90;894;0;986;24214;0,0;0,0;0,0;0,0;2024-05-01;2024-05-01;maio_2024_hidrologico
+RS-F-4306809-13214-20240501;Encantado;RS;13214;13.00;Chuvas Intensas;Hidrológico;4306809;Reconhecido;1;12;0;726;923;2;1664;21298;0,0;0,0;0,0;0,0;2024-05-01;2024-05-04;maio_2024_hidrologico
+RS-F-4302402-13214-20240501;Bom Retiro do Sul;RS;13214;13.00;Chuvas Intensas;Hidrológico;4302402;Reconhecido;0;0;0;55;1400;0;1455;2500;0,0;0,0;0,0;0,0;2024-05-01;2024-05-04;maio_2024_hidrologico
+RS-F-4305587-13214-20240501;Colinas;RS;13214;13.00;Chuvas Intensas;Hidrológico;4305587;Reconhecido;0;80;200;200;1150;0;1630;1030;6431928,95;1936494,74;17833535,73;19770030,47;2024-05-01;2024-05-03;maio_2024_hidrologico
+RS-F-4307807-12100-20240503;Estrela;RS;12100;7.00;Inundações;Hidrológico;4307807;Reconhecido;2;0;0;1100;4000;1;5103;32183;0,0;0,0;0,0;0,0;2024-05-03;2024-05-03;maio_2024_hidrologico
+RS-F-4308078-13214-20240504;Fazenda Vilanova;RS;13214;13.00;Chuvas Intensas;Hidrológico;4308078;Reconhecido;0;0;0;0;0;0;0;4291;494003,76;0,0;2297809,09;2297809,09;2024-05-04;2024-05-07;maio_2024_hidrologico
+RS-F-4315800-13214-20240512;Roca Sales;RS;13214;13.00;Chuvas Intensas;Hidrológico;4315800;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2024-05-12;2024-05-13;maio_2024_hidrologico
+RS-F-4311403-12100-20240617;Lajeado;RS;12100;7.00;Inundações;Hidrológico;4311403;Registro;0;0;0;300;500;0;800;0;0,0;0,0;0,0;0,0;2024-06-17;2024-06-20;2024_hidrologico
+RS-F-4312609-13214-20250617;Muçum;RS;13214;13.00;Chuvas Intensas;Hidrológico;4312609;Reconhecido;0;0;0;0;0;0;0;1230;205000,0;205000,0;135195,0;340195,0;2025-06-17;2025-06-27;historico_hidrologico
+RS-F-4320453-12200-20250617;Sério;RS;12200;2.00;Enxurradas;Hidrológico;4320453;Registro;0;0;0;0;0;0;0;2281;9000,0;0,0;250724,11;250724,11;2025-06-17;2025-07-21;historico_hidrologico
+RS-F-4322608-13214-20250617;Venâncio Aires;RS;13214;13.00;Chuvas Intensas;Hidrológico;4322608;Registro;0;0;0;0;0;0;0;100;0,0;50000,0;0,0;50000,0;2025-06-17;2025-06-18;historico_hidrologico
+RS-F-4302402-13214-20250618;Bom Retiro do Sul;RS;13214;13.00;Chuvas Intensas;Hidrológico;4302402;Reconhecido;0;0;0;0;42;0;42;250;214746,2;94746,2;215000,0;309746,2;2025-06-18;2025-06-24;historico_hidrologico
+RS-F-4311403-12100-20250618;Lajeado;RS;12100;7.00;Inundações;Hidrológico;4311403;Registro;0;0;0;261;95;0;356;32217;399000,0;16531,5;377625,75;394157,25;2025-06-18;2025-06-21;historico_hidrologico
+RS-F-4312054-11331-20250618;Marques de Souza;RS;11331;8.00;Movimento de Massa;Hidrológico;4312054;Registro;0;0;0;8;22;0;30;0;15000000,0;0,0;0,0;0,0;2025-06-18;2025-06-18;historico_hidrologico
+RS-F-4306205-13214-20250619;Cruzeiro do Sul;RS;13214;13.00;Chuvas Intensas;Hidrológico;4306205;Reconhecido;0;0;0;93;40;0;133;0;2818000,0;3330000,0;1178750,0;4508750,0;2025-06-19;2025-06-19;historico_hidrologico
+RS-F-4315800-12200-20250619;Roca Sales;RS;12200;2.00;Enxurradas;Hidrológico;4315800;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2025-06-19;2025-06-30;historico_hidrologico
+RS-F-4321303-13214-20250620;Taquari;RS;13214;13.00;Chuvas Intensas;Hidrológico;4321303;Reconhecido;0;0;0;23;13;0;36;0;2382405,7;2515405,7;127000,0;2642405,7;2025-06-20;2025-06-20;historico_hidrologico
+RS-F-4307807-13214-20250624;Estrela;RS;13214;13.00;Chuvas Intensas;Hidrológico;4307807;Reconhecido;0;0;0;47;125;0;172;85;58850,0;58850,0;0,0;58850,0;2025-06-24;2025-06-24;historico_hidrologico
+RS-F-4302402-13214-20250628;Bom Retiro do Sul;RS;13214;13.00;Chuvas Intensas;Hidrológico;4302402;Registro;0;0;0;0;7;0;7;0;0,0;0,0;0,0;0,0;2025-06-28;2025-07-03;historico_hidrologico
+RS-F-4311403-12100-20250629;Lajeado;RS;12100;7.00;Inundações;Hidrológico;4311403;Registro;0;0;0;147;56;0;203;0;0,0;0,0;194384,25;194384,25;2025-06-29;2025-07-01;historico_hidrologico
+RS-F-4316758-13214-20251030;Santa Clara do Sul;RS;13214;13.00;Chuvas Intensas;Hidrológico;4316758;Registro;0;1;0;0;60;0;61;0;0,0;0,0;0,0;0,0;2025-10-30;2025-11-04;historico_hidrologico
+RS-F-4315800-11321-20251108;Roca Sales;RS;11321;8.00;Movimento de Massa;Hidrológico;4315800;Registro;0;0;0;0;5;0;5;5;0,0;0,0;0,0;0,0;2025-11-08;2025-11-12;historico_hidrologico
+RS-F-4302402-13214-20251208;Bom Retiro do Sul;RS;13214;13.00;Chuvas Intensas;Hidrológico;4302402;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2025-12-08;2025-12-10;historico_hidrologico
+RS-F-4315800-11321-20251226;Roca Sales;RS;11321;8.00;Movimento de Massa;Hidrológico;4315800;Registro;0;0;0;0;0;0;0;0;0,0;0,0;0,0;0,0;2025-12-26;2025-12-30;historico_hidrologico
