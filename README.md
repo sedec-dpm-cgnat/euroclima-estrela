@@ -38,7 +38,7 @@ Departamento de Prevenção e Mitigação de Desastres — DPM
 
 O pipeline é **genérico**: basta acrescentar eixos ao KMZ e rodar `10_eixos_cascata.py` novamente — a numeração, a topologia e as curvas são refeitas automaticamente.
 
-Os mapas de comunicação são gerados por `49_cartografia_publica.py`. A planta regional, as pranchas de ponto de partida, os mapas de Forqueta, Guaporé e HAND incorporam norte, escala, municípios, rodovias e a rede hidrográfica BHO/ANA. O mesmo script gera o mapa interativo em `06_resultados/GIS/mapa_interativo_alternativas.html`, com base de ruas OpenStreetMap, pop-ups e camadas ativáveis. A base OSM é apenas cartográfica; as geometrias analíticas permanecem nas fontes locais do projeto.
+Os mapas de comunicação são gerados por `49_cartografia_publica.py`. A planta regional, as pranchas de ponto de partida, os mapas de Forqueta, Guaporé e HAND incorporam norte, escala, municípios, rodovias e a rede hidrográfica BHO/ANA. O mesmo script gera o mapa interativo em `06_resultados/GIS/mapa_interativo_alternativas.html`, com base de ruas OpenStreetMap, pop-ups, camadas contextuais e caixas de seleção para as alternativas finais HEC-00–HEC-06. A base OSM é apenas cartográfica; as geometrias analíticas permanecem nas fontes locais do projeto.
 
 Para retomar a execução pelo outro ambiente Codex, use o [prompt de continuidade do Saulo](PROMPT_CONTINUIDADE_SAULO_CODEX.md). Ele contém o estado técnico, a matriz HEC-RAS 1D, as salvaguardas de dados e o roteiro para o Termo de Referência.
 

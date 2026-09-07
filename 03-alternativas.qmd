@@ -76,6 +76,11 @@ Monte Claro e 14 de Julho. GU1 e Forqueta não aparecem como barragens no perfil
 entram no modelo como ramos e afluências laterais. O HEC-00, sem novos reservatórios, é a
 referência obrigatória antes dos demais cenários.
 
+No [mapa interativo de alternativas finais](06_resultados/GIS/mapa_interativo_alternativas.html),
+o painel **Alternativas finais / TR** permite marcar e desmarcar cada caso. Ao selecionar uma
+alternativa, aparecem os marcadores de todos os eixos que a compõem; HEC-00 representa a situação
+atual, sem novos reservatórios.
+
 ### Volume nominal e volume efetivamente utilizado
 
 O volume da tabela anterior é a capacidade nominal de espera derivada das CAVs. Na rodada C1–C4,

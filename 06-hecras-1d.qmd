@@ -25,7 +25,8 @@ ele não substitui esta etapa.
 ![Perfil longitudinal do conjunto inicial e das restrições da cascata existente.](06_resultados/VALIDACAO/PERFIL_ALTERNATIVAS_PONTO_PARTIDA_TR.png){#fig-ponto-partida-hec-perfil width=100%}
 
 Para localizar ruas, cidades e afluentes com maior detalhe, consulte o [mapa interativo
-com camadas ativáveis](06_resultados/GIS/mapa_interativo_alternativas.html). A planta não
+com camadas ativáveis](06_resultados/GIS/mapa_interativo_alternativas.html). O painel **Alternativas
+finais / TR** permite marcar cada caso e visualizar todos os eixos que o compõem. A planta não
 representa a geometria final das barragens; ela comunica a posição relativa das hipóteses
 que serão verificadas.
 

@@ -133,7 +133,8 @@ estruturas ou afluências laterais, conforme a geometria disponível.
 
 Para conferência detalhada, a [planta interativa com ruas, rodovias, rios, municípios,
 eixos e usinas](06_resultados/GIS/mapa_interativo_alternativas.html) permite ativar e
-desativar as camadas. A malha municipal e os pontos rotulados na imagem são referências
+desativar as camadas. O painel **Alternativas finais / TR** permite marcar uma ou mais alternativas
+e visualizar, simultaneamente, todos os eixos de cada composição. A malha municipal e os pontos rotulados na imagem são referências
 territoriais; o ponto representativo do município não deve ser interpretado como o
 levantamento cadastral da sede urbana. A identificação de ruas depende da base
 OpenStreetMap carregada no mapa interativo.

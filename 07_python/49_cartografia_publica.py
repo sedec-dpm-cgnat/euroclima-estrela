@@ -45,7 +45,7 @@ CORREDOR = [
     "Cruzeiro do Sul", "Lajeado", "Estrela", "Bom Retiro do Sul",
     "Fazenda Vilanova", "Taquari", "Venâncio Aires", "Mato Leitão",
     "Santa Clara do Sul", "Marques de Souza", "Travesseiro", "Capitão",
-    "Bom Princípio", "Sério",
+    "Bom Princípio", "Sério", "Guaporé",
 ]
 KEY_CITIES = [
     "Muçum", "Roca Sales", "Encantado", "Colinas", "Arroio do Meio",
@@ -197,6 +197,7 @@ def add_map_context(
     municipality_names=None,
     scale_x=0.78,
     plot_structures=True,
+    city_offsets=None,
 ):
     municipalities = layers["municipios"]
     municipalities.boundary.plot(ax=ax, color="#6b7280", linewidth=0.6, alpha=0.75, zorder=4)
@@ -215,10 +216,19 @@ def add_map_context(
 
     if municipality_names is None:
         municipality_names = KEY_CITIES
+    city_offsets = city_offsets or {}
     for _, row in municipalities[municipalities["NM_MUN"].isin(municipality_names)].iterrows():
         pt = row.geometry.representative_point()
         ax.scatter(pt.x, pt.y, s=8, color="#374151", zorder=15)
-        ax.annotate(row["NM_MUN"], (pt.x, pt.y), xytext=(4, 4), textcoords="offset points", fontsize=7.5, color="#1f2937", zorder=16)
+        ax.annotate(
+            row["NM_MUN"],
+            (pt.x, pt.y),
+            xytext=city_offsets.get(row["NM_MUN"], (4, 4)),
+            textcoords="offset points",
+            fontsize=7.5,
+            color="#1f2937",
+            zorder=16,
+        )
 
     if plot_structures:
         # Eixos da carteira completa, com ALT-J em destaque.
@@ -274,7 +284,7 @@ def save_regional_map(layers, structures):
     base = layers["municipios"]
     fig, ax = plt.subplots(figsize=(14, 9), dpi=320)
     fig.subplots_adjust(left=0.01, right=0.99, bottom=0.085, top=0.86)
-    add_map_context(ax, layers, structures, municipality_names=CORREDOR, scale_x=0.78)
+    add_map_context(ax, layers, structures, municipality_names=KEY_CITIES + ["Guaporé"], scale_x=0.78)
     xmin, xmax, ymin, ymax = map_extent(base, 20000)
     ax.set_xlim(xmin, xmax)
     ax.set_ylim(ymin, ymax)
@@ -326,7 +336,7 @@ def save_guapore_map(layers, structures):
 
 
 def save_tr_start_map(layers, structures):
-    """Planta didática do conjunto inicial recomendado para o TR."""
+    """Planta esquemática, limpa e numerada do conjunto inicial do TR."""
     base = layers["municipios"]
     extent_objects = gpd.GeoDataFrame(
         pd.concat(
@@ -341,114 +351,111 @@ def save_tr_start_map(layers, structures):
         geometry="geometry",
         crs=CRS_MAP,
     )
-    fig, ax = plt.subplots(figsize=(15, 9.5), dpi=320)
-    fig.subplots_adjust(left=0.01, right=0.99, bottom=0.09, top=0.86)
+    fig = plt.figure(figsize=(17, 9.5), dpi=320)
+    gs = fig.add_gridspec(1, 2, width_ratios=[4.65, 1.35], wspace=0.02)
+    ax = fig.add_subplot(gs[0])
+    info = fig.add_subplot(gs[1])
+    fig.subplots_adjust(left=0.015, right=0.985, bottom=0.08, top=0.85)
+
+    city_offsets = {
+        "Muçum": (-28, 4),
+        "Roca Sales": (5, 5),
+        "Encantado": (5, -14),
+        "Arroio do Meio": (5, 4),
+        "Lajeado": (5, -14),
+        "Estrela": (5, 5),
+        "Bom Retiro do Sul": (5, -14),
+        "Taquari": (5, 5),
+        "Guaporé": (5, -14),
+    }
     add_map_context(
         ax,
         layers,
         structures,
-        municipality_names=CORREDOR,
-        scale_x=0.78,
+        municipality_names=KEY_CITIES + ["Guaporé"],
+        scale_x=0.05,
         plot_structures=False,
+        city_offsets=city_offsets,
     )
-    xmin, xmax, ymin, ymax = map_extent(extent_objects, 20000)
+    xmin, xmax, ymin, ymax = map_extent(extent_objects, 19000)
     ax.set_xlim(xmin, xmax)
     ax.set_ylim(ymin, ymax)
+    ax.set_aspect("equal")
 
-    colors = {
-        "E02": "#00897b",
-        "E04": "#00897b",
-        "E08": "#2563eb",
-        "E12": "#d97706",
-    }
-    roles = {
-        "E02": "HEC-01",
-        "E04": "HEC-01",
-        "E08": "HEC-02",
-        "E12": "HEC-03",
-    }
+    # Identificadores curtos no mapa; a composição completa fica no painel lateral.
+    colors = {"E02": "#00897b", "E04": "#00897b", "E08": "#2563eb", "E12": "#d97706"}
+    marker_labels = {"E02": "1a", "E04": "1b", "E08": "2", "E12": "3"}
     main = structures["eixos"][structures["eixos"]["codigo"].isin(colors)].copy()
-    main.plot(
-        ax=ax,
-        color=main["codigo"].map(colors),
-        marker="o",
-        markersize=70,
-        edgecolor="white",
-        linewidth=0.9,
-        zorder=24,
-    )
     for _, row in main.iterrows():
+        color = colors[row["codigo"]]
+        ax.scatter(row.geometry.x, row.geometry.y, s=180, color=color, edgecolor="white", linewidth=1.0, zorder=24)
         ax.annotate(
-            f"{row['codigo']}\n{roles[row['codigo']]}",
+            marker_labels[row["codigo"]],
             (row.geometry.x, row.geometry.y),
-            xytext=(7, 7),
-            textcoords="offset points",
-            fontsize=9.5,
+            ha="center",
+            va="center",
+            fontsize=8.5,
             fontweight="bold",
-            color=colors[row["codigo"]],
+            color="white",
             zorder=25,
         )
 
     lateral = pd.concat(
         [
-            structures["guapore"].assign(hec="HEC-04"),
+            structures["guapore"].assign(hec="4"),
             structures["forqueta"][structures["forqueta"]["codigo"].isin(["FQ2-PROPOSTO", "FQ1-PROPOSTO"])].assign(
-                hec=structures["forqueta"][structures["forqueta"]["codigo"].isin(["FQ2-PROPOSTO", "FQ1-PROPOSTO"])]["codigo"].map(
-                    {"FQ2-PROPOSTO": "HEC-05", "FQ1-PROPOSTO": "HEC-06"}
-                )
+                hec=structures["forqueta"][structures["forqueta"]["codigo"].isin(["FQ2-PROPOSTO", "FQ1-PROPOSTO"])]
+                ["codigo"].map({"FQ2-PROPOSTO": "5", "FQ1-PROPOSTO": "6"})
             ),
         ],
         ignore_index=True,
     )
     lateral = gpd.GeoDataFrame(lateral, geometry="geometry", crs=CRS_MAP)
     lateral_colors = {"GU1-PROPOSTO": "#7c3aed", "FQ2-PROPOSTO": "#db2777", "FQ1-PROPOSTO": "#b45309"}
-    lateral.plot(
-        ax=ax,
-        color=lateral["codigo"].map(lateral_colors),
-        marker="D",
-        markersize=76,
-        edgecolor="white",
-        linewidth=0.9,
-        zorder=25,
-    )
     for _, row in lateral.iterrows():
-        lateral_offsets = {
-            "GU1-PROPOSTO": (8, -26),
-            "FQ2-PROPOSTO": (-62, 9),
-            "FQ1-PROPOSTO": (10, -24),
-        }
-        ax.annotate(
-            f"{row['codigo'].replace('-PROPOSTO', '')}\n{row['hec']} · lateral",
-            (row.geometry.x, row.geometry.y),
-            xytext=lateral_offsets.get(row["codigo"], (7, 7)),
-            textcoords="offset points",
-            fontsize=8.5,
-            fontweight="bold",
-            color=lateral_colors[row["codigo"]],
-            zorder=26,
-        )
+        color = lateral_colors[row["codigo"]]
+        ax.scatter(row.geometry.x, row.geometry.y, s=190, color=color, marker="D", edgecolor="white", linewidth=1.0, zorder=25)
+        ax.annotate(row["hec"], (row.geometry.x, row.geometry.y), ha="center", va="center", fontsize=8.5, fontweight="bold", color="white", zorder=26)
 
     existing = structures["usinas"][structures["usinas"]["nome"].isin(["Monte Claro", "Castro Alves", "14 de Julho"])].copy()
-    existing.plot(ax=ax, color="#111827", marker="^", markersize=62, edgecolor="white", linewidth=0.8, zorder=27)
+    existing_offsets = {"Monte Claro": (7, -16), "Castro Alves": (7, 5), "14 de Julho": (7, 5)}
     for _, row in existing.iterrows():
-        ax.annotate(row["nome"], (row.geometry.x, row.geometry.y), xytext=(6, -14), textcoords="offset points", fontsize=8.5, color="#111827", zorder=28)
+        ax.scatter(row.geometry.x, row.geometry.y, s=100, color="#111827", marker="^", edgecolor="white", linewidth=0.9, zorder=27)
+        ax.annotate(row["nome"], (row.geometry.x, row.geometry.y), xytext=existing_offsets.get(row["nome"], (6, -14)), textcoords="offset points", fontsize=8.2, color="#111827", zorder=28)
 
-    handles = [
-        Line2D([0], [0], color="#0b5fa5", lw=2.3, label="Rio Taquari / Antas"),
-        Line2D([0], [0], color="#117a65", lw=2.3, label="Rio Forqueta"),
-        Line2D([0], [0], color="#7c3aed", lw=2.3, label="Rio Guaporé"),
-        Line2D([0], [0], marker="o", color="w", markerfacecolor="#00897b", markersize=9, label="Base HEC-01: E02 + E04"),
-        Line2D([0], [0], marker="o", color="w", markerfacecolor="#2563eb", markersize=9, label="Extensão HEC-02: + E08"),
-        Line2D([0], [0], marker="o", color="w", markerfacecolor="#d97706", markersize=9, label="Extensão HEC-03: + E12"),
-        Line2D([0], [0], marker="D", color="w", markerfacecolor="#7c3aed", markersize=9, label="Prioridade lateral HEC-04: GU1"),
-        Line2D([0], [0], marker="D", color="w", markerfacecolor="#db2777", markersize=9, label="Sensibilidade HEC-05: FQ2"),
-        Line2D([0], [0], marker="D", color="w", markerfacecolor="#b45309", markersize=9, label="Sensibilidade HEC-06: FQ1 / comportas"),
-        Line2D([0], [0], marker="^", color="w", markerfacecolor="#111827", markersize=9, label="Usina existente / restrição"),
+    # Rótulos dos três rios principais são derivados da própria geometria BHO.
+    principal = layers["hidrografia"][layers["hidrografia"]["principal"]]
+    river_colors = {"Rio Taquari": "#0b5fa5", "Rio Forqueta": "#117a65", "Rio Guaporé": "#7c3aed"}
+    for name, subset in principal.groupby("nome_mapa"):
+        if name not in river_colors:
+            continue
+        pt = subset.geometry.unary_union.representative_point()
+        ax.annotate(name, (pt.x, pt.y), xytext=(5, 0), textcoords="offset points", fontsize=8.5, fontstyle="italic", color=river_colors[name], zorder=12)
+
+    ax.set_title("Alternativas de partida para o Termo de Referência — planta esquemática", fontsize=16.5, fontweight="bold", pad=13)
+    fig.text(0.34, 0.925, "As marcações numeradas correspondem aos grupos que podem ser ativados no mapa dinâmico", ha="center", fontsize=10.5, color="#4b5563")
+
+    info.axis("off")
+    info.set_xlim(0, 1)
+    info.set_ylim(0, 1)
+    info.text(0.02, 0.97, "LEITURA DO MAPA", fontsize=12, fontweight="bold", color="#1f2937", va="top")
+    info.text(0.02, 0.925, "Casos finais de partida", fontsize=9, color="#4b5563", va="top")
+    blocks = [
+        (0.84, "1 · HEC-01", "E02 + E04\narranjo-base", "#00897b"),
+        (0.72, "2 · HEC-02", "E02 + E04 + E08\nganho incremental", "#2563eb"),
+        (0.60, "3 · HEC-03", "E02 + E04 + E12\ncobertura terminal", "#d97706"),
+        (0.48, "4 · HEC-04", "ALT-J + GU1\nramo do Guaporé", "#7c3aed"),
+        (0.36, "5 · HEC-05", "ALT-J + FQ2\nramo do Forqueta", "#db2777"),
+        (0.24, "6 · HEC-06", "ALT-J + FQ1 / comportas\nsensibilidade operacional", "#b45309"),
     ]
-    ax.legend(handles=handles, loc="lower left", fontsize=8.2, framealpha=0.95, ncol=2)
-    ax.set_title("Conjunto inicial de alternativas para o Termo de Referência — planta", fontsize=17, fontweight="bold", pad=16)
-    fig.text(0.5, 0.935, "A matriz HEC-00–HEC-06 começa pela situação atual e avança do eixo principal para as contribuições laterais", ha="center", fontsize=10.5, color="#4b5563")
-    fig.text(0.5, 0.018, "Os pontos indicam hipóteses de estudo, não obras selecionadas. A geometria final depende de levantamento, remanso, segurança, ambiente e viabilidade.", ha="center", fontsize=8.5, color="#4b5563")
+    for y, title, desc, color in blocks:
+        info.scatter(0.045, y + 0.005, s=85, color=color, edgecolor="white", linewidth=0.7, zorder=2)
+        info.text(0.105, y + 0.022, title, fontsize=9.5, fontweight="bold", color=color, va="top")
+        info.text(0.105, y - 0.012, desc, fontsize=8.4, color="#374151", va="top", linespacing=1.25)
+    info.text(0.02, 0.125, "Referências", fontsize=9.5, fontweight="bold", color="#1f2937", va="top")
+    info.text(0.02, 0.095, "▲ usina existente / restrição\n● eixo principal   ◆ contribuição lateral", fontsize=8.2, color="#374151", va="top", linespacing=1.35)
+    info.text(0.02, 0.035, "HEC-00: referência sem novos eixos.", fontsize=8.0, color="#6b7280", va="top")
+    fig.text(0.34, 0.018, "Base: BHO/ANA, malha municipal e rodovias do acervo. Para ruas e seleção individual de alternativas, consulte o mapa Leaflet.", ha="center", fontsize=8.3, color="#4b5563")
     fig.savefig(OUT / "MAPA_ALTERNATIVAS_PONTO_PARTIDA_TR.png", facecolor="white")
     plt.close(fig)
 
@@ -656,7 +663,7 @@ def save_leaflet(layers, structures):
     explor["descricao"] = explor["codigo"] + " — exploratório/sensibilidade"
 
     # Pontos representativos de municípios para rótulos persistentes.
-    city = municipalities.copy()
+    city = municipalities[municipalities["NM_MUN"].isin(KEY_CITIES + ["Guaporé"])].copy()
     city["geometry"] = city.geometry.representative_point()
     city["cidade"] = city["NM_MUN"]
 
@@ -671,64 +678,125 @@ def save_leaflet(layers, structures):
         "exploratorios": geojson(explor, ["codigo", "nome", "descricao", "classe", "status"], 0),
     }
     text_payload = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
-    html = f'''<!doctype html>
+    html = '''<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mapa interativo — alternativas HEC-RAS 1D</title>
+  <title>Mapa interativo — alternativas finais HEC-RAS 1D</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
   <style>
-    html, body {{ margin:0; padding:0; font-family: Arial, sans-serif; background:#f7f8fa; color:#1f2937; }}
-    .wrap {{ max-width: 1400px; margin: 0 auto; padding: 18px; }}
-    h1 {{ margin:0 0 4px; font-size: 24px; }}
-    p {{ margin: 0 0 12px; color:#4b5563; }}
-    #map {{ height: 760px; min-height: 520px; border:1px solid #d1d5db; }}
-    .north {{ background:rgba(255,255,255,.9); padding:7px 8px; font-weight:bold; font-size:20px; border:1px solid #9ca3af; line-height:1; }}
-    .legend {{ background:rgba(255,255,255,.95); padding:8px 10px; line-height:1.45; border:1px solid #d1d5db; font-size:12px; }}
-    .swatch {{ display:inline-block; width:20px; border-top:3px solid; margin-right:5px; vertical-align:middle; }}
-    .dot {{ display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:5px; vertical-align:middle; }}
-    .source {{ font-size: 12px; margin-top: 8px; }}
+    html, body { margin:0; padding:0; font-family: Arial, sans-serif; background:#f7f8fa; color:#1f2937; }
+    .wrap { max-width: 1450px; margin: 0 auto; padding: 18px; }
+    h1 { margin:0 0 4px; font-size: 24px; }
+    p { margin: 0 0 12px; color:#4b5563; }
+    #map { height: 760px; min-height: 520px; border:1px solid #d1d5db; }
+    .north { background:rgba(255,255,255,.93); padding:7px 8px; font-weight:bold; font-size:20px; border:1px solid #9ca3af; line-height:1; text-align:center; }
+    .legend { background:rgba(255,255,255,.95); padding:8px 10px; line-height:1.45; border:1px solid #d1d5db; font-size:12px; }
+    .swatch { display:inline-block; width:20px; border-top:3px solid; margin-right:5px; vertical-align:middle; }
+    .dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:5px; vertical-align:middle; }
+    .alt-control { background:rgba(255,255,255,.97); padding:10px 12px; line-height:1.25; border:1px solid #9ca3af; width:275px; max-height:500px; overflow:auto; box-shadow:0 1px 4px rgba(0,0,0,.18); }
+    .alt-title { font-weight:bold; font-size:14px; margin-bottom:3px; }
+    .alt-help { color:#4b5563; font-size:11px; margin-bottom:8px; }
+    .alt-row { display:flex; align-items:flex-start; gap:7px; padding:5px 0; border-top:1px solid #e5e7eb; }
+    .alt-row input { margin-top:2px; accent-color:#2563eb; }
+    .alt-mark { flex:0 0 11px; width:11px; height:11px; border-radius:50%; margin-top:3px; border:1px solid rgba(0,0,0,.25); }
+    .alt-text { font-size:12px; }
+    .alt-text strong { display:block; }
+    .alt-text span { color:#4b5563; font-size:11px; }
+    .alt-detail { background:#f3f4f6; border-top:1px solid #d1d5db; margin:7px -12px -10px; padding:7px 12px; color:#374151; font-size:11px; }
+    .source { font-size: 12px; margin-top: 8px; }
+    @media (max-width: 720px) { .wrap { padding:8px; } h1 { font-size:19px; } #map { height:650px; } .alt-control { width:235px; max-height:390px; } }
   </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>Alternativas e rede hidrográfica — planta interativa</h1>
-  <p>Camadas para conferir a posição dos eixos ALT-J, GU1, Forqueta, usinas existentes, municípios, rios e rodovias antes da modelagem HEC-RAS 1D.</p>
+  <h1>Alternativas finais de partida — mapa interativo</h1>
+  <p>Marque uma ou mais alternativas no painel superior direito para visualizar os eixos e contribuições laterais que devem iniciar os estudos contratados no Termo de Referência.</p>
   <div id="map" aria-label="Mapa interativo de alternativas de barragens no Taquari–Antas"></div>
-  <p class="source">Fontes locais: BHO/ANA, malha municipal e rodovias do acervo do projeto. A base OSM é apenas cartográfica e pode depender de conexão com a internet. Pontos exploratórios não são obras selecionadas.</p>
+  <p class="source">Fontes locais: BHO/ANA, malha municipal e rodovias do acervo do projeto. A base OSM é apenas cartográfica e pode depender de conexão com a internet. Os pontos são hipóteses de estudo; a seleção final depende de HEC-RAS 1D, topografia, operação, segurança, ambiente e custo-benefício.</p>
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
-const DATA = {text_payload};
-const map = L.map('map', {{ zoomControl: true }}).setView([-29.27, -51.75], 9);
-L.tileLayer('https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{ maxZoom: 18, attribution: '&copy; OpenStreetMap contributors' }}).addTo(map);
-const styles = {{
-  municipalities: {{ color:'#6b7280', weight:1, fillColor:'#e5e7eb', fillOpacity:.16 }},
-  hydro: f => f.properties.classe === 'rio principal' ? {{ color: f.properties.nome === 'Rio Forqueta' ? '#117a65' : (f.properties.nome === 'Rio Guaporé' ? '#7c3aed' : '#0b5fa5'), weight:2.8, opacity:.92 }} : {{ color:'#8bbbd3', weight:.8, opacity:.65 }},
-  state: {{ color:'#6b7280', weight:1.2, opacity:.58 }},
-  federal: {{ color:'#d97706', weight:1.8, opacity:.75 }},
-  altj: {{ radius:7, color:'#991b1b', fillColor:'#dc2626', fillOpacity:.92, weight:1 }},
-  other: {{ radius:5, color:'#6b7280', fillColor:'#9ca3af', fillOpacity:.72, weight:1 }},
-  dam: {{ radius:8, color:'#111827', fillColor:'#111827', fillOpacity:.95, weight:1 }},
-  exploratory: {{ radius:7, color:'#92400e', fillColor:'#f59e0b', fillOpacity:.94, weight:1 }}
-}};
-function lineLayer(data, style, tooltip) {{ return L.geoJSON(data, {{ style, onEachFeature:(f,l)=>l.bindTooltip(tooltip(f)) }}); }}
-const mun = L.geoJSON(DATA.municipios, {{ style:styles.municipalities, onEachFeature:(f,l)=>l.bindPopup('<b>'+f.properties.NM_MUN+'</b><br>Município do corredor de estudo') }}).addTo(map);
-const city = L.geoJSON(DATA.cidades, {{ pointToLayer:(f,latlng)=>L.marker(latlng, {{ icon:L.divIcon({{ className:'city-label', html:'<span style="font-size:12px;font-weight:600;color:#1f2937;text-shadow:0 0 3px white,0 0 3px white;">'+f.properties.cidade+'</span>', iconAnchor:[0,0] }}) }}), onEachFeature:(f,l)=>l.bindTooltip(f.properties.cidade) }}).addTo(map);
+const DATA = __DATA__;
+const map = L.map('map', { zoomControl: true }).setView([-29.27, -51.75], 9);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+const styles = {
+  municipalities: { color:'#6b7280', weight:1, fillColor:'#e5e7eb', fillOpacity:.13 },
+  hydro: f => f.properties.classe === 'rio principal' ? { color: f.properties.nome === 'Rio Forqueta' ? '#117a65' : (f.properties.nome === 'Rio Guaporé' ? '#7c3aed' : '#0b5fa5'), weight:2.8, opacity:.92 } : { color:'#8bbbd3', weight:.8, opacity:.65 },
+  state: { color:'#6b7280', weight:1.0, opacity:.50 },
+  federal: { color:'#d97706', weight:1.7, opacity:.72 },
+  dam: { radius:8, color:'#111827', fillColor:'#111827', fillOpacity:.95, weight:1 }
+};
+function esc(value) { return String(value ?? 'n/d').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function lineLayer(data, style, tooltip) { return L.geoJSON(data, { style, onEachFeature:(f,l)=>l.bindTooltip(tooltip(f)) }); }
+const mun = L.geoJSON(DATA.municipios, { style:styles.municipalities, onEachFeature:(f,l)=>l.bindPopup('<b>'+esc(f.properties.NM_MUN)+'</b><br>Município do corredor de estudo') }).addTo(map);
+const city = L.geoJSON(DATA.cidades, { pointToLayer:(f,latlng)=>L.marker(latlng, { icon:L.divIcon({ className:'city-label', html:'<span style="font-size:12px;font-weight:600;color:#1f2937;text-shadow:0 0 3px white,0 0 3px white;">'+esc(f.properties.cidade)+'</span>', iconAnchor:[0,0] }) }), onEachFeature:(f,l)=>l.bindTooltip(f.properties.cidade) }).addTo(map);
 const hydro = lineLayer(DATA.hidrografia, styles.hydro, f => f.properties.nome || 'Afluente BHO').addTo(map);
 const roadsState = lineLayer(DATA.rodovias_estaduais, styles.state, f => f.properties.rota || 'Rodovia estadual');
 const roadsFederal = lineLayer(DATA.rodovias_federais, styles.federal, f => f.properties.rota || 'Rodovia federal');
-const axes = L.geoJSON(DATA.eixos, {{ pointToLayer:(f,ll)=>L.circleMarker(ll, f.properties.grupo === 'ALT-J' ? styles.altj : styles.other), onEachFeature:(f,l)=>l.bindPopup('<b>'+f.properties.codigo+'</b><br>'+f.properties.grupo+'<br>Cota de eixo: '+(f.properties.cota_eixo_m ?? 'n/d')+' m') }}).addTo(map);
-const dams = L.geoJSON(DATA.usinas, {{ pointToLayer:(f,ll)=>L.circleMarker(ll,styles.dam), onEachFeature:(f,l)=>l.bindPopup('<b>'+f.properties.nome+'</b><br>Usina existente<br>Potência: '+(f.properties.potencia_kW ?? 'n/d')+' kW') }}).addTo(map);
-const exploratory = L.geoJSON(DATA.exploratorios, {{ pointToLayer:(f,ll)=>L.circleMarker(ll,styles.exploratory), onEachFeature:(f,l)=>l.bindPopup('<b>'+f.properties.codigo+'</b><br>'+ (f.properties.nome || '') +'<br>'+ (f.properties.classe || 'Eixo exploratório') +'<br><i>Não selecionado; ponto de triagem/sensibilidade.</i>') }}).addTo(map);
-const north = L.control({{position:'topright'}}); north.onAdd=()=>{{ const d=L.DomUtil.create('div','north'); d.innerHTML='↑<br><span style="font-size:12px">N</span>'; return d; }}; north.addTo(map);
-const legend = L.control({{position:'bottomleft'}}); legend.onAdd=()=>{{ const d=L.DomUtil.create('div','legend'); d.innerHTML='<b>Legenda</b><br><span class="swatch" style="border-color:#0b5fa5"></span>Rio Taquari / rede principal<br><span class="swatch" style="border-color:#117a65"></span>Rio Forqueta<br><span class="swatch" style="border-color:#7c3aed"></span>Rio Guaporé<br><span class="swatch" style="border-color:#8bbbd3"></span>Afluentes BHO<br><span class="dot" style="background:#dc2626"></span>ALT-J<br><span class="dot" style="background:#111827"></span>Usina existente<br><span class="dot" style="background:#f59e0b"></span>Exploratório/sensibilidade'; return d; }}; legend.addTo(map);
-L.control.layers(null, {{ 'Municípios':mun, 'Rótulos das cidades':city, 'Hidrografia BHO':hydro, 'Rodovias estaduais':roadsState, 'Rodovias federais':roadsFederal, 'Eixos E01–E12':axes, 'Usinas existentes':dams, 'Exploratórios GU1/FQ/FQ2/MC2':exploratory }}, {{collapsed:false}}).addTo(map);
-const all = L.featureGroup([mun, hydro, axes, dams, exploratory]); map.fitBounds(all.getBounds().pad(.04));
+const dams = L.geoJSON(DATA.usinas, { pointToLayer:(f,ll)=>L.circleMarker(ll,styles.dam), onEachFeature:(f,l)=>l.bindPopup('<b>'+esc(f.properties.nome)+'</b><br>Usina existente / restrição<br>Potência: '+esc(f.properties.potencia_kW)+' kW') }).addTo(map);
+
+const byCode = {};
+for (const collection of [DATA.eixos, DATA.exploratorios]) {
+  for (const feature of collection.features) byCode[feature.properties.codigo] = feature;
+}
+const ALT_J = ['E01','E02','E04','E05','E08','E12'];
+const ALT_DEFS = [
+  { id:'hec00', label:'HEC-00 · referência', subtitle:'Situação atual — sem novos eixos', codes:[], color:'#64748b', shape:'circle' },
+  { id:'hec01', label:'Alternativa 1 · HEC-01', subtitle:'E02 + E04 — arranjo-base', codes:['E02','E04'], color:'#00897b', shape:'circle' },
+  { id:'hec02', label:'Alternativa 2 · HEC-02', subtitle:'E02 + E04 + E08 — extensão incremental', codes:['E02','E04','E08'], color:'#2563eb', shape:'circle' },
+  { id:'hec03', label:'Alternativa 3 · HEC-03', subtitle:'E02 + E04 + E12 — cobertura terminal', codes:['E02','E04','E12'], color:'#d97706', shape:'circle' },
+  { id:'hec04', label:'Alternativa 4 · HEC-04', subtitle:'ALT-J + GU1 — ramo do Guaporé', codes:ALT_J.concat(['GU1-PROPOSTO']), color:'#7c3aed', shape:'diamond' },
+  { id:'hec05', label:'Alternativa 5 · HEC-05', subtitle:'ALT-J + FQ2 — ramo do Forqueta', codes:ALT_J.concat(['FQ2-PROPOSTO']), color:'#db2777', shape:'diamond' },
+  { id:'hec06', label:'Alternativa 6 · HEC-06', subtitle:'ALT-J + FQ1 / comportas — sensibilidade', codes:ALT_J.concat(['FQ1-PROPOSTO']), color:'#b45309', shape:'diamond' },
+  { id:'extra', label:'Sensibilidades adicionais', subtitle:'MC2 · CA2 · 14J2 · EST1', codes:['MC2-PROPOSTO','CA2-PROPOSTO','14J2-PROPOSTO','EST1-PROPOSTO'], color:'#475569', shape:'diamond' }
+];
+const altLayers = {};
+function markerFor(feature, def) {
+  const p = feature.properties;
+  const lateral = p.codigo && p.codigo.includes('-PROPOSTO');
+  const marker = L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], { radius:lateral ? 8 : 7, color:def.color, fillColor:def.color, fillOpacity:.92, weight:2 });
+  marker.bindPopup('<b>'+esc(def.label)+'</b><br><b>'+esc(p.codigo)+'</b> — '+esc(p.nome || 'eixo da carteira')+'<br>'+esc(p.classe || p.grupo || 'Eixo de estudo')+'<br><span style="color:#4b5563">Ponto de triagem; não é projeto executivo.</span>');
+  marker.bindTooltip(esc(p.codigo), { direction:'top', offset:[0,-5] });
+  return marker;
+}
+for (const def of ALT_DEFS) {
+  const group = L.layerGroup();
+  for (const code of def.codes) if (byCode[code]) group.addLayer(markerFor(byCode[code], def));
+  altLayers[def.id] = group;
+}
+const selected = new Set();
+function updateDetail() {
+  const detail = document.getElementById('alt-detail');
+  if (!selected.size) { detail.textContent = 'Nenhuma alternativa adicional marcada. As usinas existentes permanecem visíveis como referência.'; return; }
+  const names = ALT_DEFS.filter(d => selected.has(d.id)).map(d => d.id === 'hec00' ? 'HEC-00: situação atual' : d.label.replace(/^Alternativa [0-9]+ · /,''));
+  detail.textContent = 'Ativas: ' + names.join(' | ');
+}
+const altControl = L.control({ position:'topright' });
+altControl.onAdd = () => {
+  const box = L.DomUtil.create('div','alt-control');
+  box.innerHTML = '<div class="alt-title">Alternativas finais / TR</div><div class="alt-help">Marque para ligar os marcadores. É possível comparar mais de um caso.</div>';
+  for (const def of ALT_DEFS) {
+    const row = document.createElement('label'); row.className='alt-row';
+    const input = document.createElement('input'); input.type='checkbox'; input.id='check-'+def.id; input.setAttribute('aria-label', def.label);
+    const swatch = document.createElement('span'); swatch.className='alt-mark'; swatch.style.background=def.color; swatch.style.borderRadius=def.shape==='diamond' ? '1px' : '50%'; if (def.shape==='diamond') swatch.style.transform='rotate(45deg)';
+    const text = document.createElement('span'); text.className='alt-text'; text.innerHTML='<strong>'+esc(def.label)+'</strong><span>'+esc(def.subtitle)+'</span>';
+    row.append(input, swatch, text); box.appendChild(row);
+    input.addEventListener('change', () => { if (input.checked) { selected.add(def.id); altLayers[def.id].addTo(map); } else { selected.delete(def.id); map.removeLayer(altLayers[def.id]); } updateDetail(); });
+  }
+  const detail = document.createElement('div'); detail.id='alt-detail'; detail.className='alt-detail'; detail.setAttribute('aria-live','polite'); detail.textContent='Nenhuma alternativa adicional marcada. As usinas existentes permanecem visíveis como referência.'; box.appendChild(detail);
+  L.DomEvent.disableClickPropagation(box); L.DomEvent.disableScrollPropagation(box); return box;
+};
+altControl.addTo(map);
+const legend = L.control({position:'bottomleft'}); legend.onAdd=()=>{ const d=L.DomUtil.create('div','legend'); d.innerHTML='<b>Referências</b><br><span class="swatch" style="border-color:#0b5fa5"></span>Rio Taquari / Antas<br><span class="swatch" style="border-color:#117a65"></span>Rio Forqueta<br><span class="swatch" style="border-color:#7c3aed"></span>Rio Guaporé<br><span class="swatch" style="border-color:#8bbbd3"></span>Afluentes BHO<br><span class="dot" style="background:#111827"></span>Usina existente / restrição<br><span class="dot" style="background:#2563eb"></span>Alternativa marcada'; return d; }; legend.addTo(map);
+L.control.layers(null, { 'Municípios':mun, 'Rótulos das cidades':city, 'Hidrografia BHO':hydro, 'Rodovias estaduais':roadsState, 'Rodovias federais':roadsFederal, 'Usinas existentes':dams }, {collapsed:false, position:'topleft'}).addTo(map);
+const focus = L.featureGroup([dams, L.geoJSON(DATA.eixos), L.geoJSON(DATA.exploratorios)]);
+map.fitBounds(focus.getBounds().pad(.16));
 </script>
 </body>
 </html>'''
+    html = html.replace("__DATA__", text_payload)
     (ROOT / "06_resultados" / "GIS").mkdir(parents=True, exist_ok=True)
     (ROOT / "06_resultados" / "GIS" / "mapa_interativo_alternativas.html").write_text(html, encoding="utf-8")
 
