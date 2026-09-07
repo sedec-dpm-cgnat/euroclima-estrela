@@ -114,6 +114,23 @@ pela área de drenagem.
 
 ![Planta regional das alternativas, usinas existentes e rede hidrográfica.](06_resultados/VALIDACAO/MAPA_ALTERNATIVAS_HEC_PLANTA.png){#fig-relatorio-planta-hec width=100%}
 
+### Conjunto de partida recomendado para o TR
+
+Para orientar a contratação sem antecipar uma decisão de implantação, a primeira rodada deve
+começar com a matriz **HEC-00–HEC-06**. E02 e E04 formam o arranjo-base; E08 e E12 medem
+ganhos incrementais; GU1 é a hipótese estrutural independente do Guaporé; e FQ2 é a alternativa
+lateral do Forqueta. FQ1, comportas e os pontos exploratórios do perfil entram como sensibilidades
+condicionadas à calibração e à verificação das restrições existentes.
+
+![Planta didática do conjunto inicial de alternativas que merece ser estudado no TR.](06_resultados/VALIDACAO/MAPA_ALTERNATIVAS_PONTO_PARTIDA_TR.png){#fig-relatorio-ponto-partida-planta width=100%}
+
+![Perfil didático da cascata e da sequência de simulação de partida.](06_resultados/VALIDACAO/PERFIL_ALTERNATIVAS_PONTO_PARTIDA_TR.png){#fig-relatorio-ponto-partida-perfil width=100%}
+
+As hastes no perfil são envelopes de altura admissível de triagem, não cotas de projeto. A
+posição no perfil torna explícita a restrição da cascata Monte Claro–Castro Alves–14 de Julho;
+no mapa, GU1 e FQ2 aparecem em seus tributários e serão representados no HEC-RAS 1D como
+estruturas ou afluências laterais, conforme a geometria disponível.
+
 Para conferência detalhada, a [planta interativa com ruas, rodovias, rios, municípios,
 eixos e usinas](06_resultados/GIS/mapa_interativo_alternativas.html) permite ativar e
 desativar as camadas. A malha municipal e os pontos rotulados na imagem são referências

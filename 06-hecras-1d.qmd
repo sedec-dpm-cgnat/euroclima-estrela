@@ -20,6 +20,10 @@ ele não substitui esta etapa.
 
 ![Planta regional das alternativas e entradas que serão verificadas no HEC-RAS 1D.](06_resultados/VALIDACAO/MAPA_ALTERNATIVAS_HEC_PLANTA.png){#fig-planta-alternativas-hec width=100%}
 
+![Conjunto inicial de alternativas e sensibilidades para a sequência do HEC-RAS 1D, em planta e perfil.](06_resultados/VALIDACAO/MAPA_ALTERNATIVAS_PONTO_PARTIDA_TR.png){#fig-ponto-partida-hec-planta width=100%}
+
+![Perfil longitudinal do conjunto inicial e das restrições da cascata existente.](06_resultados/VALIDACAO/PERFIL_ALTERNATIVAS_PONTO_PARTIDA_TR.png){#fig-ponto-partida-hec-perfil width=100%}
+
 Para localizar ruas, cidades e afluentes com maior detalhe, consulte o [mapa interativo
 com camadas ativáveis](06_resultados/GIS/mapa_interativo_alternativas.html). A planta não
 representa a geometria final das barragens; ela comunica a posição relativa das hipóteses

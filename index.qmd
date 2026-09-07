@@ -87,6 +87,8 @@ calibradas não devem ser apresentados como desempenho garantido de uma barragem
 - [Base preliminar de danos por município](06_resultados/tabelas/atlas_danos_municipios.csv)
 - [KMZ de pontos exploratórios](06_resultados/GIS/eixos_exploratorios_propostos.kmz)
 - [Planta regional das alternativas HEC-RAS 1D](06_resultados/VALIDACAO/MAPA_ALTERNATIVAS_HEC_PLANTA.png)
+- [Planta didática do ponto de partida do TR](06_resultados/VALIDACAO/MAPA_ALTERNATIVAS_PONTO_PARTIDA_TR.png)
+- [Perfil didático do ponto de partida do TR](06_resultados/VALIDACAO/PERFIL_ALTERNATIVAS_PONTO_PARTIDA_TR.png)
 - [Mapa interativo com hidrografia, municípios e ruas](06_resultados/GIS/mapa_interativo_alternativas.html)
 - [Prompt de continuidade para o Codex do Saulo](https://github.com/sedec-dpm-cgnat/euroclima-estrela/blob/main/PROMPT_CONTINUIDADE_SAULO_CODEX.md)
 

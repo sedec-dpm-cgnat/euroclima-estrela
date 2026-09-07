@@ -325,6 +325,234 @@ def save_guapore_map(layers, structures):
     plt.close(fig)
 
 
+def save_tr_start_map(layers, structures):
+    """Planta didática do conjunto inicial recomendado para o TR."""
+    base = layers["municipios"]
+    extent_objects = gpd.GeoDataFrame(
+        pd.concat(
+            [
+                base,
+                structures["eixos"][structures["eixos"]["codigo"].isin(["E02", "E04", "E08", "E12"])],
+                structures["guapore"],
+                structures["forqueta"],
+            ],
+            ignore_index=True,
+        ),
+        geometry="geometry",
+        crs=CRS_MAP,
+    )
+    fig, ax = plt.subplots(figsize=(15, 9.5), dpi=320)
+    fig.subplots_adjust(left=0.01, right=0.99, bottom=0.09, top=0.86)
+    add_map_context(
+        ax,
+        layers,
+        structures,
+        municipality_names=CORREDOR,
+        scale_x=0.78,
+        plot_structures=False,
+    )
+    xmin, xmax, ymin, ymax = map_extent(extent_objects, 20000)
+    ax.set_xlim(xmin, xmax)
+    ax.set_ylim(ymin, ymax)
+
+    colors = {
+        "E02": "#00897b",
+        "E04": "#00897b",
+        "E08": "#2563eb",
+        "E12": "#d97706",
+    }
+    roles = {
+        "E02": "HEC-01",
+        "E04": "HEC-01",
+        "E08": "HEC-02",
+        "E12": "HEC-03",
+    }
+    main = structures["eixos"][structures["eixos"]["codigo"].isin(colors)].copy()
+    main.plot(
+        ax=ax,
+        color=main["codigo"].map(colors),
+        marker="o",
+        markersize=70,
+        edgecolor="white",
+        linewidth=0.9,
+        zorder=24,
+    )
+    for _, row in main.iterrows():
+        ax.annotate(
+            f"{row['codigo']}\n{roles[row['codigo']]}",
+            (row.geometry.x, row.geometry.y),
+            xytext=(7, 7),
+            textcoords="offset points",
+            fontsize=9.5,
+            fontweight="bold",
+            color=colors[row["codigo"]],
+            zorder=25,
+        )
+
+    lateral = pd.concat(
+        [
+            structures["guapore"].assign(hec="HEC-04"),
+            structures["forqueta"][structures["forqueta"]["codigo"].isin(["FQ2-PROPOSTO", "FQ1-PROPOSTO"])].assign(
+                hec=structures["forqueta"][structures["forqueta"]["codigo"].isin(["FQ2-PROPOSTO", "FQ1-PROPOSTO"])]["codigo"].map(
+                    {"FQ2-PROPOSTO": "HEC-05", "FQ1-PROPOSTO": "HEC-06"}
+                )
+            ),
+        ],
+        ignore_index=True,
+    )
+    lateral = gpd.GeoDataFrame(lateral, geometry="geometry", crs=CRS_MAP)
+    lateral_colors = {"GU1-PROPOSTO": "#7c3aed", "FQ2-PROPOSTO": "#db2777", "FQ1-PROPOSTO": "#b45309"}
+    lateral.plot(
+        ax=ax,
+        color=lateral["codigo"].map(lateral_colors),
+        marker="D",
+        markersize=76,
+        edgecolor="white",
+        linewidth=0.9,
+        zorder=25,
+    )
+    for _, row in lateral.iterrows():
+        lateral_offsets = {
+            "GU1-PROPOSTO": (8, -26),
+            "FQ2-PROPOSTO": (-62, 9),
+            "FQ1-PROPOSTO": (10, -24),
+        }
+        ax.annotate(
+            f"{row['codigo'].replace('-PROPOSTO', '')}\n{row['hec']} · lateral",
+            (row.geometry.x, row.geometry.y),
+            xytext=lateral_offsets.get(row["codigo"], (7, 7)),
+            textcoords="offset points",
+            fontsize=8.5,
+            fontweight="bold",
+            color=lateral_colors[row["codigo"]],
+            zorder=26,
+        )
+
+    existing = structures["usinas"][structures["usinas"]["nome"].isin(["Monte Claro", "Castro Alves", "14 de Julho"])].copy()
+    existing.plot(ax=ax, color="#111827", marker="^", markersize=62, edgecolor="white", linewidth=0.8, zorder=27)
+    for _, row in existing.iterrows():
+        ax.annotate(row["nome"], (row.geometry.x, row.geometry.y), xytext=(6, -14), textcoords="offset points", fontsize=8.5, color="#111827", zorder=28)
+
+    handles = [
+        Line2D([0], [0], color="#0b5fa5", lw=2.3, label="Rio Taquari / Antas"),
+        Line2D([0], [0], color="#117a65", lw=2.3, label="Rio Forqueta"),
+        Line2D([0], [0], color="#7c3aed", lw=2.3, label="Rio Guaporé"),
+        Line2D([0], [0], marker="o", color="w", markerfacecolor="#00897b", markersize=9, label="Base HEC-01: E02 + E04"),
+        Line2D([0], [0], marker="o", color="w", markerfacecolor="#2563eb", markersize=9, label="Extensão HEC-02: + E08"),
+        Line2D([0], [0], marker="o", color="w", markerfacecolor="#d97706", markersize=9, label="Extensão HEC-03: + E12"),
+        Line2D([0], [0], marker="D", color="w", markerfacecolor="#7c3aed", markersize=9, label="Prioridade lateral HEC-04: GU1"),
+        Line2D([0], [0], marker="D", color="w", markerfacecolor="#db2777", markersize=9, label="Sensibilidade HEC-05: FQ2"),
+        Line2D([0], [0], marker="D", color="w", markerfacecolor="#b45309", markersize=9, label="Sensibilidade HEC-06: FQ1 / comportas"),
+        Line2D([0], [0], marker="^", color="w", markerfacecolor="#111827", markersize=9, label="Usina existente / restrição"),
+    ]
+    ax.legend(handles=handles, loc="lower left", fontsize=8.2, framealpha=0.95, ncol=2)
+    ax.set_title("Conjunto inicial de alternativas para o Termo de Referência — planta", fontsize=17, fontweight="bold", pad=16)
+    fig.text(0.5, 0.935, "A matriz HEC-00–HEC-06 começa pela situação atual e avança do eixo principal para as contribuições laterais", ha="center", fontsize=10.5, color="#4b5563")
+    fig.text(0.5, 0.018, "Os pontos indicam hipóteses de estudo, não obras selecionadas. A geometria final depende de levantamento, remanso, segurança, ambiente e viabilidade.", ha="center", fontsize=8.5, color="#4b5563")
+    fig.savefig(OUT / "MAPA_ALTERNATIVAS_PONTO_PARTIDA_TR.png", facecolor="white")
+    plt.close(fig)
+
+
+def _profile_projection(profile, latitudes, longitudes):
+    xy = profile[["x_utm", "y_utm"]].to_numpy(float)
+    points = gpd.GeoDataFrame(
+        geometry=gpd.points_from_xy(longitudes, latitudes),
+        crs=CRS_WGS,
+    ).to_crs(CRS_MAP)
+    arr = np.column_stack([points.geometry.x, points.geometry.y])
+    d2 = ((arr[:, None, :] - xy[None, :, :]) ** 2).sum(axis=2)
+    idx = d2.argmin(axis=1)
+    nearest = profile.iloc[idx].reset_index(drop=True)
+    return nearest["dist_km"].to_numpy(float), nearest["cota_m"].to_numpy(float)
+
+
+def save_tr_start_profile(structures):
+    """Perfil longitudinal focado na cascata e na ordem da matriz HEC."""
+    profile = pd.read_csv(ROOT / "06_resultados" / "CLAUDE" / "claude_perfil_principal.csv", sep=";", decimal=",")
+    profile = profile.sort_values("dist_km").reset_index(drop=True)
+    selected_codes = ["E02", "E04", "E08", "E12"]
+    axes = structures["eixos"][structures["eixos"]["codigo"].isin(selected_codes)].copy().reset_index(drop=True)
+    axes["dist_km"], axes["cota_perfil_m"] = _profile_projection(profile, axes["lat"], axes["lon"])
+    revised = pd.read_csv(ROOT / "06_resultados" / "CLAUDE" / "claude_altura_admissivel_revisada.csv", sep=";", decimal=",")
+    axes = axes.merge(revised[["eixo", "altura_max_m"]], left_on="codigo", right_on="eixo", how="left")
+    axes["cota_topo_triagem_m"] = axes["cota_eixo_m"] + axes["altura_max_m"]
+
+    existing = structures["usinas"][structures["usinas"]["nome"].isin(["Monte Claro", "Castro Alves", "14 de Julho"])].copy().reset_index(drop=True)
+    existing["dist_km"], existing["cota_perfil_m"] = _profile_projection(profile, existing["lat"], existing["lon"])
+    existing["cota_inventario_m"] = pd.to_numeric(existing["cota_terreno_m"], errors="coerce").fillna(existing["cota_perfil_m"])
+
+    focus = profile[(profile["dist_km"] >= 225) & (profile["dist_km"] <= 390)]
+    fig = plt.figure(figsize=(16, 11), dpi=300)
+    gs = fig.add_gridspec(2, 1, height_ratios=[3.9, 1.35], hspace=0.16)
+    ax = fig.add_subplot(gs[0])
+    ax.fill_between(focus["dist_km"], focus["cota_m"], 0, color="#eadfcd", alpha=0.9)
+    ax.plot(focus["dist_km"], focus["cota_m"], color="#5b4a34", lw=2.2, label="talvegue / perfil do MDE")
+
+    for _, row in existing.iterrows():
+        ax.vlines(row["dist_km"], row["cota_perfil_m"], row["cota_inventario_m"], color="#475569", lw=3.2, alpha=0.9)
+        ax.scatter(row["dist_km"], row["cota_inventario_m"], marker="^", s=70, color="#111827", edgecolor="white", linewidth=0.7, zorder=8)
+        ax.annotate(row["nome"], (row["dist_km"], row["cota_inventario_m"]), xytext=(0, 8), textcoords="offset points", ha="center", va="bottom", rotation=90, fontsize=8.5, color="#334155")
+
+    colors = {"E02": "#00897b", "E04": "#00897b", "E08": "#2563eb", "E12": "#d97706"}
+    case = {"E02": "HEC-01", "E04": "HEC-01", "E08": "HEC-02", "E12": "HEC-03"}
+    for _, row in axes.sort_values("dist_km").iterrows():
+        color = colors[row["codigo"]]
+        ax.vlines(row["dist_km"], row["cota_perfil_m"], row["cota_topo_triagem_m"], color=color, lw=5, alpha=0.76, zorder=7)
+        ax.scatter(row["dist_km"], row["cota_eixo_m"], marker="o", s=45, color=color, edgecolor="white", linewidth=0.7, zorder=9)
+        ax.scatter(row["dist_km"], row["cota_topo_triagem_m"], marker="D", s=55, color=color, edgecolor="white", linewidth=0.7, zorder=9)
+        ax.annotate(
+            f"{row['codigo']} · {case[row['codigo']]}\naltura máx. triagem = {row['altura_max_m']:.1f} m",
+            (row["dist_km"], row["cota_topo_triagem_m"]),
+            xytext=(0, 8),
+            textcoords="offset points",
+            ha="center",
+            va="bottom",
+            fontsize=8.5,
+            color=color,
+            fontweight="bold",
+        )
+
+    legend = [
+        Line2D([0], [0], color="#5b4a34", lw=2.2, label="Talvegue / perfil do MDE"),
+        Line2D([0], [0], color="#475569", lw=3, marker="^", markerfacecolor="#111827", markeredgecolor="white", label="Usina existente / restrição"),
+        Line2D([0], [0], color="#00897b", lw=4, marker="D", markerfacecolor="#00897b", markeredgecolor="white", label="E02 + E04 — HEC-01"),
+        Line2D([0], [0], color="#2563eb", lw=4, marker="D", markerfacecolor="#2563eb", markeredgecolor="white", label="E08 — extensão HEC-02"),
+        Line2D([0], [0], color="#d97706", lw=4, marker="D", markerfacecolor="#d97706", markeredgecolor="white", label="E12 — extensão HEC-03"),
+    ]
+    ax.legend(handles=legend, loc="upper right", fontsize=9, framealpha=0.95)
+    ax.set_xlim(225, 390)
+    ax.set_ylim(0, 455)
+    ax.grid(axis="y", color="#d6d3d1", lw=0.7)
+    ax.set_xlabel("Distância ao longo do perfil principal (km), montante → jusante")
+    ax.set_ylabel("Cota (m)")
+    ax.set_title("Conjunto inicial de alternativas para o Termo de Referência — perfil", fontsize=17, fontweight="bold", pad=14)
+
+    tab = fig.add_subplot(gs[1])
+    tab.axis("off")
+    rows = [
+        ["1", "HEC-00 / REF", "situação atual", "calibração do modelo e curva cota–dano"],
+        ["2", "HEC-01", "E02 + E04", "1º arranjo com obra no eixo principal"],
+        ["3", "HEC-02", "E02 + E04 + E08", "ganho incremental; verificar cascata"],
+        ["4", "HEC-03", "E02 + E04 + E12", "cobertura terminal; verificar 14 de Julho"],
+        ["5", "HEC-04", "ALT-J + GU1", "ramo lateral independente do Guaporé"],
+        ["6", "HEC-05 / HEC-06", "Forqueta FQ2; FQ1/comportas", "sensibilidades laterais e operação"],
+    ]
+    table = tab.table(cellText=rows, colLabels=["Ordem", "Plano", "Composição", "Por que entra no TR"], loc="center", cellLoc="left", colLoc="center", colWidths=[0.07, 0.19, 0.28, 0.46], bbox=[0.015, 0.03, 0.97, 0.92])
+    table.auto_set_font_size(False)
+    table.set_fontsize(8.6)
+    table.scale(1, 1.4)
+    for (row, col), cell in table.get_celld().items():
+        if row == 0:
+            cell.set_facecolor("#3f536b")
+            cell.set_text_props(color="white", weight="bold")
+        elif row % 2 == 0:
+            cell.set_facecolor("#f1f4f7")
+    tab.set_title("Sequência de partida — GU1 e Forqueta entram como afluências laterais e não aparecem como eixos no perfil principal", fontsize=10, pad=5)
+    fig.text(0.5, 0.012, "A definição final depende do HEC-RAS 1D calibrado, topobatimetria, operação, remanso, segurança, impactos e análise custo-benefício.", ha="center", fontsize=8.5, color="#4b5563")
+    fig.savefig(OUT / "PERFIL_ALTERNATIVAS_PONTO_PARTIDA_TR.png", bbox_inches="tight", facecolor="white")
+    plt.close(fig)
+
+
 def raster_bounds_wgs(path: Path):
     with rasterio.open(path) as src:
         bounds = src.bounds
@@ -512,6 +740,8 @@ def main():
     save_regional_map(layers, structures)
     save_forqueta_map(layers, structures)
     save_guapore_map(layers, structures)
+    save_tr_start_map(layers, structures)
+    save_tr_start_profile(structures)
     save_hand_maps(layers, structures)
     save_leaflet(layers, structures)
     print("Cartografia atualizada:")
@@ -519,6 +749,8 @@ def main():
         OUT / "MAPA_ALTERNATIVAS_HEC_PLANTA.png",
         OUT / "MAPA_EIXOS_FORQUETA.png",
         OUT / "MAPA_EIXO_GUAPORE_TRIAGEM.png",
+        OUT / "MAPA_ALTERNATIVAS_PONTO_PARTIDA_TR.png",
+        OUT / "PERFIL_ALTERNATIVAS_PONTO_PARTIDA_TR.png",
         OUT / "MAPA_HAND_SEM_VS_ALTJ.png",
         OUT / "MAPA_HAND_DIFERENCA_ALTJ.png",
         OUT / "REDUCAO_MANCHA_HAND_ALTJ_MUNICIPIOS.png",

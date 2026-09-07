@@ -56,6 +56,26 @@ discrepância entre a cota de Monte Claro no MDE principal e a CAV oficial está
 [Conciliação preliminar do datum de Monte Claro](06_resultados/VALIDACAO/CONCILIACAO_DATUM_MONTE_CLARO.md)
 e deve ser resolvida antes de fechar a altura admissível de E09.
 
+## Conjunto inicial para o Termo de Referência
+
+Para que a contratação não comece com um universo excessivamente amplo nem antecipe uma
+decisão de implantação, o ponto de partida recomendado é a matriz **HEC-00–HEC-06**. A
+planta abaixo mostra os seis grupos espaciais que merecem entrar na primeira especificação:
+E02 e E04 como base do eixo principal; E08 e E12 como extensões incrementais; GU1 como
+hipótese independente no Guaporé; e FQ2 como alternativa lateral no Forqueta. FQ1,
+comportas, MC2, CA2, 14J2 e demais eixos permanecem como sensibilidades, a serem abertas
+quando os dados e a calibração justificarem.
+
+![Planta didática do conjunto inicial de alternativas para o Termo de Referência.](06_resultados/VALIDACAO/MAPA_ALTERNATIVAS_PONTO_PARTIDA_TR.png){#fig-mapa-ponto-partida-tr width=100%}
+
+![Perfil didático da cascata e da sequência de alternativas que inicia a modelagem HEC-RAS 1D.](06_resultados/VALIDACAO/PERFIL_ALTERNATIVAS_PONTO_PARTIDA_TR.png){#fig-perfil-ponto-partida-tr width=100%}
+
+O perfil não atribui altura de projeto às barragens: as hastes coloridas apenas representam o
+envelope de altura admissível usado na triagem e tornam visíveis as restrições de Castro Alves,
+Monte Claro e 14 de Julho. GU1 e Forqueta não aparecem como barragens no perfil principal porque
+entram no modelo como ramos e afluências laterais. O HEC-00, sem novos reservatórios, é a
+referência obrigatória antes dos demais cenários.
+
 ### Volume nominal e volume efetivamente utilizado
 
 O volume da tabela anterior é a capacidade nominal de espera derivada das CAVs. Na rodada C1–C4,

@@ -45,6 +45,8 @@ finais do estudo.
 | 13 | Comparação custo × dano evitado × energia × incerteza | criar na síntese |
 | 14 | Mapa final da alternativa recomendada/selecionada | somente após HEC-RAS 1D e danos |
 | 15 | Perfil e coordenadas de pontos exploratórios CA2, MC2, 14J2 e EST1 | `VALIDACAO/PERFIL_EIXOS_EXPLORATORIOS.png`; `GIS/eixos_exploratorios_propostos.kmz` |
+| 16 | Planta didática do conjunto inicial para o TR: E02/E04, E08, E12, GU1 e Forqueta | `VALIDACAO/MAPA_ALTERNATIVAS_PONTO_PARTIDA_TR.png` |
+| 17 | Perfil didático da cascata, envelopes de altura admissível e sequência HEC-00–HEC-06 | `VALIDACAO/PERFIL_ALTERNATIVAS_PONTO_PARTIDA_TR.png` |
 
 E02 e E04 são candidatos prioritários na triagem, mas a expressão “alternativa
 selecionada” só deve ser usada depois da validação hidráulica, dos danos,
