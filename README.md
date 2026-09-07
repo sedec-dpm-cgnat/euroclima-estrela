@@ -25,6 +25,7 @@ Departamento de Prevenção e Mitigação de Desastres — DPM
 07_python/10_eixos_cascata.py       # lê os eixos do KMZ, delineia, CAV, geometria, topologia
 07_python/08_manchas_hand.py        # manchas de inundação com e sem barragem (HAND + Manning)
 07_python/09_perfil_divisao_quedas.py  # perfil longitudinal do talvegue
+07_python/49_cartografia_publica.py # mapas PNG contextualizados e mapa Leaflet
 
 02_R/00_config.R                    # parâmetros do estudo
 02_R/01_baixa_dados_ana.R           # séries fluviométricas ANA/HidroWeb
@@ -36,6 +37,10 @@ Departamento de Prevenção e Mitigação de Desastres — DPM
 ```
 
 O pipeline é **genérico**: basta acrescentar eixos ao KMZ e rodar `10_eixos_cascata.py` novamente — a numeração, a topologia e as curvas são refeitas automaticamente.
+
+Os mapas de comunicação são gerados por `49_cartografia_publica.py`. A planta regional e os mapas de Forqueta, Guaporé e HAND incorporam norte, escala, municípios, rodovias e a rede hidrográfica BHO/ANA. O mesmo script gera o mapa interativo em `06_resultados/GIS/mapa_interativo_alternativas.html`, com base de ruas OpenStreetMap, pop-ups e camadas ativáveis. A base OSM é apenas cartográfica; as geometrias analíticas permanecem nas fontes locais do projeto.
+
+Para retomar a execução pelo outro ambiente Codex, use o [prompt de continuidade do Saulo](PROMPT_CONTINUIDADE_SAULO_CODEX.md). Ele contém o estado técnico, a matriz HEC-RAS 1D, as salvaguardas de dados e o roteiro para o Termo de Referência.
 
 ## Eixos avaliados
 

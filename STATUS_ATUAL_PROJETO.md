@@ -1,7 +1,22 @@
 # STATUS ATUAL — Projeto EUROCLIMA+ / AECID
 
-**Atualizado em:** 01/08/2026  
-**Diretório de trabalho:** `C:/Users/cassi/OneDrive/Documents/SEDEC/PROJETO_EUROCLIMA`
+**Atualizado em:** 07/09/2026
+**Diretório de trabalho:** `C:/Users/cassi/OneDrive/Documents/SEDEC/PROJETO_EUROCLIMA/05_MODELAGEM`
+
+## Retomada — 07/09/2026
+
+O site Quarto foi publicado e está acessível em
+`https://sedec-dpm-cgnat.github.io/euroclima-estrela-site/`. O repositório técnico
+`euroclima-estrela` continua privado e o conteúdo publicado é a saída estática
+gerada em `docs/`.
+
+O próximo passo técnico é a montagem do HEC-RAS 1D, começando pelo HEC-00 sem
+obras e depois pelo HEC-01 (E02 + E04). A auditoria registrada em
+`06_resultados/VALIDACAO/AUDITORIA_CONTORNOS_HECRAS.md` encontrou 256,7 km² a
+explicar no fechamento preliminar das áreas e confirmou que o C01 disponível
+continua sendo uma série de triagem, não uma condição de contorno calibrada.
+Ainda faltam séries efluentes por nó, seções topobatimétricas, cadastro de
+pontes, dados de jusante e a curva cota–dano.
 
 ## Decisões metodológicas fixadas
 
@@ -153,7 +168,9 @@ HEC-RAS 1D, regra operativa validada e teste com a área-alvo de 19.440 km².
   `logos/`, `referencias.qmd` e saída `docs/`;
 - decisões, métodos, dados, resultados e limitações documentados com links para os artefatos;
 - logos DPM e Proteção e Defesa Civil preservadas; logo da UFF excluída;
-- publicação no GitHub Pages permanece pendente de revisão final, commit e push.
+- publicação concluída em `https://sedec-dpm-cgnat.github.io/euroclima-estrela-site/`;
+  a próxima publicação ocorrerá somente após a atualização técnica do HEC-RAS,
+  danos e custo-benefício.
 
 ### 5. Novas entregas incorporadas nesta versão
 
@@ -298,3 +315,30 @@ O primeiro caso com obra, portanto, é **E02 + E04**. Nenhum arranjo está selec
 para implantação antes do HEC-RAS 1D, da curva cota–dano e da análise de custo,
 energia, segurança e remanso. O diagrama está em
 `06_resultados/VALIDACAO/DIAGRAMA_TOPOLOGICO_ALTERNATIVAS_HECRAS.svg`.
+
+### Avaliação do gerador Kirsch–Nowak — 07/09/2026
+
+Foi avaliado o gerador estocástico localizado em
+`Ajumar/Kirsch-Nowak_Streamflow_Generator-master`. Ele é adequado como **C7 —
+ensemble probabilístico** para séries diárias multissítio correlacionadas, frequência de
+excedência, coincidência de picos, volume, duração, energia e danos. Não substitui C3/C4
+nem o HEC-RAS 1D: assume estacionariedade, não gera escala subdiária e não representa
+diretamente comportas, remanso ou pontes.
+
+A avaliação está em `06_resultados/AVALIACAO_KIRSCH_NOWAK_EUROCLIMA.md`. O próximo passo
+é auditar as séries ANA/DPM e preparar componentes não aninhados de Antas, Forqueta e
+Guaporé, sem dupla contagem. Só depois da validação estatística o ensemble deve ser usado
+para atualizar custo-benefício ou selecionar alternativa.
+
+### Relatório consolidado e manchas HAND — 07/09/2026
+
+Foi criado `09-relatorio-consolidado.qmd`, reunindo o histórico da análise, a leitura
+imparcial dos resultados, a comparação preliminar de manchas HAND sem novas barragens e
+com ALT-J, a matriz HEC-00–HEC-06, a hipótese de diques/soluções híbridas e o plano de
+continuidade. A triagem espacial resultou em 288,4 km² sem novas barragens e 245,4 km²
+com ALT-J, redução de 43,0 km² (14,9%) no corredor; em Estrela, 30,77 para 24,60 km²
+(20,1%). Esses números são HAND, não manchas hidráulicas finais.
+
+O relatório foi renderizado e a saída estática foi publicada no site público. As figuras
+estão em `06_resultados/VALIDACAO/MAPA_HAND_SEM_VS_ALTJ.png`,
+`MAPA_HAND_DIFERENCA_ALTJ.png` e `REDUCAO_MANCHA_HAND_ALTJ_MUNICIPIOS.png`.

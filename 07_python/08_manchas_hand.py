@@ -226,10 +226,23 @@ for i in range(n_trechos):
 log(f"  {len(rating)} trechos validos")
 
 # =============================================================== 4. cenarios
-Q_PICO_ESTRELA = 18000.0
-AREA_ESTRELA   = 19440.0
-EIXO_AREA_KM2  = 15457.0     # B1 (EIXO-A)
-Q_EFLUENTE_B1  = 2600.0      # efluente de pico da barragem seca de 90 m
+# Os valores podem ser sobrescritos para uma rodada de sensibilidade sem alterar
+# o comportamento histórico do script. A saída recebe HAND_OUT_TAG quando definido.
+Q_PICO_ESTRELA = float(os.environ.get("HAND_Q_PICO", "18000.0"))
+AREA_ESTRELA   = float(os.environ.get("HAND_AREA_ESTRELA", "19440.0"))
+EIXO_AREA_KM2  = float(os.environ.get("HAND_EIXO_AREA", "15457.0"))
+Q_EFLUENTE_B1  = float(os.environ.get("HAND_Q_EFLUENTE", "2600.0"))
+CENARIO_COM    = os.environ.get("HAND_CENARIO_COM", "com_barragem_B1_90m")
+NOME_COM       = os.environ.get("HAND_NOME_COM", "B1 90 m seca")
+OUT_TAG        = os.environ.get("HAND_OUT_TAG", "")
+
+def caminho_saida(stem, ext):
+    sufixo = f"_{OUT_TAG}" if OUT_TAG else ""
+    return os.path.join(D_GIS, f"{stem}{sufixo}{ext}")
+
+def caminho_tabela(stem, ext):
+    sufixo = f"_{OUT_TAG}" if OUT_TAG else ""
+    return os.path.join(D_TAB, f"{stem}{sufixo}{ext}")
 
 def q_de_area(a, cenario):
     q_nat = Q_PICO_ESTRELA * (a / AREA_ESTRELA) ** 0.85
@@ -238,7 +251,7 @@ def q_de_area(a, cenario):
     a_livre = a - EIXO_AREA_KM2
     return Q_EFLUENTE_B1 + Q_PICO_ESTRELA * (a_livre / AREA_ESTRELA) ** 0.85
 
-CENARIOS = ["sem_barragem", "com_barragem_B1_90m"]
+CENARIOS = ["sem_barragem", CENARIO_COM]
 
 log("rasterizando corredor...")
 _m = gdal.GetDriverByName("MEM").Create("", NX, NY, 1, gdal.GDT_Byte)
@@ -289,15 +302,15 @@ for cen in CENARIOS:
     manchas[cen] = prof.copy()
     a = (prof > 0).sum() * cell / 1e6
     log(f"  area inundada: {a:,.1f} km2 | prof. media {np.nanmean(prof[prof>0]):.2f} m")
-    salva_raster(prof, os.path.join(D_GIS, f"mancha_{cen}.tif"))
+    salva_raster(prof, caminho_saida(f"mancha_{cen}", ".tif"))
 
-pd.DataFrame(perfil).to_csv(os.path.join(D_TAB, "perfil_linha_dagua.csv"),
+pd.DataFrame(perfil).to_csv(caminho_tabela("perfil_linha_dagua", ".csv"),
                             index=False, sep=";", decimal=",")
 
-dif = np.where((manchas["sem_barragem"] > 0) & (manchas["com_barragem_B1_90m"] <= 0), 1,
-      np.where((manchas["sem_barragem"] > 0) & (manchas["com_barragem_B1_90m"] > 0), 2,
+dif = np.where((manchas["sem_barragem"] > 0) & (manchas[CENARIO_COM] <= 0), 1,
+      np.where((manchas["sem_barragem"] > 0) & (manchas[CENARIO_COM] > 0), 2,
                -9999)).astype(np.float32)
-salva_raster(dif, os.path.join(D_GIS, "mancha_diferenca.tif"))
+salva_raster(dif, caminho_saida("mancha_diferenca", ".tif"))
 
 # ------------------------------------------------------ estatisticas municipais
 log("estatisticas por municipio...")
@@ -313,10 +326,10 @@ for _, mr in sel.iterrows():
     mk = mm.GetRasterBand(1).ReadAsArray().ravel().astype(bool)
     vv = None; os.remove(tp)
     a0 = ((manchas["sem_barragem"] > 0) & mk).sum() * cell / 1e6
-    a1 = ((manchas["com_barragem_B1_90m"] > 0) & mk).sum() * cell / 1e6
+    a1 = ((manchas[CENARIO_COM] > 0) & mk).sum() * cell / 1e6
     if a0 <= 0: continue
     p0 = float(np.nanmean(manchas["sem_barragem"][(manchas["sem_barragem"] > 0) & mk]))
-    p1 = (float(np.nanmean(manchas["com_barragem_B1_90m"][(manchas["com_barragem_B1_90m"] > 0) & mk]))
+    p1 = (float(np.nanmean(manchas[CENARIO_COM][(manchas[CENARIO_COM] > 0) & mk]))
           if a1 > 0 else 0.0)
     regs.append(dict(municipio=mr.NM_MUN, area_mun_km2=round(mr.AREA_KM2, 1),
                      inund_sem_km2=round(a0, 2), inund_com_km2=round(a1, 2),
@@ -324,7 +337,7 @@ for _, mr in sel.iterrows():
                      reducao_pct=round(100 * (1 - a1 / a0), 1) if a0 > 0 else 0,
                      prof_media_sem_m=round(p0, 2), prof_media_com_m=round(p1, 2)))
 est = pd.DataFrame(regs).sort_values("inund_sem_km2", ascending=False)
-est.to_csv(os.path.join(D_TAB, "manchas_por_municipio.csv"), index=False, sep=";", decimal=",")
+est.to_csv(caminho_tabela("manchas_por_municipio", ".csv"), index=False, sep=";", decimal=",")
 
 # ----------------------------------------------------------------- poligonos
 log("vetorizando...")
@@ -346,15 +359,15 @@ for cen in CENARIOS:
     g["area_km2"] = round(g.to_crs(UTM22).area.sum() / 1e6, 2)
     pol.append(g[["cenario", "area_km2", "geometry"]])
 gpd.GeoDataFrame(pd.concat(pol, ignore_index=True), crs=UTM22).to_file(
-    os.path.join(D_GIS, "manchas.gpkg"), layer="manchas", driver="GPKG")
+    caminho_saida("manchas", ".gpkg"), layer="manchas", driver="GPKG")
 
 print("\n" + "=" * 92)
 print("MANCHAS DE INUNDACAO — EVENTO DE REFERENCIA")
 print("=" * 92)
 a0 = (manchas["sem_barragem"] > 0).sum() * cell / 1e6
-a1 = (manchas["com_barragem_B1_90m"] > 0).sum() * cell / 1e6
+a1 = (manchas[CENARIO_COM] > 0).sum() * cell / 1e6
 print(f"  sem barragem ................. {a0:8,.1f} km2")
-print(f"  com barragem B1 90 m seca .... {a1:8,.1f} km2")
+print(f"  com {NOME_COM:<24} {a1:8,.1f} km2")
 print(f"  REDUCAO ...................... {a0-a1:8,.1f} km2  ({100*(1-a1/a0):.1f}%)")
 print("\n" + "=" * 92)
 print("POR MUNICIPIO")

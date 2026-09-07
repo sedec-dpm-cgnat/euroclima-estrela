@@ -22,6 +22,23 @@
 5. revisar o HTML, as imagens, links de download e referências;
 6. registrar o commit e a versão dos dados.
 
+## Cartografia para comunicação
+
+O script `07_python/49_cartografia_publica.py` gera as figuras cartográficas
+usadas no relatório e a planta regional das alternativas destinadas à triagem
+no HEC-RAS 1D. As figuras estáticas usam a malha municipal, rodovias e a
+hidrografia BHO/ANA disponíveis no acervo local; incluem norte, escala e
+rótulos para facilitar a leitura. O mesmo script gera o mapa Leaflet em
+`06_resultados/GIS/mapa_interativo_alternativas.html`, que acrescenta a base
+de ruas do OpenStreetMap e permite ativar ou desativar municípios, cidades,
+rios, rodovias, eixos existentes e pontos exploratórios.
+
+Os pontos de cidade nas figuras são pontos representativos dos polígonos
+municipais, usados para rotulagem cartográfica. Eles não substituem a
+localização oficial de sedes urbanas. A base OSM é uma camada de referência
+visual e requer conexão para carregar os tiles; não participa dos cálculos de
+HAND, hidrologia ou HEC-RAS.
+
 ## Arquivos de auditoria
 
 - [HANDOFF](HANDOFF.md)

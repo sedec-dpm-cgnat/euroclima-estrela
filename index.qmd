@@ -23,7 +23,7 @@ segurança de barragens, licenciamento ambiental ou projeto básico.
 | Instituição | Departamento de Prevenção e Mitigação de Desastres |
 | Projeto | EUROCLIMA+ / AECID |
 | Área de estudo | Rio Taquari–Antas, com foco no controle de cheias em Estrela/RS |
-| Data da versão | 02 de agosto de 2026 |
+  | Data da versão | 07 de setembro de 2026 |
 | Status | Triagem técnica preliminar; resultados sujeitos a validação |
 
 ## Como este relatório funciona {.unnumbered}
@@ -74,16 +74,21 @@ calibradas não devem ser apresentados como desempenho garantido de uma barragem
 | [HEC-RAS 1D](06-hecras-1d.qmd) | Matriz HEC-00–HEC-06, topologia, insumos e lacunas |
 | [Danos e economia](07-danos-economia.qmd) | Atlas de Desastres, exposição e curva cota–dano preliminar |
 | [Conclusões e próximos passos](08-conclusoes.qmd) | O que já pode ser afirmado e o que precisa ser contratado |
+| [Relatório consolidado e plano de continuidade](09-relatorio-consolidado.qmd) | Visão completa, manchas HAND, alternativas HEC-RAS 1D, diques e decisões |
 
 ## Arquivos centrais {.unnumbered}
 
 - [Nota técnica em Markdown](06_resultados/NOTA_TECNICA_PRELIMINAR_BARRAGENS.md)
+- [Relatório consolidado e plano de continuidade](09-relatorio-consolidado.qmd)
 - [Status atualizado](STATUS_ATUAL_PROJETO.md)
 - [Handoff completo](HANDOFF.md)
 - [Roteiro do HEC-RAS 1D](06_resultados/CLAUDE/CLAUDE_ROTEIRO_HECRAS_1D.md)
 - [Catálogo consolidado de CAVs](06_resultados/tabelas/catalogo_cavs.csv)
 - [Base preliminar de danos por município](06_resultados/tabelas/atlas_danos_municipios.csv)
 - [KMZ de pontos exploratórios](06_resultados/GIS/eixos_exploratorios_propostos.kmz)
+- [Planta regional das alternativas HEC-RAS 1D](06_resultados/VALIDACAO/MAPA_ALTERNATIVAS_HEC_PLANTA.png)
+- [Mapa interativo com hidrografia, municípios e ruas](06_resultados/GIS/mapa_interativo_alternativas.html)
+- [Prompt de continuidade para o Codex do Saulo](https://github.com/sedec-dpm-cgnat/euroclima-estrela/blob/main/PROMPT_CONTINUIDADE_SAULO_CODEX.md)
 
 ::: {.callout-note}
 ## Template visual

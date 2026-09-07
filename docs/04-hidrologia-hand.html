@@ -166,6 +166,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Conclusões e próximos passos</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-relatorio-consolidado.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Relatório consolidado, leitura imparcial e plano de continuidade</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -218,7 +224,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#uso-do-hand" id="toc-uso-do-hand" class="nav-link" data-scroll-target="#uso-do-hand"><span class="header-section-number">4.8</span> Uso do HAND</a></li>
   <li><a href="#o-que-foi-calculado-e-o-que-não-foi" id="toc-o-que-foi-calculado-e-o-que-não-foi" class="nav-link" data-scroll-target="#o-que-foi-calculado-e-o-que-não-foi"><span class="header-section-number">4.9</span> O que foi calculado e o que não foi</a></li>
   <li><a href="#preparação-para-o-hec-ras-1d" id="toc-preparação-para-o-hec-ras-1d" class="nav-link" data-scroll-target="#preparação-para-o-hec-ras-1d"><span class="header-section-number">4.10</span> Preparação para o HEC-RAS 1D</a></li>
-  <li><a href="#limitações-da-rodada-hidrológica" id="toc-limitações-da-rodada-hidrológica" class="nav-link" data-scroll-target="#limitações-da-rodada-hidrológica"><span class="header-section-number">4.11</span> Limitações da rodada hidrológica</a></li>
+  <li><a href="#gerador-estocástico-de-séries-uso-complementar" id="toc-gerador-estocástico-de-séries-uso-complementar" class="nav-link" data-scroll-target="#gerador-estocástico-de-séries-uso-complementar"><span class="header-section-number">4.11</span> Gerador estocástico de séries — uso complementar</a></li>
+  <li><a href="#limitações-da-rodada-hidrológica" id="toc-limitações-da-rodada-hidrológica" class="nav-link" data-scroll-target="#limitações-da-rodada-hidrológica"><span class="header-section-number">4.12</span> Limitações da rodada hidrológica</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sedec-dpm-cgnat/euroclima-estrela/edit/main/04-hidrologia-hand.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/sedec-dpm-cgnat/euroclima-estrela/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></nav>
     </div>
@@ -494,8 +501,14 @@ Figura&nbsp;4.6: Eixos exploratórios de retenção no rio Forqueta.
 <h2 data-number="4.10" class="anchored" data-anchor-id="preparação-para-o-hec-ras-1d"><span class="header-section-number">4.10</span> Preparação para o HEC-RAS 1D</h2>
 <p>Depois da triagem, o eixo principal deve ser modelado em HEC-RAS 1D com seções transversais, pontes, confluências, rugosidades, condições de contorno e estruturas de controle. A preparação preliminar já está descrita no <a href="./06-hecras-1d.html">capítulo de HEC-RAS 1D</a>. A ordem operacional está fixada em <strong>HEC-00 sem obra → HEC-01 (E02 + E04) → HEC-02 (E02 + E04 + E08) → HEC-03 (E02 + E04 + E12)</strong>. Somente depois entram HEC-04 (ALT-J + GU1), HEC-05 (ALT-J + FQ2) e as sensibilidades de rede. O diagrama <a href="06_resultados/VALIDACAO/DIAGRAMA_TOPOLOGICO_ALTERNATIVAS_HECRAS.svg">topológico</a> mostra quais entradas são estruturas do rio principal e quais são afluências laterais.</p>
 </section>
-<section id="limitações-da-rodada-hidrológica" class="level2" data-number="4.11">
-<h2 data-number="4.11" class="anchored" data-anchor-id="limitações-da-rodada-hidrológica"><span class="header-section-number">4.11</span> Limitações da rodada hidrológica</h2>
+<section id="gerador-estocástico-de-séries-uso-complementar" class="level2" data-number="4.11">
+<h2 data-number="4.11" class="anchored" data-anchor-id="gerador-estocástico-de-séries-uso-complementar"><span class="header-section-number">4.11</span> Gerador estocástico de séries — uso complementar</h2>
+<p>Foi avaliada a aplicação do gerador <strong>Kirsch–Nowak</strong>, disponível no material local <code>Ajumar/Kirsch-Nowak_Streamflow_Generator-master</code>. O método gera séries diárias multissítio correlacionadas: primeiro cria totais mensais por transformação logarítmica, normalização e Cholesky; depois desagrega cada mês para a escala diária por vizinhos históricos e reescalonamento proporcional. A <a href="06_resultados/AVALIACAO_KIRSCH_NOWAK_EUROCLIMA.md">avaliação técnica detalhada</a> registra a adaptação proposta para Antas, Forqueta e Guaporé.</p>
+<p>O gerador é útil para construir um ensemble longo e estudar frequência de excedência, coincidência de picos, volume, duração, confiabilidade do volume de espera e distribuição de energia/danos. Ele não substitui a calibração do evento de referência: a versão principal assume estacionariedade, produz dados diários e não representa diretamente comportas, remanso, pontes ou a hidrodinâmica do HEC-RAS 1D.</p>
+<p>No EUROCLIMA, ele deve ser usado como módulo probabilístico posterior à auditoria das séries e anterior à seleção dos casos do HEC-RAS. Os postos devem representar componentes hidrológicos compatíveis com a topologia, e não ser somados como bacias independentes quando forem aninhados. A primeira rodada recomendada é de diagnóstico estatístico; só depois os eventos sintéticos devem alimentar o roteamento CAV/comportas.</p>
+</section>
+<section id="limitações-da-rodada-hidrológica" class="level2" data-number="4.12">
+<h2 data-number="4.12" class="anchored" data-anchor-id="limitações-da-rodada-hidrológica"><span class="header-section-number">4.12</span> Limitações da rodada hidrológica</h2>
 <ul>
 <li>hidrogramas sintéticos ainda não substituem a modelagem hidráulica calibrada;</li>
 <li>a defasagem central medida do Forqueta é 0 dia, mas não cobre o evento de novembro de 2023;</li>

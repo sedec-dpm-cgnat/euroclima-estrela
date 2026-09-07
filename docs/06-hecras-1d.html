@@ -166,6 +166,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Conclusões e próximos passos</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-relatorio-consolidado.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Relatório consolidado, leitura imparcial e plano de continuidade</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -206,7 +212,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#papel-do-modelo" id="toc-papel-do-modelo" class="nav-link active" data-scroll-target="#papel-do-modelo"><span class="header-section-number">6.1</span> Papel do modelo</a></li>
-  <li><a href="#insumos-preliminares-prontos" id="toc-insumos-preliminares-prontos" class="nav-link" data-scroll-target="#insumos-preliminares-prontos"><span class="header-section-number">6.2</span> Insumos preliminares prontos</a></li>
+  <li><a href="#insumos-preliminares-prontos" id="toc-insumos-preliminares-prontos" class="nav-link" data-scroll-target="#insumos-preliminares-prontos"><span class="header-section-number">6.2</span> Insumos preliminares prontos</a>
+  <ul class="collapse">
+  <li><a href="#auditoria-dos-contornos-antes-da-montagem-do-modelo" id="toc-auditoria-dos-contornos-antes-da-montagem-do-modelo" class="nav-link" data-scroll-target="#auditoria-dos-contornos-antes-da-montagem-do-modelo"><span class="header-section-number">6.2.1</span> Auditoria dos contornos antes da montagem do modelo</a></li>
+  </ul></li>
   <li><a href="#dados-que-ainda-faltam" id="toc-dados-que-ainda-faltam" class="nav-link" data-scroll-target="#dados-que-ainda-faltam"><span class="header-section-number">6.3</span> Dados que ainda faltam</a></li>
   <li><a href="#roteiro-de-modelagem" id="toc-roteiro-de-modelagem" class="nav-link" data-scroll-target="#roteiro-de-modelagem"><span class="header-section-number">6.4</span> Roteiro de modelagem</a></li>
   <li><a href="#matriz-de-cenários-que-será-testada-no-hec-ras-1d" id="toc-matriz-de-cenários-que-será-testada-no-hec-ras-1d" class="nav-link" data-scroll-target="#matriz-de-cenários-que-será-testada-no-hec-ras-1d"><span class="header-section-number">6.5</span> Matriz de cenários que será testada no HEC-RAS 1D</a>
@@ -286,7 +295,24 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+<div id="fig-planta-alternativas-hec" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-planta-alternativas-hec-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="06_resultados/VALIDACAO/MAPA_ALTERNATIVAS_HEC_PLANTA.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-planta-alternativas-hec-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6.1: Planta regional das alternativas e entradas que serão verificadas no HEC-RAS 1D.
+</figcaption>
+</figure>
+</div>
+<p>Para localizar ruas, cidades e afluentes com maior detalhe, consulte o <a href="06_resultados/GIS/mapa_interativo_alternativas.html">mapa interativo com camadas ativáveis</a>. A planta não representa a geometria final das barragens; ela comunica a posição relativa das hipóteses que serão verificadas.</p>
+<section id="auditoria-dos-contornos-antes-da-montagem-do-modelo" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="auditoria-dos-contornos-antes-da-montagem-do-modelo"><span class="header-section-number">6.2.1</span> Auditoria dos contornos antes da montagem do modelo</h3>
+<p>A auditoria dos insumos confirmou que o HEC-RAS 1D ainda não deve ser executado como se o hidrograma agregado de Estrela fosse simultaneamente a entrada de montante e a base para as afluências laterais. O hidrograma calibrado de C4 tem pico de 16.299 m³/s e está associado à seção de análise de 19.440 km²; ele é candidato ao limite de montante do HEC-00 somente após a confirmação dessa seção.</p>
+<p>O fechamento preliminar das áreas também deixou 256,7 km² a explicar entre o limite de jusante informado (23.699 km²) e a soma do limite de montante com as seis laterais localizadas (23.442,3 km²). Essa diferença será resolvida antes da calibração para evitar dupla contagem de contribuições. O C01/E02+E04 disponível ainda é da rodada de triagem sintética e não será usado como condição final do HEC-01.</p>
+<p>A memória auditável e o manifesto de preparação estão em <a href="06_resultados/VALIDACAO/AUDITORIA_CONTORNOS_HECRAS.md">AUDITORIA_CONTORNOS_HECRAS.md</a> e <a href="03_HECRAS/contornos_preliminares/manifesto_contornos_hecras.csv">manifesto_contornos_hecras.csv</a>.</p>
 <p>O talvegue preliminar varia de 22,0 m a 13,5 m, com declividade média aproximada de 0,216 m/km no trecho geral. A declividade dos últimos 10 km foi estimada em cerca de 6,3 × 10⁻⁵ m/m, sinal de possível controle por remanso.</p>
+</section>
 </section>
 <section id="dados-que-ainda-faltam" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="dados-que-ainda-faltam"><span class="header-section-number">6.3</span> Dados que ainda faltam</h2>
@@ -402,7 +428,7 @@ ul.task-list li input[type="checkbox"] {
 <img src="06_resultados/VALIDACAO/DIAGRAMA_TOPOLOGICO_ALTERNATIVAS_HECRAS.svg" class="img-fluid figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topologia-hecras-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;6.1: Diagrama topológico da rede e da sequência de entrada no HEC-RAS 1D.
+Figura&nbsp;6.2: Diagrama topológico da rede e da sequência de entrada no HEC-RAS 1D.
 </figcaption>
 </figure>
 </div>

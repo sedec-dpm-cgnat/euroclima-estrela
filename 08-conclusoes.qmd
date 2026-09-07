@@ -15,12 +15,12 @@
   ser tratado como escolha definitiva antes do HEC-RAS 1D.
 - A curva cota–dano é o elo que transforma redução de vazão em benefício social e deve ser
   construída em conjunto com a calibração hidráulica.
-- O Forqueta não deve entrar na alternativa de referência nesta rodada, mas isso não é descarte
-  do tributário: como conflui antes de Estrela, ele permanece como sensibilidade condicionada
-  para Lajeado, Estrela e Bom Retiro do Sul. Com a série observada
-  do posto 86745000, FQ1 acrescentou 0,7 ponto percentual e FQ2 1,1 ponto percentual à
-  redução de ALT-J em Estrela; além disso, os dois eixos são mutuamente exclusivos por cota.
-  FQ1 permanece condicionado à confirmação da defasagem no evento de novembro de 2023.
+- O Forqueta não deve ser descartado: como conflui antes de Estrela, permanece como
+  alternativa lateral condicionada para Lajeado, Estrela e Bom Retiro do Sul. Com a série
+  observada do posto 86745000, FQ1 acrescentou 0,7 ponto percentual e FQ2 1,1 ponto
+  percentual à redução de ALT-J em Estrela; além disso, os dois eixos são mutuamente
+  exclusivos por cota. FQ1 permanece condicionado à confirmação da defasagem no evento de
+  novembro de 2023.
 - A matriz combinada com ALT-A–ALT-J confirmou que o melhor cenário preliminar é ALT-J + FQ2,
   sob regra de barragem seca: aproximadamente 6.802 m³/s em Estrela, ainda 2.802 m³/s acima
   do limiar provisório de 4.000 m³/s. Portanto, incluir o Forqueta melhora o resultado, mas

@@ -18,6 +18,31 @@ ele não substitui esta etapa.
 | Contornos | 1 conjunto preliminar | [claude_hecras_contornos.csv](06_resultados/CLAUDE/claude_hecras_contornos.csv) |
 | Tributário Forqueta | contribuição lateral no trecho de Lajeado/Estrela; FQ1/FQ2 são alternativas exclusivas | [eixos_forqueta_propostos.kmz](06_resultados/GIS/eixos_forqueta_propostos.kmz) |
 
+![Planta regional das alternativas e entradas que serão verificadas no HEC-RAS 1D.](06_resultados/VALIDACAO/MAPA_ALTERNATIVAS_HEC_PLANTA.png){#fig-planta-alternativas-hec width=100%}
+
+Para localizar ruas, cidades e afluentes com maior detalhe, consulte o [mapa interativo
+com camadas ativáveis](06_resultados/GIS/mapa_interativo_alternativas.html). A planta não
+representa a geometria final das barragens; ela comunica a posição relativa das hipóteses
+que serão verificadas.
+
+### Auditoria dos contornos antes da montagem do modelo
+
+A auditoria dos insumos confirmou que o HEC-RAS 1D ainda não deve ser executado como
+se o hidrograma agregado de Estrela fosse simultaneamente a entrada de montante e a
+base para as afluências laterais. O hidrograma calibrado de C4 tem pico de 16.299 m³/s
+e está associado à seção de análise de 19.440 km²; ele é candidato ao limite de
+montante do HEC-00 somente após a confirmação dessa seção.
+
+O fechamento preliminar das áreas também deixou 256,7 km² a explicar entre o limite de
+jusante informado (23.699 km²) e a soma do limite de montante com as seis laterais
+localizadas (23.442,3 km²). Essa diferença será resolvida antes da calibração para
+evitar dupla contagem de contribuições. O C01/E02+E04 disponível ainda é da rodada
+de triagem sintética e não será usado como condição final do HEC-01.
+
+A memória auditável e o manifesto de preparação estão em
+[AUDITORIA_CONTORNOS_HECRAS.md](06_resultados/VALIDACAO/AUDITORIA_CONTORNOS_HECRAS.md)
+e [manifesto_contornos_hecras.csv](03_HECRAS/contornos_preliminares/manifesto_contornos_hecras.csv).
+
 O talvegue preliminar varia de 22,0 m a 13,5 m, com declividade média aproximada de
 0,216 m/km no trecho geral. A declividade dos últimos 10 km foi estimada em cerca de
 6,3 × 10⁻⁵ m/m, sinal de possível controle por remanso.

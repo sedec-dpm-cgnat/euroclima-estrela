@@ -234,6 +234,27 @@ ordem operacional está fixada em **HEC-00 sem obra → HEC-01 (E02 + E04) → H
 [topológico](06_resultados/VALIDACAO/DIAGRAMA_TOPOLOGICO_ALTERNATIVAS_HECRAS.svg)
 mostra quais entradas são estruturas do rio principal e quais são afluências laterais.
 
+## Gerador estocástico de séries — uso complementar
+
+Foi avaliada a aplicação do gerador **Kirsch–Nowak**, disponível no material local
+`Ajumar/Kirsch-Nowak_Streamflow_Generator-master`. O método gera séries diárias
+multissítio correlacionadas: primeiro cria totais mensais por transformação logarítmica,
+normalização e Cholesky; depois desagrega cada mês para a escala diária por vizinhos
+históricos e reescalonamento proporcional. A [avaliação técnica detalhada](06_resultados/AVALIACAO_KIRSCH_NOWAK_EUROCLIMA.md)
+registra a adaptação proposta para Antas, Forqueta e Guaporé.
+
+O gerador é útil para construir um ensemble longo e estudar frequência de excedência,
+coincidência de picos, volume, duração, confiabilidade do volume de espera e distribuição
+de energia/danos. Ele não substitui a calibração do evento de referência: a versão
+principal assume estacionariedade, produz dados diários e não representa diretamente
+comportas, remanso, pontes ou a hidrodinâmica do HEC-RAS 1D.
+
+No EUROCLIMA, ele deve ser usado como módulo probabilístico posterior à auditoria das
+séries e anterior à seleção dos casos do HEC-RAS. Os postos devem representar componentes
+hidrológicos compatíveis com a topologia, e não ser somados como bacias independentes
+quando forem aninhados. A primeira rodada recomendada é de diagnóstico estatístico; só
+depois os eventos sintéticos devem alimentar o roteamento CAV/comportas.
+
 ## Limitações da rodada hidrológica
 
 - hidrogramas sintéticos ainda não substituem a modelagem hidráulica calibrada;

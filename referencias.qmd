@@ -31,6 +31,12 @@
 - ANADEM. Modelo digital de elevação adotado para o recorte detalhado, com resolução,
   sistema de referência e data de acesso a registrar na versão contratada.
 
+## Séries sintéticas
+
+- Giuliani, M.; Herman, J.; Quinn, J. [Kirsch–Nowak Streamflow Generator](https://github.com/julianneq/Kirsch-Nowak_Streamflow_Generator).
+- Kirsch, B. R.; Characklis, G. W.; Zeff, H. B. (2013). *Evaluating the impact of alternative hydro-climate scenarios on transfer agreements: Practical improvement for generating synthetic streamflows*. Journal of Water Resources Planning and Management, 139(4), 396–406. [DOI 10.1061/(ASCE)WR.1943-5452.0000287](https://doi.org/10.1061/(ASCE)WR.1943-5452.0000287).
+- Nowak, K.; Prairie, J.; Rajagopalan, B.; Lall, U. (2010). *A nonparametric stochastic approach for multisite disaggregation of annual to daily streamflow*. Water Resources Research, 46(8). [DOI 10.1029/2009WR008530](https://doi.org/10.1029/2009WR008530).
+
 ## Nota sobre atualização
 
 As referências acima compõem a base metodológica da nota. A versão final deve acrescentar

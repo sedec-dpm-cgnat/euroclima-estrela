@@ -1,0 +1,6 @@
+componente;plano;situacao;arquivo_base;uso;restricao
+montante;HEC-00;hidrograma calibrado disponível;06_resultados/CLAUDE/claude_c4_hidrogramas_calibrado.csv;candidato a entrada no limite de 19.440 km²;confirmar que o domínio começa exatamente na seção de 19.440 km²
+montante;HEC-01;efluente nodal ainda não disponível;06_resultados/CLAUDE/claude_c4_roteamento_calibrado.csv;não usar o pico agregado de Estrela como efluente de E02/E04;gerar séries efluentes por nó para E02 e E04
+laterais;HEC-00;"áreas localizadas; séries não consolidadas";06_resultados/CLAUDE/claude_hecras_contornos.csv;Forqueta e demais tributários entram concentrados nas confluências;obter ou transpor hidrogramas com defasagem explícita
+jusante;HEC-00;normal depth preliminar;06_resultados/CLAUDE/claude_hecras_contornos.csv;apenas teste de sensibilidade;curva-chave, nível observado ou domínio estendido
+HEC-01;HEC-01;triagem antiga disponível, não calibrada;06_resultados/tabelas/hidrogramas_cascatas_comportas_triagem.csv;controle de ordem de grandeza, não entrada final;substituir por C1/C4 com efluentes nodais calibrados

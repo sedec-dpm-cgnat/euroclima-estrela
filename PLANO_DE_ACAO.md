@@ -1,7 +1,7 @@
 # Plano de Ação — Fechamento do TR e Simulações Preliminares
 
 **Projeto EUROCLIMA+ / AECID — Estudo técnico Estrela/RS**
-Atualizado em 30/07/2026
+Atualizado em 07/09/2026
 
 ---
 
@@ -20,9 +20,9 @@ Atualizado em 30/07/2026
 | CAV oficial SNIRH/ANA | ✅ 3 UHEs; completar demais reservatórios |
 | CAV dos 12 eixos novos | ✅ MDE natural, interpolação monotônica a 1 m |
 | Simulação preliminar de amortecimento | ✅ concluída (Puls) |
-| Modelo HEC-RAS 1D | ⏳ a montar |
+| Modelo HEC-RAS 1D | ⚠️ insumos preliminares e auditoria de contornos prontos; projeto/calibração pendentes |
 | FloodAdapt | ⏳ a montar |
-| Site Quarto documentando a análise no GitHub | ⏳ estrutura a criar; logos DPM e Defesa Civil obrigatórias |
+| Site Quarto documentando a análise no GitHub | ✅ publicado em `sedec-dpm-cgnat.github.io/euroclima-estrela-site` |
 
 ---
 

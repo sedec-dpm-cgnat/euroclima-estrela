@@ -686,3 +686,39 @@ E02+E04+E12. O diagrama reproduzível está em
 `06_resultados/VALIDACAO/DIAGRAMA_TOPOLOGICO_ALTERNATIVAS_HECRAS.svg`.
 Nenhuma alternativa deve ser chamada de selecionada antes da validação do HEC-RAS 1D,
 da curva cota–dano e dos custos, benefícios, remanso, energia e segurança.
+
+### 6.19 Retomada do projeto — auditoria dos contornos — 07/09/2026
+
+O site Quarto foi publicado em `https://sedec-dpm-cgnat.github.io/euroclima-estrela-site/`.
+O repositório técnico continua privado; a publicação é a saída estática de `docs/`.
+
+Foi criada a auditoria `06_resultados/VALIDACAO/AUDITORIA_CONTORNOS_HECRAS.md` e o
+manifesto `03_HECRAS/contornos_preliminares/manifesto_contornos_hecras.csv`. A
+auditoria confirmou que o hidrograma calibrado de C4 tem pico de 16.299 m³/s e está
+associado à seção de análise de 19.440 km². O C01/E02+E04 disponível ainda é uma
+rodada sintética de triagem, com pico de 9.217 m³/s, e não deve ser usado como
+condição final de montante do HEC-01.
+
+O fechamento preliminar das áreas deixou 256,7 km² a explicar entre o limite de
+jusante informado e a soma do limite de montante com as seis laterais. Antes da
+execução do HEC-00, deve-se confirmar a seção de 19.440 km², fechar esse balanço,
+gerar as séries laterais com defasagem e definir a condição de jusante. Para o
+HEC-01, ainda é necessário produzir os efluentes nodais calibrados de E02 e E04;
+não usar o hidrograma agregado de Estrela como substituto.
+
+### 6.20 Avaliação do gerador Kirsch–Nowak — 07/09/2026
+
+Foi localizada a pasta indicada pelo usuário em
+`C:\Users\cassi\OneDrive\Documents\Ajumar\Kirsch-Nowak_Streamflow_Generator-master`.
+O gerador é um método MATLAB para séries diárias sintéticas multissítio: gera totais
+mensais correlacionados por Cholesky e os desagrega para diária por k-NN e
+reescalonamento de padrões históricos. A avaliação detalhada está em
+`06_resultados/AVALIACAO_KIRSCH_NOWAK_EUROCLIMA.md`.
+
+A decisão metodológica é incorporá-lo como **C7 — ensemble probabilístico**, para
+frequência de excedência, coincidência de picos, volume, duração, energia e danos. Ele
+não substitui a rodada C3/C4 nem o HEC-RAS 1D: assume estacionariedade, produz série
+diária e não representa diretamente comportas, remanso ou pontes. O primeiro passo é
+auditar e harmonizar as séries ANA/DPM e montar componentes não aninhados de Antas,
+Forqueta e Guaporé, sem dupla contagem. A validação estatística deve preceder qualquer
+uso do ensemble em custo-benefício ou seleção final de alternativa.

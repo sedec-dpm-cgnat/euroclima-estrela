@@ -166,6 +166,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Conclusões e próximos passos</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-relatorio-consolidado.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Relatório consolidado, leitura imparcial e plano de continuidade</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -207,7 +213,8 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#estrutura" id="toc-estrutura" class="nav-link active" data-scroll-target="#estrutura"><span class="header-section-number">B.1</span> Estrutura</a></li>
   <li><a href="#pipeline-mínimo" id="toc-pipeline-mínimo" class="nav-link" data-scroll-target="#pipeline-mínimo"><span class="header-section-number">B.2</span> Pipeline mínimo</a></li>
-  <li><a href="#arquivos-de-auditoria" id="toc-arquivos-de-auditoria" class="nav-link" data-scroll-target="#arquivos-de-auditoria"><span class="header-section-number">B.3</span> Arquivos de auditoria</a></li>
+  <li><a href="#cartografia-para-comunicação" id="toc-cartografia-para-comunicação" class="nav-link" data-scroll-target="#cartografia-para-comunicação"><span class="header-section-number">B.3</span> Cartografia para comunicação</a></li>
+  <li><a href="#arquivos-de-auditoria" id="toc-arquivos-de-auditoria" class="nav-link" data-scroll-target="#arquivos-de-auditoria"><span class="header-section-number">B.4</span> Arquivos de auditoria</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sedec-dpm-cgnat/euroclima-estrela/edit/main/91-reprodutibilidade.qmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li><li><a href="https://github.com/sedec-dpm-cgnat/euroclima-estrela/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li></ul></div></nav>
     </div>
@@ -289,8 +296,13 @@ ul.task-list li input[type="checkbox"] {
 <li>registrar o commit e a versão dos dados.</li>
 </ol>
 </section>
-<section id="arquivos-de-auditoria" class="level2" data-number="B.3">
-<h2 data-number="B.3" class="anchored" data-anchor-id="arquivos-de-auditoria"><span class="header-section-number">B.3</span> Arquivos de auditoria</h2>
+<section id="cartografia-para-comunicação" class="level2" data-number="B.3">
+<h2 data-number="B.3" class="anchored" data-anchor-id="cartografia-para-comunicação"><span class="header-section-number">B.3</span> Cartografia para comunicação</h2>
+<p>O script <code>07_python/49_cartografia_publica.py</code> gera as figuras cartográficas usadas no relatório e a planta regional das alternativas destinadas à triagem no HEC-RAS 1D. As figuras estáticas usam a malha municipal, rodovias e a hidrografia BHO/ANA disponíveis no acervo local; incluem norte, escala e rótulos para facilitar a leitura. O mesmo script gera o mapa Leaflet em <code>06_resultados/GIS/mapa_interativo_alternativas.html</code>, que acrescenta a base de ruas do OpenStreetMap e permite ativar ou desativar municípios, cidades, rios, rodovias, eixos existentes e pontos exploratórios.</p>
+<p>Os pontos de cidade nas figuras são pontos representativos dos polígonos municipais, usados para rotulagem cartográfica. Eles não substituem a localização oficial de sedes urbanas. A base OSM é uma camada de referência visual e requer conexão para carregar os tiles; não participa dos cálculos de HAND, hidrologia ou HEC-RAS.</p>
+</section>
+<section id="arquivos-de-auditoria" class="level2" data-number="B.4">
+<h2 data-number="B.4" class="anchored" data-anchor-id="arquivos-de-auditoria"><span class="header-section-number">B.4</span> Arquivos de auditoria</h2>
 <ul>
 <li><a href="HANDOFF.md">HANDOFF</a></li>
 <li><a href="STATUS_ATUAL_PROJETO.md">status do projeto</a></li>

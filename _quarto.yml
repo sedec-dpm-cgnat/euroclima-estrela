@@ -19,7 +19,7 @@ book:
   author:
     - "Cássio Guilherme Rampinelli — DPM/SEDEC/MIDR"
     - "Saulo Aires de Souza, PhD — DPM/SEDEC/MIDR"
-  date: "30/07/2026"
+  date: "07/09/2026"
   date-format: "DD/MM/YYYY"
   repo-url: https://github.com/sedec-dpm-cgnat/euroclima-estrela
   repo-actions: [edit, issue]
@@ -39,6 +39,7 @@ book:
     - 06-hecras-1d.qmd
     - 07-danos-economia.qmd
     - 08-conclusoes.qmd
+    - 09-relatorio-consolidado.qmd
   appendices:
     - 90-limitacoes.qmd
     - 91-reprodutibilidade.qmd
