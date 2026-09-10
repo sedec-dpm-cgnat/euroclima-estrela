@@ -220,7 +220,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#hidrogramas-com-e-sem-reservatórios" id="toc-hidrogramas-com-e-sem-reservatórios" class="nav-link" data-scroll-target="#hidrogramas-com-e-sem-reservatórios"><span class="header-section-number">4.4</span> Hidrogramas com e sem reservatórios</a></li>
   <li><a href="#rodada-calibrada-c1c4" id="toc-rodada-calibrada-c1c4" class="nav-link" data-scroll-target="#rodada-calibrada-c1c4"><span class="header-section-number">4.5</span> Rodada calibrada C1–C4</a></li>
   <li><a href="#eixos-de-retenção-no-forqueta" id="toc-eixos-de-retenção-no-forqueta" class="nav-link" data-scroll-target="#eixos-de-retenção-no-forqueta"><span class="header-section-number">4.6</span> Eixos de retenção no Forqueta</a></li>
-  <li><a href="#busca-ampliada-de-barragens" id="toc-busca-ampliada-de-barragens" class="nav-link" data-scroll-target="#busca-ampliada-de-barragens"><span class="header-section-number">4.7</span> Busca ampliada de barragens</a></li>
+  <li><a href="#busca-ampliada-de-barragens" id="toc-busca-ampliada-de-barragens" class="nav-link" data-scroll-target="#busca-ampliada-de-barragens"><span class="header-section-number">4.7</span> Busca ampliada de barragens</a>
+  <ul class="collapse">
+  <li><a href="#hidrogramas-associados-à-matriz-hec-00hec-06" id="toc-hidrogramas-associados-à-matriz-hec-00hec-06" class="nav-link" data-scroll-target="#hidrogramas-associados-à-matriz-hec-00hec-06"><span class="header-section-number">4.7.1</span> Hidrogramas associados à matriz HEC-00–HEC-06</a></li>
+  </ul></li>
   <li><a href="#uso-do-hand" id="toc-uso-do-hand" class="nav-link" data-scroll-target="#uso-do-hand"><span class="header-section-number">4.8</span> Uso do HAND</a></li>
   <li><a href="#o-que-foi-calculado-e-o-que-não-foi" id="toc-o-que-foi-calculado-e-o-que-não-foi" class="nav-link" data-scroll-target="#o-que-foi-calculado-e-o-que-não-foi"><span class="header-section-number">4.9</span> O que foi calculado e o que não foi</a></li>
   <li><a href="#preparação-para-o-hec-ras-1d" id="toc-preparação-para-o-hec-ras-1d" class="nav-link" data-scroll-target="#preparação-para-o-hec-ras-1d"><span class="header-section-number">4.10</span> Preparação para o HEC-RAS 1D</a></li>
@@ -461,7 +464,7 @@ Figura&nbsp;4.4: Rodada calibrada C1–C4: carteira completa e evento natural.
 <p>Foi realizada uma busca exaustiva das adições possíveis à ALT-J. As 32 carteiras com E10 excluído, o envelope teórico de 64 carteiras incluindo E10 e as 192 combinações com FQ1/FQ2 não produziram nenhum pico inferior a 4.000 m³/s. O melhor resultado continua sendo ALT-J + FQ2, sob regra de barragem seca, com aproximadamente <strong>6.802 m³/s</strong> em Estrela.</p>
 <p>Essa repetição do pico para as adições E03, E06, E07, E09 e E11 decorre da topologia aninhada da rodada: com E12 presente, os eixos adicionais não ampliam a área terminal controlada no modelo simplificado. Isso não elimina seu interesse hidráulico local, mas impede apresentá-los como uma solução adicional de redução no exutório sem reformular a operação, os tempos de viagem e o modelo 1D. O E10 foi mantido apenas como envelope teórico, pois seu balanço energético preliminar é negativo.</p>
 <p>O Guaporé deve ser tratado como a próxima hipótese estrutural. Como ele não possui um eixo dedicado na carteira E01–E12, sua contribuição precisa ser desagregada do hidrograma do Antas antes de ser roteada pelo GU1; somá-la diretamente ao hidrograma atual seria dupla contagem. Os resultados e tabelas da busca estão na <a href="06_resultados/BUSCA_CARTEIRAS_AMPLIADAS_ANTAS_FORQUETA.md">síntese das carteiras ampliadas</a>.</p>
-<p>Na primeira decomposição numérica, o GU1 controlou 1.993,7 km² dos 2.486,7 km² do Guaporé. Com ALT-J e o máximo histórico do Santa Lúcia, a altura de 100 m reduziu o pico estimado em Estrela para <strong>4.532 m³/s</strong>; o envelope de 120 m não trouxe redução adicional relevante. No cenário de novembro de 2023, com vazão observada menor no Guaporé, o resultado a 120 m e defasagem zero foi <strong>4.763 m³/s</strong>. Em 384 combinações de evento, defasagem, altura, operação, ALT-J e FQ2, nenhuma ficou abaixo de 4.000 m³/s. Essa rodada confirma que GU1 merece prioridade, mas ainda não substitui a modelagem hidráulica nem autoriza a altura testada.</p>
+<p>Na primeira decomposição numérica, o GU1 controlou 1.993,7 km² dos 2.486,7 km² do Guaporé. Com ALT-J e o máximo histórico do Santa Lúcia, a altura de 100 m reduziu o pico comparável em Estrela para <strong>7.221 m³/s</strong>. O valor anterior de 4.532 m³/s não era comparável, pois a rotina então omitia indevidamente a contribuição natural do Forqueta quando nenhum eixo era ativado nesse ramo. No cenário de novembro de 2023, com vazão observada menor no Guaporé, o resultado corrigido deve ser lido com a mesma seção de controle e com o Forqueta natural mantido. Em 384 combinações de evento, defasagem, altura, operação, ALT-J e FQ2, nenhuma ficou abaixo de 4.000 m³/s. Essa rodada confirma que GU1 merece prioridade, mas ainda não substitui a modelagem hidráulica nem autoriza a altura testada.</p>
 <div id="fig-hidrogramas-combinados-hand" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hidrogramas-combinados-hand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -472,16 +475,76 @@ Figura&nbsp;4.5: Hidrogramas combinados em Estrela.
 </figcaption>
 </figure>
 </div>
+<section id="hidrogramas-associados-à-matriz-hec-00hec-06" class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="hidrogramas-associados-à-matriz-hec-00hec-06"><span class="header-section-number">4.7.1</span> Hidrogramas associados à matriz HEC-00–HEC-06</h3>
+<p>Para eliminar a ambiguidade entre a alternativa e a série que deve ser fornecida ao modelo hidráulico, a figura seguinte associa cada caso HEC ao seu hidrograma atenuado. Todas as curvas estão referidas à seção de Estrela e usam a regra seca da triagem; HEC-04 é mostrado com GU1 a 100 m apenas como envelope exploratório. Os picos servem para comparação de ordem de grandeza, não como resultado hidráulico definitivo.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th>Composição</th>
+<th style="text-align: right;">Pico preliminar em Estrela (m³/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>HEC-00</td>
+<td>situação atual, sem novos eixos</td>
+<td style="text-align: right;">16.903</td>
+</tr>
+<tr class="even">
+<td>HEC-01</td>
+<td>E02 + E04</td>
+<td style="text-align: right;">9.832</td>
+</tr>
+<tr class="odd">
+<td>HEC-02</td>
+<td>E02 + E04 + E08</td>
+<td style="text-align: right;">8.943</td>
+</tr>
+<tr class="even">
+<td>HEC-03</td>
+<td>E02 + E04 + E12</td>
+<td style="text-align: right;">7.073</td>
+</tr>
+<tr class="odd">
+<td>HEC-04</td>
+<td>ALT-J + GU1 (100 m)</td>
+<td style="text-align: right;">7.221</td>
+</tr>
+<tr class="even">
+<td>HEC-05</td>
+<td>ALT-J + FQ2</td>
+<td style="text-align: right;">6.802</td>
+</tr>
+<tr class="odd">
+<td>HEC-06</td>
+<td>ALT-J + FQ1</td>
+<td style="text-align: right;">6.877</td>
+</tr>
+</tbody>
+</table>
+<div id="fig-hidrogramas-alternativas-tr" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hidrogramas-alternativas-tr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="06_resultados/figuras/17_hidrogramas_alternativas_tr.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hidrogramas-alternativas-tr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.6: Hidrograma do evento de referência e das séries atenuadas associadas a cada caso HEC-00–HEC-06.
+</figcaption>
+</figure>
+</div>
 <div id="fig-forqueta-hidrologia" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-forqueta-hidrologia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="06_resultados/VALIDACAO/MAPA_EIXOS_FORQUETA.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-forqueta-hidrologia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;4.6: Eixos exploratórios de retenção no rio Forqueta.
+Figura&nbsp;4.7: Eixos exploratórios de retenção no rio Forqueta.
 </figcaption>
 </figure>
 </div>
+</section>
 </section>
 <section id="uso-do-hand" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="uso-do-hand"><span class="header-section-number">4.8</span> Uso do HAND</h2>

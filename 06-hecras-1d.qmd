@@ -138,6 +138,13 @@ compatíveis com 1D, a área inundada e os indicadores para a curva cota–dano.
 Os resultados de HEC-04–06 devem ser rotulados como extensão/sensibilidade até que
 as CAVs, alturas admissíveis, regras de operação e remanso sejam verificados.
 
+Como referência visual para a montagem dos planos, a figura abaixo já vincula o
+hidrograma de triagem correspondente a cada caso HEC. No modelo contratado, as curvas
+serão substituídas pelos efluentes e afluências calculados no HEC-RAS 1D, mantendo a
+mesma malha temporal e a mesma seção de comparação em Estrela.
+
+![Hidrogramas de referência e atenuados associados à matriz HEC-00–HEC-06.](06_resultados/figuras/17_hidrogramas_alternativas_tr.png){#fig-hec-hidrogramas-alternativas width=100%}
+
 ::: {.callout-important}
 ## Escopo hidráulico
 

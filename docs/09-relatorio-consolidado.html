@@ -227,7 +227,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#resultado-agregado" id="toc-resultado-agregado" class="nav-link" data-scroll-target="#resultado-agregado"><span class="header-section-number">9.3.2</span> Resultado agregado</a></li>
   <li><a href="#distribuição-municipal" id="toc-distribuição-municipal" class="nav-link" data-scroll-target="#distribuição-municipal"><span class="header-section-number">9.3.3</span> Distribuição municipal</a></li>
   </ul></li>
-  <li><a href="#alternativas-que-devem-ser-simuladas-no-hec-ras-1d" id="toc-alternativas-que-devem-ser-simuladas-no-hec-ras-1d" class="nav-link" data-scroll-target="#alternativas-que-devem-ser-simuladas-no-hec-ras-1d"><span class="header-section-number">9.4</span> Alternativas que devem ser simuladas no HEC-RAS 1D</a></li>
+  <li><a href="#alternativas-que-devem-ser-simuladas-no-hec-ras-1d" id="toc-alternativas-que-devem-ser-simuladas-no-hec-ras-1d" class="nav-link" data-scroll-target="#alternativas-que-devem-ser-simuladas-no-hec-ras-1d"><span class="header-section-number">9.4</span> Alternativas que devem ser simuladas no HEC-RAS 1D</a>
+  <ul class="collapse">
+  <li><a href="#hidrogramas-associados-aos-casos-hec" id="toc-hidrogramas-associados-aos-casos-hec" class="nav-link" data-scroll-target="#hidrogramas-associados-aos-casos-hec"><span class="header-section-number">9.4.1</span> Hidrogramas associados aos casos HEC</a></li>
+  </ul></li>
   <li><a href="#barragens-diques-e-alternativas-não-estruturais" id="toc-barragens-diques-e-alternativas-não-estruturais" class="nav-link" data-scroll-target="#barragens-diques-e-alternativas-não-estruturais"><span class="header-section-number">9.5</span> Barragens, diques e alternativas não estruturais</a></li>
   <li><a href="#análise-técnica-imparcial-neste-momento" id="toc-análise-técnica-imparcial-neste-momento" class="nav-link" data-scroll-target="#análise-técnica-imparcial-neste-momento"><span class="header-section-number">9.6</span> Análise técnica imparcial neste momento</a>
   <ul class="collapse">
@@ -382,7 +385,7 @@ Figura&nbsp;9.5: Perfil didático da cascata e da sequência de simulação de p
 <p>As hastes no perfil são envelopes de altura admissível de triagem, não cotas de projeto. A posição no perfil torna explícita a restrição da cascata Monte Claro–Castro Alves–14 de Julho; no mapa, GU1 e FQ2 aparecem em seus tributários e serão representados no HEC-RAS 1D como estruturas ou afluências laterais, conforme a geometria disponível.</p>
 <p>Para conferência detalhada, a <a href="06_resultados/GIS/mapa_interativo_alternativas.html">planta interativa com ruas, rodovias, rios, municípios, eixos e usinas</a> permite ativar e desativar as camadas. O painel <strong>Alternativas finais / TR</strong> permite marcar uma ou mais alternativas e visualizar, simultaneamente, todos os eixos de cada composição. A malha municipal e os pontos rotulados na imagem são referências territoriais; o ponto representativo do município não deve ser interpretado como o levantamento cadastral da sede urbana. A identificação de ruas depende da base OpenStreetMap carregada no mapa interativo.</p>
 <p>O Forqueta conflui a montante de Estrela e, portanto, não deve ser descartado. Ele deve entrar como contribuição lateral nos controles de Lajeado, Estrela e Bom Retiro do Sul. FQ1 e FQ2 são mutuamente exclusivos por interferência de cota; a lacuna de novembro de 2023 no posto 86745000 impede fechar a defasagem do maior evento de Estrela. O melhor resultado da matriz preliminar foi ALT-J + FQ2, com cerca de 6.802 m³/s em Estrela, ainda 2.802 m³/s acima da referência de 4.000 m³/s.</p>
-<p>O Guaporé passou a ser a hipótese estrutural independente mais promissora. O GU1 controla preliminarmente 1.993,7 km² de uma sub-bacia de 2.486,7 km². Com ALT-J, o máximo histórico do Santa Lúcia e GU1 a 100 m produziram 4.532 m³/s na triagem. É um resultado próximo da faixa-alvo, mas ainda acima dela e condicionado à desagregação correta do hidrograma para não contar novamente a contribuição do Guaporé.</p>
+<p>O Guaporé passou a ser a hipótese estrutural independente mais promissora. O GU1 controla preliminarmente 1.993,7 km² de uma sub-bacia de 2.486,7 km². Com ALT-J, o máximo histórico do Santa Lúcia e GU1 a 100 m produziram 7.221 m³/s na triagem, com a contribuição natural do Forqueta mantida na seção de Estrela. O resultado permanece acima da faixa-alvo e é condicionado à desagregação correta do hidrograma para não contar novamente a contribuição do Guaporé.</p>
 </section>
 <section id="danos-exposição-e-economia" class="level3" data-number="9.2.6">
 <h3 data-number="9.2.6" class="anchored" data-anchor-id="danos-exposição-e-economia"><span class="header-section-number">9.2.6</span> Danos, exposição e economia</h3>
@@ -643,6 +646,20 @@ Figura&nbsp;9.9: Diagrama topológico da rede e da sequência dos cenários no H
 </div>
 <p>No HEC-00, o hidrograma de montante deve coincidir com a seção associada aos 19.440 km², após o fechamento do balanço de áreas. No HEC-01–03, os efluentes de cada reservatório devem entrar no ponto nodal correspondente; não se deve usar o pico agregado de Estrela como entrada de montante e lateral ao mesmo tempo. No HEC-04 o Guaporé precisa ser retirado da parcela residual do Antas antes do roteamento. No HEC-05 o Forqueta deve entrar como afluência lateral, porque conflui antes de Estrela.</p>
 <p>Cada plano deverá entregar: hidrogramas de entrada e laterais; cotas máximas e mínimas; tempo de chegada; duração acima de patamares; profundidade; velocidade; área inundada; volume retido; níveis e volumes de cada reservatório; e indicadores de dano por município.</p>
+<section id="hidrogramas-associados-aos-casos-hec" class="level3" data-number="9.4.1">
+<h3 data-number="9.4.1" class="anchored" data-anchor-id="hidrogramas-associados-aos-casos-hec"><span class="header-section-number">9.4.1</span> Hidrogramas associados aos casos HEC</h3>
+<p>A figura abaixo apresenta, na mesma seção de comparação em Estrela, o evento de referência e o hidrograma preliminar associado a cada caso HEC. A regra adotada é a de barragem seca; HEC-04 usa GU1 a 100 m como envelope exploratório. A figura serve para documentar a associação entre alternativa e entrada hidráulica; os resultados oficiais dependerão da calibração, do remanso e da operação no HEC-RAS 1D.</p>
+<div id="fig-relatorio-hidrogramas-hec" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-relatorio-hidrogramas-hec-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="06_resultados/figuras/17_hidrogramas_alternativas_tr.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-relatorio-hidrogramas-hec-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.10: Hidrogramas do evento e das alternativas HEC-00–HEC-06 em Estrela.
+</figcaption>
+</figure>
+</div>
+</section>
 </section>
 <section id="barragens-diques-e-alternativas-não-estruturais" class="level2" data-number="9.5">
 <h2 data-number="9.5" class="anchored" data-anchor-id="barragens-diques-e-alternativas-não-estruturais"><span class="header-section-number">9.5</span> Barragens, diques e alternativas não estruturais</h2>

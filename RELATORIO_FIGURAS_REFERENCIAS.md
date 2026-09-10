@@ -47,6 +47,7 @@ finais do estudo.
 | 15 | Perfil e coordenadas de pontos exploratórios CA2, MC2, 14J2 e EST1 | `VALIDACAO/PERFIL_EIXOS_EXPLORATORIOS.png`; `GIS/eixos_exploratorios_propostos.kmz` |
 | 16 | Planta didática do conjunto inicial para o TR: E02/E04, E08, E12, GU1 e Forqueta | `VALIDACAO/MAPA_ALTERNATIVAS_PONTO_PARTIDA_TR.png` |
 | 17 | Perfil didático da cascata, envelopes de altura admissível e sequência HEC-00–HEC-06 | `VALIDACAO/PERFIL_ALTERNATIVAS_PONTO_PARTIDA_TR.png` |
+| 18 | Hidrograma do evento de referência e séries atenuadas associadas a HEC-00–HEC-06 | `figuras/17_hidrogramas_alternativas_tr.png`; dados em `tabelas/17_hidrogramas_alternativas_tr_picos.csv` |
 
 E02 e E04 são candidatos prioritários na triagem, mas a expressão “alternativa
 selecionada” só deve ser usada depois da validação hidráulica, dos danos,

@@ -191,14 +191,36 @@ atual seria dupla contagem. Os resultados e tabelas da busca estão na
 
 Na primeira decomposição numérica, o GU1 controlou 1.993,7 km² dos 2.486,7 km² do
 Guaporé. Com ALT-J e o máximo histórico do Santa Lúcia, a altura de 100 m reduziu o
-pico estimado em Estrela para **4.532 m³/s**; o envelope de 120 m não trouxe redução
-adicional relevante. No cenário de novembro de 2023, com vazão observada menor no
-Guaporé, o resultado a 120 m e defasagem zero foi **4.763 m³/s**. Em 384 combinações
+pico comparável em Estrela para **7.221 m³/s**. O valor anterior de 4.532 m³/s não era
+comparável, pois a rotina então omitia indevidamente a contribuição natural do Forqueta
+quando nenhum eixo era ativado nesse ramo. No cenário de novembro de 2023, com vazão
+observada menor no Guaporé, o resultado corrigido deve ser lido com a mesma seção de
+controle e com o Forqueta natural mantido. Em 384 combinações
 de evento, defasagem, altura, operação, ALT-J e FQ2, nenhuma ficou abaixo de 4.000 m³/s.
 Essa rodada confirma que GU1 merece prioridade, mas ainda não substitui a modelagem
 hidráulica nem autoriza a altura testada.
 
 ![Hidrogramas combinados em Estrela.](06_resultados/VALIDACAO/HIDROGRAMAS_COMBINADOS_ANTAS_FORQUETA.svg){#fig-hidrogramas-combinados-hand width=100%}
+
+### Hidrogramas associados à matriz HEC-00–HEC-06
+
+Para eliminar a ambiguidade entre a alternativa e a série que deve ser fornecida ao
+modelo hidráulico, a figura seguinte associa cada caso HEC ao seu hidrograma atenuado.
+Todas as curvas estão referidas à seção de Estrela e usam a regra seca da triagem; HEC-04
+é mostrado com GU1 a 100 m apenas como envelope exploratório. Os picos servem para
+comparação de ordem de grandeza, não como resultado hidráulico definitivo.
+
+| Caso | Composição | Pico preliminar em Estrela (m³/s) |
+|---|---|---:|
+| HEC-00 | situação atual, sem novos eixos | 16.903 |
+| HEC-01 | E02 + E04 | 9.832 |
+| HEC-02 | E02 + E04 + E08 | 8.943 |
+| HEC-03 | E02 + E04 + E12 | 7.073 |
+| HEC-04 | ALT-J + GU1 (100 m) | 7.221 |
+| HEC-05 | ALT-J + FQ2 | 6.802 |
+| HEC-06 | ALT-J + FQ1 | 6.877 |
+
+![Hidrograma do evento de referência e das séries atenuadas associadas a cada caso HEC-00–HEC-06.](06_resultados/figuras/17_hidrogramas_alternativas_tr.png){#fig-hidrogramas-alternativas-tr width=100%}
 
 ![Eixos exploratórios de retenção no rio Forqueta.](06_resultados/VALIDACAO/MAPA_EIXOS_FORQUETA.png){#fig-forqueta-hidrologia width=100%}
 

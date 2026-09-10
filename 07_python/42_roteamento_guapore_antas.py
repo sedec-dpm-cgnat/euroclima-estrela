@@ -41,6 +41,7 @@ desloca = NS["desloca"]
 rota_vertente = NS["rota_vertente"]
 T_H = NS["T_H"]
 Q_ANTAS_PICO = float(NS["Q_PICO_ANTAS"])
+Q_ANTAS_BASE = np.asarray(NS["Q_ANTAS"], dtype=float)
 Q_FQ = NS["Q_FQ"]
 Q_MARGEM = NS["Q_MARGEM"]
 Q_LIMIAR = float(NS["Q_LIMIAR"])
@@ -94,9 +95,12 @@ GEO_FQ = NS["fqg"]
 
 
 def serie_gamma_gu(pico_gu):
-    pico_rest = max(Q_ANTAS_PICO - pico_gu, 100.0)
-    q_gu = gamma_hidro(pico_gu, A_GU_TOTAL, LAMINA_MM)[1]
-    q_rest = gamma_hidro(pico_rest, A_REST, LAMINA_MM)[1]
+    # Mantém a mesma forma temporal de Q_ANTAS usada na matriz combinada.
+    # A versão anterior somava dois hidrogramas gamma independentes, alterando
+    # o pico natural e tornando o HEC-04 incomparável aos demais casos.
+    frac_gu = min(max(float(pico_gu) / Q_ANTAS_PICO, 0.0), 0.95)
+    q_gu = Q_ANTAS_BASE * frac_gu
+    q_rest = Q_ANTAS_BASE - q_gu
     return q_rest, q_gu
 
 
@@ -111,12 +115,16 @@ def branch_gu(q_gu, altura, regra):
 
 def branch_fq(q_fq, regra):
     if not q_fq:
-        return np.zeros_like(Q_FQ), 0.0, False, 0.0
+        # Sem barragem no Forqueta, a contribuição natural continua chegando
+        # a Estrela. O ramo não pode ser zerado apenas porque não foi roteado.
+        return Q_FQ.copy(), 0.0, False, 0.0
     return rota_vertente(q_fq, Q_FQ, A_FORQUETA, regra, AREA_FQ, MONT_FQ, CAV_FQ, GEO_FQ, ALT_FQ)
 
 
 rows = []
 curvas = {}
+q_natural_ref = None
+q_hec04_ref = None
 for evento, pico_gu in EVENTOS.items():
     q_rest, q_gu = serie_gamma_gu(pico_gu)
     for lag_h in (0, 6, 12, 24):
@@ -124,7 +132,10 @@ for evento, pico_gu in EVENTOS.items():
         for alt_nome, eixos_antas in ALT.items():
             for fq_nome, eixos_fq in FQ.items():
                 for regra in ("seca", "comportas"):
-                    qf_nat = Q_FQ if eixos_fq else np.zeros_like(Q_FQ)
+                    # Todas as séries desta matriz são reportadas em Estrela;
+                    # portanto o Forqueta natural permanece presente quando
+                    # não há eixo de controle nesse ramo.
+                    qf_nat = Q_FQ.copy()
                     qf_out, vf, sf, af = branch_fq(eixos_fq, regra)
                     q_natural = q_rest + q_gu_lag + qf_nat + Q_MARGEM
                     qantas_out, va, sa, aa = (
@@ -146,8 +157,14 @@ for evento, pico_gu in EVENTOS.items():
                         peak_nat = float(q_natural.max())
                         peak_out = float(q_out.max())
                         key = (evento, alt_nome, fq_nome, regra, lag_h, altura)
-                        if evento == "pico_historico_santa_lucia" and lag_h == 0 and regra == "seca" and altura in (0.0, 100.0):
-                            curvas[key] = q_out.copy()
+                        if evento == "pico_historico_santa_lucia" and lag_h == 0 and regra == "seca" and fq_nome == "SEM_FORQUETA":
+                            # O HEC-00 deve ser a série sem novas obras. A rodada
+                            # anterior guardava q_out com ALT-J e a rotulava como
+                            # natural, o que contaminava a comparação visual.
+                            if q_natural_ref is None:
+                                q_natural_ref = q_natural.copy()
+                            if alt_nome == "ALT-J" and altura == 100.0:
+                                q_hec04_ref = q_out.copy()
                         rows.append({
                             "evento_guapore": evento,
                             "pico_guapore_total_m3s": round(pico_gu, 1),
@@ -174,7 +191,29 @@ for evento, pico_gu in EVENTOS.items():
 resultado = pd.DataFrame(rows)
 resultado.to_csv(D_TAB / "roteamento_guapore_antas.csv", **WR)
 
+if q_natural_ref is None or q_hec04_ref is None:
+    raise RuntimeError("Não foi possível montar as séries de referência do HEC-00 e do HEC-04.")
+
+pd.DataFrame(
+    [
+        {"cenario": "HEC-00", "alternativa": "Situação atual — sem novos eixos", "tempo_h": t, "pico_m3s": q}
+        for t, q in zip(T_H, q_natural_ref)
+    ]
+    + [
+        {"cenario": "HEC-04", "alternativa": "ALT-J + GU1 (100 m; triagem)", "tempo_h": t, "pico_m3s": q}
+        for t, q in zip(T_H, q_hec04_ref)
+    ]
+).to_csv(D_TAB / "hidrogramas_guapore_antas.csv", **WR)
+
 validos = resultado[(resultado.altura_gu1_m > 0) & (resultado.regra_operativa == "seca")].copy()
+nov_zero_120 = resultado[
+    (resultado.evento_guapore == "novembro_2023_santa_lucia")
+    & (resultado.eixos_antas == "E02+E04+E01+E05+E08+E12")
+    & (resultado.eixos_forqueta == "SEM_FORQUETA")
+    & (resultado.regra_operativa == "seca")
+    & (resultado.defasagem_guapore_h == 0)
+    & (resultado.altura_gu1_m == 120)
+].iloc[0]
 best = validos.sort_values(["pico_resultante_estrela_m3s", "volume_total_hm3"]).iloc[0]
 best_por_evento = (
     validos.sort_values(["evento_guapore", "pico_resultante_estrela_m3s", "volume_total_hm3"])
@@ -198,7 +237,7 @@ for _, r in best_por_evento.iterrows():
 md += [
     "",
     f"No melhor cenário da rodada, **{best.eixos_antas} + {best.eixos_forqueta}**, GU1 com {best.altura_gu1_m:.0f} m e regra seca produziu {best.pico_resultante_estrela_m3s:,.0f} m³/s em Estrela, ainda {best.acima_limiar_4000_m3s:,.0f} m³/s acima do limiar preliminar. O resultado é uma triagem, pois o GU1 usa CAV sintética, pico diário transposto e não inclui remanso nem operação real das usinas Guaporé/Monte Cuco.",
-    f"A matriz contém {len(resultado)} combinações e nenhuma ficou abaixo de 4.000 m³/s. O valor de novembro de 2023 apresentado na tabela usa a defasagem que minimizou o pico nessa sensibilidade; com defasagem zero, o resultado a 120 m foi 4.763 m³/s.",
+    f"A matriz contém {len(resultado)} combinações e nenhuma ficou abaixo de 4.000 m³/s. O valor de novembro de 2023 apresentado na tabela usa a defasagem que minimizou o pico nessa sensibilidade; com defasagem zero, o resultado a 120 m foi {nov_zero_120.pico_resultante_estrela_m3s:,.0f} m³/s.",
     "",
     "A inclusão do GU1 é metodologicamente válida porque a sub-bacia foi retirada da vertente residual antes do roteamento. Não se somou o hidrograma do Guaporé ao hidrograma agregado original. A decomposição, entretanto, ainda deve ser recalibrada com séries subdiárias, transposição regional e pareamento com Muçum/Encantado/Estrela.",
     "",
@@ -211,8 +250,8 @@ def svg_plot():
     width, height = 1100, 600
     left, right, top, bottom = 80, 1040, 45, 525
     series_plot = [
-        ("natural", curvas[("pico_historico_santa_lucia", "ALT-J", "SEM_FORQUETA", "seca", 0, 0.0)], "#333333", "Natural residual + Guaporé"),
-        ("gu", curvas[("pico_historico_santa_lucia", "ALT-J", "SEM_FORQUETA", "seca", 0, 100.0)], "#1f77b4", "ALT-J + GU1 100 m"),
+        ("natural", q_natural_ref, "#333333", "HEC-00 — situação atual"),
+        ("gu", q_hec04_ref, "#7c3aed", "HEC-04 — ALT-J + GU1 100 m"),
     ]
     ymax = max(float(np.max(q)) for _, q, _, _ in series_plot + [("limiar", np.array([Q_LIMIAR]), "", "")]) * 1.08
     xmax = float(T_H[-1])

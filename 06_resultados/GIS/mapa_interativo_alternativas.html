@@ -25,6 +25,8 @@
     .alt-text strong { display:block; }
     .alt-text span { color:#4b5563; font-size:11px; }
     .alt-detail { background:#f3f4f6; border-top:1px solid #d1d5db; margin:7px -12px -10px; padding:7px 12px; color:#374151; font-size:11px; }
+    .leaflet-tooltip.alt-label { background:rgba(255,255,255,.95); border:1px solid #6b7280; border-radius:3px; color:#111827; font-size:11px; font-weight:700; line-height:1.1; padding:2px 4px; box-shadow:0 1px 2px rgba(0,0,0,.18); }
+    .leaflet-tooltip.alt-label:before { display:none; }
     .source { font-size: 12px; margin-top: 8px; }
     @media (max-width: 720px) { .wrap { padding:8px; } h1 { font-size:19px; } #map { height:650px; } .alt-control { width:235px; max-height:390px; } }
   </style>
@@ -78,7 +80,9 @@ function markerFor(feature, def) {
   const lateral = p.codigo && p.codigo.includes('-PROPOSTO');
   const marker = L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], { radius:lateral ? 8 : 7, color:def.color, fillColor:def.color, fillOpacity:.92, weight:2 });
   marker.bindPopup('<b>'+esc(def.label)+'</b><br><b>'+esc(p.codigo)+'</b> — '+esc(p.nome || 'eixo da carteira')+'<br>'+esc(p.classe || p.grupo || 'Eixo de estudo')+'<br><span style="color:#4b5563">Ponto de triagem; não é projeto executivo.</span>');
-  marker.bindTooltip(esc(p.codigo), { direction:'top', offset:[0,-5] });
+  // O código fica permanentemente visível: a leitura da alternativa não depende
+  // de passar o cursor sobre o ponto, inclusive em capturas para o relatório.
+  marker.bindTooltip(esc(p.codigo.replace('-PROPOSTO','')), { permanent:true, direction:'right', offset:[10,0], className:'alt-label', opacity:.96 });
   return marker;
 }
 for (const def of ALT_DEFS) {

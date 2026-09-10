@@ -148,9 +148,10 @@ resultado da matriz preliminar foi ALT-J + FQ2, com cerca de 6.802 m³/s em Estr
 
 O Guaporé passou a ser a hipótese estrutural independente mais promissora. O GU1 controla
 preliminarmente 1.993,7 km² de uma sub-bacia de 2.486,7 km². Com ALT-J, o máximo histórico
-do Santa Lúcia e GU1 a 100 m produziram 4.532 m³/s na triagem. É um resultado próximo da
-faixa-alvo, mas ainda acima dela e condicionado à desagregação correta do hidrograma para
-não contar novamente a contribuição do Guaporé.
+do Santa Lúcia e GU1 a 100 m produziram 7.221 m³/s na triagem, com a contribuição natural
+do Forqueta mantida na seção de Estrela. O resultado permanece acima da faixa-alvo e é
+condicionado à desagregação correta do hidrograma para não contar novamente a contribuição
+do Guaporé.
 
 ### Danos, exposição e economia
 
@@ -268,6 +269,16 @@ como afluência lateral, porque conflui antes de Estrela.
 Cada plano deverá entregar: hidrogramas de entrada e laterais; cotas máximas e mínimas;
 tempo de chegada; duração acima de patamares; profundidade; velocidade; área inundada;
 volume retido; níveis e volumes de cada reservatório; e indicadores de dano por município.
+
+### Hidrogramas associados aos casos HEC
+
+A figura abaixo apresenta, na mesma seção de comparação em Estrela, o evento de referência
+e o hidrograma preliminar associado a cada caso HEC. A regra adotada é a de barragem seca;
+HEC-04 usa GU1 a 100 m como envelope exploratório. A figura serve para documentar a
+associação entre alternativa e entrada hidráulica; os resultados oficiais dependerão da
+calibração, do remanso e da operação no HEC-RAS 1D.
+
+![Hidrogramas do evento e das alternativas HEC-00–HEC-06 em Estrela.](06_resultados/figuras/17_hidrogramas_alternativas_tr.png){#fig-relatorio-hidrogramas-hec width=100%}
 
 ## Barragens, diques e alternativas não estruturais
 

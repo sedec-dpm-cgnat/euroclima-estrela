@@ -8,12 +8,11 @@ A decomposição usa 19,440.0 km² na seção de análise, separando **2,486.7 k
 
 | Evento | Antas | Forqueta | Altura GU1 | Defasagem | Pico natural | Pico com GU1 | Redução | Excesso sobre 4.000 |
 |---|---|---|---:|---:|---:|---:|---:|---:|
-| novembro_2023_santa_lucia | E02+E04+E01+E05+E08+E12 | SEM_FORQUETA | 120 m | 24 h | 15,717 | 4,654 | 70.4% | 654 |
-| pico_historico_santa_lucia | E02+E04+E01+E05+E08+E12 | SEM_FORQUETA | 100 m | 0 h | 11,685 | 4,532 | 61.2% | 532 |
+| novembro_2023_santa_lucia | E02+E04+E01+E05+E08+E12 | FQ2 | 30 m | 24 h | 16,558 | 5,449 | 67.1% | 1,449 |
+| pico_historico_santa_lucia | E02+E04+E01+E05+E08+E12 | FQ2 | 120 m | 24 h | 15,603 | 5,551 | 64.4% | 1,551 |
 
-No melhor cenário da rodada, **E02+E04+E01+E05+E08+E12 + SEM_FORQUETA**, GU1 com 100 m e regra seca produziu 4,532 m³/s em Estrela, ainda 532 m³/s acima do limiar preliminar. O resultado é uma triagem, pois o GU1 usa CAV sintética, pico diário transposto e não inclui remanso nem operação real das usinas Guaporé/Monte Cuco.
-
-A matriz contém 384 combinações e nenhuma ficou abaixo de 4.000 m³/s. O valor de novembro de 2023 apresentado na tabela usa a defasagem de 24 h que minimizou o pico nessa sensibilidade; com defasagem zero, o resultado a 120 m foi 4.763 m³/s. A diferença reforça que a defasagem precisa ser medida ou calibrada antes de qualquer conclusão.
+No melhor cenário da rodada, **E02+E04+E01+E05+E08+E12 + FQ2**, GU1 com 30 m e regra seca produziu 5,449 m³/s em Estrela, ainda 1,449 m³/s acima do limiar preliminar. O resultado é uma triagem, pois o GU1 usa CAV sintética, pico diário transposto e não inclui remanso nem operação real das usinas Guaporé/Monte Cuco.
+A matriz contém 384 combinações e nenhuma ficou abaixo de 4.000 m³/s. O valor de novembro de 2023 apresentado na tabela usa a defasagem que minimizou o pico nessa sensibilidade; com defasagem zero, o resultado a 120 m foi 6,438 m³/s.
 
 A inclusão do GU1 é metodologicamente válida porque a sub-bacia foi retirada da vertente residual antes do roteamento. Não se somou o hidrograma do Guaporé ao hidrograma agregado original. A decomposição, entretanto, ainda deve ser recalibrada com séries subdiárias, transposição regional e pareamento com Muçum/Encantado/Estrela.
 
