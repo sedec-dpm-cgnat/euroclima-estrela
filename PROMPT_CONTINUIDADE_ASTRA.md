@@ -26,6 +26,31 @@ originais. Quando uma decisão de escopo, orçamento, licenciamento ou governan�
 estiver aberta, registre-a como **[CONFIRMAR]** e prossiga com uma alternativa
 paramétrica claramente identificada.
 
+## Pasta compartilhada de continuidade — acesso obrigatório
+
+O pacote completo desta rodada está na pasta compartilhada do Google Drive:
+
+<https://drive.google.com/drive/folders/1DgcbVVfyEdXy4dTRConMjVlB6ns1G2-u>
+
+Ao iniciar, abra essa pasta pelo conector do Google Drive ou pelo navegador
+autenticado. Baixe e extraia os dois volumes ZIP no mesmo diretório, preservando
+a estrutura interna:
+
+- `ASTRA_CONTINUIDADE_EUROCLIMA_2026-09-17_MODELO.zip`;
+- `ASTRA_CONTINUIDADE_EUROCLIMA_2026-09-17_CONTEXTO_GIS.zip`.
+
+Os arquivos `00_LEIA-ME_ASTRA.md`, este prompt e
+`TR_MINUTA_REV0C_LIMPA_HECRAS1D.docx` também estão disponíveis separadamente
+na pasta para leitura imediata. Depois de extrair os volumes, use
+`00_PACOTE_CONTINUIDADE_ASTRA_2026-09-17_DRIVE/` como raiz do pacote. Não
+procure uma pasta local com o mesmo nome antes de consultar o Drive e não crie
+uma segunda cópia de trabalho sem registrar onde ela foi extraída.
+
+Ao concluir cada rodada, salve no repositório técnico e atualize a pasta
+compartilhada apenas os resultados, scripts, logs e relatórios necessários,
+mantendo nomes versionados. Não envie credenciais, arquivos `.env`, `auth.json`,
+tokens ou chaves privadas ao Drive.
+
 ## Primeiro procedimento obrigatório
 
 Abra e leia integralmente, nesta ordem:
