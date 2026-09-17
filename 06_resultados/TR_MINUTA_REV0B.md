@@ -150,7 +150,7 @@ O escopo organiza-se em **cinco eixos técnicos**, correspondentes às atividade
 
 **2.3 — Modelo hidrológico distribuído.** Modelo chuva-vazão da bacia Taquari-Antas para geração dos hidrogramas de cheia, com discretização em sub-bacias que permita representar **separadamente as parcelas controladas e não controladas** por eventuais barragens. Deve permitir a simulação do efeito de soluções baseadas na natureza (infraestrutura verde e azul) e de controle de uso e ocupação do solo nos tributários.
 
-**2.4 — Modelo hidráulico.** Modelagem **bidimensional (2D)** obrigatória no sub-trecho refinado que compreende a área urbana de Estrela. Admite-se modelagem 1D ou 2D com malha mais grosseira no trecho estendido. Geração de mapas de **profundidade, velocidade, perigo hidrodinâmico (h·v) e tempo de propagação** da onda de cheia.
+**2.4 — Modelo hidráulico.** Modelagem hidráulica **unidimensional (1D)** obrigatória no trecho de estudo e no sub-trecho refinado que compreende a área urbana de Estrela, com representação da calha, planície, pontes, confluências, diques e estruturas de controle por seções transversais e estruturas hidráulicas. A geração de mapas de **profundidade, velocidade, perigo hidrodinâmico (h·v), tempo de propagação e extensão das manchas** deverá ser feita a partir do HEC-RAS 1D e de pós-processamento geoespacial. Eventual uso de modelo 2D poderá ser proposto apenas como análise complementar, mediante justificativa e aprovação da CONTRATANTE; não integra o modelo hidráulico principal deste TR.
 
 **2.5 — Calibração e validação.** Obrigatórias, com base em: marcas históricas de cheia; dados dos eventos de 2023, 2024 e 2025; imagens de satélite de eventos passados; e os levantamentos hidrométricos do Eixo 1. Deverão ser reportados índices de desempenho (Nash-Sutcliffe, erro de pico, erro de volume, ajuste da mancha por índice de Jaccard/*Critical Success Index*).
 
@@ -289,7 +289,7 @@ d) **análise custo-benefício** aplicada a alternativas de redução de risco d
 |---|---|---|
 | Coordenador geral | Eng. Civil / Ambiental / Hídrica, com pós-graduação | 10 anos em projetos de recursos hídricos |
 | Especialista em hidrologia | Eng. ou pós-graduação em Recursos Hídricos | 8 anos, com experiência em análise de frequência e modelagem chuva-vazão |
-| Especialista em modelagem hidrodinâmica | idem | 8 anos, com projetos 2D comprovados |
+| Especialista em modelagem hidrodinâmica | idem | 8 anos, com projetos de modelagem hidráulica 1D comprovados |
 | Especialista em geoprocessamento | Eng. Cartográfico / Geógrafo / afim | 5 anos |
 | Responsável por levantamento LiDAR/aerofotogrametria | Eng. Cartográfico ou Agrimensor | 5 anos, com registro no CREA |
 | Responsável por batimetria | Eng. ou Técnico habilitado | 5 anos |

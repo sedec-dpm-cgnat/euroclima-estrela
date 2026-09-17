@@ -91,6 +91,8 @@ calibradas não devem ser apresentados como desempenho garantido de uma barragem
 - [Perfil didático do ponto de partida do TR](06_resultados/VALIDACAO/PERFIL_ALTERNATIVAS_PONTO_PARTIDA_TR.png)
 - [Mapa interativo: marque as alternativas finais e veja seus eixos](06_resultados/GIS/mapa_interativo_alternativas.html)
 - [Prompt de continuidade para o Codex do Saulo](https://github.com/sedec-dpm-cgnat/euroclima-estrela/blob/main/PROMPT_CONTINUIDADE_SAULO_CODEX.md)
+- [Prompt completo de continuidade para o Astra](https://github.com/sedec-dpm-cgnat/euroclima-estrela/blob/main/PROMPT_CONTINUIDADE_ASTRA.md)
+- [Minuta limpa do Termo de Referência — HEC-RAS 1D](06_resultados/TR_MINUTA_REV0C_LIMPA_HECRAS1D.docx)
 
 ::: {.callout-note}
 ## Template visual

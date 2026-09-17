@@ -40,7 +40,11 @@ O pipeline é **genérico**: basta acrescentar eixos ao KMZ e rodar `10_eixos_ca
 
 Os mapas de comunicação são gerados por `49_cartografia_publica.py`. A planta regional, as pranchas de ponto de partida, os mapas de Forqueta, Guaporé e HAND incorporam norte, escala, municípios, rodovias e a rede hidrográfica BHO/ANA. O mesmo script gera o mapa interativo em `06_resultados/GIS/mapa_interativo_alternativas.html`, com base de ruas OpenStreetMap, pop-ups, camadas contextuais e caixas de seleção para as alternativas finais HEC-00–HEC-06. A base OSM é apenas cartográfica; as geometrias analíticas permanecem nas fontes locais do projeto.
 
-Para retomar a execução pelo outro ambiente Codex, use o [prompt de continuidade do Saulo](PROMPT_CONTINUIDADE_SAULO_CODEX.md). Ele contém o estado técnico, a matriz HEC-RAS 1D, as salvaguardas de dados e o roteiro para o Termo de Referência.
+Para retomar a execução por outro ambiente Codex, use o [prompt de continuidade do Astra](PROMPT_CONTINUIDADE_ASTRA.md). Ele contém a ordem das simulações, a matriz HEC-RAS 1D, as salvaguardas de dados, a organização do pacote de transferência e o roteiro para o Termo de Referência. O [prompt anterior de continuidade do Saulo](PROMPT_CONTINUIDADE_SAULO_CODEX.md) permanece como histórico.
+
+A minuta de referência para a contratação está em [`06_resultados/TR_MINUTA_REV0C_LIMPA_HECRAS1D.docx`](06_resultados/TR_MINUTA_REV0C_LIMPA_HECRAS1D.docx), acompanhada da versão Markdown [`06_resultados/TR_MINUTA_REV0B.md`](06_resultados/TR_MINUTA_REV0B.md). A REV. 0A original, que contém resíduos de outro projeto, é preservada apenas na pasta de documentos-fonte e não deve ser usada como base de edição.
+
+Para renderizar DOCX neste computador, use `07_python/render_docx_euroclima.ps1`; o wrapper localiza o LibreOffice instalado e usa o Python empacotado do Codex automaticamente.
 
 ## Eixos avaliados
 

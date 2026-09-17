@@ -30,6 +30,9 @@ _book/
 # artefatos locais do Python
 07_python/__pycache__/
 
+# QA local de documentos; não faz parte dos resultados entregáveis
+06_resultados/_qa_*/
+
 # sistema
 Thumbs.db
 .DS_Store
